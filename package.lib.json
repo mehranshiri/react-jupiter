@@ -1,0 +1,29 @@
+{
+  "name": "@evandhq/design-system",
+  "version": "0.1.3",
+  "main": "./index.js",
+  "license": "MIT",
+  "keywords": [
+    "evand",
+    "design system",
+    "component",
+    "react",
+    "styled-component"
+  ],
+  "contributors": [
+    "@arashmanteghi",
+    "https://github.com/marzzy"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+  },
+  "dependencies": {
+    "styled-components": "^4.3.2"
+  },
+  "peerDependencies": {
+  },
+  "devDependencies": {
+  }
+}
