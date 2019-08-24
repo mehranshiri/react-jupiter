@@ -1,7 +1,20 @@
 {
-  "name": "design-system",
+  "name": "@evand/design-system",
   "version": "0.1.0",
   "private": true,
+  "main": "lib/index.js",
+	"license": "MIT",
+  "keywords": [
+    "evand",
+    "design system",
+    "component",
+    "react",
+    "styled-component"
+  ],
+  "contributors": [
+    "@arashmanteghi",
+    "https://github.com/marzzy"
+  ],
   "dependencies": {
     "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-links": "^5.1.11",
