@@ -1,9 +1,8 @@
 {
-  "name": "@evand/design-system",
+  "name": "@evandhq/design-system",
   "version": "0.1.0",
-  "private": true,
   "main": "lib/index.js",
-	"license": "MIT",
+  "license": "MIT",
   "keywords": [
     "evand",
     "design system",
@@ -15,6 +14,9 @@
     "@arashmanteghi",
     "https://github.com/marzzy"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-links": "^5.1.11",
@@ -33,6 +35,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "version": "auto-changelog -p && git add CHANGELOG.md",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -52,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "auto-changelog": "^1.15.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
