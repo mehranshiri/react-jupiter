@@ -1,5 +1,5 @@
 {
-  "name": "@evandhq/design-system",
+  "name": "@evandhq/design-system-development",
   "version": "0.1.0",
   "main": "lib/index.js",
   "license": "MIT",
@@ -36,7 +36,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lib": "babel src/components -d lib && cp package.lib.json lib/package.json",
+    "lib": "del-cli ./lib && babel src/components -d lib --presets minify && cp package.lib.json lib/package.json",
     "version": "auto-changelog -p && git add CHANGELOG.md",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
@@ -62,8 +62,11 @@
     "auto-changelog": "^1.15.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.9.0",
+    "babel-minify": "^0.5.1",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.5.1",
     "babel-preset-react": "^6.24.1",
+    "del-cli": "^2.0.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
