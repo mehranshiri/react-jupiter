@@ -1,6 +1,6 @@
 {
-  "name": "@evandhq/design-system-development",
-  "version": "0.1.0",
+  "name": "@evandhq/react-design-system-development",
+  "version": "0.0.1",
   "main": "lib/index.js",
   "license": "MIT",
   "keywords": [
@@ -16,6 +16,13 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evandhq/react-design-system"
+  },
+  "bugs": {
+    "url": "https://github.com/evandhq/react-design-system/issues"
   },
   "dependencies": {
     "@babel/core": "^7.0.0",
@@ -33,15 +40,15 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:doc": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint ./src",
     "lint:fix": "./node_modules/.bin/eslint ./src --fix",
-    "lib": "del-cli ./lib && babel src/components -d lib --presets minify && cp package.lib.json lib/package.json",
+    "build:lib": "del-cli ./lib && babel src/components -d lib --presets minify && cp package.lib.json lib/package.json && cp README.md lib/ && cp CHANGELOG.md lib/ && cp LICENSE lib/",
     "version": "auto-changelog -p && git add CHANGELOG.md",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build:storybook": "build-storybook -s public"
   },
   "husky": {
     "hooks": {

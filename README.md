@@ -1,68 +1,125 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="http://design.evand.com">
+    <img width="200" src="https://blog.evand.com/wp-content/themes/evand/assets/evand.png">
+  </a>
+</p>
 
-## Available Scripts
+<h1 align="center">Evand Design System</h1>
+<h3 align="center">An UI design language with React implementation.</h3>
+<br />
 
-In the project directory, you can run:
+## 🔱 __Features__
+- An enterprise UI design system for web applications.
+- A set of high-quality React components.
+- Written in ES6 and styled-components.
+<br /><br />
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## 📦 __Install__
 
-### `npm test`
+```bash
+npm install --save @evandhq/react-design-system
+```
+or
+```bash
+yarn add @evandhq/react-design-system
+```
+<br /><br />
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🙌🏼 __Usage__
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```jsx
+import { Button } from '@evandhq/react-design-system';
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ReactDOM.render(<Button>Submit</Button>, mountNode);
+```
+<br /><br />
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🛠 __Development__
+Use Gitpod, a free online dev environment for GitHub.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/evandhq/react-design-system)
 
-## Learn More
+Or clone locally:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+$ git clone https://github.com/evandhq/react-design-system.git
+$ cd react-design-system
+$ npm install
+$ npm start
+```
+<br /><br />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## ⬛️ __Commands__
+_start development and view doc. Open your browser and visit http://127.0.0.1:3000:_
+```bash
+$ npm start 
+```
+<br/>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+_show stories of storybook. pen your browser and visit http://127.0.0.1:9009:_
+```bash
+$ npm run storybook
+```
+<br/>
 
-### Analyzing the Bundle Size
+_running all tests:_
+```bash
+$ npm run test 
+```
+<br/>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+_show linter errors (linter prevent changes to commit):_
+```bash
+$ npm run lint
+```
+<br/>
 
-### Making a Progressive Web App
+_fix linter errors automatically:_
+```bash
+$ npm run lint:fix
+```
+<br/>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+_create changelog_
+```bash
+$ npm run version
+```
+<br/>
 
-### Advanced Configuration
+_generate static site of storybook_
+```bash
+$ npm run build:storybook
+```
+<br/>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+_build production of documents and samples_
+```bash
+$ npm run build:doc
+```
+<br/>
 
-### Deployment
+_build version of design system_
+```bash
+$ npm run build:lib
+```
+<br/><br/>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## 🤝 __Contributing__ [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+Read our [contributing guide](https://evand.com) and let's build a better react design system.
+<br /><br />
+
+
+
+## 🎓 __Licence__
+_react design system_ is available under MIT licence.
