@@ -12,6 +12,7 @@
 - An enterprise UI design system for web applications.
 - A set of high-quality React components.
 - Written in ES6 and styled-components.
+- Use [react-hook-form](https://github.com/react-hook-form/react-hook-form) for form handling
 <br /><br />
 
 
