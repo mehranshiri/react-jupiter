@@ -1,6 +1,6 @@
 {
   "name": "@evandhq/react-design-system-development",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "license": "MIT",
   "keywords": [
@@ -46,7 +46,7 @@
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint ./src",
     "lint:fix": "./node_modules/.bin/eslint ./src --fix",
-    "build:lib": "del-cli ./lib && babel src/components -d lib --presets minify && cp -r src/components/assets lib/assets && cp src/components/general.scss lib && cp package.lib.json lib/package.json && cp README.md lib/ && cp CHANGELOG.md lib/ && cp LICENSE lib/",
+    "build:lib": "del-cli ./lib && babel src/components -d lib --presets minify && cp -r src/components/assets lib/assets && cp package.lib.json lib/package.json && cp README.md lib/ && cp CHANGELOG.md lib/ && cp LICENSE lib/",
     "version": "auto-changelog -p && git add CHANGELOG.md",
     "storybook": "start-storybook -p 9009 -s public",
     "build:storybook": "build-storybook -s public"
