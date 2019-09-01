@@ -22,7 +22,7 @@ function App() {
         >
           Learn React
         </a>
-        <Components.Button displayText="Submit" />
+        <Components.Button displayText="پرداخت" />
       </header>
     </div>
   );

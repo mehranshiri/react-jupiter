@@ -1,6 +1,6 @@
 {
   "name": "@evandhq/react-design-system",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./index.js",
   "license": "MIT",
   "keywords": [
@@ -32,5 +32,6 @@
   "peerDependencies": {
   },
   "devDependencies": {
+    "node-sass": "^4.12.0"
   }
 }
