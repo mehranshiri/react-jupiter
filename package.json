@@ -40,9 +40,9 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build:doc": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build:doc": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint ./src",
     "lint:fix": "./node_modules/.bin/eslint ./src --fix",
@@ -88,6 +88,7 @@
     "eslint-config-airbnb": "^18.0.1",
     "husky": "^3.0.4",
     "node-sass": "^4.12.0",
+    "react-app-rewired": "^2.1.3",
     "react-test-renderer": "^16.9.0",
     "require-context.macro": "^1.1.1"
   }

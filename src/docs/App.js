@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Components from '../components';
+import Components, { Button } from '../components';
 import logo from './assets/logo.svg';
 import './App.css';
 
@@ -22,7 +22,8 @@ function App() {
         >
           Learn React
         </a>
-        <Components.Button displayText="پرداخت" />
+        <Components.Button1 displayText="پرداخت" />
+        <Button props="props value" borderRadius={3} rounded />
       </header>
     </div>
   );

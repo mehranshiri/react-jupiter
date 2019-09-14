@@ -1,25 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from '../globalStyle';
+import defaultTheme from '../themes';
+import { ButtonContainer } from './index.styles';
 
-const ButtonContainer = styled.button`
-  padding: 5px 10px;
-  background: #555;
-  color: #ccc;
-  font-family: "IRANSans";
-`;
-
-const Button = ({ displayText }) => (
-  <>
-    <GlobalStyle />
-    <ButtonContainer>{displayText}</ButtonContainer>
-  </>
-);
+const Button = (props) => {
+  const { rounded } = props;
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <ButtonContainer rounded={rounded}>
+        Button example
+      </ButtonContainer>
+    </ThemeProvider>
+  );
+};
 
 Button.propTypes = {
-  displayText: PropTypes.string.isRequired,
+  rounded: PropTypes.bool,
+};
+
+Button.defaultProps = {
+  rounded: false,
 };
 
 export default Button;
