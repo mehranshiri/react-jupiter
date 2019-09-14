@@ -5,7 +5,7 @@ import logo from './assets/logo.svg';
 import './App.css';
 
 function App() {
-  const { Title } = Typography;
+  const { Title, Text } = Typography;
   return (
     <div className="App">
       <header className="App-header">
@@ -26,6 +26,7 @@ function App() {
         <Components.Button1 displayText="پرداخت" />
         <Button props="props value" borderRadius={3} rounded />
         <Title level={3} type="danger">سلام</Title>
+        <Text>تکست ساده</Text>
       </header>
     </div>
   );
