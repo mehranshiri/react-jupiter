@@ -1,10 +1,11 @@
 import React from 'react';
 
-import Components, { Button } from '../components';
+import Components, { Button, Typography } from '../components';
 import logo from './assets/logo.svg';
 import './App.css';
 
 function App() {
+  const { Title } = Typography;
   return (
     <div className="App">
       <header className="App-header">
@@ -24,6 +25,7 @@ function App() {
         </a>
         <Components.Button1 displayText="پرداخت" />
         <Button props="props value" borderRadius={3} rounded />
+        <Title level={3} type="danger">سلام</Title>
       </header>
     </div>
   );
