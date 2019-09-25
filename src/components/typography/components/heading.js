@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
-import { H1, H2, H3 } from './title.styles';
+import {
+  H1, H2, H3, H4, H5,
+} from './heading.styles';
 
-const Title = (props) => {
+const Heading = (props) => {
   const { children, level, type } = props;
 
   const renderLevel = (children, level, type) => {
     switch (level) {
+      case 5:
+        return (<H5 type={type}>{children}</H5>);
+      case 4:
+        return (<H4 type={type}>{children}</H4>);
       case 3:
         return (<H3 type={type}>{children}</H3>);
       case 2:
@@ -27,7 +33,7 @@ const Title = (props) => {
   );
 };
 
-Title.propTypes = {
+Heading.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -37,9 +43,9 @@ Title.propTypes = {
   type: PropTypes.string,
 };
 
-Title.defaultProps = {
+Heading.defaultProps = {
   level: 1,
   type: 'default',
 };
 
-export default Title;
+export default Heading;

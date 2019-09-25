@@ -3,20 +3,24 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
+import GlobalStyle from '../../globalStyle';
 import { Content } from './paragraph.style';
 
 const Paragraph = (props) => {
   const {
-    children, size, weight,
+    children, size, bold,
   } = props;
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Content
-        size={size}
-        weight={weight}
-      >
-        {children}
-      </Content>
+      <>
+        <GlobalStyle />
+        <Content
+          size={size}
+          bold={bold}
+        >
+          {children}
+        </Content>
+      </>
     </ThemeProvider>
   );
 };
@@ -28,13 +32,12 @@ Paragraph.propTypes = {
     PropTypes.string,
   ]).isRequired,
   size: PropTypes.number,
-  weight: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
+  bold: PropTypes.bool,
 };
 
 Paragraph.defaultProps = {
   size: 13,
-  weight: 'normal',
+  bold: false,
 };
+
+export default Paragraph;
