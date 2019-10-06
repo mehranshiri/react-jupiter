@@ -8,7 +8,7 @@ import {
 } from './heading.styles';
 
 const Heading = (props) => {
-  const { children, level, type } = props;
+  const { children, level } = props;
 
   const renderLevel = (children, level, type) => {
     switch (level) {
@@ -28,7 +28,7 @@ const Heading = (props) => {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      {renderLevel(children, level, type)}
+      {renderLevel(children, level)}
     </ThemeProvider>
   );
 };
@@ -40,12 +40,10 @@ Heading.propTypes = {
     PropTypes.string,
   ]).isRequired,
   level: PropTypes.number,
-  type: PropTypes.string,
 };
 
 Heading.defaultProps = {
   level: 1,
-  type: 'default',
 };
 
 export default Heading;
