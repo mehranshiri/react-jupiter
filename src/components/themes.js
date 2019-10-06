@@ -1,13 +1,13 @@
 const defaultTheme = {
   colors: {
-    primary800: '#091E31',
-    primary600: '#132A3E', // default primary color
-    primary400: '#013A5C',
-    primary200: '#3673AA',
-    secondary800: '#027EB8',
-    secondary600: '#0095DB', // default secondary color
-    secondary400: '#FF5D5D',
-    secondary200: '#FFE8E8',
+    darkBlue800: '#091E31',
+    darkBlue600: '#132A3E', // default primary color
+    darkBlue400: '#013A5C',
+    darkBlue200: '#3673AA',
+    blue800: '#027EB8',
+    blue600: '#0095DB', // default secondary color
+    blue400: '#FF5D5D',
+    blue200: '#FFE8E8',
     green800: '#21B151',
     green600: '#42D473', // default green color
     green400: '#8BEFAC',
@@ -20,10 +20,12 @@ const defaultTheme = {
     yellow600: '#FFD324', // default yellow color
     yellow400: '#FFE372',
     yellow200: '#FFF4C9',
-    grey800: '#A7A7A7',
-    grey600: '#D2D2D2', // default grey color
-    grey400: '#EBEBEB',
-    grey200: '#F9F9F9',
+    gray800: '#A7A7A7',
+    gray600: '#D2D2D2', // default gray color
+    gray400: '#EBEBEB',
+    gray200: '#F9F9F9',
+    riverBed: '#555f61',
+    riverBedDark: '#3B4141',
   },
   typography: {
     baseSize: 14,
@@ -34,6 +36,7 @@ const defaultTheme = {
     h3size: 24,
     h4size: 20,
     h5size: 16,
+    headingLineHeightRatio: 1.68,
   },
   button: {
     borderRadius: 3,
