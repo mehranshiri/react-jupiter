@@ -1,0 +1,38 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ThemeProvider } from 'styled-components';
+
+import defaultTheme from '../../themes';
+import { TitleLarge, TitleSmall } from './title.styles';
+
+const Title = (props) => {
+  const { children, size } = props;
+
+  const renderTitle = (children, size) => {
+    if (size === 'small') {
+      return <TitleSmall>{children}</TitleSmall>;
+    }
+    return <TitleLarge>{children}</TitleLarge>;
+  };
+
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      {renderTitle(children, size)}
+    </ThemeProvider>
+  );
+};
+
+Title.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
+  size: PropTypes.string, // accepted input: "large" or "small"
+};
+
+Title.defaultProps = {
+  size: 'large',
+};
+
+export default Title;

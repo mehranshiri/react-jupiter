@@ -2,7 +2,9 @@ import React from 'react';
 
 import Components, { Button, Typography } from '../../../components';
 
-const { Heading, Text, Paragraph } = Typography;
+const {
+  Heading, Text, Paragraph, Title,
+} = Typography;
 
 const ButtonPage = () => (
   <>
@@ -16,6 +18,9 @@ const ButtonPage = () => (
       <Heading level={4}>سلام</Heading>
       <Heading level={5}>سلام</Heading>
       <Text>تکست ساده</Text>
+      <Title size="large">عنوان بزرگ</Title>
+      <Title>عنوان بزرگ</Title>
+      <Title size="small">عنوان کوچک</Title>
     </div>
     <Paragraph bold>
       طراحان معمولاً برای طراحی، ابتدا از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفاً به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموماً نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.

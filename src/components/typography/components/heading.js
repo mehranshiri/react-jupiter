@@ -39,7 +39,7 @@ Heading.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]).isRequired,
-  level: PropTypes.number,
+  level: PropTypes.number, // accepted inputs: 1 or 2 or ... or 6
 };
 
 Heading.defaultProps = {

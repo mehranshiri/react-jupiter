@@ -31,8 +31,8 @@ Paragraph.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]).isRequired,
-  size: PropTypes.number,
-  bold: PropTypes.bool,
+  size: PropTypes.number, // accepted values: 8 or 9 or 10 or ...
+  bold: PropTypes.bool, // accepted values: true or false
 };
 
 Paragraph.defaultProps = {
