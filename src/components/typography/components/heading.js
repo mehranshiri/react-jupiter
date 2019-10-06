@@ -10,19 +10,19 @@ import {
 const Heading = (props) => {
   const { children, level } = props;
 
-  const renderLevel = (children, level, type) => {
+  const renderLevel = (children, level) => {
     switch (level) {
       case 5:
-        return (<H5 type={type}>{children}</H5>);
+        return (<H5>{children}</H5>);
       case 4:
-        return (<H4 type={type}>{children}</H4>);
+        return (<H4>{children}</H4>);
       case 3:
-        return (<H3 type={type}>{children}</H3>);
+        return (<H3>{children}</H3>);
       case 2:
-        return (<H2 type={type}>{children}</H2>);
+        return (<H2>{children}</H2>);
       case 1:
       default:
-        return (<H1 type={type}>{children}</H1>);
+        return (<H1>{children}</H1>);
     }
   };
 
