@@ -6,8 +6,8 @@ const defaultTheme = {
     darkBlue200: '#3673AA',
     blue800: '#027EB8',
     blue600: '#0095DB', // default secondary color
-    blue400: '#FF5D5D',
-    blue200: '#FFE8E8',
+    blue400: '#99D5F1',
+    blue200: '#E6F4FB',
     green800: '#21B151',
     green600: '#42D473', // default green color
     green400: '#8BEFAC',

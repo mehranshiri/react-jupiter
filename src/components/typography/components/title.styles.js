@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const TitleLarge = styled.h2`
   margin: 12px 0 8px;
+  font-family: 'IranSharp';
   font-size: 18px;
   line-height: ${({ theme }) => (`${18 * theme.typography.headingLineHeightRatio}px`)};
   color: ${({ theme }) => (`${theme.colors.gray800}`)};
@@ -10,6 +11,7 @@ export const TitleLarge = styled.h2`
 
 export const TitleSmall = styled.h3`
   margin: 10px 0 8px;
+  font-family: 'IranSharp';
   font-size: 14px;
   line-height: ${({ theme }) => (`${14 * theme.typography.headingLineHeightRatio}px`)};
   color: ${({ theme }) => (`${theme.colors.gray800}`)};

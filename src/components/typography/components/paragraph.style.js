@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Content = styled.span`
   margin: 8px 0;
+  font-family: 'IranSharp';
   ${({ bold }) => (bold ? 'font-weight: bold' : '')};
   font-size: ${({ theme, size }) => (size ? `${size}px` : `${theme.typography.baseSize}`)};
   line-height: ${({ theme, size }) => (

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const stringColorBasedOnType = (theme, type) => {
-  switch (type) {
+const getColorFromName = (theme, color) => {
+  switch (color) {
     case 'danger':
       return 'red';
     case 'success':
@@ -12,10 +12,44 @@ const stringColorBasedOnType = (theme, type) => {
   }
 };
 
-export const String = styled.span`
-  color: ${({ theme, type }) => stringColorBasedOnType(theme, type)};
-  font-weight: ${({ weight }) => (weight)};
+export const Emphasized = styled.em`
+  font-family: 'IranSharp';
   font-size: ${({ size }) => (`${size}px`)};
   ${({ underline }) => (underline ? 'text-decoration: underline' : '')}
-  ${({ remove }) => (remove ? 'text-decoration:  line-through' : '')}
+  ${({ lineThrough }) => (lineThrough ? 'text-decoration: line-through' : '')}
+  ${({ strong }) => (strong ? 'font-weight: bold' : '')}
+  color: ${({ theme, color }) => getColorFromName(theme, color)};
+  ${({ theme, marked }) => (marked ? `background-color: ${theme.colors.blue200}` : '')}
+`;
+
+export const Strong = styled.strong`
+  font-family: 'IranSharp';
+  font-size: ${({ size }) => (`${size}px`)};
+  font-weight: bold;
+  ${({ underline }) => (underline ? 'text-decoration: underline' : '')}
+  ${({ lineThrough }) => (lineThrough ? 'text-decoration: line-through' : '')}
+  ${({ emphasized }) => (emphasized ? 'font-style: italic' : '')}
+  color: ${({ theme, color }) => getColorFromName(theme, color)};
+  ${({ theme, marked }) => (marked ? `background-color: ${theme.colors.blue200}` : '')}
+`;
+
+export const String = styled.span`
+  font-family: 'IranSharp';
+  font-size: ${({ size }) => (`${size}px`)};
+  ${({ underline }) => (underline ? 'text-decoration: underline' : '')}
+  ${({ lineThrough }) => (lineThrough ? 'text-decoration: line-through' : '')}
+  color: ${({ theme, color }) => getColorFromName(theme, color)};
+  ${({ theme, marked }) => (marked ? `background-color: ${theme.colors.blue200}` : '')}
+`;
+
+export const SubScript = styled.sub`
+  font-family: 'IranSharp';
+  font-size: 8px;
+  color: ${({ theme, color }) => getColorFromName(theme, color)};
+`;
+
+export const SupScript = styled.sup`
+  font-family: 'IranSharp';
+  font-size: 8px;
+  color: ${({ theme, color }) => getColorFromName(theme, color)};
 `;

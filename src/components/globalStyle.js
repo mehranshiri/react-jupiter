@@ -6,7 +6,7 @@ import IranSharpBoldWoff from './assets/fonts/iransharp_bold_web.woff';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'IranSharp';
+    font-family: 'IranSharp‌Bold';
     font-style: normal;
     font-weight: bold;
     src: url(${IranSharpBoldWoff2}) format('woff2'), url(${IranSharpBoldWoff}) format('woff');
