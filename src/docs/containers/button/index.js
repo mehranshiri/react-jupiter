@@ -3,7 +3,7 @@ import React from 'react';
 import Components, { Button, Typography } from '../../../components';
 
 const {
-  Heading, Text, Paragraph, Title,
+  Heading, Text, Paragraph, Title, Link,
 } = Typography;
 
 const ButtonPage = () => (
@@ -21,15 +21,41 @@ const ButtonPage = () => (
       <div />
       <Text emphasized>تکست ساده</Text>
       <div />
-      <Text color="red">تکست ساده</Text>
+      <Text color="red" hover underline>تکست ساده</Text>
+      <div />
+      <Text color="green">تکست ساده</Text>
+      <div />
+      <Text color="blue">تکست ساده</Text>
       <div />
       <Text underline>تکست ساده</Text>
       <div />
+      <Text marked>آنجایی</Text>
+      <div />
       <Text lineThrough>تکست ساده</Text>
+      <div />
+      <Text label>آنجایی</Text>
       <div />
       <Text>تکست ساده</Text>
       <div />
       <Text strong emphasized>تکست ساده</Text>
+      <div />
+      <Text>تکست ساده</Text>
+      <div />
+      <Link to="/">تکست ساده</Link>
+      <div />
+      <Link to="http://yahoo.com" external>تکست ساده لینک خارجی</Link>
+      <div />
+      <Text>تکست ساده</Text>
+      <div />
+      <Text>تکست ساده</Text>
+      <div />
+      <Text>تکست ساده</Text>
+      <div />
+      <Text>تکست ساده</Text>
+      <div />
+      <Text>تکست ساده</Text>
+      <div />
+      <Text>تکست ساده</Text>
       <div />
       <Text>تکست ساده</Text>
       <div />
@@ -38,7 +64,7 @@ const ButtonPage = () => (
       <Title>عنوان بزرگ</Title>
       <Title size="small">عنوان کوچک</Title>
     </div>
-    <Paragraph bold>
+    <Paragraph>
       طراحان معمولاً برای طراحی، ابتدا از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفاً به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از
       <Text marked>آنجایی</Text>
        که طراحان عموماً

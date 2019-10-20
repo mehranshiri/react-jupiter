@@ -24,8 +24,8 @@ const defaultTheme = {
     gray600: '#D2D2D2', // default gray color
     gray400: '#EBEBEB',
     gray200: '#F9F9F9',
-    riverBed: '#555f61',
     riverBedDark: '#3B4141',
+    riverBed: '#555f61',
   },
   typography: {
     baseSize: 14,

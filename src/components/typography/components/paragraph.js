@@ -8,16 +8,13 @@ import { Content } from './paragraph.style';
 
 const Paragraph = (props) => {
   const {
-    children, size, bold,
+    children, size,
   } = props;
   return (
     <ThemeProvider theme={defaultTheme}>
       <>
         <GlobalStyle />
-        <Content
-          size={size}
-          bold={bold}
-        >
+        <Content size={size}>
           {children}
         </Content>
       </>
@@ -32,12 +29,10 @@ Paragraph.propTypes = {
     PropTypes.string,
   ]).isRequired,
   size: PropTypes.number, // accepted values: 8 or 9 or 10 or ...
-  bold: PropTypes.bool, // accepted values: true or false
 };
 
 Paragraph.defaultProps = {
   size: 13,
-  bold: false,
 };
 
 export default Paragraph;

@@ -9,7 +9,7 @@ import {
 
 const renderString = (options) => {
   const {
-    children, size, color, underline, lineThrough, strong, emphasized, subScript, supScript, marked,
+    children, size, color, underline, lineThrough, strong, emphasized, subScript, supScript, marked, label,
   } = options;
 
   let typeOfText;
@@ -25,10 +25,11 @@ const renderString = (options) => {
         <Strong
           size={size}
           color={color}
-          underline={underline}
-          lineThrough={lineThrough}
+          underline={underline && !lineThrough}
+          lineThrough={lineThrough && !underline}
           emphasized={emphasized}
-          marked={marked}
+          marked={marked && !false}
+          isLabel={label && !marked}
         >
           {children}
         </Strong>
@@ -38,10 +39,10 @@ const renderString = (options) => {
         <Emphasized
           size={size}
           color={color}
-          underline={underline}
-          lineThrough={lineThrough}
-          strong={strong}
-          marked={marked}
+          underline={underline && !lineThrough}
+          lineThrough={lineThrough && !underline}
+          marked={marked && !false}
+          isLabel={label && !marked}
         >
           {children}
         </Emphasized>
@@ -64,9 +65,10 @@ const renderString = (options) => {
         <String
           size={size}
           color={color}
-          underline={underline}
-          lineThrough={lineThrough}
-          marked={marked}
+          underline={underline && !lineThrough}
+          lineThrough={lineThrough && !underline}
+          marked={marked && !false}
+          isLabel={label && !marked}
         >
           {children}
         </String>
@@ -76,7 +78,7 @@ const renderString = (options) => {
 
 const Text = (props) => {
   const {
-    children, size, color, underline, lineThrough, strong, emphasized, subScript, supScript, marked,
+    children, size, color, underline, lineThrough, strong, emphasized, subScript, supScript, marked, label,
   } = props;
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -91,6 +93,7 @@ const Text = (props) => {
         subScript,
         supScript,
         marked,
+        label,
       })}
     </ThemeProvider>
   );
@@ -103,7 +106,7 @@ Text.propTypes = {
     PropTypes.string,
   ]).isRequired,
   size: PropTypes.number,
-  color: PropTypes.string,
+  color: PropTypes.string, // accepted input: "red" or "green" or "blue" or "yellow" or "darkBlue"
   underline: PropTypes.bool,
   lineThrough: PropTypes.bool,
   strong: PropTypes.bool,
@@ -111,6 +114,7 @@ Text.propTypes = {
   subScript: PropTypes.bool,
   supScript: PropTypes.bool,
   marked: PropTypes.bool,
+  label: PropTypes.bool,
 };
 
 Text.defaultProps = {
@@ -123,6 +127,7 @@ Text.defaultProps = {
   subScript: false,
   supScript: false,
   marked: false,
+  label: false,
 };
 
 export default Text;
