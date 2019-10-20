@@ -7,12 +7,12 @@ import { TitleLarge, TitleSmall } from './title.styles';
 
 const Title = (props) => {
   const { children, size } = props;
-
   const renderTitle = (children, size) => {
+    if (children === undefined) return null;
     if (size === 'small') {
-      return <TitleSmall>{children}</TitleSmall>;
+      return <TitleSmall data-test="title">{children}</TitleSmall>;
     }
-    return <TitleLarge>{children}</TitleLarge>;
+    return <TitleLarge data-test="title">{children}</TitleLarge>;
   };
 
   return (
