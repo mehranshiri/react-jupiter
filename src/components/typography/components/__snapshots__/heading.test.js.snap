@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading component Should render H1 component without error 1`] = `
+<styled.h1
+  data-test="h1-tag"
+>
+  تست
+</styled.h1>
+`;
+
+exports[`Heading component Should render H2 component without error 1`] = `
+<styled.h2
+  data-test="h2-tag"
+>
+  تست
+</styled.h2>
+`;
+
+exports[`Heading component Should render H3 component without error 1`] = `
+<styled.h3
+  data-test="h3-tag"
+>
+  تست
+</styled.h3>
+`;
+
+exports[`Heading component Should render H4 component without error 1`] = `
+<styled.h4
+  data-test="h4-tag"
+>
+  تست
+</styled.h4>
+`;
+
+exports[`Heading component Should render H5 component without error 1`] = `
+<styled.h5
+  data-test="h5-tag"
+>
+  تست
+</styled.h5>
+`;

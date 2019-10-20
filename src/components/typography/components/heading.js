@@ -11,18 +11,21 @@ const Heading = (props) => {
   const { children, level } = props;
 
   const renderLevel = (children, level) => {
+    if (children === undefined) {
+      return null;
+    }
     switch (level) {
       case 5:
-        return (<H5>{children}</H5>);
+        return (<H5 data-test="h5-tag">{children}</H5>);
       case 4:
-        return (<H4>{children}</H4>);
+        return (<H4 data-test="h4-tag">{children}</H4>);
       case 3:
-        return (<H3>{children}</H3>);
+        return (<H3 data-test="h3-tag">{children}</H3>);
       case 2:
-        return (<H2>{children}</H2>);
+        return (<H2 data-test="h2-tag">{children}</H2>);
       case 1:
       default:
-        return (<H1>{children}</H1>);
+        return (<H1 data-test="h1-tag">{children}</H1>);
     }
   };
 
