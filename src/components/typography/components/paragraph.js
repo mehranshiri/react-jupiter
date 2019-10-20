@@ -10,11 +10,12 @@ const Paragraph = (props) => {
   const {
     children, size,
   } = props;
+  if (children === undefined) return null;
   return (
     <ThemeProvider theme={defaultTheme}>
       <>
         <GlobalStyle />
-        <Content size={size}>
+        <Content size={size} data-test="paragraph">
           {children}
         </Content>
       </>
@@ -32,7 +33,7 @@ Paragraph.propTypes = {
 };
 
 Paragraph.defaultProps = {
-  size: 13,
+  size: defaultTheme.typography.baseSize,
 };
 
 export default Paragraph;

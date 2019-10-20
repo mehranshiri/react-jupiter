@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
 
 
 import Heading from './heading';
@@ -19,35 +18,30 @@ describe('Heading component', () => {
     const component = setupShallow({ children: 'تست', level: 1 });
     const H1 = findByTestAtrr(component, 'h1-tag');
     expect(H1.length).toBe(1);
-    expect(toJson(H1)).toMatchSnapshot();
   });
 
   it('Should render H2 component without error', () => {
     const component = setupShallow({ children: 'تست', level: 2 });
     const H2 = findByTestAtrr(component, 'h2-tag');
     expect(H2.length).toBe(1);
-    expect(toJson(H2)).toMatchSnapshot();
   });
 
   it('Should render H3 component without error', () => {
     const component = setupShallow({ children: 'تست', level: 3 });
     const H3 = findByTestAtrr(component, 'h3-tag');
     expect(H3.length).toBe(1);
-    expect(toJson(H3)).toMatchSnapshot();
   });
 
   it('Should render H4 component without error', () => {
     const component = setupShallow({ children: 'تست', level: 4 });
     const H4 = findByTestAtrr(component, 'h4-tag');
     expect(H4.length).toBe(1);
-    expect(toJson(H4)).toMatchSnapshot();
   });
 
   it('Should render H5 component without error', () => {
     const component = setupShallow({ children: 'تست', level: 5 });
     const H5 = findByTestAtrr(component, 'h5-tag');
     expect(H5.length).toBe(1);
-    expect(toJson(H5)).toMatchSnapshot();
   });
 
 
