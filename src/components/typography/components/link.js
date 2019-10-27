@@ -12,7 +12,7 @@ const renderLink = (options) => {
   } = options;
   if (external) {
     return (
-      <ExternalLink href={to} target={target} hover>
+      <ExternalLink href={to} target={target} hover data-test="external-link">
         <Text
           size={size}
           strong={strong}
@@ -25,7 +25,7 @@ const renderLink = (options) => {
     );
   }
   return (
-    <InternalLink to={to} target={target} hover>
+    <InternalLink to={to} target={target} hover data-test="internal-link">
       <Text
         size={size}
         strong={strong}
@@ -42,6 +42,7 @@ const Link = (props) => {
   const {
     children, external, to, target, size, strong, emphasized,
   } = props;
+  if (children === undefined || to === undefined) return null;
   return (
     <ThemeProvider theme={defaultTheme}>
       {renderLink({

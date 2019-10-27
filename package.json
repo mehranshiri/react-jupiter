@@ -44,7 +44,8 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build:doc": "react-app-rewired build",
-    "test": "react-app-rewired test",
+    "test": "react-app-rewired test --silent",
+    "test:coverage": "react-app-rewired test --silent --coverage",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint ./src",
     "lint:fix": "./node_modules/.bin/eslint ./src --fix",

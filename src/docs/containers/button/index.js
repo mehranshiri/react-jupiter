@@ -31,7 +31,7 @@ const ButtonPage = () => (
       <div />
       <Text marked>آنجایی</Text>
       <div />
-      <Text lineThrough>تکست ساده</Text>
+      <Text lineThrough underline>تکست میکس</Text>
       <div />
       <Text label>آنجایی</Text>
       <div />
