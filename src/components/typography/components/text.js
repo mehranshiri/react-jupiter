@@ -12,6 +12,8 @@ const renderString = (options) => {
     children, size, color, underline, lineThrough, strong, emphasized, subScript, supScript, marked, label,
   } = options;
 
+  if (children === undefined) return null;
+
   let typeOfText;
   if (strong) typeOfText = 'strong';
   else if (emphasized) typeOfText = 'emphasized';
@@ -28,8 +30,9 @@ const renderString = (options) => {
           underline={underline && !lineThrough}
           lineThrough={lineThrough && !underline}
           emphasized={emphasized}
-          marked={marked && !false}
+          marked={marked && !label}
           isLabel={label && !marked}
+          data-test="strong"
         >
           {children}
         </Strong>
@@ -41,21 +44,22 @@ const renderString = (options) => {
           color={color}
           underline={underline && !lineThrough}
           lineThrough={lineThrough && !underline}
-          marked={marked && !false}
+          marked={marked && !label}
           isLabel={label && !marked}
+          data-test="emphasized"
         >
           {children}
         </Emphasized>
       );
     case 'subScript':
       return (
-        <SubScript color={color}>
+        <SubScript color={color} data-test="subScript">
           {children}
         </SubScript>
       );
     case 'supScript':
       return (
-        <SupScript color={color}>
+        <SupScript color={color} data-test="supScript">
           {children}
         </SupScript>
       );
@@ -67,8 +71,9 @@ const renderString = (options) => {
           color={color}
           underline={underline && !lineThrough}
           lineThrough={lineThrough && !underline}
-          marked={marked && !false}
+          marked={marked && !label}
           isLabel={label && !marked}
+          data-test="span"
         >
           {children}
         </String>
@@ -118,7 +123,7 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
-  size: 14,
+  size: defaultTheme.typography.baseSize,
   color: 'default',
   underline: false,
   lineThrough: false,
