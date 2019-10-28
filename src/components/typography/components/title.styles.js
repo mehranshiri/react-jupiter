@@ -1,25 +1,19 @@
 import styled from 'styled-components';
 
-const headingColorBasedOnType = (theme, type) => {
-  switch (type) {
-    case 'danger':
-      return 'red';
-    case 'success':
-      return 'green';
-    default:
-    case 'default':
-      return 'black';
-  }
-};
-
-export const H1 = styled.h2`
-  color: ${({ theme, type }) => headingColorBasedOnType(theme, type)};
+export const TitleLarge = styled.h2`
+  margin: 12px 0 8px;
+  font-family: 'IranSharp';
+  font-size: 18px;
+  line-height: ${({ theme }) => (`${18 * theme.typography.headingLineHeightRatio}px`)};
+  color: ${({ theme }) => (`${theme.colors.gray800}`)};
+  font-weight: bold;
 `;
 
-export const H2 = styled.h2`
-  color: ${({ theme, type }) => headingColorBasedOnType(theme, type)};
-`;
-
-export const H3 = styled.h3`
-  color: ${({ theme, type }) => headingColorBasedOnType(theme, type)};
+export const TitleSmall = styled.h3`
+  margin: 10px 0 8px;
+  font-family: 'IranSharp';
+  font-size: 14px;
+  line-height: ${({ theme }) => (`${14 * theme.typography.headingLineHeightRatio}px`)};
+  color: ${({ theme }) => (`${theme.colors.gray800}`)};
+  font-weight: bold;
 `;

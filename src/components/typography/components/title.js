@@ -3,26 +3,21 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
-import { H1, H2, H3 } from './title.styles';
+import { TitleLarge, TitleSmall } from './title.styles';
 
 const Title = (props) => {
-  const { children, level, type } = props;
-
-  const renderLevel = (children, level, type) => {
-    switch (level) {
-      case 3:
-        return (<H3 type={type}>{children}</H3>);
-      case 2:
-        return (<H2 type={type}>{children}</H2>);
-      case 1:
-      default:
-        return (<H1 type={type}>{children}</H1>);
+  const { children, size } = props;
+  const renderTitle = (children, size) => {
+    if (children === undefined) return null;
+    if (size === 'small') {
+      return <TitleSmall data-test="title">{children}</TitleSmall>;
     }
+    return <TitleLarge data-test="title">{children}</TitleLarge>;
   };
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      {renderLevel(children, level, type)}
+      {renderTitle(children, size)}
     </ThemeProvider>
   );
 };
@@ -33,13 +28,11 @@ Title.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]).isRequired,
-  level: PropTypes.number,
-  type: PropTypes.string,
+  size: PropTypes.string, // accepted input: "large" or "small"
 };
 
 Title.defaultProps = {
-  level: 1,
-  type: 'default',
+  size: 'large',
 };
 
 export default Title;
