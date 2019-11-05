@@ -20,11 +20,11 @@
 ## 📦 __Install__
 
 ```bash
-npm install --save @evandhq/react-design-system
+npm install --save react-jupiter
 ```
 or
 ```bash
-yarn add @evandhq/react-design-system
+yarn add react-jupiter
 ```
 <br /><br />
 
@@ -33,7 +33,7 @@ yarn add @evandhq/react-design-system
 ## 🙌🏼 __Usage__
 
 ```jsx
-import { Button } from '@evandhq/react-design-system';
+import { Button } from 'react-jupiter';
 
 ReactDOM.render(<Button>Submit</Button>, mountNode);
 ```
