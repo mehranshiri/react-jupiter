@@ -19,7 +19,7 @@ const ButtonPage = () => (
       <Heading level={5}>سلام</Heading>
       <Text size={16} strong>تکست ساده</Text>
       <div />
-      <Text emphasized>تکست ساده</Text>
+      <Text emphasized color="white">تکست ساده</Text>
       <div />
       <Text color="red" hover underline>تکست ساده</Text>
       <div />

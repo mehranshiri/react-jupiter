@@ -111,7 +111,7 @@ Text.propTypes = {
     PropTypes.string,
   ]).isRequired,
   size: PropTypes.number,
-  color: PropTypes.string, // accepted input: "red" or "green" or "blue" or "yellow" or "darkBlue"
+  color: PropTypes.string, // accepted input: "red" or "green" or "blue" or "yellow" or "white" or "darkBlue"
   underline: PropTypes.bool,
   lineThrough: PropTypes.bool,
   strong: PropTypes.bool,

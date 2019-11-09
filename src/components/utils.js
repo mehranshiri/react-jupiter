@@ -10,6 +10,8 @@ export const getColorFromName = (theme, color) => {
       return theme.colors.yellow600;
     case 'darkBlue':
       return theme.colors.darkBlue600;
+    case 'white':
+      return theme.colors.white;
     default:
     case 'default':
       return theme.typography.baseColor;

@@ -26,6 +26,7 @@ const defaultTheme = {
     gray200: '#F9F9F9',
     riverBedDark: '#3B4141',
     riverBed: '#555f61',
+    white: '#FFFFFF',
   },
   typography: {
     baseSize: 14,
