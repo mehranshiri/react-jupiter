@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
+import GlobalStyle from '../../globalStyle';
 import {
   String, Strong, Emphasized, SubScript, SupScript,
 } from './text.style';
@@ -87,19 +88,22 @@ const Text = (props) => {
   } = props;
   return (
     <ThemeProvider theme={defaultTheme}>
-      {renderString({
-        children,
-        size,
-        color,
-        underline,
-        lineThrough,
-        strong,
-        emphasized,
-        subScript,
-        supScript,
-        marked,
-        label,
-      })}
+      <>
+        <GlobalStyle />
+        {renderString({
+          children,
+          size,
+          color,
+          underline,
+          lineThrough,
+          strong,
+          emphasized,
+          subScript,
+          supScript,
+          marked,
+          label,
+        })}
+      </>
     </ThemeProvider>
   );
 };

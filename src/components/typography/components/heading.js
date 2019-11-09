@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
+import GlobalStyle from '../../globalStyle';
 import {
   H1, H2, H3, H4, H5,
 } from './heading.styles';
@@ -31,7 +32,10 @@ const Heading = (props) => {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      {renderLevel(children, level)}
+      <>
+        <GlobalStyle />
+        {renderLevel(children, level)}
+      </>
     </ThemeProvider>
   );
 };

@@ -12,7 +12,10 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
   font-family: 'IranSharp';
   margin: 20px 0 8px;
-  font-size: ${({ theme }) => (`${theme.typography.h2Size}px`)};
+  font-size: ${({ theme }) => {
+    console.log('theme: ', theme.typography.h2Size);
+    return `${theme.typography.h2Size}px`;
+  }};
   line-height: ${({ theme }) => (`${theme.typography.h2Size * theme.typography.headingLineHeightRatio}px`)};
   color: ${({ theme }) => (`${theme.colors.riverBedDark}`)};
   font-weight: bold;

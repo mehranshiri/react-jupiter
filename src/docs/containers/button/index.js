@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Components, { Button, Typography } from '../../../components';
 
@@ -6,12 +7,17 @@ const {
   Heading, Text, Paragraph, Title, Link,
 } = Typography;
 
+const NewTitle = styled(Heading)`
+  color: red;
+`;
+
 const ButtonPage = () => (
   <>
     <div>
       <div>Button</div>
       <Components.Button1 displayText="پرداخت" />
       <Button props="props value" borderRadius={3} rounded />
+      <NewTitle level={1}>تست جدید هدینگ</NewTitle>
       <Heading level={1}>سلام</Heading>
       <Heading level={2}>سلام</Heading>
       <Heading level={3}>سلام</Heading>
