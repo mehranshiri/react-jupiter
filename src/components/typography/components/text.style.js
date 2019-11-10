@@ -8,6 +8,7 @@ export const Emphasized = styled.em`
   ${({ underline }) => (underline ? 'text-decoration: underline;' : '')}
   ${({ lineThrough }) => (lineThrough ? 'text-decoration: line-through;' : '')}
   color: ${({ theme, color }) => getColorFromName(theme, color)};
+  ${({ bold }) => (bold ? 'font-weight: bold;' : '')}
   ${({ theme, marked }) => (marked ? `background-color: ${theme.colors.blue200};` : '')}
   ${({ theme, isLabel }) => (isLabel
     ? `background-color: ${theme.colors.gray400}; padding: 2px 8px; border-radius: 2px;`
@@ -32,10 +33,11 @@ export const Strong = styled.strong`
 
 export const String = styled.span`
   font-family: 'IranSharp';
-  font-size: ${({ size }) => (`${size}px`)};
+  font-size: ${({ theme, size }) => (size ? `${size}px` : `${theme.typography.baseSize}px`)};
   ${({ underline }) => (underline ? 'text-decoration: underline;' : '')}
   ${({ lineThrough }) => (lineThrough ? 'text-decoration: line-through;' : '')}
   color: ${({ theme, color }) => getColorFromName(theme, color)};
+  ${({ bold }) => (bold ? 'font-weight: bold;' : '')}
   ${({ theme, marked }) => (marked ? `background-color: ${theme.colors.blue200};` : '')}
   ${({ theme, isLabel }) => (isLabel
     ? `background-color: ${theme.colors.gray400}; padding: 2px 8px; border-radius: 2px;`

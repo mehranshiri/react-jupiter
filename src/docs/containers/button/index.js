@@ -23,7 +23,9 @@ const ButtonPage = () => (
       <Heading level={4}>سلام</Heading>
       <Heading level={5}>سلام</Heading>
       <div />
-      <Text size={16} strong>تکست ساده</Text>
+      <Text size={16} strong>تکست ساده استرانگ</Text>
+      <div />
+      <Text size={16} bold>تکست ساده بولد</Text>
       <div />
       <Text emphasized color="white">تکست ساده</Text>
       <div />

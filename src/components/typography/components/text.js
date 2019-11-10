@@ -10,7 +10,7 @@ import {
 
 const renderString = (props) => {
   const {
-    children, size, color, underline, lineThrough, strong, emphasized, subScript, supScript, marked, label,
+    children, size, color, underline, lineThrough, strong, bold, emphasized, subScript, supScript, marked, label,
   } = props;
 
   if (children === undefined) return null;
@@ -46,6 +46,7 @@ const renderString = (props) => {
           color={color}
           underline={underline && !lineThrough}
           lineThrough={lineThrough && !underline}
+          bold={bold}
           marked={marked && !label}
           isLabel={label && !marked}
           data-test="emphasized"
@@ -76,6 +77,7 @@ const renderString = (props) => {
           lineThrough={lineThrough && !underline}
           marked={marked && !label}
           isLabel={label && !marked}
+          bold={bold}
           data-test="span"
           {...props}
         >
@@ -96,6 +98,7 @@ renderString.propTypes = {
   underline: PropTypes.bool,
   lineThrough: PropTypes.bool,
   strong: PropTypes.bool,
+  bold: PropTypes.bool,
   emphasized: PropTypes.bool,
   subScript: PropTypes.bool,
   supScript: PropTypes.bool,
@@ -109,6 +112,7 @@ renderString.defaultProps = {
   underline: false,
   lineThrough: false,
   strong: false,
+  bold: false,
   emphasized: false,
   subScript: false,
   supScript: false,
