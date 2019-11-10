@@ -7,13 +7,13 @@ import GlobalStyle from '../../globalStyle';
 import Text from './text';
 import { InternalLink, ExternalLink } from './link.styles';
 
-const renderLink = (options) => {
+const renderLink = (props) => {
   const {
     external, children, to, target, size, strong, emphasized,
-  } = options;
+  } = props;
   if (external) {
     return (
-      <ExternalLink href={to} target={target} hover data-test="external-link">
+      <ExternalLink href={to} target={target} hover data-test="external-link" {...props}>
         <Text
           size={size}
           strong={strong}
@@ -26,7 +26,7 @@ const renderLink = (options) => {
     );
   }
   return (
-    <InternalLink to={to} target={target} hover data-test="internal-link">
+    <InternalLink to={to} target={target} hover data-test="internal-link" {...props}>
       <Text
         size={size}
         strong={strong}
@@ -39,30 +39,7 @@ const renderLink = (options) => {
   );
 };
 
-const Link = (props) => {
-  const {
-    children, external, to, target, size, strong, emphasized,
-  } = props;
-  if (children === undefined || to === undefined) return null;
-  return (
-    <ThemeProvider theme={defaultTheme}>
-      <>
-        <GlobalStyle />
-        {renderLink({
-          children,
-          external,
-          to,
-          target,
-          size,
-          strong,
-          emphasized,
-        })}
-      </>
-    </ThemeProvider>
-  );
-};
-
-Link.propTypes = {
+renderLink.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -76,12 +53,30 @@ Link.propTypes = {
   emphasized: PropTypes.bool,
 };
 
-Link.defaultProps = {
+renderLink.defaultProps = {
   external: false,
   target: '_self',
   size: 14,
   strong: false,
   emphasized: false,
 };
+
+const Link = (props) => {
+  const { children, to } = props;
+  if (children === undefined || to === undefined) return null;
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <>
+        <GlobalStyle />
+        {renderLink(props)}
+      </>
+    </ThemeProvider>
+  );
+};
+
+
+Link.propTypes = renderLink.propTypes;
+
+Link.defaultProps = renderLink.defaultProps;
 
 export default Link;

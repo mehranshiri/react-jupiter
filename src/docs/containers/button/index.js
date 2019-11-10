@@ -7,8 +7,8 @@ const {
   Heading, Text, Paragraph, Title, Link,
 } = Typography;
 
-const NewTitle = styled(Heading)`
-  color: red;
+const NewTitle = styled(Title)`
+  background-color: red;
 `;
 
 const ButtonPage = () => (
@@ -17,12 +17,12 @@ const ButtonPage = () => (
       <div>Button</div>
       <Components.Button1 displayText="پرداخت" />
       <Button props="props value" borderRadius={3} rounded />
-      <NewTitle level={1}>تست جدید هدینگ</NewTitle>
       <Heading level={1}>سلام</Heading>
       <Heading level={2}>سلام</Heading>
       <Heading level={3}>سلام</Heading>
       <Heading level={4}>سلام</Heading>
       <Heading level={5}>سلام</Heading>
+      <div />
       <Text size={16} strong>تکست ساده</Text>
       <div />
       <Text emphasized color="white">تکست ساده</Text>
@@ -67,6 +67,7 @@ const ButtonPage = () => (
       <div />
       <Text subScript>نویسنده</Text>
       <Title size="large">عنوان بزرگ</Title>
+      <NewTitle size="large" style={{ color: 'green' }}>تایال</NewTitle>
       <Title>عنوان بزرگ</Title>
       <Title size="small">عنوان کوچک</Title>
     </div>
