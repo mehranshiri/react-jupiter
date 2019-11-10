@@ -42,6 +42,15 @@ const defaultTheme = {
   button: {
     borderRadius: 3,
   },
+  avatar: {
+    borderRadius: 2,
+    borderWidth: 1,
+    size: {
+      lg: 90,
+      md: 60,
+      sm: 40,
+    },
+  },
   primaryColor: '#cc0000',
   secondaryColor: '#bd0101',
 };
