@@ -131,4 +131,8 @@ const Text = (props) => (
   </>
 );
 
+Text.prototype = renderString.propTypes;
+
+Text.defaultProps = renderString.defaultProps;
+
 export default Text;

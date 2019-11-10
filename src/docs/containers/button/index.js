@@ -25,7 +25,7 @@ const ButtonPage = () => (
       <div />
       <Text size={16} strong>تکست ساده استرانگ</Text>
       <div />
-      <Text size={16} bold>تکست ساده بولد</Text>
+      <Text size={11} bold>تکست ساده بولد</Text>
       <div />
       <Text emphasized color="white">تکست ساده</Text>
       <div />

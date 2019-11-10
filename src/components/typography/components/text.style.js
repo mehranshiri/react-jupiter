@@ -33,7 +33,7 @@ export const Strong = styled.strong`
 
 export const String = styled.span`
   font-family: 'IranSharp';
-  font-size: ${({ theme, size }) => (size ? `${size}px` : `${theme.typography.baseSize}px`)};
+  font-size: ${({ size }) => (`${size}px`)};
   ${({ underline }) => (underline ? 'text-decoration: underline;' : '')}
   ${({ lineThrough }) => (lineThrough ? 'text-decoration: line-through;' : '')}
   color: ${({ theme, color }) => getColorFromName(theme, color)};
