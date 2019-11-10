@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
+import GlobalStyle from '../../globalStyle';
 import {
   String, Strong, Emphasized, SubScript, SupScript,
 } from './text.style';
 
-const renderString = (options) => {
+const renderString = (props) => {
   const {
     children, size, color, underline, lineThrough, strong, emphasized, subScript, supScript, marked, label,
-  } = options;
+  } = props;
 
   if (children === undefined) return null;
 
@@ -33,6 +34,7 @@ const renderString = (options) => {
           marked={marked && !label}
           isLabel={label && !marked}
           data-test="strong"
+          {...props}
         >
           {children}
         </Strong>
@@ -47,19 +49,20 @@ const renderString = (options) => {
           marked={marked && !label}
           isLabel={label && !marked}
           data-test="emphasized"
+          {...props}
         >
           {children}
         </Emphasized>
       );
     case 'subScript':
       return (
-        <SubScript color={color} data-test="subScript">
+        <SubScript color={color} data-test="subScript" {...props}>
           {children}
         </SubScript>
       );
     case 'supScript':
       return (
-        <SupScript color={color} data-test="supScript">
+        <SupScript color={color} data-test="supScript" {...props}>
           {children}
         </SupScript>
       );
@@ -74,6 +77,7 @@ const renderString = (options) => {
           marked={marked && !label}
           isLabel={label && !marked}
           data-test="span"
+          {...props}
         >
           {children}
         </String>
@@ -81,30 +85,7 @@ const renderString = (options) => {
   }
 };
 
-const Text = (props) => {
-  const {
-    children, size, color, underline, lineThrough, strong, emphasized, subScript, supScript, marked, label,
-  } = props;
-  return (
-    <ThemeProvider theme={defaultTheme}>
-      {renderString({
-        children,
-        size,
-        color,
-        underline,
-        lineThrough,
-        strong,
-        emphasized,
-        subScript,
-        supScript,
-        marked,
-        label,
-      })}
-    </ThemeProvider>
-  );
-};
-
-Text.propTypes = {
+renderString.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -122,7 +103,7 @@ Text.propTypes = {
   label: PropTypes.bool,
 };
 
-Text.defaultProps = {
+renderString.defaultProps = {
   size: defaultTheme.typography.baseSize,
   color: 'default',
   underline: false,
@@ -134,5 +115,16 @@ Text.defaultProps = {
   marked: false,
   label: false,
 };
+
+const Text = (props) => (
+  <>
+    <ThemeProvider theme={defaultTheme}>
+      <>
+        <GlobalStyle />
+        {renderString(props)}
+      </>
+    </ThemeProvider>
+  </>
+);
 
 export default Text;

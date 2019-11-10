@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
+import GlobalStyle from '../../globalStyle';
 import { TitleLarge, TitleSmall } from './title.styles';
 
 const Title = (props) => {
@@ -10,14 +11,17 @@ const Title = (props) => {
   const renderTitle = (children, size) => {
     if (children === undefined) return null;
     if (size === 'small') {
-      return <TitleSmall data-test="title">{children}</TitleSmall>;
+      return <TitleSmall data-test="title" {...props}>{children}</TitleSmall>;
     }
-    return <TitleLarge data-test="title">{children}</TitleLarge>;
+    return <TitleLarge data-test="title" {...props}>{children}</TitleLarge>;
   };
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      {renderTitle(children, size)}
+      <>
+        <GlobalStyle />
+        {renderTitle(children, size)}
+      </>
     </ThemeProvider>
   );
 };

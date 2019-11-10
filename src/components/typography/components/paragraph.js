@@ -15,7 +15,7 @@ const Paragraph = (props) => {
     <ThemeProvider theme={defaultTheme}>
       <>
         <GlobalStyle />
-        <Content size={size} data-test="paragraph">
+        <Content size={size} data-test="paragraph" {...props}>
           {children}
         </Content>
       </>
