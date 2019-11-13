@@ -9,11 +9,11 @@ import { InternalLink, ExternalLink } from './link.styles';
 
 const renderLink = (props) => {
   const {
-    external, children, to, target, size, strong, emphasized,
+    external, children, to, target, size, strong, emphasized, ...rest
   } = props;
   if (external) {
     return (
-      <ExternalLink href={to} target={target} hover data-test="external-link" {...props}>
+      <ExternalLink href={to} target={target} data-test="external-link" {...rest}>
         <Text
           size={size}
           strong={strong}
@@ -26,7 +26,7 @@ const renderLink = (props) => {
     );
   }
   return (
-    <InternalLink to={to} target={target} hover data-test="internal-link" {...props}>
+    <InternalLink to={to} target={target} data-test="internal-link" {...rest}>
       <Text
         size={size}
         strong={strong}
@@ -47,7 +47,7 @@ renderLink.propTypes = {
   ]).isRequired,
   external: PropTypes.bool,
   to: PropTypes.string.isRequired,
-  target: PropTypes.string, // accepted input: "_self" or "_blank" or "_parent" or "_top"
+  target: PropTypes.oneOf(['_self', '_blank', '_parent', '_top']),
   size: PropTypes.number,
   strong: PropTypes.bool,
   emphasized: PropTypes.bool,

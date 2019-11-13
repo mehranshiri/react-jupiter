@@ -8,6 +8,7 @@ export const Emphasized = styled.em`
   ${({ underline }) => (underline ? 'text-decoration: underline;' : '')}
   ${({ lineThrough }) => (lineThrough ? 'text-decoration: line-through;' : '')}
   color: ${({ theme, color }) => getColorFromName(theme, color)};
+  ${({ bold }) => (bold ? 'font-weight: bold;' : '')}
   ${({ theme, marked }) => (marked ? `background-color: ${theme.colors.blue200};` : '')}
   ${({ theme, isLabel }) => (isLabel
     ? `background-color: ${theme.colors.gray400}; padding: 2px 8px; border-radius: 2px;`
@@ -36,6 +37,7 @@ export const String = styled.span`
   ${({ underline }) => (underline ? 'text-decoration: underline;' : '')}
   ${({ lineThrough }) => (lineThrough ? 'text-decoration: line-through;' : '')}
   color: ${({ theme, color }) => getColorFromName(theme, color)};
+  ${({ bold }) => (bold ? 'font-weight: bold;' : '')}
   ${({ theme, marked }) => (marked ? `background-color: ${theme.colors.blue200};` : '')}
   ${({ theme, isLabel }) => (isLabel
     ? `background-color: ${theme.colors.gray400}; padding: 2px 8px; border-radius: 2px;`

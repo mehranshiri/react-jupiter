@@ -7,13 +7,13 @@ import GlobalStyle from '../../globalStyle';
 import { TitleLarge, TitleSmall } from './title.styles';
 
 const Title = (props) => {
-  const { children, size } = props;
+  const { children, size, ...rest } = props;
   const renderTitle = (children, size) => {
     if (children === undefined) return null;
     if (size === 'small') {
-      return <TitleSmall data-test="title" {...props}>{children}</TitleSmall>;
+      return <TitleSmall data-test="title" {...rest}>{children}</TitleSmall>;
     }
-    return <TitleLarge data-test="title" {...props}>{children}</TitleLarge>;
+    return <TitleLarge data-test="title" {...rest}>{children}</TitleLarge>;
   };
 
   return (
@@ -32,7 +32,7 @@ Title.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]).isRequired,
-  size: PropTypes.string, // accepted input: "large" or "small"
+  size: PropTypes.oneOf(['large', 'small']),
 };
 
 Title.defaultProps = {

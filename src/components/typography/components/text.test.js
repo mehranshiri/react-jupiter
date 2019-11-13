@@ -18,7 +18,7 @@ const setupShallow = (props = {}) => (
       subScript={props.subScript}
       supScript={props.supScript}
       marked={props.marked}
-      label={props.label}
+      labeled={props.labeled}
       {...props}
     >
       {props.children}
@@ -38,7 +38,7 @@ const setupMount = (props = {}) => (
       subScript={props.subScript}
       supScript={props.supScript}
       marked={props.marked}
-      label={props.label}
+      labeled={props.labeled}
       {...props}
     >
       {props.children}
@@ -158,7 +158,7 @@ describe('Text component', () => {
     const Text = setupMount({
       children: 'تکست ساده',
       strong: true,
-      label: true,
+      labeled: true,
     });
     expect(Text).toHaveStyleRule('background-color', theme.colors.gray400);
     expect(Text).toHaveStyleRule('padding', '2px 8px');
@@ -261,7 +261,7 @@ describe('Text component', () => {
     const Text = setupMount({
       children: 'تکست لیبل کج',
       emphasized: true,
-      label: true,
+      labeled: true,
     });
     expect(Text).toHaveStyleRule('background-color', theme.colors.gray400);
     expect(Text).toHaveStyleRule('border-radius', '2px');
@@ -291,7 +291,7 @@ describe('Text component', () => {
   it('Should render simple label text', () => {
     const Text = setupMount({
       children: 'لیبیل',
-      label: true,
+      labeled: true,
     });
     expect(Text).toHaveStyleRule('background-color', theme.colors.gray400);
     expect(Text).toHaveStyleRule('border-radius', '2px');
@@ -302,7 +302,7 @@ describe('Text component', () => {
   it('Should render simple text when label and marked props are both true', () => {
     const Text = setupMount({
       children: 'لیبیل',
-      label: true,
+      labeled: true,
       marked: true,
     });
     expect(Text).not.toHaveStyleRule('background-color');
