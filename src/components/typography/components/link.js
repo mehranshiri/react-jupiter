@@ -47,7 +47,7 @@ renderLink.propTypes = {
   ]).isRequired,
   external: PropTypes.bool,
   to: PropTypes.string.isRequired,
-  target: PropTypes.string, // accepted input: "_self" or "_blank" or "_parent" or "_top"
+  target: PropTypes.oneOf(['_self', '_blank', '_parent', '_top']),
   size: PropTypes.number,
   strong: PropTypes.bool,
   emphasized: PropTypes.bool,

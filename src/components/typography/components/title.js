@@ -32,7 +32,7 @@ Title.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]).isRequired,
-  size: PropTypes.string, // accepted input: "large" or "small"
+  size: PropTypes.oneOf(['large', 'small']),
 };
 
 Title.defaultProps = {

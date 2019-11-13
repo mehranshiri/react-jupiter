@@ -94,7 +94,7 @@ renderString.propTypes = {
     PropTypes.string,
   ]).isRequired,
   size: PropTypes.number,
-  color: PropTypes.string, // accepted input: "red" or "green" or "blue" or "yellow" or "white" or "darkBlue"
+  color: PropTypes.oneOf(['red', 'green', 'blue', 'yellow', 'white', 'darkBlue']),
   underline: PropTypes.bool,
   lineThrough: PropTypes.bool,
   strong: PropTypes.bool,
@@ -131,7 +131,24 @@ const Text = (props) => (
   </>
 );
 
-Text.prototype = renderString.propTypes;
+Text.prototype = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
+  size: PropTypes.number,
+  color: PropTypes.oneOf(['red', 'green', 'blue', 'yellow', 'white', 'darkBlue']),
+  underline: PropTypes.bool,
+  lineThrough: PropTypes.bool,
+  strong: PropTypes.bool,
+  bold: PropTypes.bool,
+  emphasized: PropTypes.bool,
+  subScript: PropTypes.bool,
+  supScript: PropTypes.bool,
+  marked: PropTypes.bool,
+  label: PropTypes.bool,
+};
 
 Text.defaultProps = renderString.defaultProps;
 
