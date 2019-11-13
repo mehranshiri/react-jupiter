@@ -8,14 +8,14 @@ import { Content } from './paragraph.style';
 
 const Paragraph = (props) => {
   const {
-    children, size,
+    children, size, ...rest
   } = props;
   if (children === undefined) return null;
   return (
     <ThemeProvider theme={defaultTheme}>
       <>
         <GlobalStyle />
-        <Content size={size} data-test="paragraph" {...props}>
+        <Content size={size} data-test="paragraph" {...rest}>
           {children}
         </Content>
       </>

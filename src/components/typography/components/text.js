@@ -10,7 +10,7 @@ import {
 
 const renderString = (props) => {
   const {
-    children, size, color, underline, lineThrough, strong, bold, emphasized, subScript, supScript, marked, label,
+    children, size, color, underline, lineThrough, strong, bold, emphasized, subScript, supScript, marked, label, ...rest
   } = props;
 
   if (children === undefined) return null;
@@ -34,7 +34,7 @@ const renderString = (props) => {
           marked={marked && !label}
           isLabel={label && !marked}
           data-test="strong"
-          {...props}
+          {...rest}
         >
           {children}
         </Strong>
@@ -50,20 +50,20 @@ const renderString = (props) => {
           marked={marked && !label}
           isLabel={label && !marked}
           data-test="emphasized"
-          {...props}
+          {...rest}
         >
           {children}
         </Emphasized>
       );
     case 'subScript':
       return (
-        <SubScript color={color} data-test="subScript" {...props}>
+        <SubScript color={color} data-test="subScript" {...rest}>
           {children}
         </SubScript>
       );
     case 'supScript':
       return (
-        <SupScript color={color} data-test="supScript" {...props}>
+        <SupScript color={color} data-test="supScript" {...rest}>
           {children}
         </SupScript>
       );
@@ -79,7 +79,7 @@ const renderString = (props) => {
           isLabel={label && !marked}
           bold={bold}
           data-test="span"
-          {...props}
+          {...rest}
         >
           {children}
         </String>

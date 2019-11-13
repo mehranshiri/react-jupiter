@@ -9,7 +9,7 @@ import {
 } from './heading.styles';
 
 const Heading = (props) => {
-  const { children, level } = props;
+  const { children, level, ...rest } = props;
 
   const renderLevel = (children, level) => {
     if (children === undefined) {
@@ -17,16 +17,16 @@ const Heading = (props) => {
     }
     switch (level) {
       case 5:
-        return (<H5 data-test="h5-tag" {...props}>{children}</H5>);
+        return (<H5 data-test="h5-tag" {...rest}>{children}</H5>);
       case 4:
-        return (<H4 data-test="h4-tag" {...props}>{children}</H4>);
+        return (<H4 data-test="h4-tag" {...rest}>{children}</H4>);
       case 3:
-        return (<H3 data-test="h3-tag" {...props}>{children}</H3>);
+        return (<H3 data-test="h3-tag" {...rest}>{children}</H3>);
       case 2:
-        return (<H2 data-test="h2-tag" {...props}>{children}</H2>);
+        return (<H2 data-test="h2-tag" {...rest}>{children}</H2>);
       case 1:
       default:
-        return (<H1 data-test="h1-tag" {...props}>{children}</H1>);
+        return (<H1 data-test="h1-tag" {...rest}>{children}</H1>);
     }
   };
 
