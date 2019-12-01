@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import { getColorFromName } from '../../utils';
 
+import '../../globalStyle.scss';
+
 export const Emphasized = styled.em`
   font-family: 'IranSharp';
   font-size: ${({ size }) => (`${size}px`)};

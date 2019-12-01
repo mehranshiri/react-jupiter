@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
-import GlobalStyle from '../../globalStyle';
 import { TitleLarge, TitleSmall } from './title.styles';
 
 const Title = (props) => {
@@ -18,10 +17,7 @@ const Title = (props) => {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <>
-        <GlobalStyle />
-        {renderTitle(children, size)}
-      </>
+      {renderTitle(children, size)}
     </ThemeProvider>
   );
 };
