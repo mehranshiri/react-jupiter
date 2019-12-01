@@ -3,39 +3,41 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
-import GlobalStyle from '../../globalStyle';
 import {
-  H1, H2, H3, H4, H5,
+  H1, H2, H3, H4, H5, H6,
 } from './heading.styles';
 
-const Heading = (props) => {
-  const { children, level, ...rest } = props;
+const { sizes } = defaultTheme;
 
-  const renderLevel = (children, level) => {
+const Heading = (props) => {
+  const {
+    children, size, level, ...rest
+  } = props;
+
+  const renderLevel = (children, size, level) => {
     if (children === undefined) {
       return null;
     }
     switch (level) {
+      case 6:
+        return (<H6 size={size} data-test="h6-tag" {...rest}>{children}</H6>);
       case 5:
-        return (<H5 data-test="h5-tag" {...rest}>{children}</H5>);
+        return (<H5 size={size} data-test="h5-tag" {...rest}>{children}</H5>);
       case 4:
-        return (<H4 data-test="h4-tag" {...rest}>{children}</H4>);
+        return (<H4 size={size} data-test="h4-tag" {...rest}>{children}</H4>);
       case 3:
-        return (<H3 data-test="h3-tag" {...rest}>{children}</H3>);
+        return (<H3 size={size} data-test="h3-tag" {...rest}>{children}</H3>);
       case 2:
-        return (<H2 data-test="h2-tag" {...rest}>{children}</H2>);
+        return (<H2 size={size} data-test="h2-tag" {...rest}>{children}</H2>);
       case 1:
       default:
-        return (<H1 data-test="h1-tag" {...rest}>{children}</H1>);
+        return (<H1 size={size} data-test="h1-tag" {...rest}>{children}</H1>);
     }
   };
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <>
-        <GlobalStyle />
-        {renderLevel(children, level)}
-      </>
+      {renderLevel(children, size, level)}
     </ThemeProvider>
   );
 };
@@ -46,10 +48,12 @@ Heading.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]).isRequired,
+  size: PropTypes.oneOf([sizes.large, sizes.medium, sizes.small]),
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
 };
 
 Heading.defaultProps = {
+  size: sizes.large,
   level: 1,
 };
 

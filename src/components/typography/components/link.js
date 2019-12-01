@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
-import GlobalStyle from '../../globalStyle';
 import Text from './text';
 import { InternalLink, ExternalLink } from './link.styles';
 
@@ -66,10 +65,7 @@ const Link = (props) => {
   if (children === undefined || to === undefined) return null;
   return (
     <ThemeProvider theme={defaultTheme}>
-      <>
-        <GlobalStyle />
-        {renderLink(props)}
-      </>
+      {renderLink(props)}
     </ThemeProvider>
   );
 };

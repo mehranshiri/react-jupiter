@@ -17,11 +17,30 @@ const ButtonPage = () => (
       <div>Button</div>
       <Components.Button1 displayText="پرداخت" />
       <Button props="props value" borderRadius={3} rounded />
+      <Heading>سلام</Heading>
       <Heading level={1}>سلام</Heading>
-      <Heading level={2}>سلام</Heading>
-      <Heading level={3}>سلام</Heading>
+      <Heading size="medium" level={1}>سلام</Heading>
+      <Heading size="small" level={1}>سلام</Heading>
+      <hr />
+      <Heading size="large" level={2}>سلام</Heading>
+      <Heading size="medium" level={2}>سلام</Heading>
+      <Heading size="small" level={2}>سلام</Heading>
+      <hr />
+      <Heading size="large" level={3}>سلام</Heading>
+      <Heading size="medium" level={3}>سلام</Heading>
+      <Heading size="small" level={3}>سلام</Heading>
+      <hr />
       <Heading level={4}>سلام</Heading>
-      <Heading level={5}>سلام</Heading>
+      <Heading size="medium" level={4}>سلام</Heading>
+      <Heading size="small" level={4}>سلام</Heading>
+      <hr />
+      <Heading size="large" level={5}>سلام</Heading>
+      <Heading size="medium" level={5}>سلام</Heading>
+      <Heading size="small" level={5}>سلام</Heading>
+      <hr />
+      <Heading size="large" level={6}>سلام</Heading>
+      <Heading size="medium" level={6}>سلام</Heading>
+      <Heading size="small" level={6}>سلام</Heading>
       <div />
       <Text size={16} strong>تکست ساده استرانگ</Text>
       <div />

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
-import GlobalStyle from '../../globalStyle';
 import {
   String, Strong, Emphasized, SubScript, SupScript,
 } from './text.style';
@@ -121,14 +120,9 @@ renderString.defaultProps = {
 };
 
 const Text = (props) => (
-  <>
-    <ThemeProvider theme={defaultTheme}>
-      <>
-        <GlobalStyle />
-        {renderString(props)}
-      </>
-    </ThemeProvider>
-  </>
+  <ThemeProvider theme={defaultTheme}>
+    {renderString(props)}
+  </ThemeProvider>
 );
 
 Text.prototype = {
