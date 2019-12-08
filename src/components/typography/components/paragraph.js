@@ -3,22 +3,18 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
-import GlobalStyle from '../../globalStyle';
 import { Content } from './paragraph.style';
 
 const Paragraph = (props) => {
   const {
-    children, size,
+    children, size, ...rest
   } = props;
   if (children === undefined) return null;
   return (
     <ThemeProvider theme={defaultTheme}>
-      <>
-        <GlobalStyle />
-        <Content size={size} data-test="paragraph" {...props}>
-          {children}
-        </Content>
-      </>
+      <Content size={size} data-test="paragraph" {...rest}>
+        {children}
+      </Content>
     </ThemeProvider>
   );
 };

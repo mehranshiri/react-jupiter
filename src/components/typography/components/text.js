@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from '../../themes';
-import GlobalStyle from '../../globalStyle';
 import {
   String, Strong, Emphasized, SubScript, SupScript,
 } from './text.style';
 
 const renderString = (props) => {
   const {
-    children, size, color, underline, lineThrough, strong, emphasized, subScript, supScript, marked, label,
+    children, size, color, underline, lineThrough, strong, bold, emphasized, subScript, supScript, marked, label, ...rest
   } = props;
 
   if (children === undefined) return null;
@@ -34,7 +33,7 @@ const renderString = (props) => {
           marked={marked && !label}
           isLabel={label && !marked}
           data-test="strong"
-          {...props}
+          {...rest}
         >
           {children}
         </Strong>
@@ -46,23 +45,24 @@ const renderString = (props) => {
           color={color}
           underline={underline && !lineThrough}
           lineThrough={lineThrough && !underline}
+          bold={bold}
           marked={marked && !label}
           isLabel={label && !marked}
           data-test="emphasized"
-          {...props}
+          {...rest}
         >
           {children}
         </Emphasized>
       );
     case 'subScript':
       return (
-        <SubScript color={color} data-test="subScript" {...props}>
+        <SubScript color={color} data-test="subScript" {...rest}>
           {children}
         </SubScript>
       );
     case 'supScript':
       return (
-        <SupScript color={color} data-test="supScript" {...props}>
+        <SupScript color={color} data-test="supScript" {...rest}>
           {children}
         </SupScript>
       );
@@ -76,8 +76,9 @@ const renderString = (props) => {
           lineThrough={lineThrough && !underline}
           marked={marked && !label}
           isLabel={label && !marked}
+          bold={bold}
           data-test="span"
-          {...props}
+          {...rest}
         >
           {children}
         </String>
@@ -92,10 +93,11 @@ renderString.propTypes = {
     PropTypes.string,
   ]).isRequired,
   size: PropTypes.number,
-  color: PropTypes.string, // accepted input: "red" or "green" or "blue" or "yellow" or "white" or "darkBlue"
+  color: PropTypes.oneOf(['red', 'green', 'blue', 'yellow', 'white', 'darkBlue']),
   underline: PropTypes.bool,
   lineThrough: PropTypes.bool,
   strong: PropTypes.bool,
+  bold: PropTypes.bool,
   emphasized: PropTypes.bool,
   subScript: PropTypes.bool,
   supScript: PropTypes.bool,
@@ -109,6 +111,7 @@ renderString.defaultProps = {
   underline: false,
   lineThrough: false,
   strong: false,
+  bold: false,
   emphasized: false,
   subScript: false,
   supScript: false,
@@ -117,14 +120,30 @@ renderString.defaultProps = {
 };
 
 const Text = (props) => (
-  <>
-    <ThemeProvider theme={defaultTheme}>
-      <>
-        <GlobalStyle />
-        {renderString(props)}
-      </>
-    </ThemeProvider>
-  </>
+  <ThemeProvider theme={defaultTheme}>
+    {renderString(props)}
+  </ThemeProvider>
 );
+
+Text.prototype = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
+  size: PropTypes.number,
+  color: PropTypes.oneOf(['red', 'green', 'blue', 'yellow', 'white', 'darkBlue']),
+  underline: PropTypes.bool,
+  lineThrough: PropTypes.bool,
+  strong: PropTypes.bool,
+  bold: PropTypes.bool,
+  emphasized: PropTypes.bool,
+  subScript: PropTypes.bool,
+  supScript: PropTypes.bool,
+  marked: PropTypes.bool,
+  label: PropTypes.bool,
+};
+
+Text.defaultProps = renderString.defaultProps;
 
 export default Text;

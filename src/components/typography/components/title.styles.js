@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import '../../globalStyle.scss';
+
 export const TitleLarge = styled.h2`
   margin: 12px 0 8px;
   font-family: 'IranSharp';
