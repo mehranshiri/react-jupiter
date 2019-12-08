@@ -6,7 +6,7 @@ import GlobalStyle from '../globalStyle';
 import defaultTheme from '../themes';
 
 export const GlobalAndThemeWrapper = (props) => {
-  const { theme, children, isBold } = props;
+  const { theme, children } = props;
   if (children === undefined) {
     return null;
   }
@@ -15,7 +15,7 @@ export const GlobalAndThemeWrapper = (props) => {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
-        <Child isBold={isBold}>
+        <Child>
           {children}
         </Child>
       </>
@@ -31,10 +31,8 @@ GlobalAndThemeWrapper.propTypes = {
   ]).isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   theme: PropTypes.object,
-  isBold: PropTypes.bool,
 };
 
 GlobalAndThemeWrapper.defaultProps = {
   theme: defaultTheme,
-  isBold: false,
 };
