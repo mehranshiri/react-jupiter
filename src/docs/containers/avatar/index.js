@@ -66,6 +66,12 @@ const AvatarPage = () => (
     <Avatar alt="گربه ی ناز نازی" src="wrong-src" />
     <br />
 
+    <Heading level={2}>
+      آواتار  بدون آدرس دهی
+    </Heading>
+    <Avatar alt="گربه ی ناز نازی" />
+    <br />
+
   </>
 );
 
