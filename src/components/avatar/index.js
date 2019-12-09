@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import GlobalAndThemeWrapper from '../global';
+import GlobalAndThemeWrapper from '../utils';
 import { Image } from './index.styles';
 import avatarTheme from './theme';
 

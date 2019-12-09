@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { findByTestAtrr } from '../utils';
+import { findByTestAtrr } from '../helpers';
 
 import Avatar from './index';
 

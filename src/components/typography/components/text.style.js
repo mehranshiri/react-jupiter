@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { getColorFromName } from '../../utils';
+import { getColorFromName } from '../../helpers';
 
 import '../../globalStyle.scss';
 
