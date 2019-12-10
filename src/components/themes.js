@@ -60,6 +60,10 @@ const defaultTheme = {
   button: {
     borderRadius: 3,
   },
+  borderRadius: {
+    low: 2,
+    high: 3,
+  },
   primaryColor: '#cc0000',
   secondaryColor: '#bd0101',
 };

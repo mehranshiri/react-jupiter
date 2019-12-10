@@ -8,6 +8,7 @@ import SideNavigation from './components/side-navigation';
 
 import HomePage from './containers/home';
 import ButtonPage from './containers/button';
+import AvatarPage from './containers/avatar';
 
 const Container = styled.main`
   display: flex;
@@ -30,6 +31,7 @@ function App() {
         <ContentContainer>
           <Route exact path="/" component={HomePage} />
           <Route path="/components/button" component={ButtonPage} />
+          <Route path="/components/avatar" component={AvatarPage} />
         </ContentContainer>
       </Content>
     </Container>
