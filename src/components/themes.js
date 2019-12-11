@@ -53,9 +53,9 @@ const defaultTheme = {
     headingLineHeightRatio: 1.68,
   },
   sizes: {
-    large: 'large',
-    medium: 'medium',
-    small: 'small',
+    large: 'lg',
+    medium: 'md',
+    small: 'sm',
   },
   button: {
     borderRadius: 3,

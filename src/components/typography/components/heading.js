@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
-import defaultTheme from '../../themes';
+import theme from '../theme';
 import {
   H1, H2, H3, H4, H5, H6,
 } from './heading.styles';
 
-const { sizes } = defaultTheme;
+const { sizes } = theme;
 
 const Heading = (props) => {
   const {
@@ -36,7 +36,7 @@ const Heading = (props) => {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme}>
       {renderLevel(children, size, level)}
     </ThemeProvider>
   );
@@ -53,7 +53,7 @@ Heading.propTypes = {
 };
 
 Heading.defaultProps = {
-  size: sizes.large,
+  size: sizes.lg,
   level: 1,
 };
 
