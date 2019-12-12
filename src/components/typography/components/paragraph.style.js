@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import '../../globalStyle.scss';
+
 export const Content = styled.p`
   margin: 8px 0;
   font-family: 'IranSharp';
