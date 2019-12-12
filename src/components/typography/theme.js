@@ -60,6 +60,7 @@ const typographyTheme = {
   lineHeightRatio: 1.75,
   headingLineHeightRatio: 1.68,
   sizes: defaultTheme.sizes,
+  colors: defaultTheme.colors,
 };
 
 export default typographyTheme;

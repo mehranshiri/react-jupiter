@@ -4,7 +4,7 @@ import 'jest-styled-components';
 
 
 import Heading from './heading';
-import { findByTestAtrr } from '../../helpers';
+import { findByTestAtrr } from '../../utils/testUtils';
 import theme from '../theme';
 
 const setupShallow = (props = {}) => (

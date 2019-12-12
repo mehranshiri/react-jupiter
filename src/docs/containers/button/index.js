@@ -1,15 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Components, { Button, Typography } from '../../../components';
 
 const {
-  Heading, Text, Paragraph, Title, Link,
+  Heading, Text, Paragraph, Link,
 } = Typography;
-
-const NewTitle = styled(Title)`
-  background-color: red;
-`;
 
 const ButtonPage = () => (
   <>
@@ -52,6 +47,8 @@ const ButtonPage = () => (
       <div />
       <Text color="green">تکست ساده</Text>
       <div />
+      <Text color="light">تکست ساده</Text>
+      <div />
       <Text color="blue">تکست ساده</Text>
       <div />
       <Text underline>تکست ساده</Text>
@@ -87,10 +84,6 @@ const ButtonPage = () => (
       <Text>تکست ساده</Text>
       <div />
       <Text subScript>نویسنده</Text>
-      <Title size="large">عنوان بزرگ</Title>
-      <NewTitle size="large" style={{ color: 'green' }}>تایال</NewTitle>
-      <Title>عنوان بزرگ</Title>
-      <Title size="small">عنوان کوچک</Title>
     </div>
     <Paragraph>
       طراحان معمولاً برای طراحی، ابتدا از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفاً به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از

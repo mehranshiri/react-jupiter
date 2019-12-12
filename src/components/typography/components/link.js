@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
-import defaultTheme from '../../themes';
+import defaultTheme from '../theme';
 import Text from './text';
 import { InternalLink, ExternalLink } from './link.styles';
 
