@@ -3,8 +3,8 @@ import { shallow, mount } from 'enzyme';
 import 'jest-styled-components';
 
 import Text from './text';
-import { findByTestAtrr } from '../../helpers';
-import theme from '../../themes';
+import { findByTestAtrr } from '../../utils/testUtils';
+import theme from '../theme';
 
 const setupShallow = (props = {}) => (
   shallow(
@@ -139,7 +139,7 @@ describe('Text component', () => {
       strong: true,
       lineThrough: true,
     });
-    expect(Text).toHaveStyleRule('color', theme.typography.baseColor);
+    expect(Text).toHaveStyleRule('color', theme.defaultColor);
     expect(Text).toHaveStyleRule('text-decoration', 'line-through');
     Text.unmount();
   });
@@ -182,7 +182,7 @@ describe('Text component', () => {
       emphasized: true,
       underline: true,
     });
-    expect(Text).toHaveStyleRule('color', theme.typography.baseColor);
+    expect(Text).toHaveStyleRule('color', theme.defaultColor);
     expect(Text).toHaveStyleRule('text-decoration', 'underline');
     Text.unmount();
   });
@@ -193,7 +193,7 @@ describe('Text component', () => {
       emphasized: true,
       lineThrough: true,
     });
-    expect(Text).toHaveStyleRule('color', theme.typography.baseColor);
+    expect(Text).toHaveStyleRule('color', theme.defaultColor);
     expect(Text).toHaveStyleRule('text-decoration', 'line-through');
     Text.unmount();
   });
@@ -204,7 +204,7 @@ describe('Text component', () => {
       emphasized: true,
       strong: true,
     });
-    expect(Text).toHaveStyleRule('color', theme.typography.baseColor);
+    expect(Text).toHaveStyleRule('color', theme.defaultColor);
     expect(Text).toHaveStyleRule('font-style', 'italic');
     Text.unmount();
   });
@@ -213,8 +213,8 @@ describe('Text component', () => {
     const Text = setupMount({
       children: 'تکست ساده',
     });
-    expect(Text).toHaveStyleRule('font-size', `${theme.typography.baseSize}px`);
-    expect(Text).toHaveStyleRule('color', theme.typography.baseColor);
+    expect(Text).toHaveStyleRule('font-size', `${theme.defaultSize}px`);
+    expect(Text).toHaveStyleRule('color', theme.defaultColor);
     Text.unmount();
   });
 

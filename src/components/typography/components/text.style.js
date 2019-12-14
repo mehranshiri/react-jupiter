@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-import { getColorFromName } from '../../helpers';
-
+import { getColorFromName } from '../../utils/themeUtils';
 import '../../globalStyle.scss';
 
 export const Emphasized = styled.em`
