@@ -12,9 +12,11 @@ export const getColorFromName = (theme, color) => {
       return theme.colors.darkBlue600;
     case 'white':
       return theme.colors.white;
+    case 'light':
+      return theme.colors.riverBed;
     default:
     case 'default':
-      return theme.typography.baseColor;
+      return theme.defaultColor;
   }
 };
 
@@ -32,11 +34,6 @@ export const getHoverColorFromName = (theme, color) => {
       return theme.colors.darkBlue800;
     default:
     case 'default':
-      return theme.typography.baseColor;
+      return theme.defaultColor;
   }
-};
-
-export const findByTestAtrr = (component, attr) => {
-  const wrapper = component.find(`[data-test='${attr}']`);
-  return wrapper;
 };

@@ -3,8 +3,8 @@ import { shallow, mount } from 'enzyme';
 import 'jest-styled-components';
 
 import Paragraph from './paragraph';
-import { findByTestAtrr } from '../../utils';
-import theme from '../../themes';
+import { findByTestAtrr } from '../../utils/testUtils';
+import theme from '../theme';
 
 const setupShallow = (props = {}) => (
   shallow(<Paragraph size={props.size} {...props}>{props.children}</Paragraph>)
@@ -33,8 +33,8 @@ describe('Paragraph component', () => {
     const Paragraph = setupMount({
       children: 'این یک متن بلند برای پاراگراف است',
     });
-    expect(Paragraph).toHaveStyleRule('font-size', `${theme.typography.baseSize}px`);
-    expect(Paragraph).toHaveStyleRule('line-height', `${theme.typography.baseSize * theme.typography.lineHeightRatio}px`);
+    expect(Paragraph).toHaveStyleRule('font-size', `${theme.defaultSize}px`);
+    expect(Paragraph).toHaveStyleRule('line-height', `${theme.defaultSize * theme.lineHeightRatio}px`);
   });
 
   it('Should render Paragraph with font-size 15', () => {

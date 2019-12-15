@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
-import defaultTheme from '../../themes';
+import theme from '../theme';
 import {
   String, Strong, Emphasized, SubScript, SupScript,
 } from './text.style';
@@ -106,7 +106,7 @@ renderString.propTypes = {
 };
 
 renderString.defaultProps = {
-  size: defaultTheme.typography.baseSize,
+  size: theme.defaultSize,
   color: 'default',
   underline: false,
   lineThrough: false,
@@ -120,7 +120,7 @@ renderString.defaultProps = {
 };
 
 const Text = (props) => (
-  <ThemeProvider theme={defaultTheme}>
+  <ThemeProvider theme={theme}>
     {renderString(props)}
   </ThemeProvider>
 );

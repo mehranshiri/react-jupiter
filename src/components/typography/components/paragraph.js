@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
-import defaultTheme from '../../themes';
+import theme from '../theme';
 import { Content } from './paragraph.style';
 
 const Paragraph = (props) => {
@@ -11,7 +11,7 @@ const Paragraph = (props) => {
   } = props;
   if (children === undefined) return null;
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme}>
       <Content size={size} data-test="paragraph" {...rest}>
         {children}
       </Content>
@@ -29,7 +29,7 @@ Paragraph.propTypes = {
 };
 
 Paragraph.defaultProps = {
-  size: defaultTheme.typography.baseSize,
+  size: theme.defaultSize,
 };
 
 export default Paragraph;

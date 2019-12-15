@@ -1,15 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Components, { Button, Typography } from '../../../components';
 
 const {
-  Heading, Text, Paragraph, Title, Link,
+  Heading, Text, Paragraph, Link,
 } = Typography;
-
-const NewTitle = styled(Title)`
-  background-color: red;
-`;
 
 const ButtonPage = () => (
   <>
@@ -19,28 +14,28 @@ const ButtonPage = () => (
       <Button props="props value" borderRadius={3} rounded />
       <Heading>سلام</Heading>
       <Heading level={1}>سلام</Heading>
-      <Heading size="medium" level={1}>سلام</Heading>
-      <Heading size="small" level={1}>سلام</Heading>
+      <Heading size="md" level={1}>سلام</Heading>
+      <Heading size="sm" level={1}>سلام</Heading>
       <hr />
-      <Heading size="large" level={2}>سلام</Heading>
-      <Heading size="medium" level={2}>سلام</Heading>
-      <Heading size="small" level={2}>سلام</Heading>
+      <Heading size="lg" level={2}>سلام</Heading>
+      <Heading size="md" level={2}>سلام</Heading>
+      <Heading size="sm" level={2}>سلام</Heading>
       <hr />
-      <Heading size="large" level={3}>سلام</Heading>
-      <Heading size="medium" level={3}>سلام</Heading>
-      <Heading size="small" level={3}>سلام</Heading>
+      <Heading size="lg" level={3}>سلام</Heading>
+      <Heading size="md" level={3}>سلام</Heading>
+      <Heading size="sm" level={3}>سلام</Heading>
       <hr />
       <Heading level={4}>سلام</Heading>
-      <Heading size="medium" level={4}>سلام</Heading>
-      <Heading size="small" level={4}>سلام</Heading>
+      <Heading size="md" level={4}>سلام</Heading>
+      <Heading size="sm" level={4}>سلام</Heading>
       <hr />
-      <Heading size="large" level={5}>سلام</Heading>
-      <Heading size="medium" level={5}>سلام</Heading>
-      <Heading size="small" level={5}>سلام</Heading>
+      <Heading size="lg" level={5}>سلام</Heading>
+      <Heading size="md" level={5}>سلام</Heading>
+      <Heading size="sm" level={5}>سلام</Heading>
       <hr />
-      <Heading size="large" level={6}>سلام</Heading>
-      <Heading size="medium" level={6}>سلام</Heading>
-      <Heading size="small" level={6}>سلام</Heading>
+      <Heading size="lg" level={6}>سلام</Heading>
+      <Heading size="md" level={6}>سلام</Heading>
+      <Heading size="sm" level={6}>سلام</Heading>
       <div />
       <Text size={16} strong>تکست ساده استرانگ</Text>
       <div />
@@ -51,6 +46,8 @@ const ButtonPage = () => (
       <Text color="red" underline>تکست ساده</Text>
       <div />
       <Text color="green">تکست ساده</Text>
+      <div />
+      <Text color="light">تکست ساده</Text>
       <div />
       <Text color="blue">تکست ساده</Text>
       <div />
@@ -87,10 +84,6 @@ const ButtonPage = () => (
       <Text>تکست ساده</Text>
       <div />
       <Text subScript>نویسنده</Text>
-      <Title size="large">عنوان بزرگ</Title>
-      <NewTitle size="large" style={{ color: 'green' }}>تایال</NewTitle>
-      <Title>عنوان بزرگ</Title>
-      <Title size="small">عنوان کوچک</Title>
     </div>
     <Paragraph>
       طراحان معمولاً برای طراحی، ابتدا از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفاً به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از
