@@ -51,10 +51,10 @@ const SideNavigation = ({ ltr }) => (
       <Nav id="5">
         <NavItem title="راه اندازی" ltr={ltr} />
       </Nav>
-      <NavTitle>کامپوننت‌ها</NavTitle>
       <Nav id="6">
-        <NavItem title="آیکون‌ها" ltr={ltr} />
+        <NavItem title="مفاهیم" ltr={ltr} />
       </Nav>
+      <NavTitle>کامپوننت‌ها</NavTitle>
       <Nav id="7">
         <NavItem title="تایپوگرافی" ltr={ltr} />
       </Nav>
@@ -64,6 +64,11 @@ const SideNavigation = ({ ltr }) => (
       <Nav id="9">
         <Link to="/components/avatar">
           <NavItem title="آواتار" ltr={ltr} />
+        </Link>
+      </Nav>
+      <Nav id="10">
+        <Link to="/components/icon">
+          <NavItem title="آیکون" ltr={ltr} />
         </Link>
       </Nav>
     </SideNav>
