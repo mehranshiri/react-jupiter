@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import '../../globalStyle.scss';
+import '../../iranSharpFont.scss';
 
 export const Content = styled.p`
   margin: 8px 0;

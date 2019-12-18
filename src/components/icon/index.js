@@ -7,7 +7,7 @@ import { StyledIcon } from './index.styles';
 
 const Icon = (props) => {
   const {
-    iconName,
+    name,
     size,
     color,
   } = props;
@@ -17,7 +17,7 @@ const Icon = (props) => {
       <StyledIcon
         size={size}
         color={color}
-        className={`icon-${iconName}`}
+        className={`icon-${name}`}
         data-test="icon"
       />
     </ThemeProvider>
@@ -25,7 +25,7 @@ const Icon = (props) => {
 };
 
 Icon.propTypes = {
-  iconName: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
   color: PropTypes.oneOf([
     'darkBlue800', 'darkBlue600', 'darkBlue400', 'darkBlue200',
