@@ -59,7 +59,9 @@ const SideNavigation = ({ ltr }) => (
         <NavItem title="تایپوگرافی" ltr={ltr} />
       </Nav>
       <Nav id="8">
-        <NavItem title="دکمه‌ها" ltr={ltr} />
+        <Link to="/components/mainbutton">
+          <NavItem title="دکمه‌ها" ltr={ltr} />
+        </Link>
       </Nav>
       <Nav id="9">
         <Link to="/components/avatar">
