@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot testing for all examples on doc page mainButton 1`] = `
+Array [
+  <h1
+    class="sc-bdVaJa irmrqS"
+    data-test="h1-tag"
+  >
+    دکمه ها
+  </h1>,
+  <br />,
+  <br />,
+  <h2
+    class="sc-bwzfXH hlvhiK"
+    data-test="h2-tag"
+  >
+    نمونه دکمه پیشفرض
+  </h2>,
+  <button
+    class="sc-kAzzGY hLyYcF"
+    data-test="button"
+    type="submit"
+  >
+    دکمه
+  </button>,
+  <br />,
+  <h2
+    class="sc-bwzfXH hlvhiK"
+    data-test="h2-tag"
+  >
+    دکمه آیکون دار
+  </h2>,
+  <button
+    class="sc-kAzzGY hLyYcF"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG cLeoVi"
+      color="#FFFFFF"
+      data-test="icon"
+    />
+    دکمه آیکون دار
+  </button>,
+  <br />,
+  <h2
+    class="sc-bwzfXH hlvhiK"
+    data-test="h2-tag"
+  >
+    دکمه full-width
+  </h2>,
+  <button
+    class="sc-kAzzGY dBqhDp"
+    data-test="button"
+    type="submit"
+  >
+    دکمه full-width (sm size)
+  </button>,
+  <button
+    class="sc-kAzzGY jvtXZA"
+    data-test="button"
+    type="submit"
+  >
+    دکمه full-width(md size - default)
+  </button>,
+  <button
+    class="sc-kAzzGY iQgLZd"
+    data-test="button"
+    type="submit"
+  >
+    دکمه full-width(lg size)
+  </button>,
+  <br />,
+  <h2
+    class="sc-bwzfXH hlvhiK"
+    data-test="h2-tag"
+  >
+    دکمه در اندازه های متفاوت
+  </h2>,
+  <h3
+    class="sc-htpNat djFCwm"
+    data-test="h3-tag"
+  >
+    sm size
+  </h3>,
+  <button
+    class="sc-kAzzGY jvXXPN"
+    data-test="button"
+    type="submit"
+  >
+    دکمه
+  </button>,
+  <button
+    class="sc-kAzzGY jvXXPN"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG gXpTqE"
+      color="#FFFFFF"
+      data-test="icon"
+    />
+    دکمه
+  </button>,
+  <br />,
+  <h3
+    class="sc-htpNat djFCwm"
+    data-test="h3-tag"
+  >
+    md size (default)
+  </h3>,
+  <button
+    class="sc-kAzzGY hLyYcF"
+    data-test="button"
+    type="submit"
+  >
+    دکمه
+  </button>,
+  <button
+    class="sc-kAzzGY hLyYcF"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG cLeoVi"
+      color="#FFFFFF"
+      data-test="icon"
+    />
+    دکمه
+  </button>,
+  <br />,
+  <h3
+    class="sc-htpNat djFCwm"
+    data-test="h3-tag"
+  >
+    lg size
+  </h3>,
+  <button
+    class="sc-kAzzGY cDauqw"
+    data-test="button"
+    type="submit"
+  >
+    دکمه
+  </button>,
+  <button
+    class="sc-kAzzGY cDauqw"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG eQovrl"
+      color="#FFFFFF"
+      data-test="icon"
+    />
+    دکمه
+  </button>,
+  <br />,
+  <h2
+    class="sc-bwzfXH hlvhiK"
+    data-test="h2-tag"
+  >
+    دکمه های رنگی
+  </h2>,
+  <button
+    class="sc-kAzzGY cgKqwb"
+    data-test="button"
+    type="submit"
+  >
+    دکمه قرمز
+  </button>,
+  <button
+    class="sc-kAzzGY duGtPo"
+    data-test="button"
+    type="submit"
+  >
+    دکمه سبز
+  </button>,
+  <button
+    class="sc-kAzzGY iaRuxh"
+    data-test="button"
+    type="submit"
+  >
+    دکمه زرد
+  </button>,
+  <button
+    class="sc-kAzzGY hLyYcF"
+    data-test="button"
+    type="submit"
+  >
+    دکمه آبی تیره-پیشفرض
+  </button>,
+  <br />,
+]
+`;
