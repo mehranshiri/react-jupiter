@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
-import { BaseButton } from './index.styles';
 import Icon from '../icon';
+import { Text } from '../typography';
+import { BaseButton } from './index.styles';
 import buttonTheme from './theme';
+
 
 const MainButton = (props) => {
   const {
@@ -27,9 +29,11 @@ const MainButton = (props) => {
       >
         {
           icon
-            && <Icon name={icon} size={size} color={buttonTheme.colors.white} />
+            && <Icon name={icon} size={size} color="white" />
         }
-        {children}
+        <Text size={buttonTheme.size[size].font} color="white" bold>
+          {children}
+        </Text>
       </BaseButton>
     </ThemeProvider>
   );
