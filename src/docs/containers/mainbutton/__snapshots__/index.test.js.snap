@@ -17,11 +17,18 @@ Array [
     نمونه دکمه پیشفرض
   </h2>,
   <button
-    class="sc-kAzzGY hLyYcF"
+    class=" button-primary sc-kAzzGY dVYlIR"
     data-test="button"
     type="submit"
   >
-    دکمه
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه
+    </span>
   </button>,
   <br />,
   <h2
@@ -31,16 +38,23 @@ Array [
     دکمه آیکون دار
   </h2>,
   <button
-    class="sc-kAzzGY hLyYcF"
+    class=" button-primary sc-kAzzGY dVYlIR"
     data-test="button"
     type="submit"
   >
     <i
-      class="icon-watch_later sc-cSHVUG cLeoVi"
-      color="#FFFFFF"
+      class="icon-watch_later sc-cSHVUG bvKljG"
+      color="white"
       data-test="icon"
     />
-    دکمه آیکون دار
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه آیکون دار
+    </span>
   </button>,
   <br />,
   <h2
@@ -50,25 +64,46 @@ Array [
     دکمه full-width
   </h2>,
   <button
-    class="sc-kAzzGY dBqhDp"
+    class=" button-primary sc-kAzzGY kfBOOg"
     data-test="button"
     type="submit"
   >
-    دکمه full-width (sm size)
+    <span
+      class="sc-htoDjs jbxVbw"
+      color="white"
+      data-test="span"
+      size="10"
+    >
+      دکمه full-width (sm size)
+    </span>
   </button>,
   <button
-    class="sc-kAzzGY jvtXZA"
+    class=" button-primary sc-kAzzGY foQbZC"
     data-test="button"
     type="submit"
   >
-    دکمه full-width(md size - default)
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه full-width(md size - default)
+    </span>
   </button>,
   <button
-    class="sc-kAzzGY iQgLZd"
+    class=" button-primary sc-kAzzGY gFJulV"
     data-test="button"
     type="submit"
   >
-    دکمه full-width(lg size)
+    <span
+      class="sc-htoDjs doVAst"
+      color="white"
+      data-test="span"
+      size="20"
+    >
+      دکمه full-width(lg size)
+    </span>
   </button>,
   <br />,
   <h2
@@ -84,23 +119,37 @@ Array [
     sm size
   </h3>,
   <button
-    class="sc-kAzzGY jvXXPN"
+    class=" button-primary sc-kAzzGY eRvTGL"
     data-test="button"
     type="submit"
   >
-    دکمه
+    <span
+      class="sc-htoDjs jbxVbw"
+      color="white"
+      data-test="span"
+      size="10"
+    >
+      دکمه
+    </span>
   </button>,
   <button
-    class="sc-kAzzGY jvXXPN"
+    class=" button-primary sc-kAzzGY eRvTGL"
     data-test="button"
     type="submit"
   >
     <i
-      class="icon-watch_later sc-cSHVUG gXpTqE"
-      color="#FFFFFF"
+      class="icon-watch_later sc-cSHVUG dGLwdO"
+      color="white"
       data-test="icon"
     />
-    دکمه
+    <span
+      class="sc-htoDjs jbxVbw"
+      color="white"
+      data-test="span"
+      size="10"
+    >
+      دکمه
+    </span>
   </button>,
   <br />,
   <h3
@@ -110,23 +159,37 @@ Array [
     md size (default)
   </h3>,
   <button
-    class="sc-kAzzGY hLyYcF"
+    class=" button-primary sc-kAzzGY dVYlIR"
     data-test="button"
     type="submit"
   >
-    دکمه
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه
+    </span>
   </button>,
   <button
-    class="sc-kAzzGY hLyYcF"
+    class=" button-primary sc-kAzzGY dVYlIR"
     data-test="button"
     type="submit"
   >
     <i
-      class="icon-watch_later sc-cSHVUG cLeoVi"
-      color="#FFFFFF"
+      class="icon-watch_later sc-cSHVUG bvKljG"
+      color="white"
       data-test="icon"
     />
-    دکمه
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه
+    </span>
   </button>,
   <br />,
   <h3
@@ -136,58 +199,363 @@ Array [
     lg size
   </h3>,
   <button
-    class="sc-kAzzGY cDauqw"
+    class=" button-primary sc-kAzzGY gcTdRb"
     data-test="button"
     type="submit"
   >
-    دکمه
+    <span
+      class="sc-htoDjs doVAst"
+      color="white"
+      data-test="span"
+      size="20"
+    >
+      دکمه
+    </span>
   </button>,
   <button
-    class="sc-kAzzGY cDauqw"
+    class=" button-primary sc-kAzzGY gcTdRb"
     data-test="button"
     type="submit"
   >
     <i
-      class="icon-watch_later sc-cSHVUG eQovrl"
-      color="#FFFFFF"
+      class="icon-watch_later sc-cSHVUG eYrkUq"
+      color="white"
       data-test="icon"
     />
-    دکمه
+    <span
+      class="sc-htoDjs doVAst"
+      color="white"
+      data-test="span"
+      size="20"
+    >
+      دکمه
+    </span>
   </button>,
   <br />,
   <h2
     class="sc-bwzfXH hlvhiK"
     data-test="h2-tag"
   >
-    دکمه های رنگی
+    دکمه ها در استایل ها متفاوت و رنگ های متفاوت
   </h2>,
+  <h3
+    class="sc-htpNat djFCwm"
+    data-test="h3-tag"
+  >
+    رنگ قرمز
+  </h3>,
   <button
-    class="sc-kAzzGY cgKqwb"
+    class=" button-primary sc-kAzzGY kDkvUm"
     data-test="button"
     type="submit"
   >
-    دکمه قرمز
+    <i
+      class="icon-watch_later sc-cSHVUG bvKljG"
+      color="white"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه primary (default)
+    </span>
   </button>,
   <button
-    class="sc-kAzzGY duGtPo"
+    class=" button-secondary sc-kAzzGY kDkvUm"
     data-test="button"
     type="submit"
   >
-    دکمه سبز
+    <i
+      class="icon-watch_later sc-cSHVUG cLeoVi"
+      color="red"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs dJtNTe"
+      color="red"
+      data-test="span"
+      size="14"
+    >
+      دکمه secondary
+    </span>
   </button>,
   <button
-    class="sc-kAzzGY iaRuxh"
+    class=" button-tertiary sc-kAzzGY kDkvUm"
     data-test="button"
     type="submit"
   >
-    دکمه زرد
+    <i
+      class="icon-watch_later sc-cSHVUG cLeoVi"
+      color="red"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs dJtNTe"
+      color="red"
+      data-test="span"
+      size="14"
+    >
+      دکمه tertiary
+    </span>
+  </button>,
+  <hr />,
+  <h3
+    class="sc-htpNat djFCwm"
+    data-test="h3-tag"
+  >
+    رنگ سبز
+  </h3>,
+  <button
+    class=" button-primary sc-kAzzGY hjWcOg"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG bvKljG"
+      color="white"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه primary (default)
+    </span>
   </button>,
   <button
-    class="sc-kAzzGY hLyYcF"
+    class=" button-secondary sc-kAzzGY hjWcOg"
     data-test="button"
     type="submit"
   >
-    دکمه آبی تیره-پیشفرض
+    <i
+      class="icon-watch_later sc-cSHVUG cLeoVi"
+      color="green"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs fcTmNH"
+      color="green"
+      data-test="span"
+      size="14"
+    >
+      دکمه secondary
+    </span>
+  </button>,
+  <button
+    class=" button-tertiary sc-kAzzGY hjWcOg"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG cLeoVi"
+      color="green"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs fcTmNH"
+      color="green"
+      data-test="span"
+      size="14"
+    >
+      دکمه tertiary
+    </span>
+  </button>,
+  <hr />,
+  <h3
+    class="sc-htpNat djFCwm"
+    data-test="h3-tag"
+  >
+    رنگ زرد
+  </h3>,
+  <button
+    class=" button-primary sc-kAzzGY ixlRYC"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG bvKljG"
+      color="white"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه primary (default)
+    </span>
+  </button>,
+  <button
+    class=" button-secondary sc-kAzzGY ixlRYC"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG cLeoVi"
+      color="yellow"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs ijahRT"
+      color="yellow"
+      data-test="span"
+      size="14"
+    >
+      دکمه secondary
+    </span>
+  </button>,
+  <button
+    class=" button-tertiary sc-kAzzGY ixlRYC"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG cLeoVi"
+      color="yellow"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs ijahRT"
+      color="yellow"
+      data-test="span"
+      size="14"
+    >
+      دکمه tertiary
+    </span>
+  </button>,
+  <hr />,
+  <h3
+    class="sc-htpNat djFCwm"
+    data-test="h3-tag"
+  >
+    رنگ آبی
+  </h3>,
+  <button
+    class=" button-primary sc-kAzzGY bRkiVt"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG bvKljG"
+      color="white"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه primary (default)
+    </span>
+  </button>,
+  <button
+    class=" button-secondary sc-kAzzGY bRkiVt"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG cLeoVi"
+      color="blue"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs ghkjrx"
+      color="blue"
+      data-test="span"
+      size="14"
+    >
+      دکمه secondary
+    </span>
+  </button>,
+  <button
+    class=" button-tertiary sc-kAzzGY bRkiVt"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG cLeoVi"
+      color="blue"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs ghkjrx"
+      color="blue"
+      data-test="span"
+      size="14"
+    >
+      دکمه tertiary
+    </span>
+  </button>,
+  <hr />,
+  <h3
+    class="sc-htpNat djFCwm"
+    data-test="h3-tag"
+  >
+    رنگ آبی تیره - پیشفرض
+  </h3>,
+  <button
+    class=" button-primary sc-kAzzGY dVYlIR"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG bvKljG"
+      color="white"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه primary (default)
+    </span>
+  </button>,
+  <button
+    class=" button-secondary sc-kAzzGY dVYlIR"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG cLeoVi"
+      color="darkBlue"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs deFOOE"
+      color="darkBlue"
+      data-test="span"
+      size="14"
+    >
+      دکمه secondary
+    </span>
+  </button>,
+  <button
+    class=" button-tertiary sc-kAzzGY dVYlIR"
+    data-test="button"
+    type="submit"
+  >
+    <i
+      class="icon-watch_later sc-cSHVUG cLeoVi"
+      color="darkBlue"
+      data-test="icon"
+    />
+    <span
+      class="sc-htoDjs deFOOE"
+      color="darkBlue"
+      data-test="span"
+      size="14"
+    >
+      دکمه tertiary
+    </span>
   </button>,
   <br />,
 ]

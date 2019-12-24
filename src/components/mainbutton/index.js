@@ -16,8 +16,9 @@ const MainButton = (props) => {
     isWide,
     size,
     backgroundColor,
+    typeStyle,
+    className,
   } = props;
-
   return (
     <ThemeProvider theme={buttonTheme}>
       <BaseButton
@@ -26,12 +27,23 @@ const MainButton = (props) => {
         isWide={isWide}
         size={size}
         backgroundColor={backgroundColor}
+        className={`${className} button-${typeStyle}`}
       >
         {
           icon
-            && <Icon name={icon} size={size} color="white" />
+            && (
+              <Icon
+                name={icon}
+                size={size}
+                color={typeStyle !== 'primary' ? backgroundColor : 'white'}
+              />
+            )
         }
-        <Text size={buttonTheme.size[size].font} color="white" bold>
+        <Text
+          size={buttonTheme.size[size].font}
+          color={typeStyle !== 'primary' ? backgroundColor : 'white'}
+          bold
+        >
           {children}
         </Text>
       </BaseButton>
@@ -43,9 +55,11 @@ MainButton.propTypes = {
   htmlType: PropTypes.oneOf(['button', 'submit', 'reset']),
   children: PropTypes.string.isRequired,
   icon: PropTypes.string,
+  className: PropTypes.string,
   isWide: PropTypes.bool,
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
-  backgroundColor: PropTypes.oneOf(['red', 'green', 'yellow', 'darkBlue']),
+  backgroundColor: PropTypes.oneOf(['red', 'green', 'yellow', 'darkBlue', 'blue']),
+  typeStyle: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
 };
 
 MainButton.defaultProps = {
@@ -54,6 +68,8 @@ MainButton.defaultProps = {
   isWide: false,
   size: 'md',
   backgroundColor: 'darkBlue',
+  typeStyle: 'primary',
+  className: '',
 };
 
 export default MainButton;

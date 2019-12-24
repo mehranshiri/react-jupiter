@@ -80,19 +80,71 @@ const MainButtonPage = () => (
     <br />
 
     <Heading level={2}>
-      دکمه های رنگی
+      دکمه ها در استایل ها متفاوت و رنگ های متفاوت
     </Heading>
-    <MainButton backgroundColor="red">
-      دکمه قرمز
+    <Heading level={3}>
+      رنگ قرمز
+    </Heading>
+    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="red">
+      دکمه primary (default)
     </MainButton>
-    <MainButton backgroundColor="green">
-      دکمه سبز
+    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="red">
+      دکمه secondary
     </MainButton>
-    <MainButton backgroundColor="yellow">
-      دکمه زرد
+    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="red">
+      دکمه tertiary
     </MainButton>
-    <MainButton backgroundColor="darkBlue">
-      دکمه آبی تیره-پیشفرض
+    <hr />
+    <Heading level={3}>
+      رنگ سبز
+    </Heading>
+    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="green">
+      دکمه primary (default)
+    </MainButton>
+    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="green">
+      دکمه secondary
+    </MainButton>
+    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="green">
+      دکمه tertiary
+    </MainButton>
+    <hr />
+    <Heading level={3}>
+      رنگ زرد
+    </Heading>
+    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="yellow">
+      دکمه primary (default)
+    </MainButton>
+    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="yellow">
+      دکمه secondary
+    </MainButton>
+    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="yellow">
+      دکمه tertiary
+    </MainButton>
+    <hr />
+    <Heading level={3}>
+      رنگ آبی
+    </Heading>
+    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="blue">
+      دکمه primary (default)
+    </MainButton>
+    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="blue">
+      دکمه secondary
+    </MainButton>
+    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="blue">
+      دکمه tertiary
+    </MainButton>
+    <hr />
+    <Heading level={3}>
+      رنگ آبی تیره - پیشفرض
+    </Heading>
+    <MainButton typeStyle="primary" icon="watch_later">
+      دکمه primary (default)
+    </MainButton>
+    <MainButton typeStyle="secondary" icon="watch_later">
+      دکمه secondary
+    </MainButton>
+    <MainButton typeStyle="tertiary" icon="watch_later">
+      دکمه tertiary
     </MainButton>
     <br />
 
