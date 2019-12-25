@@ -18,6 +18,7 @@ export const BaseButton = styled.button`
 
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   opacity: ${({ disabled }) => (disabled ? '0.25' : '1')};
+  border-radius: ${({ theme }) => `${theme.borderRadius}px`};
 
   &.button-primary {
     border: none;

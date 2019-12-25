@@ -17,7 +17,7 @@ Array [
     نمونه دکمه پیشفرض
   </h2>,
   <button
-    class=" button-primary sc-chPdSV heMYfW"
+    class=" button-primary sc-chPdSV iOIAtU"
     data-test="button"
     type="submit"
   >
@@ -38,7 +38,7 @@ Array [
     دکمه آیکون دار
   </h2>,
   <button
-    class=" button-primary sc-chPdSV heMYfW"
+    class=" button-primary sc-chPdSV iOIAtU"
     data-test="button"
     type="submit"
   >
@@ -68,7 +68,7 @@ Array [
     دکمه full-width
   </h2>,
   <button
-    class=" button-primary sc-chPdSV kMpvgt"
+    class=" button-primary sc-chPdSV hzkfVM"
     data-test="button"
     type="submit"
   >
@@ -82,7 +82,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV dPUalH"
+    class=" button-primary sc-chPdSV kZfPpu"
     data-test="button"
     type="submit"
   >
@@ -96,7 +96,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV jydVsM"
+    class=" button-primary sc-chPdSV jlObrS"
     data-test="button"
     type="submit"
   >
@@ -123,7 +123,7 @@ Array [
     sm size
   </h3>,
   <button
-    class=" button-primary sc-chPdSV dikZaw"
+    class=" button-primary sc-chPdSV krqVKK"
     data-test="button"
     type="submit"
   >
@@ -137,7 +137,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV dikZaw"
+    class=" button-primary sc-chPdSV krqVKK"
     data-test="button"
     type="submit"
   >
@@ -167,7 +167,7 @@ Array [
     md size (default)
   </h3>,
   <button
-    class=" button-primary sc-chPdSV heMYfW"
+    class=" button-primary sc-chPdSV iOIAtU"
     data-test="button"
     type="submit"
   >
@@ -181,7 +181,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV heMYfW"
+    class=" button-primary sc-chPdSV iOIAtU"
     data-test="button"
     type="submit"
   >
@@ -211,7 +211,7 @@ Array [
     lg size
   </h3>,
   <button
-    class=" button-primary sc-chPdSV essAtJ"
+    class=" button-primary sc-chPdSV kmaCYc"
     data-test="button"
     type="submit"
   >
@@ -225,7 +225,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV essAtJ"
+    class=" button-primary sc-chPdSV kmaCYc"
     data-test="button"
     type="submit"
   >
@@ -261,7 +261,7 @@ Array [
     رنگ قرمز
   </h3>,
   <button
-    class=" button-primary sc-chPdSV ifGJTL"
+    class=" button-primary sc-chPdSV jlraTZ"
     data-test="button"
     type="submit"
   >
@@ -284,7 +284,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV QxOQf"
+    class=" button-primary sc-chPdSV bFLryg"
     data-test="button"
     disabled=""
     type="submit"
@@ -308,7 +308,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV ifGJTL"
+    class=" button-secondary sc-chPdSV jlraTZ"
     data-test="button"
     type="submit"
   >
@@ -331,7 +331,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV QxOQf"
+    class=" button-secondary sc-chPdSV bFLryg"
     data-test="button"
     disabled=""
     type="submit"
@@ -355,7 +355,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV ifGJTL"
+    class=" button-tertiary sc-chPdSV jlraTZ"
     data-test="button"
     type="submit"
   >
@@ -378,7 +378,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV QxOQf"
+    class=" button-tertiary sc-chPdSV bFLryg"
     data-test="button"
     disabled=""
     type="submit"
@@ -409,7 +409,7 @@ Array [
     رنگ سبز
   </h3>,
   <button
-    class=" button-primary sc-chPdSV jgAVWY"
+    class=" button-primary sc-chPdSV jRAzAm"
     data-test="button"
     type="submit"
   >
@@ -432,7 +432,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV ghDPfg"
+    class=" button-primary sc-chPdSV eNuQdL"
     data-test="button"
     disabled=""
     type="submit"
@@ -456,7 +456,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV jgAVWY"
+    class=" button-secondary sc-chPdSV jRAzAm"
     data-test="button"
     type="submit"
   >
@@ -479,7 +479,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV ghDPfg"
+    class=" button-secondary sc-chPdSV eNuQdL"
     data-test="button"
     disabled=""
     type="submit"
@@ -503,7 +503,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV jgAVWY"
+    class=" button-tertiary sc-chPdSV jRAzAm"
     data-test="button"
     type="submit"
   >
@@ -526,7 +526,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV ghDPfg"
+    class=" button-tertiary sc-chPdSV eNuQdL"
     data-test="button"
     disabled=""
     type="submit"
@@ -557,7 +557,7 @@ Array [
     رنگ زرد
   </h3>,
   <button
-    class=" button-primary sc-chPdSV foLScb"
+    class=" button-primary sc-chPdSV KbShx"
     data-test="button"
     type="submit"
   >
@@ -580,7 +580,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV ewTSv"
+    class=" button-primary sc-chPdSV gSpYdg"
     data-test="button"
     disabled=""
     type="submit"
@@ -604,7 +604,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV foLScb"
+    class=" button-secondary sc-chPdSV KbShx"
     data-test="button"
     type="submit"
   >
@@ -627,7 +627,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV ewTSv"
+    class=" button-secondary sc-chPdSV gSpYdg"
     data-test="button"
     disabled=""
     type="submit"
@@ -651,7 +651,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV foLScb"
+    class=" button-tertiary sc-chPdSV KbShx"
     data-test="button"
     type="submit"
   >
@@ -674,7 +674,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV ewTSv"
+    class=" button-tertiary sc-chPdSV gSpYdg"
     data-test="button"
     disabled=""
     type="submit"
@@ -705,7 +705,7 @@ Array [
     رنگ آبی
   </h3>,
   <button
-    class=" button-primary sc-chPdSV fRxZWl"
+    class=" button-primary sc-chPdSV kGfofH"
     data-test="button"
     type="submit"
   >
@@ -728,7 +728,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV YBeRO"
+    class=" button-primary sc-chPdSV hctkVs"
     data-test="button"
     disabled=""
     type="submit"
@@ -752,7 +752,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV fRxZWl"
+    class=" button-secondary sc-chPdSV kGfofH"
     data-test="button"
     type="submit"
   >
@@ -775,7 +775,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV YBeRO"
+    class=" button-secondary sc-chPdSV hctkVs"
     data-test="button"
     disabled=""
     type="submit"
@@ -799,7 +799,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV fRxZWl"
+    class=" button-tertiary sc-chPdSV kGfofH"
     data-test="button"
     type="submit"
   >
@@ -822,7 +822,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV YBeRO"
+    class=" button-tertiary sc-chPdSV hctkVs"
     data-test="button"
     disabled=""
     type="submit"
@@ -853,7 +853,7 @@ Array [
     رنگ آبی تیره - پیشفرض
   </h3>,
   <button
-    class=" button-primary sc-chPdSV heMYfW"
+    class=" button-primary sc-chPdSV iOIAtU"
     data-test="button"
     type="submit"
   >
@@ -876,7 +876,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV iNvUjj"
+    class=" button-primary sc-chPdSV hAhUzu"
     data-test="button"
     disabled=""
     type="submit"
@@ -900,7 +900,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV heMYfW"
+    class=" button-secondary sc-chPdSV iOIAtU"
     data-test="button"
     type="submit"
   >
@@ -923,7 +923,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV iNvUjj"
+    class=" button-secondary sc-chPdSV hAhUzu"
     data-test="button"
     disabled=""
     type="submit"
@@ -947,7 +947,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV heMYfW"
+    class=" button-tertiary sc-chPdSV iOIAtU"
     data-test="button"
     type="submit"
   >
@@ -970,7 +970,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV iNvUjj"
+    class=" button-tertiary sc-chPdSV hAhUzu"
     data-test="button"
     disabled=""
     type="submit"

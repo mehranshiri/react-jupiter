@@ -25,6 +25,7 @@ const buttonTheme = {
     },
   },
   colors: defaultTheme.colors,
+  borderRadius: defaultTheme.borderRadius.low,
 };
 
 export default buttonTheme;
