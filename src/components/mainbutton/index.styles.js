@@ -16,13 +16,16 @@ export const BaseButton = styled.button`
   padding: ${({ size, theme }) => theme.size[size].padding};
   box-sizing: border-box;
 
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  opacity: ${({ disabled }) => (disabled ? '0.25' : '1')};
+
   &.button-primary {
     border: none;
     background: ${({ theme, backgroundColor }) => getColorFromName(theme, backgroundColor)};
     
     &:hover { 
       transition: all 0.25s;
-      background: ${({ theme, backgroundColor }) => getHoverColorFromName(theme, backgroundColor)};
+      background: ${({ theme, backgroundColor, disabled }) => (!disabled ? getHoverColorFromName(theme, backgroundColor) : getColorFromName(theme, backgroundColor))};
     }
     &:focus {
       transition: all 0.25s;
@@ -32,15 +35,15 @@ export const BaseButton = styled.button`
   
   &.button-secondary {
     border: 1px solid ${({ theme, backgroundColor }) => getColorFromName(theme, backgroundColor)};
-    background: white;
+    background: transparent;
 
     &:hover { 
-      border-color: transparent;
+      border-color: ${({ theme, disabled, backgroundColor }) => (!disabled ? 'transparent' : getColorFromName(theme, backgroundColor))};
       transition: all 0.25s;
-      background: ${({ theme, backgroundColor }) => getHoverColorFromName(theme, backgroundColor)};
+      background: ${({ theme, backgroundColor, disabled }) => (!disabled ? getHoverColorFromName(theme, backgroundColor) : 'transparent')};
       * {
         transition: all 0.25s;
-        color: ${({ theme }) => theme.colors.white};
+        color: ${({ theme, backgroundColor, disabled }) => (!disabled ? theme.colors.white : getColorFromName(theme, backgroundColor))};
       }
     }
     &:focus {

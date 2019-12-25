@@ -88,11 +88,20 @@ const MainButtonPage = () => (
     <MainButton typeStyle="primary" icon="watch_later" backgroundColor="red">
       دکمه primary (default)
     </MainButton>
+    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="red" isDisabled>
+      دکمه primary (default) - isDisabled
+    </MainButton>
     <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="red">
       دکمه secondary
     </MainButton>
+    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="red" isDisabled>
+      دکمه secondary - isDisabled
+    </MainButton>
     <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="red">
       دکمه tertiary
+    </MainButton>
+    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="red" isDisabled>
+      دکمه tertiary - isDisabled
     </MainButton>
     <hr />
     <Heading level={3}>
@@ -101,11 +110,20 @@ const MainButtonPage = () => (
     <MainButton typeStyle="primary" icon="watch_later" backgroundColor="green">
       دکمه primary (default)
     </MainButton>
+    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="green" isDisabled>
+      دکمه primary (default) - isDisabled
+    </MainButton>
     <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="green">
       دکمه secondary
     </MainButton>
+    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="green" isDisabled>
+      دکمه secondary - isDisabled
+    </MainButton>
     <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="green">
       دکمه tertiary
+    </MainButton>
+    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="green" isDisabled>
+      دکمه tertiary - isDisabled
     </MainButton>
     <hr />
     <Heading level={3}>
@@ -114,11 +132,20 @@ const MainButtonPage = () => (
     <MainButton typeStyle="primary" icon="watch_later" backgroundColor="yellow">
       دکمه primary (default)
     </MainButton>
+    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="yellow" isDisabled>
+      دکمه primary (default) - isDisabled
+    </MainButton>
     <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="yellow">
       دکمه secondary
     </MainButton>
+    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="yellow" isDisabled>
+      دکمه secondary - isDisabled
+    </MainButton>
     <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="yellow">
       دکمه tertiary
+    </MainButton>
+    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="yellow" isDisabled>
+      دکمه tertiary - isDisabled
     </MainButton>
     <hr />
     <Heading level={3}>
@@ -127,11 +154,20 @@ const MainButtonPage = () => (
     <MainButton typeStyle="primary" icon="watch_later" backgroundColor="blue">
       دکمه primary (default)
     </MainButton>
+    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="blue" isDisabled>
+      دکمه primary (default) - isDisabled
+    </MainButton>
     <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="blue">
       دکمه secondary
     </MainButton>
+    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="blue" isDisabled>
+      دکمه secondary - isDisabled
+    </MainButton>
     <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="blue">
       دکمه tertiary
+    </MainButton>
+    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="blue" isDisabled>
+      دکمه tertiary - isDisabled
     </MainButton>
     <hr />
     <Heading level={3}>
@@ -140,11 +176,20 @@ const MainButtonPage = () => (
     <MainButton typeStyle="primary" icon="watch_later">
       دکمه primary (default)
     </MainButton>
+    <MainButton typeStyle="primary" icon="watch_later" isDisabled>
+      دکمه primary (default) - isDisabled
+    </MainButton>
     <MainButton typeStyle="secondary" icon="watch_later">
       دکمه secondary
     </MainButton>
+    <MainButton typeStyle="secondary" icon="watch_later" isDisabled>
+      دکمه secondary - isDisabled
+    </MainButton>
     <MainButton typeStyle="tertiary" icon="watch_later">
       دکمه tertiary
+    </MainButton>
+    <MainButton typeStyle="tertiary" icon="watch_later" isDisabled>
+      دکمه tertiary - isDisabled
     </MainButton>
     <br />
 

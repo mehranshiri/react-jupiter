@@ -17,7 +17,7 @@ Array [
     نمونه دکمه پیشفرض
   </h2>,
   <button
-    class=" button-primary sc-chPdSV erRwD"
+    class=" button-primary sc-chPdSV heMYfW"
     data-test="button"
     type="submit"
   >
@@ -38,7 +38,7 @@ Array [
     دکمه آیکون دار
   </h2>,
   <button
-    class=" button-primary sc-chPdSV erRwD"
+    class=" button-primary sc-chPdSV heMYfW"
     data-test="button"
     type="submit"
   >
@@ -68,7 +68,7 @@ Array [
     دکمه full-width
   </h2>,
   <button
-    class=" button-primary sc-chPdSV eDCiYc"
+    class=" button-primary sc-chPdSV kMpvgt"
     data-test="button"
     type="submit"
   >
@@ -82,7 +82,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV bcQFBj"
+    class=" button-primary sc-chPdSV dPUalH"
     data-test="button"
     type="submit"
   >
@@ -96,7 +96,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV imWYXm"
+    class=" button-primary sc-chPdSV jydVsM"
     data-test="button"
     type="submit"
   >
@@ -123,7 +123,7 @@ Array [
     sm size
   </h3>,
   <button
-    class=" button-primary sc-chPdSV MCpym"
+    class=" button-primary sc-chPdSV dikZaw"
     data-test="button"
     type="submit"
   >
@@ -137,7 +137,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV MCpym"
+    class=" button-primary sc-chPdSV dikZaw"
     data-test="button"
     type="submit"
   >
@@ -167,7 +167,7 @@ Array [
     md size (default)
   </h3>,
   <button
-    class=" button-primary sc-chPdSV erRwD"
+    class=" button-primary sc-chPdSV heMYfW"
     data-test="button"
     type="submit"
   >
@@ -181,7 +181,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV erRwD"
+    class=" button-primary sc-chPdSV heMYfW"
     data-test="button"
     type="submit"
   >
@@ -211,7 +211,7 @@ Array [
     lg size
   </h3>,
   <button
-    class=" button-primary sc-chPdSV bEpoXc"
+    class=" button-primary sc-chPdSV essAtJ"
     data-test="button"
     type="submit"
   >
@@ -225,7 +225,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV bEpoXc"
+    class=" button-primary sc-chPdSV essAtJ"
     data-test="button"
     type="submit"
   >
@@ -261,7 +261,7 @@ Array [
     رنگ قرمز
   </h3>,
   <button
-    class=" button-primary sc-chPdSV cFDUEI"
+    class=" button-primary sc-chPdSV ifGJTL"
     data-test="button"
     type="submit"
   >
@@ -284,7 +284,31 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV cFDUEI"
+    class=" button-primary sc-chPdSV QxOQf"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG cqpyEq"
+        color="white"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه primary (default) - isDisabled
+    </span>
+  </button>,
+  <button
+    class=" button-secondary sc-chPdSV ifGJTL"
     data-test="button"
     type="submit"
   >
@@ -307,7 +331,31 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV cFDUEI"
+    class=" button-secondary sc-chPdSV QxOQf"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG hNuDoP"
+        color="red"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs dJtNTe"
+      color="red"
+      data-test="span"
+      size="14"
+    >
+      دکمه secondary - isDisabled
+    </span>
+  </button>,
+  <button
+    class=" button-tertiary sc-chPdSV ifGJTL"
     data-test="button"
     type="submit"
   >
@@ -329,6 +377,30 @@ Array [
       دکمه tertiary
     </span>
   </button>,
+  <button
+    class=" button-tertiary sc-chPdSV QxOQf"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG dYkkKn"
+        color="darkBlue"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs deFOOE"
+      color="darkBlue"
+      data-test="span"
+      size="14"
+    >
+      دکمه tertiary - isDisabled
+    </span>
+  </button>,
   <hr />,
   <h3
     class="sc-htpNat djFCwm"
@@ -337,7 +409,7 @@ Array [
     رنگ سبز
   </h3>,
   <button
-    class=" button-primary sc-chPdSV dUiVly"
+    class=" button-primary sc-chPdSV jgAVWY"
     data-test="button"
     type="submit"
   >
@@ -360,7 +432,31 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV dUiVly"
+    class=" button-primary sc-chPdSV ghDPfg"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG cqpyEq"
+        color="white"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه primary (default) - isDisabled
+    </span>
+  </button>,
+  <button
+    class=" button-secondary sc-chPdSV jgAVWY"
     data-test="button"
     type="submit"
   >
@@ -383,7 +479,31 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV dUiVly"
+    class=" button-secondary sc-chPdSV ghDPfg"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG laYqjl"
+        color="green"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs fcTmNH"
+      color="green"
+      data-test="span"
+      size="14"
+    >
+      دکمه secondary - isDisabled
+    </span>
+  </button>,
+  <button
+    class=" button-tertiary sc-chPdSV jgAVWY"
     data-test="button"
     type="submit"
   >
@@ -405,6 +525,30 @@ Array [
       دکمه tertiary
     </span>
   </button>,
+  <button
+    class=" button-tertiary sc-chPdSV ghDPfg"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG dYkkKn"
+        color="darkBlue"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs deFOOE"
+      color="darkBlue"
+      data-test="span"
+      size="14"
+    >
+      دکمه tertiary - isDisabled
+    </span>
+  </button>,
   <hr />,
   <h3
     class="sc-htpNat djFCwm"
@@ -413,7 +557,7 @@ Array [
     رنگ زرد
   </h3>,
   <button
-    class=" button-primary sc-chPdSV bmphoB"
+    class=" button-primary sc-chPdSV foLScb"
     data-test="button"
     type="submit"
   >
@@ -436,7 +580,31 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV bmphoB"
+    class=" button-primary sc-chPdSV ewTSv"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG cqpyEq"
+        color="white"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه primary (default) - isDisabled
+    </span>
+  </button>,
+  <button
+    class=" button-secondary sc-chPdSV foLScb"
     data-test="button"
     type="submit"
   >
@@ -459,7 +627,31 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV bmphoB"
+    class=" button-secondary sc-chPdSV ewTSv"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG fEAIhM"
+        color="yellow"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs ijahRT"
+      color="yellow"
+      data-test="span"
+      size="14"
+    >
+      دکمه secondary - isDisabled
+    </span>
+  </button>,
+  <button
+    class=" button-tertiary sc-chPdSV foLScb"
     data-test="button"
     type="submit"
   >
@@ -481,6 +673,30 @@ Array [
       دکمه tertiary
     </span>
   </button>,
+  <button
+    class=" button-tertiary sc-chPdSV ewTSv"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG dYkkKn"
+        color="darkBlue"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs deFOOE"
+      color="darkBlue"
+      data-test="span"
+      size="14"
+    >
+      دکمه tertiary - isDisabled
+    </span>
+  </button>,
   <hr />,
   <h3
     class="sc-htpNat djFCwm"
@@ -489,7 +705,7 @@ Array [
     رنگ آبی
   </h3>,
   <button
-    class=" button-primary sc-chPdSV dHTuCb"
+    class=" button-primary sc-chPdSV fRxZWl"
     data-test="button"
     type="submit"
   >
@@ -512,7 +728,31 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV dHTuCb"
+    class=" button-primary sc-chPdSV YBeRO"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG cqpyEq"
+        color="white"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه primary (default) - isDisabled
+    </span>
+  </button>,
+  <button
+    class=" button-secondary sc-chPdSV fRxZWl"
     data-test="button"
     type="submit"
   >
@@ -535,7 +775,31 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV dHTuCb"
+    class=" button-secondary sc-chPdSV YBeRO"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG jXgbPU"
+        color="blue"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs ghkjrx"
+      color="blue"
+      data-test="span"
+      size="14"
+    >
+      دکمه secondary - isDisabled
+    </span>
+  </button>,
+  <button
+    class=" button-tertiary sc-chPdSV fRxZWl"
     data-test="button"
     type="submit"
   >
@@ -557,6 +821,30 @@ Array [
       دکمه tertiary
     </span>
   </button>,
+  <button
+    class=" button-tertiary sc-chPdSV YBeRO"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG dYkkKn"
+        color="darkBlue"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs deFOOE"
+      color="darkBlue"
+      data-test="span"
+      size="14"
+    >
+      دکمه tertiary - isDisabled
+    </span>
+  </button>,
   <hr />,
   <h3
     class="sc-htpNat djFCwm"
@@ -565,7 +853,7 @@ Array [
     رنگ آبی تیره - پیشفرض
   </h3>,
   <button
-    class=" button-primary sc-chPdSV erRwD"
+    class=" button-primary sc-chPdSV heMYfW"
     data-test="button"
     type="submit"
   >
@@ -588,7 +876,31 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-secondary sc-chPdSV erRwD"
+    class=" button-primary sc-chPdSV iNvUjj"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG cqpyEq"
+        color="white"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs cemEaf"
+      color="white"
+      data-test="span"
+      size="14"
+    >
+      دکمه primary (default) - isDisabled
+    </span>
+  </button>,
+  <button
+    class=" button-secondary sc-chPdSV heMYfW"
     data-test="button"
     type="submit"
   >
@@ -611,7 +923,31 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-tertiary sc-chPdSV erRwD"
+    class=" button-secondary sc-chPdSV iNvUjj"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG dYkkKn"
+        color="darkBlue"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs deFOOE"
+      color="darkBlue"
+      data-test="span"
+      size="14"
+    >
+      دکمه secondary - isDisabled
+    </span>
+  </button>,
+  <button
+    class=" button-tertiary sc-chPdSV heMYfW"
     data-test="button"
     type="submit"
   >
@@ -631,6 +967,30 @@ Array [
       size="14"
     >
       دکمه tertiary
+    </span>
+  </button>,
+  <button
+    class=" button-tertiary sc-chPdSV iNvUjj"
+    data-test="button"
+    disabled=""
+    type="submit"
+  >
+    <div
+      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+    >
+      <i
+        class="icon-watch_later sc-cSHVUG dYkkKn"
+        color="darkBlue"
+        data-test="icon"
+      />
+    </div>
+    <span
+      class="sc-htoDjs deFOOE"
+      color="darkBlue"
+      data-test="span"
+      size="14"
+    >
+      دکمه tertiary - isDisabled
     </span>
   </button>,
   <br />,

@@ -13,6 +13,7 @@ const MainButton = (props) => {
     icon,
     children,
     isWide,
+    isDisabled,
     size,
     backgroundColor,
     typeStyle,
@@ -30,7 +31,6 @@ const MainButton = (props) => {
     default:
       fontColor = 'white';
   }
-
   return (
     <ThemeProvider theme={buttonTheme}>
       <BaseButton
@@ -40,6 +40,7 @@ const MainButton = (props) => {
         size={size}
         backgroundColor={backgroundColor}
         className={`${className} button-${typeStyle}`}
+        disabled={isDisabled}
       >
         {
           icon
@@ -69,6 +70,7 @@ MainButton.propTypes = {
   icon: PropTypes.string,
   className: PropTypes.string,
   isWide: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
   backgroundColor: PropTypes.oneOf(['red', 'green', 'yellow', 'darkBlue', 'blue']),
   typeStyle: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
@@ -78,6 +80,7 @@ MainButton.defaultProps = {
   htmlType: 'submit',
   icon: '',
   isWide: false,
+  isDisabled: false,
   size: 'md',
   backgroundColor: 'darkBlue',
   typeStyle: 'primary',
