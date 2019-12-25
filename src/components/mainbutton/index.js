@@ -18,6 +18,19 @@ const MainButton = (props) => {
     typeStyle,
     className,
   } = props;
+
+  let fontColor;
+  switch (typeStyle) {
+    case 'secondary':
+      fontColor = backgroundColor;
+      break;
+    case 'tertiary':
+      fontColor = 'darkBlue';
+      break;
+    default:
+      fontColor = 'white';
+  }
+
   return (
     <ThemeProvider theme={buttonTheme}>
       <BaseButton
@@ -34,13 +47,13 @@ const MainButton = (props) => {
               <StyledIcon
                 name={icon}
                 size={size}
-                color={typeStyle !== 'primary' ? backgroundColor : 'white'}
+                color={fontColor}
               />
             )
         }
         <Text
           size={buttonTheme.size[size].font}
-          color={typeStyle !== 'primary' ? backgroundColor : 'white'}
+          color={fontColor}
           bold
         >
           {children}

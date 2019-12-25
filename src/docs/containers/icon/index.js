@@ -21,7 +21,7 @@ const IconPage = () => (
     <Heading level={2}>
       نمونه آیکون با کامل ترین امکانات
     </Heading>
-    <Icon name="watch_later" size="sm" color="green600" />
+    <Icon name="watch_later" size="sm" color="green" />
     <br />
 
     <Heading level={2}>

@@ -11,7 +11,7 @@ const iconTheme = {
     md: 10,
     sm: 8,
   },
-  color: defaultTheme.colors,
+  colors: defaultTheme.colors,
 };
 
 export default iconTheme;

@@ -19,11 +19,13 @@ export const BaseButton = styled.button`
   &.button-primary {
     border: none;
     background: ${({ theme, backgroundColor }) => getColorFromName(theme, backgroundColor)};
-
+    
     &:hover { 
+      transition: all 0.25s;
       background: ${({ theme, backgroundColor }) => getHoverColorFromName(theme, backgroundColor)};
     }
     &:focus {
+      transition: all 0.25s;
       background: ${({ theme, backgroundColor }) => getFocusColorFromName(theme, backgroundColor)};
     }
   }
@@ -34,17 +36,40 @@ export const BaseButton = styled.button`
 
     &:hover { 
       border-color: transparent;
+      transition: all 0.25s;
       background: ${({ theme, backgroundColor }) => getHoverColorFromName(theme, backgroundColor)};
+      * {
+        transition: all 0.25s;
+        color: ${({ theme }) => theme.colors.white};
+      }
     }
     &:focus {
       border-color: transparent;
       background: ${({ theme, backgroundColor }) => getFocusColorFromName(theme, backgroundColor)};
+      * {
+        transition: all 0.25s;
+        color: ${({ theme }) => theme.colors.white};
+      }
     }
   }
   
   &.button-tertiary {
     border: none;
     background: transparent;
+
+    &:hover { 
+      * {
+        transition: all 0.25s;
+        color: ${({ theme }) => theme.colors.darkBlue400};
+      }
+    }
+    &:focus {
+      * {
+        transition: all 0.25s;
+        color: ${({ theme }) => theme.colors.darkBlue800};
+      }
+    }
+
   }
 `;
 
