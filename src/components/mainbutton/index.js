@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
-import Icon from '../icon';
 import { Text } from '../typography';
-import { BaseButton } from './index.styles';
+import { BaseButton, StyledIcon } from './index.styles';
 import buttonTheme from './theme';
 
 
@@ -32,7 +31,7 @@ const MainButton = (props) => {
         {
           icon
             && (
-              <Icon
+              <StyledIcon
                 name={icon}
                 size={size}
                 color={typeStyle !== 'primary' ? backgroundColor : 'white'}

@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
+import Icon from '../icon';
 import { getColorFromName, getHoverColorFromName, getFocusColorFromName } from '../utils/themeUtils';
 
-// TODO: margin should be changed
-// TODO: height should be added
 export const BaseButton = styled.button`
   display: flex;
   align-items: center;
@@ -11,8 +10,9 @@ export const BaseButton = styled.button`
 
   width: ${({ isWide }) => (isWide ? '100%' : 'max-content')};
   min-width: ${({ size, theme }) => (`${theme.size[size].minWidth}px`)};
+  min-height: ${({ size, theme }) => (`${theme.size[size].height}px`)};
 
-  margin: 4px;
+  margin: ${({ size, theme }) => (`${theme.size[size].margin}px`)};
   padding: ${({ size, theme }) => theme.size[size].padding};
   box-sizing: border-box;
 
@@ -46,5 +46,8 @@ export const BaseButton = styled.button`
     border: none;
     background: transparent;
   }
+`;
 
+export const StyledIcon = styled(Icon)`
+  padding-right: 0;
 `;
