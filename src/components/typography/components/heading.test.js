@@ -24,8 +24,8 @@ describe('Heading component', () => {
 
   it('Should render large H1 component without error', () => {
     const H1 = setupMount({ children: 'تست', level: 1 });
-    expect(H1).toHaveStyleRule('font-size', `${theme.h1SizeLarge}px`);
-    expect(H1).toHaveStyleRule('line-height', `${theme.h1SizeLarge * theme.lineHeightRatio}px`);
+    expect(H1).toHaveStyleRule('font-size', `${theme.h1SizeMedium}px`);
+    expect(H1).toHaveStyleRule('line-height', `${theme.h1SizeMedium * theme.lineHeightRatio}px`);
     expect(H1).toHaveStyleRule('color', theme.defaultColor);
     H1.unmount();
   });
