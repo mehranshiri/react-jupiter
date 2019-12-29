@@ -1,8 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { Typography, MainButton } from '../../../components';
 
 const { Heading } = Typography;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+`;
 
 const MainButtonPage = () => (
   <>
@@ -85,112 +90,162 @@ const MainButtonPage = () => (
     <Heading level={3}>
       رنگ قرمز
     </Heading>
-    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="red">
-      دکمه primary (default)
-    </MainButton>
-    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="red" isDisabled>
-      دکمه primary (default) - isDisabled
-    </MainButton>
-    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="red">
-      دکمه secondary
-    </MainButton>
-    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="red" isDisabled>
-      دکمه secondary - isDisabled
-    </MainButton>
-    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="red">
-      دکمه tertiary
-    </MainButton>
-    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="red" isDisabled>
-      دکمه tertiary - isDisabled
-    </MainButton>
+    <Heading level={4}>
+      رنگ قرمز - normal
+    </Heading>
+    <ButtonWrapper>
+      <MainButton typeStyle="primary" icon="watch_later" backgroundColor="red">
+        دکمه primary (default)
+      </MainButton>
+      <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="red">
+        دکمه secondary
+      </MainButton>
+      <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="red">
+        دکمه tertiary
+      </MainButton>
+    </ButtonWrapper>
+    <Heading level={4}>
+      رنگ قرمز - disabled
+    </Heading>
+    <ButtonWrapper>
+      <MainButton typeStyle="primary" icon="watch_later" backgroundColor="red" isDisabled>
+        دکمه primary (default) - isDisabled
+      </MainButton>
+      <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="red" isDisabled>
+        دکمه secondary - isDisabled
+      </MainButton>
+      <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="red" isDisabled>
+        دکمه tertiary - isDisabled
+      </MainButton>
+    </ButtonWrapper>
     <hr />
     <Heading level={3}>
       رنگ سبز
     </Heading>
-    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="green">
-      دکمه primary (default)
-    </MainButton>
-    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="green" isDisabled>
-      دکمه primary (default) - isDisabled
-    </MainButton>
-    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="green">
-      دکمه secondary
-    </MainButton>
-    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="green" isDisabled>
-      دکمه secondary - isDisabled
-    </MainButton>
-    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="green">
-      دکمه tertiary
-    </MainButton>
-    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="green" isDisabled>
-      دکمه tertiary - isDisabled
-    </MainButton>
+    <Heading level={4}>
+      رنگ سبز - normal
+    </Heading>
+    <ButtonWrapper>
+      <MainButton typeStyle="primary" icon="watch_later" backgroundColor="green">
+        دکمه primary (default)
+      </MainButton>
+      <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="green">
+        دکمه secondary
+      </MainButton>
+      <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="green">
+        دکمه tertiary
+      </MainButton>
+    </ButtonWrapper>
+    <Heading level={4}>
+      رنگ سبز - disabled
+    </Heading>
+    <ButtonWrapper>
+      <MainButton typeStyle="primary" icon="watch_later" backgroundColor="green" isDisabled>
+        دکمه primary (default) - isDisabled
+      </MainButton>
+      <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="green" isDisabled>
+        دکمه secondary - isDisabled
+      </MainButton>
+      <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="green" isDisabled>
+        دکمه tertiary - isDisabled
+      </MainButton>
+    </ButtonWrapper>
     <hr />
     <Heading level={3}>
       رنگ زرد
     </Heading>
-    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="yellow">
-      دکمه primary (default)
-    </MainButton>
-    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="yellow" isDisabled>
-      دکمه primary (default) - isDisabled
-    </MainButton>
-    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="yellow">
-      دکمه secondary
-    </MainButton>
-    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="yellow" isDisabled>
-      دکمه secondary - isDisabled
-    </MainButton>
-    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="yellow">
-      دکمه tertiary
-    </MainButton>
-    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="yellow" isDisabled>
-      دکمه tertiary - isDisabled
-    </MainButton>
+    <Heading level={4}>
+      رنگ زرد - normal
+    </Heading>
+    <ButtonWrapper>
+      <MainButton typeStyle="primary" icon="watch_later" backgroundColor="yellow">
+        دکمه primary (default)
+      </MainButton>
+      <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="yellow">
+        دکمه secondary
+      </MainButton>
+      <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="yellow">
+        دکمه tertiary
+      </MainButton>
+    </ButtonWrapper>
+    <Heading level={4}>
+      رنگ زرد - disabled
+    </Heading>
+    <ButtonWrapper>
+      <MainButton typeStyle="primary" icon="watch_later" backgroundColor="yellow" isDisabled>
+        دکمه primary (default) - isDisabled
+      </MainButton>
+      <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="yellow" isDisabled>
+        دکمه secondary - isDisabled
+      </MainButton>
+      <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="yellow" isDisabled>
+        دکمه tertiary - isDisabled
+      </MainButton>
+    </ButtonWrapper>
     <hr />
     <Heading level={3}>
       رنگ آبی
     </Heading>
-    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="blue">
-      دکمه primary (default)
-    </MainButton>
-    <MainButton typeStyle="primary" icon="watch_later" backgroundColor="blue" isDisabled>
-      دکمه primary (default) - isDisabled
-    </MainButton>
-    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="blue">
-      دکمه secondary
-    </MainButton>
-    <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="blue" isDisabled>
-      دکمه secondary - isDisabled
-    </MainButton>
-    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="blue">
-      دکمه tertiary
-    </MainButton>
-    <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="blue" isDisabled>
-      دکمه tertiary - isDisabled
-    </MainButton>
+    <Heading level={4}>
+      رنگ آبی - normal
+    </Heading>
+    <ButtonWrapper>
+      <MainButton typeStyle="primary" icon="watch_later" backgroundColor="blue">
+        دکمه primary (default)
+      </MainButton>
+      <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="blue">
+        دکمه secondary
+      </MainButton>
+      <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="blue">
+        دکمه tertiary
+      </MainButton>
+    </ButtonWrapper>
+    <Heading level={4}>
+      رنگ آبی - disabled
+    </Heading>
+    <ButtonWrapper>
+      <MainButton typeStyle="primary" icon="watch_later" backgroundColor="blue" isDisabled>
+        دکمه primary (default) - isDisabled
+      </MainButton>
+      <MainButton typeStyle="secondary" icon="watch_later" backgroundColor="blue" isDisabled>
+        دکمه secondary - isDisabled
+      </MainButton>
+      <MainButton typeStyle="tertiary" icon="watch_later" backgroundColor="blue" isDisabled>
+        دکمه tertiary - isDisabled
+      </MainButton>
+    </ButtonWrapper>
     <hr />
     <Heading level={3}>
       رنگ آبی تیره - پیشفرض
     </Heading>
-    <MainButton typeStyle="primary" icon="watch_later">
-      دکمه primary (default)
-    </MainButton>
-    <MainButton typeStyle="primary" icon="watch_later" isDisabled>
-      دکمه primary (default) - isDisabled
-    </MainButton>
-    <MainButton typeStyle="secondary" icon="watch_later">
-      دکمه secondary
-    </MainButton>
-    <MainButton typeStyle="secondary" icon="watch_later" isDisabled>
-      دکمه secondary - isDisabled
-    </MainButton>
-    <MainButton typeStyle="tertiary" icon="watch_later">
-      دکمه tertiary
-    </MainButton>
-    <MainButton typeStyle="tertiary" icon="watch_later" isDisabled>
-      دکمه tertiary - isDisabled
-    </MainButton>
+    <Heading level={4}>
+      رنگ آبی تیره - پیشفرض - normal
+    </Heading>
+    <ButtonWrapper>
+      <MainButton typeStyle="primary" icon="watch_later">
+        دکمه primary (default)
+      </MainButton>
+      <MainButton typeStyle="secondary" icon="watch_later">
+        دکمه secondary
+      </MainButton>
+      <MainButton typeStyle="tertiary" icon="watch_later">
+        دکمه tertiary
+      </MainButton>
+    </ButtonWrapper>
+    <Heading level={4}>
+      رنگ آبی تیره - پیشفرض - disabled
+    </Heading>
+    <ButtonWrapper>
+      <MainButton typeStyle="primary" icon="watch_later" isDisabled>
+        دکمه primary (default) - isDisabled
+      </MainButton>
+      <MainButton typeStyle="secondary" icon="watch_later" isDisabled>
+        دکمه secondary - isDisabled
+      </MainButton>
+      <MainButton typeStyle="tertiary" icon="watch_later" isDisabled>
+        دکمه tertiary - isDisabled
+      </MainButton>
+    </ButtonWrapper>
     <br />
 
   </>
