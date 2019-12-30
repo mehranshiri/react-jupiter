@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 import { getIconContentByType, getSizeOfIcon, getMarginOfIcon } from './utils';
+import { getColorFromName } from '../utils/themeUtils';
 import './font.scss';
 
 export const IconElement = styled.i`
   display: inline-block;
   vertical-align: middle;
+  color: ${({ theme, color }) => getColorFromName(theme, color)};
   font-family: 'icomoon' !important;
   font-weight: normal;
   font-style: normal;

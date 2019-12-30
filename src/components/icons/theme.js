@@ -1,7 +1,4 @@
-import defaultTheme from '../themes';
-
 const theme = {
-  color: defaultTheme.colors.riverBedDark,
   sizes: {
     large: 24,
     largeMargin: 12,

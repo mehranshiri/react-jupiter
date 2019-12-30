@@ -1,4 +1,4 @@
-import defaultTheme from '../themes';
+import generalTheme from '../themes';
 import theme from './theme';
 
 export const getIconContentByType = (type) => {
@@ -649,11 +649,11 @@ export const getIconContentByType = (type) => {
 
 export const getSizeOfIcon = (size) => {
   switch (size) {
-    case defaultTheme.sizes.large:
+    case generalTheme.sizes.large:
       return theme.sizes.large;
-    case defaultTheme.sizes.small:
+    case generalTheme.sizes.small:
       return theme.sizes.small;
-    case defaultTheme.sizes.medium:
+    case generalTheme.sizes.medium:
     default:
       return theme.sizes.medium;
   }
@@ -661,11 +661,11 @@ export const getSizeOfIcon = (size) => {
 
 export const getMarginOfIcon = (size) => {
   switch (size) {
-    case defaultTheme.sizes.large:
+    case generalTheme.sizes.large:
       return theme.sizes.largeMargin;
-    case defaultTheme.sizes.small:
+    case generalTheme.sizes.small:
       return theme.sizes.smallMargin;
-    case defaultTheme.sizes.medium:
+    case generalTheme.sizes.medium:
     default:
       return theme.sizes.mediumMargin;
   }
