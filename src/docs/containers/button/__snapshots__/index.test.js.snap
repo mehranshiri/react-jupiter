@@ -17,7 +17,8 @@ Array [
     نمونه دکمه پیشفرض
   </h2>,
   <button
-    class=" button-primary sc-kAzzGY fEQmZL"
+    class="sc-kAzzGY gLJdoB"
+    data-styletype="primary"
     data-test="button"
     type="submit"
   >
@@ -37,7 +38,8 @@ Array [
     دکمه آیکون دار
   </h2>,
   <button
-    class=" button-primary sc-kAzzGY fEQmZL"
+    class="sc-kAzzGY gLJdoB"
+    data-styletype="primary"
     data-test="button"
     type="submit"
   >
@@ -66,7 +68,8 @@ Array [
     دکمه full-width
   </h2>,
   <button
-    class=" button-primary sc-kAzzGY gsOOKS"
+    class="sc-kAzzGY jgoHpL"
+    data-styletype="primary"
     data-test="button"
     type="submit"
   >
@@ -79,7 +82,8 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-kAzzGY buGrHt"
+    class="sc-kAzzGY criAQW"
+    data-styletype="primary"
     data-test="button"
     type="submit"
   >
@@ -92,7 +96,8 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-kAzzGY IXlEK"
+    class="sc-kAzzGY iuoOjW"
+    data-styletype="primary"
     data-test="button"
     type="submit"
   >
@@ -118,7 +123,8 @@ Array [
     sm size
   </h3>,
   <button
-    class=" button-primary sc-kAzzGY fKqROh"
+    class="sc-kAzzGY cuuIPS"
+    data-styletype="primary"
     data-test="button"
     type="submit"
   >
@@ -131,7 +137,8 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-kAzzGY fKqROh"
+    class="sc-kAzzGY cuuIPS"
+    data-styletype="primary"
     data-test="button"
     type="submit"
   >
@@ -160,7 +167,8 @@ Array [
     md size (default)
   </h3>,
   <button
-    class=" button-primary sc-kAzzGY fEQmZL"
+    class="sc-kAzzGY gLJdoB"
+    data-styletype="primary"
     data-test="button"
     type="submit"
   >
@@ -173,7 +181,8 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-kAzzGY fEQmZL"
+    class="sc-kAzzGY gLJdoB"
+    data-styletype="primary"
     data-test="button"
     type="submit"
   >
@@ -202,7 +211,8 @@ Array [
     lg size
   </h3>,
   <button
-    class=" button-primary sc-kAzzGY jBCQVE"
+    class="sc-kAzzGY jRwfLb"
+    data-styletype="primary"
     data-test="button"
     type="submit"
   >
@@ -215,7 +225,8 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-kAzzGY jBCQVE"
+    class="sc-kAzzGY jRwfLb"
+    data-styletype="primary"
     data-test="button"
     type="submit"
   >
@@ -259,7 +270,8 @@ Array [
     class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-kAzzGY bxnAkC"
+      class="sc-kAzzGY iWxklW"
+      data-styletype="primary"
       data-test="button"
       type="submit"
     >
@@ -281,7 +293,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-kAzzGY bxnAkC"
+      class="sc-kAzzGY iWxklW"
+      data-styletype="secondary"
       data-test="button"
       type="submit"
     >
@@ -303,7 +316,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-kAzzGY bxnAkC"
+      class="sc-kAzzGY iWxklW"
+      data-styletype="tertiary"
       data-test="button"
       type="submit"
     >
@@ -335,7 +349,8 @@ Array [
     class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-kAzzGY cJaHLJ"
+      class="sc-kAzzGY fYrDtw"
+      data-styletype="primary"
       data-test="button"
       disabled=""
       type="submit"
@@ -358,7 +373,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-kAzzGY cJaHLJ"
+      class="sc-kAzzGY fYrDtw"
+      data-styletype="secondary"
       data-test="button"
       disabled=""
       type="submit"
@@ -381,7 +397,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-kAzzGY cJaHLJ"
+      class="sc-kAzzGY fYrDtw"
+      data-styletype="tertiary"
       data-test="button"
       disabled=""
       type="submit"
@@ -421,7 +438,8 @@ Array [
     class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-kAzzGY kdJiAy"
+      class="sc-kAzzGY dwduYj"
+      data-styletype="primary"
       data-test="button"
       type="submit"
     >
@@ -443,7 +461,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-kAzzGY kdJiAy"
+      class="sc-kAzzGY dwduYj"
+      data-styletype="secondary"
       data-test="button"
       type="submit"
     >
@@ -465,7 +484,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-kAzzGY kdJiAy"
+      class="sc-kAzzGY dwduYj"
+      data-styletype="tertiary"
       data-test="button"
       type="submit"
     >
@@ -497,7 +517,8 @@ Array [
     class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-kAzzGY litgpj"
+      class="sc-kAzzGY bhgDad"
+      data-styletype="primary"
       data-test="button"
       disabled=""
       type="submit"
@@ -520,7 +541,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-kAzzGY litgpj"
+      class="sc-kAzzGY bhgDad"
+      data-styletype="secondary"
       data-test="button"
       disabled=""
       type="submit"
@@ -543,7 +565,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-kAzzGY litgpj"
+      class="sc-kAzzGY bhgDad"
+      data-styletype="tertiary"
       data-test="button"
       disabled=""
       type="submit"
@@ -583,7 +606,8 @@ Array [
     class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-kAzzGY dcVEwx"
+      class="sc-kAzzGY gHRNcx"
+      data-styletype="primary"
       data-test="button"
       type="submit"
     >
@@ -605,7 +629,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-kAzzGY dcVEwx"
+      class="sc-kAzzGY gHRNcx"
+      data-styletype="secondary"
       data-test="button"
       type="submit"
     >
@@ -627,7 +652,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-kAzzGY dcVEwx"
+      class="sc-kAzzGY gHRNcx"
+      data-styletype="tertiary"
       data-test="button"
       type="submit"
     >
@@ -659,7 +685,8 @@ Array [
     class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-kAzzGY jkflnQ"
+      class="sc-kAzzGY hDvnjn"
+      data-styletype="primary"
       data-test="button"
       disabled=""
       type="submit"
@@ -682,7 +709,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-kAzzGY jkflnQ"
+      class="sc-kAzzGY hDvnjn"
+      data-styletype="secondary"
       data-test="button"
       disabled=""
       type="submit"
@@ -705,7 +733,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-kAzzGY jkflnQ"
+      class="sc-kAzzGY hDvnjn"
+      data-styletype="tertiary"
       data-test="button"
       disabled=""
       type="submit"
@@ -745,7 +774,8 @@ Array [
     class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-kAzzGY blCscT"
+      class="sc-kAzzGY jhFpFm"
+      data-styletype="primary"
       data-test="button"
       type="submit"
     >
@@ -767,7 +797,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-kAzzGY blCscT"
+      class="sc-kAzzGY jhFpFm"
+      data-styletype="secondary"
       data-test="button"
       type="submit"
     >
@@ -789,7 +820,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-kAzzGY blCscT"
+      class="sc-kAzzGY jhFpFm"
+      data-styletype="tertiary"
       data-test="button"
       type="submit"
     >
@@ -821,7 +853,8 @@ Array [
     class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-kAzzGY ibinOa"
+      class="sc-kAzzGY kcudCe"
+      data-styletype="primary"
       data-test="button"
       disabled=""
       type="submit"
@@ -844,7 +877,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-kAzzGY ibinOa"
+      class="sc-kAzzGY kcudCe"
+      data-styletype="secondary"
       data-test="button"
       disabled=""
       type="submit"
@@ -867,7 +901,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-kAzzGY ibinOa"
+      class="sc-kAzzGY kcudCe"
+      data-styletype="tertiary"
       data-test="button"
       disabled=""
       type="submit"
@@ -907,7 +942,8 @@ Array [
     class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-kAzzGY fEQmZL"
+      class="sc-kAzzGY gLJdoB"
+      data-styletype="primary"
       data-test="button"
       type="submit"
     >
@@ -929,7 +965,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-kAzzGY fEQmZL"
+      class="sc-kAzzGY gLJdoB"
+      data-styletype="secondary"
       data-test="button"
       type="submit"
     >
@@ -951,7 +988,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-kAzzGY fEQmZL"
+      class="sc-kAzzGY gLJdoB"
+      data-styletype="tertiary"
       data-test="button"
       type="submit"
     >
@@ -983,7 +1021,8 @@ Array [
     class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-kAzzGY gcDdct"
+      class="sc-kAzzGY jhkFYr"
+      data-styletype="primary"
       data-test="button"
       disabled=""
       type="submit"
@@ -1006,7 +1045,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-kAzzGY gcDdct"
+      class="sc-kAzzGY jhkFYr"
+      data-styletype="secondary"
       data-test="button"
       disabled=""
       type="submit"
@@ -1029,7 +1069,8 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-kAzzGY gcDdct"
+      class="sc-kAzzGY jhkFYr"
+      data-styletype="tertiary"
       data-test="button"
       disabled=""
       type="submit"

@@ -17,7 +17,6 @@ const Button = (props) => {
     size,
     backgroundColor,
     styleType,
-    className,
   } = props;
 
   let fontColor;
@@ -39,8 +38,8 @@ const Button = (props) => {
         wide={wide}
         size={size}
         backgroundColor={backgroundColor}
-        className={`${className} button-${styleType}`}
         disabled={disabled}
+        data-styleType={styleType}
       >
         {
           icon
@@ -68,7 +67,6 @@ Button.propTypes = {
   htmlType: PropTypes.oneOf(['button', 'submit', 'reset']),
   children: PropTypes.string.isRequired,
   icon: PropTypes.string,
-  className: PropTypes.string,
   wide: PropTypes.bool,
   disabled: PropTypes.bool,
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
@@ -84,7 +82,6 @@ Button.defaultProps = {
   size: 'md',
   backgroundColor: 'darkBlue',
   styleType: 'primary',
-  className: '',
 };
 
 export default Button;

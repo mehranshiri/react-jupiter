@@ -20,7 +20,7 @@ export const BaseButton = styled.button`
   opacity: ${({ disabled }) => (disabled ? '0.25' : '1')};
   border-radius: ${({ theme }) => `${theme.borderRadius}px`};
 
-  &.button-primary {
+  &[data-styleType="primary"] {
     border: none;
     background: ${({ theme, backgroundColor }) => getColorFromName(theme, backgroundColor)};
     
@@ -34,7 +34,7 @@ export const BaseButton = styled.button`
     }
   }
   
-  &.button-secondary {
+  &[data-styleType="secondary"] {
     border: 1px solid ${({ theme, backgroundColor }) => getColorFromName(theme, backgroundColor)};
     background: transparent;
 
@@ -57,7 +57,7 @@ export const BaseButton = styled.button`
     }
   }
   
-  &.button-tertiary {
+  &[data-styleType="tertiary"] {
     border: none;
     background: transparent;
 
