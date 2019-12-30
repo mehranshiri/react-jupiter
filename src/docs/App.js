@@ -10,7 +10,7 @@ import HomePage from './containers/home';
 import ButtonPage from './containers/button';
 import AvatarPage from './containers/avatar';
 import IconPage from './containers/icon';
-import MainButtonPage from './containers/mainbutton';
+import TypographyPage from './containers/typography';
 
 const Container = styled.main`
   display: flex;
@@ -32,10 +32,10 @@ function App() {
         <SideNavigation />
         <ContentContainer>
           <Route exact path="/" component={HomePage} />
-          <Route path="/components/button" component={ButtonPage} />
+          <Route path="/components/typography" component={TypographyPage} />
           <Route path="/components/avatar" component={AvatarPage} />
           <Route path="/components/icon" component={IconPage} />
-          <Route path="/components/mainbutton" component={MainButtonPage} />
+          <Route path="/components/button" component={ButtonPage} />
         </ContentContainer>
       </Content>
     </Container>

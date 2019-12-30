@@ -17,7 +17,7 @@ Array [
     نمونه دکمه پیشفرض
   </h2>,
   <button
-    class=" button-primary sc-chPdSV iOIAtU"
+    class=" button-primary sc-kAzzGY fEQmZL"
     data-test="button"
     type="submit"
   >
@@ -38,15 +38,15 @@ Array [
     دکمه آیکون دار
   </h2>,
   <button
-    class=" button-primary sc-chPdSV iOIAtU"
+    class=" button-primary sc-kAzzGY fEQmZL"
     data-test="button"
     type="submit"
   >
     <div
-      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+      class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
     >
       <i
-        class="icon-watch_later sc-cSHVUG cqpyEq"
+        class="icon-watch_later sc-jzJRlG gBuJEN"
         color="white"
         data-test="icon"
       />
@@ -68,7 +68,7 @@ Array [
     دکمه full-width
   </h2>,
   <button
-    class=" button-primary sc-chPdSV hzkfVM"
+    class=" button-primary sc-kAzzGY gsOOKS"
     data-test="button"
     type="submit"
   >
@@ -82,7 +82,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV kZfPpu"
+    class=" button-primary sc-kAzzGY buGrHt"
     data-test="button"
     type="submit"
   >
@@ -96,7 +96,7 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV jlObrS"
+    class=" button-primary sc-kAzzGY IXlEK"
     data-test="button"
     type="submit"
   >
@@ -123,7 +123,7 @@ Array [
     sm size
   </h3>,
   <button
-    class=" button-primary sc-chPdSV krqVKK"
+    class=" button-primary sc-kAzzGY fKqROh"
     data-test="button"
     type="submit"
   >
@@ -137,15 +137,15 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV krqVKK"
+    class=" button-primary sc-kAzzGY fKqROh"
     data-test="button"
     type="submit"
   >
     <div
-      class="sc-kgoBCf dLBqYr sc-kAzzGY dtLGbe"
+      class="sc-chPdSV kEYvSi sc-cSHVUG ebkVMz"
     >
       <i
-        class="icon-watch_later sc-cSHVUG guKhFg"
+        class="icon-watch_later sc-jzJRlG kMIXPq"
         color="white"
         data-test="icon"
       />
@@ -167,7 +167,7 @@ Array [
     md size (default)
   </h3>,
   <button
-    class=" button-primary sc-chPdSV iOIAtU"
+    class=" button-primary sc-kAzzGY fEQmZL"
     data-test="button"
     type="submit"
   >
@@ -181,15 +181,15 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV iOIAtU"
+    class=" button-primary sc-kAzzGY fEQmZL"
     data-test="button"
     type="submit"
   >
     <div
-      class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+      class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
     >
       <i
-        class="icon-watch_later sc-cSHVUG cqpyEq"
+        class="icon-watch_later sc-jzJRlG gBuJEN"
         color="white"
         data-test="icon"
       />
@@ -211,7 +211,7 @@ Array [
     lg size
   </h3>,
   <button
-    class=" button-primary sc-chPdSV kmaCYc"
+    class=" button-primary sc-kAzzGY jBCQVE"
     data-test="button"
     type="submit"
   >
@@ -225,15 +225,15 @@ Array [
     </span>
   </button>,
   <button
-    class=" button-primary sc-chPdSV kmaCYc"
+    class=" button-primary sc-kAzzGY jBCQVE"
     data-test="button"
     type="submit"
   >
     <div
-      class="sc-kgoBCf dLBqYr sc-kAzzGY ciMFBd"
+      class="sc-chPdSV kEYvSi sc-cSHVUG hKScKU"
     >
       <i
-        class="icon-watch_later sc-cSHVUG dadeXC"
+        class="icon-watch_later sc-jzJRlG cGQQZc"
         color="white"
         data-test="icon"
       />
@@ -267,18 +267,18 @@ Array [
     رنگ قرمز - normal
   </h4>,
   <div
-    class="sc-kGXeez kYntIi"
+    class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-chPdSV jlraTZ"
+      class=" button-primary sc-kAzzGY bxnAkC"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG cqpyEq"
+          class="icon-watch_later sc-jzJRlG gBuJEN"
           color="white"
           data-test="icon"
         />
@@ -293,15 +293,15 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-chPdSV jlraTZ"
+      class=" button-secondary sc-kAzzGY bxnAkC"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG hNuDoP"
+          class="icon-watch_later sc-jzJRlG kexrok"
           color="red"
           data-test="icon"
         />
@@ -316,15 +316,15 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-chPdSV jlraTZ"
+      class=" button-tertiary sc-kAzzGY bxnAkC"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG dYkkKn"
+          class="icon-watch_later sc-jzJRlG cMJMwC"
           color="darkBlue"
           data-test="icon"
         />
@@ -346,19 +346,19 @@ Array [
     رنگ قرمز - disabled
   </h4>,
   <div
-    class="sc-kGXeez kYntIi"
+    class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-chPdSV bFLryg"
+      class=" button-primary sc-kAzzGY cJaHLJ"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG cqpyEq"
+          class="icon-watch_later sc-jzJRlG gBuJEN"
           color="white"
           data-test="icon"
         />
@@ -373,16 +373,16 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-chPdSV bFLryg"
+      class=" button-secondary sc-kAzzGY cJaHLJ"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG hNuDoP"
+          class="icon-watch_later sc-jzJRlG kexrok"
           color="red"
           data-test="icon"
         />
@@ -397,16 +397,16 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-chPdSV bFLryg"
+      class=" button-tertiary sc-kAzzGY cJaHLJ"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG dYkkKn"
+          class="icon-watch_later sc-jzJRlG cMJMwC"
           color="darkBlue"
           data-test="icon"
         />
@@ -435,18 +435,18 @@ Array [
     رنگ سبز - normal
   </h4>,
   <div
-    class="sc-kGXeez kYntIi"
+    class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-chPdSV jRAzAm"
+      class=" button-primary sc-kAzzGY kdJiAy"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG cqpyEq"
+          class="icon-watch_later sc-jzJRlG gBuJEN"
           color="white"
           data-test="icon"
         />
@@ -461,15 +461,15 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-chPdSV jRAzAm"
+      class=" button-secondary sc-kAzzGY kdJiAy"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG laYqjl"
+          class="icon-watch_later sc-jzJRlG ieIRpH"
           color="green"
           data-test="icon"
         />
@@ -484,15 +484,15 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-chPdSV jRAzAm"
+      class=" button-tertiary sc-kAzzGY kdJiAy"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG dYkkKn"
+          class="icon-watch_later sc-jzJRlG cMJMwC"
           color="darkBlue"
           data-test="icon"
         />
@@ -514,19 +514,19 @@ Array [
     رنگ سبز - disabled
   </h4>,
   <div
-    class="sc-kGXeez kYntIi"
+    class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-chPdSV eNuQdL"
+      class=" button-primary sc-kAzzGY litgpj"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG cqpyEq"
+          class="icon-watch_later sc-jzJRlG gBuJEN"
           color="white"
           data-test="icon"
         />
@@ -541,16 +541,16 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-chPdSV eNuQdL"
+      class=" button-secondary sc-kAzzGY litgpj"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG laYqjl"
+          class="icon-watch_later sc-jzJRlG ieIRpH"
           color="green"
           data-test="icon"
         />
@@ -565,16 +565,16 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-chPdSV eNuQdL"
+      class=" button-tertiary sc-kAzzGY litgpj"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG dYkkKn"
+          class="icon-watch_later sc-jzJRlG cMJMwC"
           color="darkBlue"
           data-test="icon"
         />
@@ -603,18 +603,18 @@ Array [
     رنگ زرد - normal
   </h4>,
   <div
-    class="sc-kGXeez kYntIi"
+    class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-chPdSV KbShx"
+      class=" button-primary sc-kAzzGY dcVEwx"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG cqpyEq"
+          class="icon-watch_later sc-jzJRlG gBuJEN"
           color="white"
           data-test="icon"
         />
@@ -629,15 +629,15 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-chPdSV KbShx"
+      class=" button-secondary sc-kAzzGY dcVEwx"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG fEAIhM"
+          class="icon-watch_later sc-jzJRlG iWLfHZ"
           color="yellow"
           data-test="icon"
         />
@@ -652,15 +652,15 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-chPdSV KbShx"
+      class=" button-tertiary sc-kAzzGY dcVEwx"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG dYkkKn"
+          class="icon-watch_later sc-jzJRlG cMJMwC"
           color="darkBlue"
           data-test="icon"
         />
@@ -682,19 +682,19 @@ Array [
     رنگ زرد - disabled
   </h4>,
   <div
-    class="sc-kGXeez kYntIi"
+    class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-chPdSV gSpYdg"
+      class=" button-primary sc-kAzzGY jkflnQ"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG cqpyEq"
+          class="icon-watch_later sc-jzJRlG gBuJEN"
           color="white"
           data-test="icon"
         />
@@ -709,16 +709,16 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-chPdSV gSpYdg"
+      class=" button-secondary sc-kAzzGY jkflnQ"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG fEAIhM"
+          class="icon-watch_later sc-jzJRlG iWLfHZ"
           color="yellow"
           data-test="icon"
         />
@@ -733,16 +733,16 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-chPdSV gSpYdg"
+      class=" button-tertiary sc-kAzzGY jkflnQ"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG dYkkKn"
+          class="icon-watch_later sc-jzJRlG cMJMwC"
           color="darkBlue"
           data-test="icon"
         />
@@ -771,18 +771,18 @@ Array [
     رنگ آبی - normal
   </h4>,
   <div
-    class="sc-kGXeez kYntIi"
+    class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-chPdSV kGfofH"
+      class=" button-primary sc-kAzzGY blCscT"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG cqpyEq"
+          class="icon-watch_later sc-jzJRlG gBuJEN"
           color="white"
           data-test="icon"
         />
@@ -797,15 +797,15 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-chPdSV kGfofH"
+      class=" button-secondary sc-kAzzGY blCscT"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG jXgbPU"
+          class="icon-watch_later sc-jzJRlG gjBRpW"
           color="blue"
           data-test="icon"
         />
@@ -820,15 +820,15 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-chPdSV kGfofH"
+      class=" button-tertiary sc-kAzzGY blCscT"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG dYkkKn"
+          class="icon-watch_later sc-jzJRlG cMJMwC"
           color="darkBlue"
           data-test="icon"
         />
@@ -850,19 +850,19 @@ Array [
     رنگ آبی - disabled
   </h4>,
   <div
-    class="sc-kGXeez kYntIi"
+    class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-chPdSV hctkVs"
+      class=" button-primary sc-kAzzGY ibinOa"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG cqpyEq"
+          class="icon-watch_later sc-jzJRlG gBuJEN"
           color="white"
           data-test="icon"
         />
@@ -877,16 +877,16 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-chPdSV hctkVs"
+      class=" button-secondary sc-kAzzGY ibinOa"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG jXgbPU"
+          class="icon-watch_later sc-jzJRlG gjBRpW"
           color="blue"
           data-test="icon"
         />
@@ -901,16 +901,16 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-chPdSV hctkVs"
+      class=" button-tertiary sc-kAzzGY ibinOa"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG dYkkKn"
+          class="icon-watch_later sc-jzJRlG cMJMwC"
           color="darkBlue"
           data-test="icon"
         />
@@ -939,18 +939,18 @@ Array [
     رنگ آبی تیره - پیشفرض - normal
   </h4>,
   <div
-    class="sc-kGXeez kYntIi"
+    class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-chPdSV iOIAtU"
+      class=" button-primary sc-kAzzGY fEQmZL"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG cqpyEq"
+          class="icon-watch_later sc-jzJRlG gBuJEN"
           color="white"
           data-test="icon"
         />
@@ -965,15 +965,15 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-chPdSV iOIAtU"
+      class=" button-secondary sc-kAzzGY fEQmZL"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG dYkkKn"
+          class="icon-watch_later sc-jzJRlG cMJMwC"
           color="darkBlue"
           data-test="icon"
         />
@@ -988,15 +988,15 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-chPdSV iOIAtU"
+      class=" button-tertiary sc-kAzzGY fEQmZL"
       data-test="button"
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG dYkkKn"
+          class="icon-watch_later sc-jzJRlG cMJMwC"
           color="darkBlue"
           data-test="icon"
         />
@@ -1018,19 +1018,19 @@ Array [
     رنگ آبی تیره - پیشفرض - disabled
   </h4>,
   <div
-    class="sc-kGXeez kYntIi"
+    class="sc-kgoBCf beOYFC"
   >
     <button
-      class=" button-primary sc-chPdSV hAhUzu"
+      class=" button-primary sc-kAzzGY gcDdct"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG cqpyEq"
+          class="icon-watch_later sc-jzJRlG gBuJEN"
           color="white"
           data-test="icon"
         />
@@ -1045,16 +1045,16 @@ Array [
       </span>
     </button>
     <button
-      class=" button-secondary sc-chPdSV hAhUzu"
+      class=" button-secondary sc-kAzzGY gcDdct"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG dYkkKn"
+          class="icon-watch_later sc-jzJRlG cMJMwC"
           color="darkBlue"
           data-test="icon"
         />
@@ -1069,16 +1069,16 @@ Array [
       </span>
     </button>
     <button
-      class=" button-tertiary sc-chPdSV hAhUzu"
+      class=" button-tertiary sc-kAzzGY gcDdct"
       data-test="button"
       disabled=""
       type="submit"
     >
       <div
-        class="sc-kgoBCf dLBqYr sc-kAzzGY gnTUdE"
+        class="sc-chPdSV kEYvSi sc-cSHVUG hDoLhH"
       >
         <i
-          class="icon-watch_later sc-cSHVUG dYkkKn"
+          class="icon-watch_later sc-jzJRlG cMJMwC"
           color="darkBlue"
           data-test="icon"
         />

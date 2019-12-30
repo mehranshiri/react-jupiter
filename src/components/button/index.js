@@ -7,7 +7,7 @@ import { BaseButton, StyledIcon } from './index.styles';
 import buttonTheme from './theme';
 
 
-const MainButton = (props) => {
+const Button = (props) => {
   const {
     htmlType,
     icon,
@@ -64,7 +64,7 @@ const MainButton = (props) => {
   );
 };
 
-MainButton.propTypes = {
+Button.propTypes = {
   htmlType: PropTypes.oneOf(['button', 'submit', 'reset']),
   children: PropTypes.string.isRequired,
   icon: PropTypes.string,
@@ -76,7 +76,7 @@ MainButton.propTypes = {
   typeStyle: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
 };
 
-MainButton.defaultProps = {
+Button.defaultProps = {
   htmlType: 'submit',
   icon: '',
   isWide: false,
@@ -87,4 +87,4 @@ MainButton.defaultProps = {
   className: '',
 };
 
-export default MainButton;
+export default Button;

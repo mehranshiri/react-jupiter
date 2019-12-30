@@ -2,11 +2,11 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { findByTestAtrr } from '../utils/testUtils';
 
-import MainButton from './index';
+import Button from './index';
 
 describe('mainButton', () => {
   it('render simple default mainButton component', () => {
-    const component = mount(<MainButton>my simple button</MainButton>);
+    const component = mount(<Button>my simple button</Button>);
 
     expect(component.text()).toBe('my simple button');
     expect(component.props().htmlType).toBe('submit');
@@ -14,9 +14,9 @@ describe('mainButton', () => {
 
   it('render iconic mainButton component', () => {
     const component = render(
-      <MainButton icon="watch_later">
+      <Button icon="watch_later">
         دکمه آیکون دار
-      </MainButton>,
+      </Button>,
     );
     const iconWrapper = findByTestAtrr(component, 'icon');
 
