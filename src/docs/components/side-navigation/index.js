@@ -71,6 +71,11 @@ const SideNavigation = ({ ltr }) => (
           <NavItem title="آیکون" ltr={ltr} />
         </Link>
       </Nav>
+      <Nav id="11">
+        <Link to="/components/icons">
+          <NavItem title="آیکون‌ها" ltr={ltr} />
+        </Link>
+      </Nav>
     </SideNav>
   </Container>
 );
