@@ -12,6 +12,8 @@ const Icon = (props) => {
     color,
   } = props;
 
+  if (name === undefined) return null;
+
   return (
     <ThemeProvider theme={iconTheme}>
       <StyledIcon
@@ -27,21 +29,12 @@ const Icon = (props) => {
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
-  color: PropTypes.oneOf([
-    'darkBlue800', 'darkBlue600', 'darkBlue400', 'darkBlue200',
-    'blue800', 'blue600', 'blue400', 'blue200',
-    'green800', 'green600', 'green400', 'green200',
-    'red800', 'red600', 'red400', 'red200',
-    'yellow800', 'yellow600', 'yellow400', 'yellow200',
-    'gray800', 'gray600', 'gray400', 'gray200',
-    'riverBedDark', 'riverBed',
-    'white',
-  ]),
+  color: PropTypes.oneOf(['default', 'red', 'green', 'blue', 'yellow', 'white', 'darkBlue', 'gray']),
 };
 
 Icon.defaultProps = {
   size: 'md',
-  color: 'riverBedDark',
+  color: 'default',
 };
 
 export default Icon;
