@@ -28,7 +28,7 @@ export const BaseButton = styled.button`
       transition: all 0.25s;
       background: ${({ theme, backgroundColor, disabled }) => (!disabled ? getHoverColorFromName(theme, backgroundColor) : getColorFromName(theme, backgroundColor))};
     }
-    &:focus {
+    &:active {
       transition: all 0.25s;
       background: ${({ theme, backgroundColor }) => getFocusColorFromName(theme, backgroundColor)};
     }
@@ -47,7 +47,7 @@ export const BaseButton = styled.button`
         color: ${({ theme, backgroundColor, disabled }) => (!disabled ? theme.colors.white : getColorFromName(theme, backgroundColor))};
       }
     }
-    &:focus {
+    &:active {
       border-color: transparent;
       background: ${({ theme, backgroundColor }) => getFocusColorFromName(theme, backgroundColor)};
       * {
@@ -67,7 +67,7 @@ export const BaseButton = styled.button`
         color: ${({ theme }) => theme.colors.darkBlue400};
       }
     }
-    &:focus {
+    &:active {
       * {
         transition: all 0.25s;
         color: ${({ theme }) => theme.colors.darkBlue800};
