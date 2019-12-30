@@ -8,7 +8,7 @@ export const BaseButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  width: ${({ isWide }) => (isWide ? '100%' : 'max-content')};
+  width: ${({ wide }) => (wide ? '100%' : 'max-content')};
   min-width: ${({ size, theme }) => (`${theme.size[size].minWidth}px`)};
   min-height: ${({ size, theme }) => (`${theme.size[size].height}px`)};
 

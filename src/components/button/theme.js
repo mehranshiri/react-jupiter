@@ -1,6 +1,6 @@
 import defaultTheme from '../themes';
 
-const buttonTheme = {
+const theme = {
   size: {
     lg: {
       padding: '4px 48px',
@@ -28,4 +28,4 @@ const buttonTheme = {
   borderRadius: defaultTheme.borderRadius.low,
 };
 
-export default buttonTheme;
+export default theme;

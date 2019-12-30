@@ -22,10 +22,9 @@ Array [
     type="submit"
   >
     <span
-      class="sc-htoDjs cemEaf"
+      class="sc-htoDjs bgiUUZ"
       color="white"
       data-test="span"
-      size="14"
     >
       دکمه
     </span>
@@ -52,10 +51,9 @@ Array [
       />
     </div>
     <span
-      class="sc-htoDjs cemEaf"
+      class="sc-htoDjs bgiUUZ"
       color="white"
       data-test="span"
-      size="14"
     >
       دکمه آیکون دار
     </span>
@@ -73,10 +71,9 @@ Array [
     type="submit"
   >
     <span
-      class="sc-htoDjs jbxVbw"
+      class="sc-htoDjs bgiUUZ"
       color="white"
       data-test="span"
-      size="10"
     >
       دکمه full-width (sm size)
     </span>
@@ -87,10 +84,9 @@ Array [
     type="submit"
   >
     <span
-      class="sc-htoDjs cemEaf"
+      class="sc-htoDjs bgiUUZ"
       color="white"
       data-test="span"
-      size="14"
     >
       دکمه full-width(md size - default)
     </span>
@@ -101,10 +97,9 @@ Array [
     type="submit"
   >
     <span
-      class="sc-htoDjs doVAst"
+      class="sc-htoDjs bgiUUZ"
       color="white"
       data-test="span"
-      size="20"
     >
       دکمه full-width(lg size)
     </span>
@@ -128,10 +123,9 @@ Array [
     type="submit"
   >
     <span
-      class="sc-htoDjs jbxVbw"
+      class="sc-htoDjs bgiUUZ"
       color="white"
       data-test="span"
-      size="10"
     >
       دکمه
     </span>
@@ -151,10 +145,9 @@ Array [
       />
     </div>
     <span
-      class="sc-htoDjs jbxVbw"
+      class="sc-htoDjs bgiUUZ"
       color="white"
       data-test="span"
-      size="10"
     >
       دکمه
     </span>
@@ -172,10 +165,9 @@ Array [
     type="submit"
   >
     <span
-      class="sc-htoDjs cemEaf"
+      class="sc-htoDjs bgiUUZ"
       color="white"
       data-test="span"
-      size="14"
     >
       دکمه
     </span>
@@ -195,10 +187,9 @@ Array [
       />
     </div>
     <span
-      class="sc-htoDjs cemEaf"
+      class="sc-htoDjs bgiUUZ"
       color="white"
       data-test="span"
-      size="14"
     >
       دکمه
     </span>
@@ -216,10 +207,9 @@ Array [
     type="submit"
   >
     <span
-      class="sc-htoDjs doVAst"
+      class="sc-htoDjs bgiUUZ"
       color="white"
       data-test="span"
-      size="20"
     >
       دکمه
     </span>
@@ -239,10 +229,9 @@ Array [
       />
     </div>
     <span
-      class="sc-htoDjs doVAst"
+      class="sc-htoDjs bgiUUZ"
       color="white"
       data-test="span"
-      size="20"
     >
       دکمه
     </span>
@@ -284,10 +273,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs cemEaf"
+        class="sc-htoDjs bgiUUZ"
         color="white"
         data-test="span"
-        size="14"
       >
         دکمه primary (default)
       </span>
@@ -307,10 +295,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs dJtNTe"
+        class="sc-htoDjs Bjkai"
         color="red"
         data-test="span"
-        size="14"
       >
         دکمه secondary
       </span>
@@ -330,10 +317,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs deFOOE"
+        class="sc-htoDjs iQeslt"
         color="darkBlue"
         data-test="span"
-        size="14"
       >
         دکمه tertiary
       </span>
@@ -364,12 +350,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs cemEaf"
+        class="sc-htoDjs bgiUUZ"
         color="white"
         data-test="span"
-        size="14"
       >
-        دکمه primary (default) - isDisabled
+        دکمه primary (default) - disabled
       </span>
     </button>
     <button
@@ -388,12 +373,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs dJtNTe"
+        class="sc-htoDjs Bjkai"
         color="red"
         data-test="span"
-        size="14"
       >
-        دکمه secondary - isDisabled
+        دکمه secondary - disabled
       </span>
     </button>
     <button
@@ -412,12 +396,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs deFOOE"
+        class="sc-htoDjs iQeslt"
         color="darkBlue"
         data-test="span"
-        size="14"
       >
-        دکمه tertiary - isDisabled
+        دکمه tertiary - disabled
       </span>
     </button>
   </div>,
@@ -452,10 +435,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs cemEaf"
+        class="sc-htoDjs bgiUUZ"
         color="white"
         data-test="span"
-        size="14"
       >
         دکمه primary (default)
       </span>
@@ -475,10 +457,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs fcTmNH"
+        class="sc-htoDjs jpsEjs"
         color="green"
         data-test="span"
-        size="14"
       >
         دکمه secondary
       </span>
@@ -498,10 +479,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs deFOOE"
+        class="sc-htoDjs iQeslt"
         color="darkBlue"
         data-test="span"
-        size="14"
       >
         دکمه tertiary
       </span>
@@ -532,12 +512,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs cemEaf"
+        class="sc-htoDjs bgiUUZ"
         color="white"
         data-test="span"
-        size="14"
       >
-        دکمه primary (default) - isDisabled
+        دکمه primary (default) - disabled
       </span>
     </button>
     <button
@@ -556,12 +535,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs fcTmNH"
+        class="sc-htoDjs jpsEjs"
         color="green"
         data-test="span"
-        size="14"
       >
-        دکمه secondary - isDisabled
+        دکمه secondary - disabled
       </span>
     </button>
     <button
@@ -580,12 +558,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs deFOOE"
+        class="sc-htoDjs iQeslt"
         color="darkBlue"
         data-test="span"
-        size="14"
       >
-        دکمه tertiary - isDisabled
+        دکمه tertiary - disabled
       </span>
     </button>
   </div>,
@@ -620,10 +597,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs cemEaf"
+        class="sc-htoDjs bgiUUZ"
         color="white"
         data-test="span"
-        size="14"
       >
         دکمه primary (default)
       </span>
@@ -643,10 +619,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs ijahRT"
+        class="sc-htoDjs jdlLkZ"
         color="yellow"
         data-test="span"
-        size="14"
       >
         دکمه secondary
       </span>
@@ -666,10 +641,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs deFOOE"
+        class="sc-htoDjs iQeslt"
         color="darkBlue"
         data-test="span"
-        size="14"
       >
         دکمه tertiary
       </span>
@@ -700,12 +674,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs cemEaf"
+        class="sc-htoDjs bgiUUZ"
         color="white"
         data-test="span"
-        size="14"
       >
-        دکمه primary (default) - isDisabled
+        دکمه primary (default) - disabled
       </span>
     </button>
     <button
@@ -724,12 +697,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs ijahRT"
+        class="sc-htoDjs jdlLkZ"
         color="yellow"
         data-test="span"
-        size="14"
       >
-        دکمه secondary - isDisabled
+        دکمه secondary - disabled
       </span>
     </button>
     <button
@@ -748,12 +720,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs deFOOE"
+        class="sc-htoDjs iQeslt"
         color="darkBlue"
         data-test="span"
-        size="14"
       >
-        دکمه tertiary - isDisabled
+        دکمه tertiary - disabled
       </span>
     </button>
   </div>,
@@ -788,10 +759,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs cemEaf"
+        class="sc-htoDjs bgiUUZ"
         color="white"
         data-test="span"
-        size="14"
       >
         دکمه primary (default)
       </span>
@@ -811,10 +781,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs ghkjrx"
+        class="sc-htoDjs kavVik"
         color="blue"
         data-test="span"
-        size="14"
       >
         دکمه secondary
       </span>
@@ -834,10 +803,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs deFOOE"
+        class="sc-htoDjs iQeslt"
         color="darkBlue"
         data-test="span"
-        size="14"
       >
         دکمه tertiary
       </span>
@@ -868,12 +836,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs cemEaf"
+        class="sc-htoDjs bgiUUZ"
         color="white"
         data-test="span"
-        size="14"
       >
-        دکمه primary (default) - isDisabled
+        دکمه primary (default) - disabled
       </span>
     </button>
     <button
@@ -892,12 +859,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs ghkjrx"
+        class="sc-htoDjs kavVik"
         color="blue"
         data-test="span"
-        size="14"
       >
-        دکمه secondary - isDisabled
+        دکمه secondary - disabled
       </span>
     </button>
     <button
@@ -916,12 +882,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs deFOOE"
+        class="sc-htoDjs iQeslt"
         color="darkBlue"
         data-test="span"
-        size="14"
       >
-        دکمه tertiary - isDisabled
+        دکمه tertiary - disabled
       </span>
     </button>
   </div>,
@@ -956,10 +921,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs cemEaf"
+        class="sc-htoDjs bgiUUZ"
         color="white"
         data-test="span"
-        size="14"
       >
         دکمه primary (default)
       </span>
@@ -979,10 +943,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs deFOOE"
+        class="sc-htoDjs iQeslt"
         color="darkBlue"
         data-test="span"
-        size="14"
       >
         دکمه secondary
       </span>
@@ -1002,10 +965,9 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs deFOOE"
+        class="sc-htoDjs iQeslt"
         color="darkBlue"
         data-test="span"
-        size="14"
       >
         دکمه tertiary
       </span>
@@ -1036,12 +998,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs cemEaf"
+        class="sc-htoDjs bgiUUZ"
         color="white"
         data-test="span"
-        size="14"
       >
-        دکمه primary (default) - isDisabled
+        دکمه primary (default) - disabled
       </span>
     </button>
     <button
@@ -1060,12 +1021,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs deFOOE"
+        class="sc-htoDjs iQeslt"
         color="darkBlue"
         data-test="span"
-        size="14"
       >
-        دکمه secondary - isDisabled
+        دکمه secondary - disabled
       </span>
     </button>
     <button
@@ -1084,12 +1044,11 @@ Array [
         />
       </div>
       <span
-        class="sc-htoDjs deFOOE"
+        class="sc-htoDjs iQeslt"
         color="darkBlue"
         data-test="span"
-        size="14"
       >
-        دکمه tertiary - isDisabled
+        دکمه tertiary - disabled
       </span>
     </button>
   </div>,

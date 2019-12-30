@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { Text } from '../typography';
 import { BaseButton, StyledIcon } from './index.styles';
-import buttonTheme from './theme';
+import theme from './theme';
 
 
 const Button = (props) => {
@@ -12,16 +12,16 @@ const Button = (props) => {
     htmlType,
     icon,
     children,
-    isWide,
-    isDisabled,
+    wide,
+    disabled,
     size,
     backgroundColor,
-    typeStyle,
+    styleType,
     className,
   } = props;
 
   let fontColor;
-  switch (typeStyle) {
+  switch (styleType) {
     case 'secondary':
       fontColor = backgroundColor;
       break;
@@ -32,15 +32,15 @@ const Button = (props) => {
       fontColor = 'white';
   }
   return (
-    <ThemeProvider theme={buttonTheme}>
+    <ThemeProvider theme={theme}>
       <BaseButton
         data-test="button"
         type={htmlType}
-        isWide={isWide}
+        wide={wide}
         size={size}
         backgroundColor={backgroundColor}
-        className={`${className} button-${typeStyle}`}
-        disabled={isDisabled}
+        className={`${className} button-${styleType}`}
+        disabled={disabled}
       >
         {
           icon
@@ -53,7 +53,7 @@ const Button = (props) => {
             )
         }
         <Text
-          size={buttonTheme.size[size].font}
+          size={theme.size[size]}
           color={fontColor}
           bold
         >
@@ -69,21 +69,21 @@ Button.propTypes = {
   children: PropTypes.string.isRequired,
   icon: PropTypes.string,
   className: PropTypes.string,
-  isWide: PropTypes.bool,
-  isDisabled: PropTypes.bool,
+  wide: PropTypes.bool,
+  disabled: PropTypes.bool,
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
   backgroundColor: PropTypes.oneOf(['red', 'green', 'yellow', 'darkBlue', 'blue']),
-  typeStyle: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  styleType: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
 };
 
 Button.defaultProps = {
   htmlType: 'submit',
   icon: '',
-  isWide: false,
-  isDisabled: false,
+  wide: false,
+  disabled: false,
   size: 'md',
   backgroundColor: 'darkBlue',
-  typeStyle: 'primary',
+  styleType: 'primary',
   className: '',
 };
 
