@@ -4,8 +4,8 @@ import { ThemeProvider } from 'styled-components';
 
 import { Text } from '../typography';
 import { BaseButton, StyledIcon } from './index.styles';
+import { setFontColor } from './utils';
 import theme from './theme';
-
 
 const Button = (props) => {
   const {
@@ -18,18 +18,8 @@ const Button = (props) => {
     backgroundColor,
     styleType,
   } = props;
+  const fontColor = setFontColor(styleType, backgroundColor);
 
-  let fontColor;
-  switch (styleType) {
-    case 'secondary':
-      fontColor = backgroundColor;
-      break;
-    case 'tertiary':
-      fontColor = 'darkBlue';
-      break;
-    default:
-      fontColor = 'white';
-  }
   return (
     <ThemeProvider theme={theme}>
       <BaseButton
