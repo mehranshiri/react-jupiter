@@ -13,8 +13,8 @@ const ButtonPage = () => (
       <Components.Button1 displayText="پرداخت" />
       <Button props="props value" borderRadius={3} rounded />
       <Heading>سلام</Heading>
+      <Heading size="lg" level={1}>سلام</Heading>
       <Heading level={1}>سلام</Heading>
-      <Heading size="md" level={1}>سلام</Heading>
       <Heading size="sm" level={1}>سلام</Heading>
       <hr />
       <Heading size="lg" level={2}>سلام</Heading>
@@ -25,7 +25,7 @@ const ButtonPage = () => (
       <Heading size="md" level={3}>سلام</Heading>
       <Heading size="sm" level={3}>سلام</Heading>
       <hr />
-      <Heading level={4}>سلام</Heading>
+      <Heading level={4} size="lg">سلام</Heading>
       <Heading size="md" level={4}>سلام</Heading>
       <Heading size="sm" level={4}>سلام</Heading>
       <hr />
