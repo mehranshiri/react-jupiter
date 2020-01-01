@@ -40,6 +40,29 @@ const defaultTheme = {
     low: 2,
     high: 3,
   },
+  shadows: {
+    color: '#000000',
+    level1: {
+      blur: 8,
+      opacity: 0.16,
+    },
+    level2: {
+      blur: 12,
+      opacity: 0.20,
+    },
+    level3: {
+      blur: 16,
+      opacity: 0.24,
+    },
+    level4: {
+      blur: 24,
+      opacity: 0.32,
+    },
+    level5: {
+      blur: 32,
+      opacity: 0.48,
+    },
+  },
 };
 
 export default defaultTheme;
