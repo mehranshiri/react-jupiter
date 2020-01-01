@@ -6,12 +6,12 @@ const iconTheme = {
     md: 20,
     sm: 16,
   },
-  paddingSize: {
+  marginSize: {
     lg: 12,
     md: 10,
     sm: 8,
   },
-  color: defaultTheme.colors,
+  colors: defaultTheme.colors,
 };
 
 export default iconTheme;
