@@ -41,25 +41,29 @@ const defaultTheme = {
     high: 3,
   },
   shadows: {
-    color: '#000000',
-    level1: {
+    1: {
       blur: 8,
+      spread: 0,
       opacity: 0.16,
     },
-    level2: {
+    2: {
       blur: 12,
+      spread: 2,
       opacity: 0.20,
     },
-    level3: {
+    3: {
       blur: 16,
+      spread: 4,
       opacity: 0.24,
     },
-    level4: {
+    4: {
       blur: 24,
+      spread: 6,
       opacity: 0.32,
     },
-    level5: {
+    5: {
       blur: 32,
+      spread: 8,
       opacity: 0.48,
     },
   },

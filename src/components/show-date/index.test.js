@@ -15,7 +15,7 @@ const setupShallow = (props = {}) => (
   )
 );
 
-describe('DateBookmark component', () => {
+describe('ShowDate component', () => {
   it('should render correctly', () => {
     const component = setupShallow({ date: new Date() });
     const DateBookmark = findByTestAtrr(component, 'show-date');
