@@ -13,7 +13,7 @@ export const TemplateContainer = styled.section`
     `0 0 ${theme.shadows[level].blur}px ${theme.shadows[level].spread}px rgba(0, 0, 0, ${theme.shadows[level].opacity})`
   )};
   text-decoration: none;
-  transition: all .2s ease-out;
+  transition: ${({ theme }) => (`all ${theme.animation.time}s ${theme.animation.method}`)};
 
   &:hover {
     ${({ theme, level, hoverToLevel }) => (

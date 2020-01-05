@@ -48,24 +48,28 @@ const defaultTheme = {
     },
     2: {
       blur: 12,
-      spread: 2,
+      spread: 0,
       opacity: 0.20,
     },
     3: {
       blur: 16,
-      spread: 4,
+      spread: 0,
       opacity: 0.24,
     },
     4: {
       blur: 24,
-      spread: 6,
+      spread: 0,
       opacity: 0.32,
     },
     5: {
       blur: 32,
-      spread: 8,
+      spread: 0,
       opacity: 0.48,
     },
+  },
+  animation: {
+    time: 0.2,
+    method: 'ease-in',
   },
 };
 
