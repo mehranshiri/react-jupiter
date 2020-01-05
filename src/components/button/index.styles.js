@@ -20,7 +20,14 @@ export const BaseButton = styled.button`
   opacity: ${({ disabled }) => (disabled ? '0.25' : '1')};
   border-radius: ${({ theme }) => `${theme.borderRadius}px`};
 
-  &[data-styleType="primary"] {
+  &[data-linkbutton="link-button"] * {
+    color: ${({ theme, color }) => getColorFromName(theme, color)};
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &[data-styletype="primary"] {
     border: none;
     background: ${({ theme, backgroundColor }) => getColorFromName(theme, backgroundColor)};
     
@@ -34,7 +41,7 @@ export const BaseButton = styled.button`
     }
   }
   
-  &[data-styleType="secondary"] {
+  &[data-styletype="secondary"] {
     border: 1px solid ${({ theme, backgroundColor }) => getColorFromName(theme, backgroundColor)};
     background: transparent;
 
@@ -57,7 +64,7 @@ export const BaseButton = styled.button`
     }
   }
   
-  &[data-styleType="tertiary"] {
+  &[data-styletype="tertiary"] {
     border: none;
     background: transparent;
 

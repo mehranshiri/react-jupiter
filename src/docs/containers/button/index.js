@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Typography, Button } from '../../../components';
 
-const { Heading } = Typography;
+const { Heading, Link } = Typography;
 
 const ButtonWrapper = styled.div`
   display: flex;
@@ -247,6 +247,27 @@ const ButtonPage = () => (
       </Button>
     </ButtonWrapper>
     <br />
+
+    <Heading level={2}>
+      دکمه لینک دار
+    </Heading>
+    <ButtonWrapper>
+      <Button styleType="primary" icon="watch_later">
+        <Link to="http://yahoo.com" external>
+          تکست ساده لینک خارجی
+        </Link>
+      </Button>
+      <Button styleType="secondary" icon="watch_later">
+        <Link to="http://yahoo.com" external>
+          تکست ساده لینک خارجی
+        </Link>
+      </Button>
+      <Button styleType="tertiary" icon="watch_later">
+        <Link to="http://yahoo.com" external>
+          تکست ساده لینک خارجی
+        </Link>
+      </Button>
+    </ButtonWrapper>
 
   </>
 );

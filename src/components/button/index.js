@@ -19,6 +19,7 @@ const Button = (props) => {
     styleType,
   } = props;
   const fontColor = setFontColor(styleType, backgroundColor);
+  const isLinkButton = !!(children && children.type && children.type.name && children.type.name === 'Link');
 
   return (
     <ThemeProvider theme={theme}>
@@ -29,7 +30,9 @@ const Button = (props) => {
         size={size}
         backgroundColor={backgroundColor}
         disabled={disabled}
-        data-styleType={styleType}
+        data-styletype={styleType}
+        data-linkbutton={isLinkButton ? 'link-button' : null}
+        color={fontColor}
       >
         {
           icon
@@ -41,13 +44,20 @@ const Button = (props) => {
               />
             )
         }
-        <Text
-          size={theme.size[size]}
-          color={fontColor}
-          bold
-        >
-          {children}
-        </Text>
+        {isLinkButton
+          ? (
+            <>
+              {children}
+            </>
+          ) : (
+            <Text
+              size={theme.size[size]}
+              color={fontColor}
+              bold
+            >
+              {children}
+            </Text>
+          )}
       </BaseButton>
     </ThemeProvider>
   );
@@ -55,7 +65,11 @@ const Button = (props) => {
 
 Button.propTypes = {
   htmlType: PropTypes.oneOf(['button', 'submit', 'reset']),
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
   icon: PropTypes.string,
   wide: PropTypes.bool,
   disabled: PropTypes.bool,
