@@ -41,7 +41,7 @@ export const BaseButton = styled.button`
     &:hover { 
       border-color: ${({ theme, disabled, backgroundColor }) => (!disabled ? 'transparent' : getColorFromName(theme, backgroundColor))};
       transition: all 0.25s;
-      background: ${({ theme, backgroundColor, disabled }) => (!disabled ? getHoverColorFromName(theme, backgroundColor) : 'transparent')};
+      background: ${({ theme, backgroundColor, disabled }) => (!disabled ? getColorFromName(theme, backgroundColor) : 'transparent')};
       * {
         transition: all 0.25s;
         color: ${({ theme, backgroundColor, disabled }) => (!disabled ? theme.colors.white : getColorFromName(theme, backgroundColor))};
