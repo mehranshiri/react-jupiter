@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import Icon from '../icon';
 import { getColorFromName, getHoverColorFromName, getFocusColorFromName } from '../utils/themeUtils';
@@ -19,13 +20,6 @@ export const BaseButton = styled.button`
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   opacity: ${({ disabled }) => (disabled ? '0.25' : '1')};
   border-radius: ${({ theme }) => `${theme.borderRadius}px`};
-
-  &[data-linkbutton="link-button"] * {
-    color: ${({ theme, color }) => getColorFromName(theme, color)};
-    &:hover {
-      text-decoration: none;
-    }
-  }
 
   &[data-styletype="primary"] {
     border: none;
@@ -86,4 +80,21 @@ export const BaseButton = styled.button`
 
 export const StyledIcon = styled(Icon)`
   padding-right: 0;
+`;
+
+export const ExternalLink = styled.a`
+  color: ${({ theme, color }) => getColorFromName(theme, color)};
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &:visited {
+    color: ${({ theme, color }) => getColorFromName(theme, color)};
+    text-decoration: none;
+  }
+`;
+
+export const InternalLink = styled(Link)`
+  color: ${({ theme, color }) => getColorFromName(theme, color)};
+  text-decoration: none;
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Typography, Button } from '../../../components';
 
-const { Heading, Link } = Typography;
+const { Heading } = Typography;
 
 const ButtonWrapper = styled.div`
   display: flex;
@@ -252,20 +252,14 @@ const ButtonPage = () => (
       دکمه لینک دار
     </Heading>
     <ButtonWrapper>
-      <Button styleType="primary" icon="watch_later">
-        <Link to="http://yahoo.com" external>
-          تکست ساده لینک خارجی
-        </Link>
+      <Button styleType="primary" icon="watch_later" linkTo="/avatar">
+        دکمه لینک ساده با تنظیمات پیشفرض
       </Button>
-      <Button styleType="secondary" icon="watch_later">
-        <Link to="http://yahoo.com" external>
-          تکست ساده لینک خارجی
-        </Link>
+      <Button styleType="secondary" icon="watch_later" linkTo="https://sciencebusiness.net/categories/dfgdfg" linkType="external" linkTarget="_blank">
+        دکمه لینک با لینک خارجی
       </Button>
-      <Button styleType="tertiary" icon="watch_later">
-        <Link to="http://yahoo.com" external>
-          تکست ساده لینک خارجی
-        </Link>
+      <Button styleType="tertiary" icon="watch_later" linkTo="/avatar" linkType="internal" linkTarget="_self">
+        دکمه لینک داخلی (نمونه کامل)
       </Button>
     </ButtonWrapper>
 
