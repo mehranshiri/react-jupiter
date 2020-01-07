@@ -6,11 +6,11 @@ import { convertToJalaali } from '../utils/date';
 import { DateContainer } from './index.style';
 
 const ShowDate = (props) => {
-  const { date, fontSize } = props;
+  const { date, fontSize, color } = props;
 
   return (
     <DateContainer data-test="show-date">
-      <Text size={fontSize}>
+      <Text size={fontSize} color={color}>
         {convertToJalaali(date, 'dddd jD jMMMM')}
       </Text>
     </DateContainer>
@@ -26,10 +26,12 @@ ShowDate.propTypes = {
     PropTypes.string,
     PropTypes.number,
   ]),
+  color: PropTypes.oneOf(['default', 'red', 'green', 'blue', 'yellow', 'white', 'darkBlue', 'gray']),
 };
 
 ShowDate.defaultProps = {
   fontSize: 12,
+  color: 'default',
 };
 
 
