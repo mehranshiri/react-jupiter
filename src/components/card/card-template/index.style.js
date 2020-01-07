@@ -6,7 +6,10 @@ export const LinkWrapper = styled(Link)`
 `;
 
 export const TemplateContainer = styled.section`
+  display: flex;
+  flex-direction: ${({ direction }) => (direction === 'vertical' ? 'column' : 'row')};
   border-radius: ${({ theme }) => (`${theme.borderRadius.low}px`)};
+  overflow: hidden;
   width: 100%;
   ${({ maxWidth }) => (maxWidth ? `max-width: ${maxWidth}px` : '')};
   box-shadow: ${({ theme, level }) => (
