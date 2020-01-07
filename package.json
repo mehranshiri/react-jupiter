@@ -59,9 +59,6 @@
       "pre-commit": "npm run lint"
     }
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",

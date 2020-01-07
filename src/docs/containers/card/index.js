@@ -3,6 +3,7 @@ import React from 'react';
 import { Typography } from '../../../components';
 import ShowDate from '../../../components/show-date';
 import CardTemplate from '../../../components/card/card-template';
+import { EventCard } from '../../../components/card';
 
 const { Heading } = Typography;
 
@@ -13,6 +14,9 @@ const CardPage = () => (
     </Heading>
     <ShowDate date={new Date()} />
     <br />
+    <EventCard
+      cover="https://static.evand.net/images/events/covers/original/2e6f40ac8e1bc78304ccf3fd77b1b3d5.jpg"
+    />
     <br />
     <CardTemplate hoverToLevel={2}><div>Hello empty card</div></CardTemplate>
     <br />
