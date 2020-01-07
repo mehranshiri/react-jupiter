@@ -9,13 +9,18 @@ import Avatar from '../../avatar';
 import {
   SquareCover,
   SquareContentContainer,
-  SquareDateBookmarkContainer,
+  DateBookmarkContainer,
   BookmarkIcon,
   Title,
   PlacePriceContainer,
   PlacePriceIcon,
   OrganizationLink,
   OrganizationName,
+  SliderCover,
+  SliderContentContainer,
+  SliderDetailsContainer,
+  RectangleCover,
+  RectangleContentContainer,
 } from './index.style';
 
 type Props = {
@@ -28,13 +33,25 @@ type Props = {
   cover: String,
   organizationName: ?string,
   organizationLogo: ?string,
-  organizationSlug: ?String,
+  organizationSlug: ?string,
+  linkTo: ?string,
   onClickBookmark: () => void,
 }
 
 const EventCard = (props: Props) => {
   const {
-    title, type, bookmarked, price, place, date, cover, organizationName, organizationLogo, organizationSlug, onClickBookmark,
+    title,
+    type,
+    bookmarked,
+    price,
+    place,
+    date,
+    cover,
+    organizationName,
+    organizationLogo,
+    organizationSlug,
+    onClickBookmark,
+    linkTo,
   } = props;
 
   const [isBookmarked, setBookmark] = useState(bookmarked);
@@ -45,50 +62,115 @@ const EventCard = (props: Props) => {
     onClickBookmark();
   };
 
+  const renderSquareCard = () => (
+    <CardTemplate
+      direction="vertical"
+      hoverToLevel={3}
+      data-test={SQUARE_CARD}
+      maxWidth={400}
+      linkTo={linkTo}
+    >
+      <SquareCover src={cover} />
+      <SquareContentContainer>
+        <DateBookmarkContainer data-test="square-date-bookmark">
+          <ShowDate date={date} color="gray" fontSize="12" />
+          {
+            isBookmarked
+              ? <BookmarkIcon type="bookmark" size="lg" color="gray" onClick={handleClickBookmark} />
+              : <BookmarkIcon type="bookmark-border" size="lg" color="gray" onClick={handleClickBookmark} />
+          }
+        </DateBookmarkContainer>
+        <Title level={2} size="sm">{title}</Title>
+        <PlacePriceContainer>
+          <div>
+            <PlacePriceIcon type="place" size="md" color="gray" />
+            <Text color="gray" size="12">{place}</Text>
+          </div>
+          <div>
+            <PlacePriceIcon type="loyalty" size="md" color="gray" />
+            <Text color="gray" size="12">{price}</Text>
+          </div>
+        </PlacePriceContainer>
+        {(organizationLogo || organizationName) && (
+          <OrganizationLink to={`organizations/${organizationSlug}`}>
+            <Avatar src={organizationLogo} size="sm" />
+            <OrganizationName>{organizationName}</OrganizationName>
+          </OrganizationLink>
+        )}
+      </SquareContentContainer>
+    </CardTemplate>
+  );
+
+  const renderSliderCard = () => (
+    <CardTemplate
+      direction="vertical"
+      hoverToLevel={3}
+      data-test={SLIDER_CARD}
+      maxWidth={800}
+      linkTo={linkTo}
+    >
+      <SliderCover src={cover} />
+      <SliderContentContainer>
+        <Title level={2} size="lg">{title}</Title>
+        <SliderDetailsContainer>
+          <div>
+            <ShowDate date={date} fontSize="18" color="gray" />
+          </div>
+          <div>
+            <PlacePriceIcon type="place" size="lg" color="gray" />
+            <Text color="gray" size="18">{place}</Text>
+          </div>
+          <div>
+            <PlacePriceIcon type="loyalty" size="lg" color="gray" />
+            <Text color="gray" size="18">{price}</Text>
+          </div>
+        </SliderDetailsContainer>
+      </SliderContentContainer>
+    </CardTemplate>
+  );
+
+  const renderRectangleCard = () => (
+    <CardTemplate
+      direction="horizontal"
+      hoverToLevel={3}
+      data-test={RECTANGLE_CARD}
+      maxWidth={592}
+      linkTo={linkTo}
+    >
+      <RectangleCover src={cover} />
+      <RectangleContentContainer>
+        <DateBookmarkContainer>
+          <ShowDate date={date} color="gray" fontSize="12" />
+          {
+            isBookmarked
+              ? <BookmarkIcon type="bookmark" size="lg" color="gray" onClick={handleClickBookmark} />
+              : <BookmarkIcon type="bookmark-border" size="lg" color="gray" onClick={handleClickBookmark} />
+          }
+        </DateBookmarkContainer>
+        <Title level={2} size="sm">{title}</Title>
+        <PlacePriceContainer>
+          <div>
+            <PlacePriceIcon type="place" size="sm" color="gray" />
+            <Text color="gray" size="12">{place}</Text>
+          </div>
+          <div>
+            <PlacePriceIcon type="loyalty" size="sm" color="gray" />
+            <Text color="gray" size="12">{price}</Text>
+          </div>
+        </PlacePriceContainer>
+      </RectangleContentContainer>
+    </CardTemplate>
+  );
+
   const renderCard = () => {
     switch (type) {
       case RECTANGLE_CARD:
-        return <div data-test={RECTANGLE_CARD}>Hello default card</div>;
+        return renderRectangleCard();
       case SLIDER_CARD:
-        return <div data-test={SLIDER_CARD}>Hello default card</div>;
+        return renderSliderCard();
       case SQUARE_CARD:
       default:
-        return (
-          <CardTemplate
-            direction="vertical"
-            hoverToLevel={3}
-            data-test={SQUARE_CARD}
-            maxWidth={400}
-            linkTo="/alinkaddress"
-          >
-            <SquareCover src={cover} />
-            <SquareContentContainer>
-              <SquareDateBookmarkContainer>
-                <ShowDate date={date} color="gray" fontSize="12" />
-                {
-                  isBookmarked
-                    ? <BookmarkIcon type="bookmark" size="md" color="gray" onClick={handleClickBookmark} />
-                    : <BookmarkIcon type="bookmark-border" size="md" color="gray" onClick={handleClickBookmark} />
-                }
-              </SquareDateBookmarkContainer>
-              <Title level={2} size="sm">{title}</Title>
-              <PlacePriceContainer>
-                <div>
-                  <PlacePriceIcon type="place" size="md" color="gray" />
-                  <Text color="gray" size="12">{place}</Text>
-                </div>
-                <div>
-                  <PlacePriceIcon type="loyalty" size="md" color="gray" />
-                  <Text color="gray" size="12">{price}</Text>
-                </div>
-              </PlacePriceContainer>
-              <OrganizationLink to={`organizations/${organizationSlug}`}>
-                <Avatar src={organizationLogo} size="sm" />
-                <OrganizationName>{organizationName}</OrganizationName>
-              </OrganizationLink>
-            </SquareContentContainer>
-          </CardTemplate>
-        );
+        return renderSquareCard();
     }
   };
 

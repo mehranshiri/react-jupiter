@@ -11,7 +11,7 @@ export const getColorFromName = (theme, color) => {
     case 'darkBlue':
       return theme.colors.darkBlue600;
     case 'gray':
-      return theme.colors.gray600;
+      return theme.colors.gray800;
     case 'white':
       return theme.colors.white;
     case 'light':

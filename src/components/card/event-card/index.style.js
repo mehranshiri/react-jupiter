@@ -4,21 +4,9 @@ import { Link } from 'react-router-dom';
 import { Text, Heading } from '../../typography';
 import Icon from '../../icons';
 
-export const SquareCover = styled.img`
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-`;
+/* Common event card styles */
 
-export const SquareContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  justify-content: space-between;
-  height: 200px;
-`;
-
-export const SquareDateBookmarkContainer = styled.div`
+export const DateBookmarkContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -37,6 +25,26 @@ export const Title = styled(Heading)`
   text-overflow: ellipsis;
 `;
 
+export const PlacePriceIcon = styled(Icon)`
+  margin-right: 0;
+`;
+
+
+/* Square event card styles */
+
+export const SquareCover = styled.img`
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+`;
+
+export const SquareContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  justify-content: space-between;
+`;
+
 export const PlacePriceContainer = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -45,13 +53,10 @@ export const PlacePriceContainer = styled.div`
   }
 `;
 
-export const PlacePriceIcon = styled(Icon)`
-  margin-right: 0;
-`;
-
 export const OrganizationLink = styled(Link)`
   display: flex;
   align-items: center;
+  margin-top: 20px;
   text-decoration: none;
 `;
 
@@ -60,4 +65,58 @@ export const OrganizationName = styled(Text)`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+`;
+
+
+/* Slider event card styles */
+
+export const SliderCover = styled.img`
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+`;
+
+export const SliderContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  justify-content: space-between;
+  /* height: 140px; */
+`;
+
+export const SliderDetailsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  > div {; */
+    width: 33%;
+    text-align: center;
+    :nth-child(1) {
+      text-align: right;
+    }
+  }
+`;
+
+
+/* Rectangle event card styles */
+
+export const RectangleCover = styled.img`
+  width: 100%;
+  max-width: 245px;
+  height: auto;
+`;
+
+export const RectangleContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  justify-content: space-between;
+  width: calc(100% - 245px);
+  /* height: 200px; */
+`;
+
+export const RectangleDateBookmarkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid red;
 `;

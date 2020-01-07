@@ -60,7 +60,7 @@ CardTemplate.propTypes = {
     PropTypes.string,
   ]),
   linkTo: PropTypes.string,
-  direction: PropTypes.oneOf('vertical', 'horizontal'),
+  direction: PropTypes.oneOf(['vertical', 'horizontal']),
 };
 
 CardTemplate.defaultProps = {
