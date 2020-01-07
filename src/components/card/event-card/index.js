@@ -1,15 +1,21 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import { SQUARE_CARD, RECTANGLE_CARD, SLIDER_CARD } from './constants';
 import CardTemplate from '../card-template';
 import ShowDate from '../../show-date';
-// import Icon from '../../icon';
+import { Text } from '../../typography';
+import Avatar from '../../avatar';
 import {
   SquareCover,
   SquareContentContainer,
   SquareDateBookmarkContainer,
-  // Date,
+  BookmarkIcon,
+  Title,
+  PlacePriceContainer,
+  PlacePriceIcon,
+  OrganizationLink,
+  OrganizationName,
 } from './index.style';
 
 type Props = {
@@ -17,22 +23,27 @@ type Props = {
   bookmarked?: boolean,
   type?: SQUARE_CARD | RECTANGLE_CARD | SLIDER_CARD,
   price: string,
-  location: string,
+  place: string,
   date: string | Object,
   cover: String,
-  organizerName: ?string,
-  organizerLogo: ?string,
-  organizerSlug: ?String,
+  organizationName: ?string,
+  organizationLogo: ?string,
+  organizationSlug: ?String,
+  onClickBookmark: () => void,
 }
 
 const EventCard = (props: Props) => {
-  // const {
-  //   title, type, bookmarked, price, location, date, cover, organizerName, organizerLogo,
-  // } = props;
-
   const {
-    type, date, cover,
+    title, type, bookmarked, price, place, date, cover, organizationName, organizationLogo, organizationSlug, onClickBookmark,
   } = props;
+
+  const [isBookmarked, setBookmark] = useState(bookmarked);
+
+  const handleClickBookmark = (e) => {
+    e.preventDefault();
+    setBookmark(!isBookmarked);
+    onClickBookmark();
+  };
 
   const renderCard = () => {
     switch (type) {
@@ -45,16 +56,37 @@ const EventCard = (props: Props) => {
         return (
           <CardTemplate
             direction="vertical"
+            hoverToLevel={3}
             data-test={SQUARE_CARD}
+            maxWidth={400}
+            linkTo="/alinkaddress"
           >
             <SquareCover src={cover} />
             <SquareContentContainer>
               <SquareDateBookmarkContainer>
-                <ShowDate date={date} fontSize="12" />
-                {/* <Icon name="" /> */}
+                <ShowDate date={date} color="gray" fontSize="12" />
+                {
+                  isBookmarked
+                    ? <BookmarkIcon type="bookmark" size="md" color="gray" onClick={handleClickBookmark} />
+                    : <BookmarkIcon type="bookmark-border" size="md" color="gray" onClick={handleClickBookmark} />
+                }
               </SquareDateBookmarkContainer>
+              <Title level={2} size="sm">{title}</Title>
+              <PlacePriceContainer>
+                <div>
+                  <PlacePriceIcon type="place" size="md" color="gray" />
+                  <Text color="gray" size="12">{place}</Text>
+                </div>
+                <div>
+                  <PlacePriceIcon type="loyalty" size="md" color="gray" />
+                  <Text color="gray" size="12">{price}</Text>
+                </div>
+              </PlacePriceContainer>
+              <OrganizationLink to={`organizations/${organizationSlug}`}>
+                <Avatar src={organizationLogo} size="sm" />
+                <OrganizationName>{organizationName}</OrganizationName>
+              </OrganizationLink>
             </SquareContentContainer>
-            <p>Hello default card</p>
           </CardTemplate>
         );
     }

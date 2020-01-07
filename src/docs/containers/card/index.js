@@ -15,7 +15,16 @@ const CardPage = () => (
     <ShowDate date={new Date()} />
     <br />
     <EventCard
+      type="square"
+      title="تایتل یک رویداد نسبتا طولانی در اینجاست که قرار است اضافه بیاید و بزند به بیرون"
       cover="https://static.evand.net/images/events/covers/original/2e6f40ac8e1bc78304ccf3fd77b1b3d5.jpg"
+      date="2020-01-10T14:00:00+0330"
+      place="تهران"
+      price="از ۴۴۰۰۰ تومان"
+      organizationLogo="https://static.evand.net/images/organizations/logos/original/e90483ade453446ae2fd156e15244d04.jpg"
+      organizationName="هلدینگ کلان - مجتمع فنی پلی تکنیک - شرکت تجارت جهانی اندیشه"
+      organizationSlug="drskill"
+      onClickBookmark={() => { window.console.log('handle click bookmark'); }}
     />
     <br />
     <CardTemplate hoverToLevel={2}><div>Hello empty card</div></CardTemplate>
