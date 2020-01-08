@@ -31,10 +31,13 @@ const Button = (props) => {
   const [isDoneClickedAction, setDoneClickedAction] = useState(false);
 
   function handleClick() {
-    if (styleType !== 'tertiary') {
-      setDoneClickedAction(true);
+    if (!disabled) {
+      if (styleType !== 'tertiary') {
+        setDoneClickedAction(true);
+      }
+      return onClick;
     }
-    return onClick;
+    return null;
   }
 
   function RenderButtonContext() {

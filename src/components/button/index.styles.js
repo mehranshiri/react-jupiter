@@ -50,7 +50,7 @@ export const BaseButton = styled.button`
     }
     &:active {
       transition: all 0.25s;
-      background: ${({ theme, backgroundColor }) => getFocusColorFromName(theme, backgroundColor)};
+      background: ${({ theme, backgroundColor, disabled }) => (!disabled ? getFocusColorFromName(theme, backgroundColor) : getColorFromName(theme, backgroundColor))};
     }
   }
   
@@ -68,11 +68,11 @@ export const BaseButton = styled.button`
       }
     }
     &:active {
-      border-color: transparent;
-      background: ${({ theme, backgroundColor }) => getFocusColorFromName(theme, backgroundColor)};
+      border-color: ${({ theme, disabled, backgroundColor }) => (!disabled ? 'transparent' : getColorFromName(theme, backgroundColor))};
+      background: ${({ theme, backgroundColor, disabled }) => (!disabled ? getFocusColorFromName(theme, backgroundColor) : 'transparent')};
       * {
         transition: all 0.25s;
-        color: ${({ theme }) => theme.colors.white};
+        color: ${({ theme, backgroundColor, disabled }) => (!disabled ? theme.colors.white : getColorFromName(theme, backgroundColor))};
       }
     }
   }
