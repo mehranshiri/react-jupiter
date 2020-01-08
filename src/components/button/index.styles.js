@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import Icon from '../icon';
+import { getRGBFromName } from './utils';
 import { getColorFromName, getHoverColorFromName, getFocusColorFromName } from '../utils/themeUtils';
 
 export const BaseButton = styled.button`
@@ -20,6 +21,24 @@ export const BaseButton = styled.button`
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   opacity: ${({ disabled }) => (disabled ? '0.25' : '1')};
   border-radius: ${({ theme }) => `${theme.borderRadius}px`};
+
+  &[data-clickedButtonAction="${({ backgroundColor }) => backgroundColor}"] {
+    animation: onClickMove${({ backgroundColor }) => backgroundColor} 0.5s;
+    -webkit-animation: onClickMove${({ backgroundColor }) => backgroundColor} 0.5s;
+
+    @-webkit-keyframes onClickMove${({ backgroundColor }) => backgroundColor} {
+      0%   {box-shadow: none;}
+      80%  {box-shadow: 0px 0px 0px 4px rgba(${({ backgroundColor }) => getRGBFromName(backgroundColor)},0.12);}
+      90%  {box-shadow: 0px 0px 2px 4px rgba(${({ backgroundColor }) => getRGBFromName(backgroundColor)},0.12);}
+      100% {box-shadow: 0px 0px 1px 4px rgba(${({ backgroundColor }) => getRGBFromName(backgroundColor)},0);}
+    }
+    @keyframes onClickMove${({ backgroundColor }) => backgroundColor} {
+      0%   {box-shadow: none;}
+      80%  {box-shadow: 0px 0px 0px 4px rgba(${({ backgroundColor }) => getRGBFromName(backgroundColor)},0.12);}
+      90%  {box-shadow: 0px 0px 2px 4px rgba(${({ backgroundColor }) => getRGBFromName(backgroundColor)},0.12);}
+      100% {box-shadow: 0px 0px 1px 4px rgba(${({ backgroundColor }) => getRGBFromName(backgroundColor)},0);}
+    }
+  }
 
   &[data-styletype="primary"] {
     border: none;
