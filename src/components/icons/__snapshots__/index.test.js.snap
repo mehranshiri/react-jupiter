@@ -25,6 +25,7 @@ exports[`Icon component should render alarm-off icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="alarm-off"
@@ -56,6 +57,7 @@ exports[`Icon component should render alarm-on icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="alarm-on"
@@ -87,6 +89,7 @@ exports[`Icon component should render aspect-ratio icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="aspect-ratio"
@@ -118,6 +121,7 @@ exports[`Icon component should render assessment icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="assessment"
@@ -149,6 +153,7 @@ exports[`Icon component should render delete-outline icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="delete-outline"
@@ -180,6 +185,7 @@ exports[`Icon component should render description icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="description"
@@ -211,6 +217,7 @@ exports[`Icon component should render event icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="event"
@@ -242,6 +249,7 @@ exports[`Icon component should render event-seat icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="event-seat"
@@ -273,6 +281,7 @@ exports[`Icon component should render exit-to-app icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="exit-to-app"
@@ -304,6 +313,7 @@ exports[`Icon component should render today icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="today"
@@ -335,6 +345,7 @@ exports[`Icon component should render touch-app icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="touch-app"
@@ -366,6 +377,7 @@ exports[`Icon component should render watch-later icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="watch-later"
@@ -397,6 +409,7 @@ exports[`Icon component should render zoom-in icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="zoom-in"
@@ -428,6 +441,7 @@ exports[`Icon component should render zoom-out icon correctly 1`] = `
 
 <i
   className="c0"
+  color="default"
   data-test="i-tag"
   size="md"
   type="zoom-out"
