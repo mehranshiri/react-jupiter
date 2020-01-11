@@ -41,7 +41,7 @@ CardTemplate.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]).isRequired,
-  level: PropTypes.number,
+  level: PropTypes.oneOf([1, 2, 3, 4, 5]),
   hoverToLevel: PropTypes.number,
   maxWidth: PropTypes.oneOfType([
     PropTypes.number,
