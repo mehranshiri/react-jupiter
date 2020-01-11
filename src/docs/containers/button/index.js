@@ -252,7 +252,7 @@ const ButtonPage = () => (
       دکمه لینک دار
     </Heading>
     <ButtonWrapper>
-      <Button styleType="primary" icon="watch_later" linkTo="/avatar">
+      <Button linkTo="/avatar">
         دکمه لینک ساده با تنظیمات پیشفرض
       </Button>
       <Button styleType="secondary" icon="watch_later" linkTo="https://sciencebusiness.net/categories/dfgdfg" linkType="external" linkTarget="_blank">
