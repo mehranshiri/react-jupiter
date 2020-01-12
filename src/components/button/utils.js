@@ -1,7 +1,7 @@
-export function setFontColor(styleType, backgroundColor) {
+export function setFontColor(styleType, mainColor) {
   switch (styleType) {
     case 'secondary':
-      return backgroundColor;
+      return mainColor;
     case 'tertiary':
       return 'darkBlue';
     default:

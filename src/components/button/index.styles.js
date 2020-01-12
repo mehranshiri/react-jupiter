@@ -22,57 +22,57 @@ export const BaseButton = styled.button`
   opacity: ${({ disabled }) => (disabled ? '0.25' : '1')};
   border-radius: ${({ theme }) => `${theme.borderRadius}px`};
 
-  &[data-clickedButtonAction="${({ backgroundColor }) => backgroundColor}"] {
-    animation: onClickMove${({ backgroundColor }) => backgroundColor} 0.5s;
-    -webkit-animation: onClickMove${({ backgroundColor }) => backgroundColor} 0.5s;
+  &[data-clickedButtonAction="${({ mainColor }) => mainColor}"] {
+    animation: onClickMove${({ mainColor }) => mainColor} 0.5s;
+    -webkit-animation: onClickMove${({ mainColor }) => mainColor} 0.5s;
 
-    @-webkit-keyframes onClickMove${({ backgroundColor }) => backgroundColor} {
+    @-webkit-keyframes onClickMove${({ mainColor }) => mainColor} {
       0%   {box-shadow: none;}
-      80%  {box-shadow: 0px 0px 0px 4px rgba(${({ backgroundColor }) => getRGBFromName(backgroundColor)},0.12);}
-      90%  {box-shadow: 0px 0px 2px 4px rgba(${({ backgroundColor }) => getRGBFromName(backgroundColor)},0.12);}
-      100% {box-shadow: 0px 0px 1px 4px rgba(${({ backgroundColor }) => getRGBFromName(backgroundColor)},0);}
+      80%  {box-shadow: 0px 0px 0px 4px rgba(${({ mainColor }) => getRGBFromName(mainColor)},0.12);}
+      90%  {box-shadow: 0px 0px 2px 4px rgba(${({ mainColor }) => getRGBFromName(mainColor)},0.12);}
+      100% {box-shadow: 0px 0px 1px 4px rgba(${({ mainColor }) => getRGBFromName(mainColor)},0);}
     }
-    @keyframes onClickMove${({ backgroundColor }) => backgroundColor} {
+    @keyframes onClickMove${({ mainColor }) => mainColor} {
       0%   {box-shadow: none;}
-      80%  {box-shadow: 0px 0px 0px 4px rgba(${({ backgroundColor }) => getRGBFromName(backgroundColor)},0.12);}
-      90%  {box-shadow: 0px 0px 2px 4px rgba(${({ backgroundColor }) => getRGBFromName(backgroundColor)},0.12);}
-      100% {box-shadow: 0px 0px 1px 4px rgba(${({ backgroundColor }) => getRGBFromName(backgroundColor)},0);}
+      80%  {box-shadow: 0px 0px 0px 4px rgba(${({ mainColor }) => getRGBFromName(mainColor)},0.12);}
+      90%  {box-shadow: 0px 0px 2px 4px rgba(${({ mainColor }) => getRGBFromName(mainColor)},0.12);}
+      100% {box-shadow: 0px 0px 1px 4px rgba(${({ mainColor }) => getRGBFromName(mainColor)},0);}
     }
   }
 
   &[data-styletype="primary"] {
     border: none;
-    background: ${({ theme, backgroundColor }) => getColorFromName(theme, backgroundColor)};
+    background: ${({ theme, mainColor }) => getColorFromName(theme, mainColor)};
     
     &:hover { 
       transition: all 0.25s;
-      background: ${({ theme, backgroundColor, disabled }) => (!disabled ? getHoverColorFromName(theme, backgroundColor) : getColorFromName(theme, backgroundColor))};
+      background: ${({ theme, mainColor, disabled }) => (!disabled ? getHoverColorFromName(theme, mainColor) : getColorFromName(theme, mainColor))};
     }
     &:active {
       transition: all 0.25s;
-      background: ${({ theme, backgroundColor, disabled }) => (!disabled ? getFocusColorFromName(theme, backgroundColor) : getColorFromName(theme, backgroundColor))};
+      background: ${({ theme, mainColor, disabled }) => (!disabled ? getFocusColorFromName(theme, mainColor) : getColorFromName(theme, mainColor))};
     }
   }
   
   &[data-styletype="secondary"] {
-    border: 1px solid ${({ theme, backgroundColor }) => getColorFromName(theme, backgroundColor)};
+    border: 1px solid ${({ theme, mainColor }) => getColorFromName(theme, mainColor)};
     background: transparent;
 
     &:hover { 
-      border-color: ${({ theme, disabled, backgroundColor }) => (!disabled ? 'transparent' : getColorFromName(theme, backgroundColor))};
+      border-color: ${({ theme, disabled, mainColor }) => (!disabled ? 'transparent' : getColorFromName(theme, mainColor))};
       transition: all 0.25s;
-      background: ${({ theme, backgroundColor, disabled }) => (!disabled ? getColorFromName(theme, backgroundColor) : 'transparent')};
+      background: ${({ theme, mainColor, disabled }) => (!disabled ? getColorFromName(theme, mainColor) : 'transparent')};
       * {
         transition: all 0.25s;
-        color: ${({ theme, backgroundColor, disabled }) => (!disabled ? theme.colors.white : getColorFromName(theme, backgroundColor))};
+        color: ${({ theme, mainColor, disabled }) => (!disabled ? theme.colors.white : getColorFromName(theme, mainColor))};
       }
     }
     &:active {
-      border-color: ${({ theme, disabled, backgroundColor }) => (!disabled ? 'transparent' : getColorFromName(theme, backgroundColor))};
-      background: ${({ theme, backgroundColor, disabled }) => (!disabled ? getFocusColorFromName(theme, backgroundColor) : 'transparent')};
+      border-color: ${({ theme, disabled, mainColor }) => (!disabled ? 'transparent' : getColorFromName(theme, mainColor))};
+      background: ${({ theme, mainColor, disabled }) => (!disabled ? getFocusColorFromName(theme, mainColor) : 'transparent')};
       * {
         transition: all 0.25s;
-        color: ${({ theme, backgroundColor, disabled }) => (!disabled ? theme.colors.white : getColorFromName(theme, backgroundColor))};
+        color: ${({ theme, mainColor, disabled }) => (!disabled ? theme.colors.white : getColorFromName(theme, mainColor))};
       }
     }
   }

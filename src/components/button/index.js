@@ -20,14 +20,14 @@ const Button = (props) => {
     wide,
     disabled,
     size,
-    backgroundColor,
+    mainColor,
     styleType,
     linkTo,
     linkTarget,
     linkType,
     onClick,
   } = props;
-  const fontColor = setFontColor(styleType, backgroundColor);
+  const fontColor = setFontColor(styleType, mainColor);
   const [isDoneClickedAction, setDoneClickedAction] = useState(false);
 
   function handleClick() {
@@ -49,10 +49,10 @@ const Button = (props) => {
           type={htmlType}
           wide={wide}
           size={size}
-          backgroundColor={backgroundColor}
+          mainColor={mainColor}
           disabled={disabled}
           data-styletype={styleType}
-          data-clickedButtonAction={isDoneClickedAction ? backgroundColor : null}
+          data-clickedButtonAction={isDoneClickedAction ? mainColor : null}
           onAnimationEnd={() => (setDoneClickedAction(false))}
         >
           {
@@ -107,7 +107,7 @@ Button.propTypes = {
   wide: PropTypes.bool,
   disabled: PropTypes.bool,
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
-  backgroundColor: PropTypes.oneOf(['red', 'green', 'yellow', 'darkBlue', 'blue']),
+  mainColor: PropTypes.oneOf(['red', 'green', 'yellow', 'darkBlue', 'blue']),
   styleType: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   linkTo: PropTypes.string,
   linkTarget: PropTypes.oneOf(['_self', '_blank']),
@@ -121,7 +121,7 @@ Button.defaultProps = {
   wide: false,
   disabled: false,
   size: 'md',
-  backgroundColor: 'darkBlue',
+  mainColor: 'darkBlue',
   styleType: 'primary',
   linkTo: null,
   linkTarget: '_self',

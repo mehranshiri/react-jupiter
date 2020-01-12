@@ -94,13 +94,13 @@ const ButtonPage = () => (
       رنگ قرمز - normal
     </Heading>
     <ButtonWrapper>
-      <Button styleType="primary" icon="watch_later" backgroundColor="red">
+      <Button styleType="primary" icon="watch_later" mainColor="red">
         دکمه primary (default)
       </Button>
-      <Button styleType="secondary" icon="watch_later" backgroundColor="red">
+      <Button styleType="secondary" icon="watch_later" mainColor="red">
         دکمه secondary
       </Button>
-      <Button styleType="tertiary" icon="watch_later" backgroundColor="red">
+      <Button styleType="tertiary" icon="watch_later" mainColor="red">
         دکمه tertiary
       </Button>
     </ButtonWrapper>
@@ -108,13 +108,13 @@ const ButtonPage = () => (
       رنگ قرمز - disabled
     </Heading>
     <ButtonWrapper>
-      <Button styleType="primary" icon="watch_later" backgroundColor="red" disabled>
+      <Button styleType="primary" icon="watch_later" mainColor="red" disabled>
         دکمه primary (default) - disabled
       </Button>
-      <Button styleType="secondary" icon="watch_later" backgroundColor="red" disabled>
+      <Button styleType="secondary" icon="watch_later" mainColor="red" disabled>
         دکمه secondary - disabled
       </Button>
-      <Button styleType="tertiary" icon="watch_later" backgroundColor="red" disabled>
+      <Button styleType="tertiary" icon="watch_later" mainColor="red" disabled>
         دکمه tertiary - disabled
       </Button>
     </ButtonWrapper>
@@ -126,13 +126,13 @@ const ButtonPage = () => (
       رنگ سبز - normal
     </Heading>
     <ButtonWrapper>
-      <Button styleType="primary" icon="watch_later" backgroundColor="green">
+      <Button styleType="primary" icon="watch_later" mainColor="green">
         دکمه primary (default)
       </Button>
-      <Button styleType="secondary" icon="watch_later" backgroundColor="green">
+      <Button styleType="secondary" icon="watch_later" mainColor="green">
         دکمه secondary
       </Button>
-      <Button styleType="tertiary" icon="watch_later" backgroundColor="green">
+      <Button styleType="tertiary" icon="watch_later" mainColor="green">
         دکمه tertiary
       </Button>
     </ButtonWrapper>
@@ -140,13 +140,13 @@ const ButtonPage = () => (
       رنگ سبز - disabled
     </Heading>
     <ButtonWrapper>
-      <Button styleType="primary" icon="watch_later" backgroundColor="green" disabled>
+      <Button styleType="primary" icon="watch_later" mainColor="green" disabled>
         دکمه primary (default) - disabled
       </Button>
-      <Button styleType="secondary" icon="watch_later" backgroundColor="green" disabled>
+      <Button styleType="secondary" icon="watch_later" mainColor="green" disabled>
         دکمه secondary - disabled
       </Button>
-      <Button styleType="tertiary" icon="watch_later" backgroundColor="green" disabled>
+      <Button styleType="tertiary" icon="watch_later" mainColor="green" disabled>
         دکمه tertiary - disabled
       </Button>
     </ButtonWrapper>
@@ -158,13 +158,13 @@ const ButtonPage = () => (
       رنگ زرد - normal
     </Heading>
     <ButtonWrapper>
-      <Button styleType="primary" icon="watch_later" backgroundColor="yellow">
+      <Button styleType="primary" icon="watch_later" mainColor="yellow">
         دکمه primary (default)
       </Button>
-      <Button styleType="secondary" icon="watch_later" backgroundColor="yellow">
+      <Button styleType="secondary" icon="watch_later" mainColor="yellow">
         دکمه secondary
       </Button>
-      <Button styleType="tertiary" icon="watch_later" backgroundColor="yellow">
+      <Button styleType="tertiary" icon="watch_later" mainColor="yellow">
         دکمه tertiary
       </Button>
     </ButtonWrapper>
@@ -172,13 +172,13 @@ const ButtonPage = () => (
       رنگ زرد - disabled
     </Heading>
     <ButtonWrapper>
-      <Button styleType="primary" icon="watch_later" backgroundColor="yellow" disabled>
+      <Button styleType="primary" icon="watch_later" mainColor="yellow" disabled>
         دکمه primary (default) - disabled
       </Button>
-      <Button styleType="secondary" icon="watch_later" backgroundColor="yellow" disabled>
+      <Button styleType="secondary" icon="watch_later" mainColor="yellow" disabled>
         دکمه secondary - disabled
       </Button>
-      <Button styleType="tertiary" icon="watch_later" backgroundColor="yellow" disabled>
+      <Button styleType="tertiary" icon="watch_later" mainColor="yellow" disabled>
         دکمه tertiary - disabled
       </Button>
     </ButtonWrapper>
@@ -190,13 +190,13 @@ const ButtonPage = () => (
       رنگ آبی - normal
     </Heading>
     <ButtonWrapper>
-      <Button styleType="primary" icon="watch_later" backgroundColor="blue">
+      <Button styleType="primary" icon="watch_later" mainColor="blue">
         دکمه primary (default)
       </Button>
-      <Button styleType="secondary" icon="watch_later" backgroundColor="blue">
+      <Button styleType="secondary" icon="watch_later" mainColor="blue">
         دکمه secondary
       </Button>
-      <Button styleType="tertiary" icon="watch_later" backgroundColor="blue">
+      <Button styleType="tertiary" icon="watch_later" mainColor="blue">
         دکمه tertiary
       </Button>
     </ButtonWrapper>
@@ -204,13 +204,13 @@ const ButtonPage = () => (
       رنگ آبی - disabled
     </Heading>
     <ButtonWrapper>
-      <Button styleType="primary" icon="watch_later" backgroundColor="blue" disabled>
+      <Button styleType="primary" icon="watch_later" mainColor="blue" disabled>
         دکمه primary (default) - disabled
       </Button>
-      <Button styleType="secondary" icon="watch_later" backgroundColor="blue" disabled>
+      <Button styleType="secondary" icon="watch_later" mainColor="blue" disabled>
         دکمه secondary - disabled
       </Button>
-      <Button styleType="tertiary" icon="watch_later" backgroundColor="blue" disabled>
+      <Button styleType="tertiary" icon="watch_later" mainColor="blue" disabled>
         دکمه tertiary - disabled
       </Button>
     </ButtonWrapper>

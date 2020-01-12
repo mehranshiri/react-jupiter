@@ -50,9 +50,9 @@ describe('Button(snapshot testing)', () => {
   });
 
   it('green Buttons', () => {
-    const component1 = render(<Button styleType="primary" backgroundColor="green">my primary button</Button>);
-    const component2 = render(<Button styleType="secondary" backgroundColor="green">my secoundrry button</Button>);
-    const component3 = render(<Button styleType="tertiary" backgroundColor="green">my tertiary button</Button>);
+    const component1 = render(<Button styleType="primary" mainColor="green">my primary button</Button>);
+    const component2 = render(<Button styleType="secondary" mainColor="green">my secoundrry button</Button>);
+    const component3 = render(<Button styleType="tertiary" mainColor="green">my tertiary button</Button>);
 
     expect(toJson(component1)).toMatchSnapshot();
     expect(toJson(component2)).toMatchSnapshot();
@@ -60,9 +60,9 @@ describe('Button(snapshot testing)', () => {
   });
 
   it('yellow Buttons', () => {
-    const component1 = render(<Button styleType="primary" backgroundColor="yellow">my primary button</Button>);
-    const component2 = render(<Button styleType="secondary" backgroundColor="yellow">my secoundrry button</Button>);
-    const component3 = render(<Button styleType="tertiary" backgroundColor="yellow">my tertiary button</Button>);
+    const component1 = render(<Button styleType="primary" mainColor="yellow">my primary button</Button>);
+    const component2 = render(<Button styleType="secondary" mainColor="yellow">my secoundrry button</Button>);
+    const component3 = render(<Button styleType="tertiary" mainColor="yellow">my tertiary button</Button>);
 
     expect(toJson(component1)).toMatchSnapshot();
     expect(toJson(component2)).toMatchSnapshot();
@@ -70,9 +70,9 @@ describe('Button(snapshot testing)', () => {
   });
 
   it('red Buttons', () => {
-    const component1 = render(<Button styleType="primary" backgroundColor="red">my primary button</Button>);
-    const component2 = render(<Button styleType="secondary" backgroundColor="red">my secoundrry button</Button>);
-    const component3 = render(<Button styleType="tertiary" backgroundColor="red">my tertiary button</Button>);
+    const component1 = render(<Button styleType="primary" mainColor="red">my primary button</Button>);
+    const component2 = render(<Button styleType="secondary" mainColor="red">my secoundrry button</Button>);
+    const component3 = render(<Button styleType="tertiary" mainColor="red">my tertiary button</Button>);
 
     expect(toJson(component1)).toMatchSnapshot();
     expect(toJson(component2)).toMatchSnapshot();
@@ -80,9 +80,9 @@ describe('Button(snapshot testing)', () => {
   });
 
   it('blue Buttons', () => {
-    const component1 = render(<Button styleType="primary" backgroundColor="blue">my primary button</Button>);
-    const component2 = render(<Button styleType="secondary" backgroundColor="blue">my secoundrry button</Button>);
-    const component3 = render(<Button styleType="tertiary" backgroundColor="blue">my tertiary button</Button>);
+    const component1 = render(<Button styleType="primary" mainColor="blue">my primary button</Button>);
+    const component2 = render(<Button styleType="secondary" mainColor="blue">my secoundrry button</Button>);
+    const component3 = render(<Button styleType="tertiary" mainColor="blue">my tertiary button</Button>);
 
     expect(toJson(component1)).toMatchSnapshot();
     expect(toJson(component2)).toMatchSnapshot();
@@ -90,9 +90,9 @@ describe('Button(snapshot testing)', () => {
   });
 
   it('darkblue Buttons(default)', () => {
-    const component1 = render(<Button styleType="primary" backgroundColor="darkblue">my primary button</Button>);
-    const component2 = render(<Button styleType="secondary" backgroundColor="darkblue">my secoundrry button</Button>);
-    const component3 = render(<Button styleType="tertiary" backgroundColor="darkblue">my tertiary button</Button>);
+    const component1 = render(<Button styleType="primary" mainColor="darkblue">my primary button</Button>);
+    const component2 = render(<Button styleType="secondary" mainColor="darkblue">my secoundrry button</Button>);
+    const component3 = render(<Button styleType="tertiary" mainColor="darkblue">my tertiary button</Button>);
     const component4 = render(<Button styleType="primary">my primary button</Button>);
     const component5 = render(<Button styleType="secondary">my secoundrry button</Button>);
     const component6 = render(<Button styleType="tertiary">my tertiary button</Button>);
@@ -106,8 +106,8 @@ describe('Button(snapshot testing)', () => {
   });
 
   it('disabled Buttons', () => {
-    const component1 = render(<Button styleType="primary" backgroundColor="blue" icon="watch_later" disabled>my blue iconic disabled primary button</Button>);
-    const component2 = render(<Button styleType="secondary" backgroundColor="red" disabled>my red disabled secoundrry button</Button>);
+    const component1 = render(<Button styleType="primary" mainColor="blue" icon="watch_later" disabled>my blue iconic disabled primary button</Button>);
+    const component2 = render(<Button styleType="secondary" mainColor="red" disabled>my red disabled secoundrry button</Button>);
     const component3 = render(<Button styleType="tertiary" disabled>my disabled tertiary button</Button>);
     const component4 = render(
       <Router>
