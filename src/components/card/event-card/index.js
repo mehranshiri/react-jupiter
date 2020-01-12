@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 
-import { SQUARE_CARD, RECTANGLE_CARD, SLIDER_CARD } from './constants';
+import { SQUARE_CARD, RECTANGLE_CARD } from './constants';
 import CardTemplate from '../card-template';
 import ShowDate from '../../show-date';
 import { Text } from '../../typography';
@@ -16,9 +16,6 @@ import {
   PlacePriceIcon,
   OrganizationLink,
   OrganizationName,
-  SliderCover,
-  SliderContentContainer,
-  SliderDetailsContainer,
   RectangleCover,
   RectangleContentContainer,
 } from './index.style';
@@ -26,7 +23,7 @@ import {
 type Props = {
   title: string,
   bookmarked?: boolean,
-  type?: SQUARE_CARD | RECTANGLE_CARD | SLIDER_CARD,
+  type?: SQUARE_CARD | RECTANGLE_CARD,
   price: string,
   place: string,
   date: string | Object,
@@ -101,34 +98,6 @@ const EventCard = (props: Props) => {
     </CardTemplate>
   );
 
-  const renderSliderCard = () => (
-    <CardTemplate
-      direction="vertical"
-      hoverToLevel={3}
-      data-test={SLIDER_CARD}
-      maxWidth={800}
-      linkTo={linkTo}
-    >
-      <SliderCover src={cover} />
-      <SliderContentContainer>
-        <Title level={2} size="lg">{title}</Title>
-        <SliderDetailsContainer>
-          <div>
-            <ShowDate date={date} fontSize="18" color="gray" />
-          </div>
-          <div>
-            <PlacePriceIcon type="place" size="lg" color="gray" />
-            <Text color="gray" size="18">{place}</Text>
-          </div>
-          <div>
-            <PlacePriceIcon type="loyalty" size="lg" color="gray" />
-            <Text color="gray" size="18">{price}</Text>
-          </div>
-        </SliderDetailsContainer>
-      </SliderContentContainer>
-    </CardTemplate>
-  );
-
   const renderRectangleCard = () => (
     <CardTemplate
       direction="horizontal"
@@ -166,8 +135,6 @@ const EventCard = (props: Props) => {
     switch (type) {
       case RECTANGLE_CARD:
         return renderRectangleCard();
-      case SLIDER_CARD:
-        return renderSliderCard();
       case SQUARE_CARD:
       default:
         return renderSquareCard();

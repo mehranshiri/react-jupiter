@@ -28,7 +28,7 @@ const CardPage = () => (
       linkTo="/somewhere"
     />
     <br />
-    <EventCard
+    {/* <EventCard
       type="slider"
       title="تایتل یک رویداد نسبتا طولانی در اینجاست که باید و باید و قرار است اضافه بیاید و بزند به بیرون"
       cover="https://static.evand.net/images/events/covers/original/2e6f40ac8e1bc78304ccf3fd77b1b3d5.jpg"
@@ -37,7 +37,7 @@ const CardPage = () => (
       price="از ۴۴۰۰۰ تومان"
       onClickBookmark={() => { window.console.log('handle click bookmark'); }}
       linkTo="/somewhere"
-    />
+    /> */}
     <br />
 
     <EventCard

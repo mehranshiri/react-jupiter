@@ -68,35 +68,6 @@ export const OrganizationName = styled(Text)`
 `;
 
 
-/* Slider event card styles */
-
-export const SliderCover = styled.img`
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-`;
-
-export const SliderContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 8px;
-  justify-content: space-between;
-  /* height: 140px; */
-`;
-
-export const SliderDetailsContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  > div {; */
-    width: 33%;
-    text-align: center;
-    :nth-child(1) {
-      text-align: right;
-    }
-  }
-`;
-
-
 /* Rectangle event card styles */
 
 export const RectangleCover = styled.img`
