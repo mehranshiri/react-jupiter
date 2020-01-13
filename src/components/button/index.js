@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
@@ -25,26 +25,14 @@ const Button = (props) => {
     linkTo,
     linkTarget,
     linkType,
-    onClick,
+    ...rest
   } = props;
   const fontColor = setFontColor(styleType, mainColor);
-  const [isDoneClickedAction, setDoneClickedAction] = useState(false);
-
-  function handleClick() {
-    if (!disabled) {
-      if (styleType !== 'tertiary') {
-        setDoneClickedAction(true);
-      }
-      return onClick;
-    }
-    return null;
-  }
 
   function RenderButtonContext() {
     return (
       <ThemeProvider theme={theme}>
         <BaseButton
-          onClick={handleClick}
           data-test="button"
           type={htmlType}
           wide={wide}
@@ -52,8 +40,7 @@ const Button = (props) => {
           mainColor={mainColor}
           disabled={disabled}
           data-styletype={styleType}
-          data-clickedButtonAction={isDoneClickedAction ? mainColor : null}
-          onAnimationEnd={() => (setDoneClickedAction(false))}
+          {...rest}
         >
           {
             icon
@@ -112,7 +99,6 @@ Button.propTypes = {
   linkTo: PropTypes.string,
   linkTarget: PropTypes.oneOf(['_self', '_blank']),
   linkType: PropTypes.oneOf(['external', 'internal']),
-  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
@@ -126,7 +112,6 @@ Button.defaultProps = {
   linkTo: null,
   linkTarget: '_self',
   linkType: 'internal',
-  onClick: null,
 };
 
 export default Button;

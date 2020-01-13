@@ -2,7 +2,7 @@
 
 exports[`Button(snapshot testing) Button sizes 1`] = `
 <button
-  class="sc-jzJRlG hCLTUC"
+  class="sc-jzJRlG kgoJDG"
   data-styletype="primary"
   data-test="button"
   type="submit"
@@ -19,7 +19,7 @@ exports[`Button(snapshot testing) Button sizes 1`] = `
 
 exports[`Button(snapshot testing) Button sizes 2`] = `
 <button
-  class="sc-jzJRlG bvPtYt"
+  class="sc-jzJRlG haXrBz"
   data-styletype="primary"
   data-test="button"
   type="submit"
@@ -36,7 +36,7 @@ exports[`Button(snapshot testing) Button sizes 2`] = `
 
 exports[`Button(snapshot testing) Button sizes 3`] = `
 <button
-  class="sc-jzJRlG laEcew"
+  class="sc-jzJRlG AGgwt"
   data-styletype="primary"
   data-test="button"
   type="submit"
@@ -53,7 +53,7 @@ exports[`Button(snapshot testing) Button sizes 3`] = `
 
 exports[`Button(snapshot testing) Button-default 1`] = `
 <button
-  class="sc-jzJRlG bvPtYt"
+  class="sc-jzJRlG haXrBz"
   data-styletype="primary"
   data-test="button"
   type="submit"
@@ -70,7 +70,7 @@ exports[`Button(snapshot testing) Button-default 1`] = `
 
 exports[`Button(snapshot testing) blue Buttons 1`] = `
 <button
-  class="sc-jzJRlG gxruXm"
+  class="sc-jzJRlG jLnVUu"
   data-styletype="primary"
   data-test="button"
   type="submit"
@@ -87,7 +87,7 @@ exports[`Button(snapshot testing) blue Buttons 1`] = `
 
 exports[`Button(snapshot testing) blue Buttons 2`] = `
 <button
-  class="sc-jzJRlG gxruXm"
+  class="sc-jzJRlG jLnVUu"
   data-styletype="secondary"
   data-test="button"
   type="submit"
@@ -104,7 +104,7 @@ exports[`Button(snapshot testing) blue Buttons 2`] = `
 
 exports[`Button(snapshot testing) blue Buttons 3`] = `
 <button
-  class="sc-jzJRlG gxruXm"
+  class="sc-jzJRlG jLnVUu"
   data-styletype="tertiary"
   data-test="button"
   type="submit"
@@ -121,7 +121,7 @@ exports[`Button(snapshot testing) blue Buttons 3`] = `
 
 exports[`Button(snapshot testing) darkblue Buttons(default) 1`] = `
 <button
-  class="sc-jzJRlG gbUyZi"
+  class="sc-jzJRlG dRFkQa"
   data-styletype="primary"
   data-test="button"
   type="submit"
@@ -138,7 +138,7 @@ exports[`Button(snapshot testing) darkblue Buttons(default) 1`] = `
 
 exports[`Button(snapshot testing) darkblue Buttons(default) 2`] = `
 <button
-  class="sc-jzJRlG gbUyZi"
+  class="sc-jzJRlG dRFkQa"
   data-styletype="secondary"
   data-test="button"
   type="submit"
@@ -155,7 +155,7 @@ exports[`Button(snapshot testing) darkblue Buttons(default) 2`] = `
 
 exports[`Button(snapshot testing) darkblue Buttons(default) 3`] = `
 <button
-  class="sc-jzJRlG gbUyZi"
+  class="sc-jzJRlG dRFkQa"
   data-styletype="tertiary"
   data-test="button"
   type="submit"
@@ -172,7 +172,7 @@ exports[`Button(snapshot testing) darkblue Buttons(default) 3`] = `
 
 exports[`Button(snapshot testing) darkblue Buttons(default) 4`] = `
 <button
-  class="sc-jzJRlG bvPtYt"
+  class="sc-jzJRlG haXrBz"
   data-styletype="primary"
   data-test="button"
   type="submit"
@@ -189,7 +189,7 @@ exports[`Button(snapshot testing) darkblue Buttons(default) 4`] = `
 
 exports[`Button(snapshot testing) darkblue Buttons(default) 5`] = `
 <button
-  class="sc-jzJRlG bvPtYt"
+  class="sc-jzJRlG haXrBz"
   data-styletype="secondary"
   data-test="button"
   type="submit"
@@ -206,7 +206,7 @@ exports[`Button(snapshot testing) darkblue Buttons(default) 5`] = `
 
 exports[`Button(snapshot testing) darkblue Buttons(default) 6`] = `
 <button
-  class="sc-jzJRlG bvPtYt"
+  class="sc-jzJRlG haXrBz"
   data-styletype="tertiary"
   data-test="button"
   type="submit"
@@ -223,7 +223,7 @@ exports[`Button(snapshot testing) darkblue Buttons(default) 6`] = `
 
 exports[`Button(snapshot testing) disabled Buttons 1`] = `
 <button
-  class="sc-jzJRlG cRHvZk"
+  class="sc-jzJRlG kpVPZn"
   data-styletype="primary"
   data-test="button"
   disabled=""
@@ -250,7 +250,7 @@ exports[`Button(snapshot testing) disabled Buttons 1`] = `
 
 exports[`Button(snapshot testing) disabled Buttons 2`] = `
 <button
-  class="sc-jzJRlG bWWMtl"
+  class="sc-jzJRlG hvtatS"
   data-styletype="secondary"
   data-test="button"
   disabled=""
@@ -268,7 +268,7 @@ exports[`Button(snapshot testing) disabled Buttons 2`] = `
 
 exports[`Button(snapshot testing) disabled Buttons 3`] = `
 <button
-  class="sc-jzJRlG kxqaOX"
+  class="sc-jzJRlG fFHjJi"
   data-styletype="tertiary"
   data-test="button"
   disabled=""
@@ -291,7 +291,7 @@ exports[`Button(snapshot testing) disabled Buttons 4`] = `
   target="_self"
 >
   <button
-    class="sc-jzJRlG kxqaOX"
+    class="sc-jzJRlG fFHjJi"
     data-styletype="primary"
     data-test="button"
     disabled=""
@@ -310,7 +310,7 @@ exports[`Button(snapshot testing) disabled Buttons 4`] = `
 
 exports[`Button(snapshot testing) full-width button 1`] = `
 <button
-  class="sc-jzJRlG grsnUp"
+  class="sc-jzJRlG faMOae"
   data-styletype="primary"
   data-test="button"
   type="submit"
@@ -327,7 +327,7 @@ exports[`Button(snapshot testing) full-width button 1`] = `
 
 exports[`Button(snapshot testing) green Buttons 1`] = `
 <button
-  class="sc-jzJRlG cGQlhu"
+  class="sc-jzJRlG jadVCv"
   data-styletype="primary"
   data-test="button"
   type="submit"
@@ -344,7 +344,7 @@ exports[`Button(snapshot testing) green Buttons 1`] = `
 
 exports[`Button(snapshot testing) green Buttons 2`] = `
 <button
-  class="sc-jzJRlG cGQlhu"
+  class="sc-jzJRlG jadVCv"
   data-styletype="secondary"
   data-test="button"
   type="submit"
@@ -361,7 +361,7 @@ exports[`Button(snapshot testing) green Buttons 2`] = `
 
 exports[`Button(snapshot testing) green Buttons 3`] = `
 <button
-  class="sc-jzJRlG cGQlhu"
+  class="sc-jzJRlG jadVCv"
   data-styletype="tertiary"
   data-test="button"
   type="submit"
@@ -383,7 +383,7 @@ exports[`Button(snapshot testing) linked Buttons 1`] = `
   target="_self"
 >
   <button
-    class="sc-jzJRlG bvPtYt"
+    class="sc-jzJRlG haXrBz"
     data-styletype="primary"
     data-test="button"
     type="submit"
@@ -406,7 +406,7 @@ exports[`Button(snapshot testing) linked Buttons 2`] = `
   target="_blank"
 >
   <button
-    class="sc-jzJRlG bvPtYt"
+    class="sc-jzJRlG haXrBz"
     data-styletype="secondary"
     data-test="button"
     type="submit"
@@ -438,7 +438,7 @@ exports[`Button(snapshot testing) linked Buttons 3`] = `
   target="_self"
 >
   <button
-    class="sc-jzJRlG bvPtYt"
+    class="sc-jzJRlG haXrBz"
     data-styletype="tertiary"
     data-test="button"
     type="submit"
@@ -465,7 +465,7 @@ exports[`Button(snapshot testing) linked Buttons 3`] = `
 
 exports[`Button(snapshot testing) red Buttons 1`] = `
 <button
-  class="sc-jzJRlG dIWnWG"
+  class="sc-jzJRlG flQTlW"
   data-styletype="primary"
   data-test="button"
   type="submit"
@@ -482,7 +482,7 @@ exports[`Button(snapshot testing) red Buttons 1`] = `
 
 exports[`Button(snapshot testing) red Buttons 2`] = `
 <button
-  class="sc-jzJRlG dIWnWG"
+  class="sc-jzJRlG flQTlW"
   data-styletype="secondary"
   data-test="button"
   type="submit"
@@ -499,7 +499,7 @@ exports[`Button(snapshot testing) red Buttons 2`] = `
 
 exports[`Button(snapshot testing) red Buttons 3`] = `
 <button
-  class="sc-jzJRlG dIWnWG"
+  class="sc-jzJRlG flQTlW"
   data-styletype="tertiary"
   data-test="button"
   type="submit"
@@ -516,7 +516,7 @@ exports[`Button(snapshot testing) red Buttons 3`] = `
 
 exports[`Button(snapshot testing) yellow Buttons 1`] = `
 <button
-  class="sc-jzJRlG liiOHI"
+  class="sc-jzJRlG cIQvUg"
   data-styletype="primary"
   data-test="button"
   type="submit"
@@ -533,7 +533,7 @@ exports[`Button(snapshot testing) yellow Buttons 1`] = `
 
 exports[`Button(snapshot testing) yellow Buttons 2`] = `
 <button
-  class="sc-jzJRlG liiOHI"
+  class="sc-jzJRlG cIQvUg"
   data-styletype="secondary"
   data-test="button"
   type="submit"
@@ -550,7 +550,7 @@ exports[`Button(snapshot testing) yellow Buttons 2`] = `
 
 exports[`Button(snapshot testing) yellow Buttons 3`] = `
 <button
-  class="sc-jzJRlG liiOHI"
+  class="sc-jzJRlG cIQvUg"
   data-styletype="tertiary"
   data-test="button"
   type="submit"
