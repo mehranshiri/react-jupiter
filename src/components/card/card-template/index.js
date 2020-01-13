@@ -8,7 +8,7 @@ import { TemplateContainer, LinkWrapper } from './index.style';
 
 const CardTemplate = (props) => {
   const {
-    maxWidth, children, level, hoverToLevel, linkTo, direction,
+    maxWidth, children, level, hoverToLevel, linkTo, direction, ...rest
   } = props;
 
   const renderContent = () => {
@@ -21,6 +21,7 @@ const CardTemplate = (props) => {
             hoverToLevel={hoverToLevel}
             direction={direction}
             data-test="card-template"
+            {...rest}
           >
             {children}
           </TemplateContainer>
@@ -34,6 +35,7 @@ const CardTemplate = (props) => {
         hoverToLevel={hoverToLevel}
         direction={direction}
         data-test="card-template"
+        {...rest}
       >
         {children}
       </TemplateContainer>

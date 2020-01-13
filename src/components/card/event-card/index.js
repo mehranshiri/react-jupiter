@@ -1,37 +1,42 @@
 
 import React, { useState } from 'react';
 
-import { SQUARE_CARD, RECTANGLE_CARD } from './constants';
-import CardTemplate from '../card-template';
+import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
 import ShowDate from '../../show-date';
 import { Text } from '../../typography';
 import Avatar from '../../avatar';
 import {
-  SquareCover,
-  SquareContentContainer,
+  VerticalCardContainer,
+  Link,
+  VerticalCover,
+  VerticalContentContainer,
   DateBookmarkContainer,
   BookmarkIcon,
   Title,
-  PlacePriceContainer,
   PlacePriceIcon,
   OrganizationLink,
   OrganizationName,
-  RectangleCover,
-  RectangleContentContainer,
+  HorizontalCardContainer,
+  HorizontalCover,
+  HorizontalContentContainer,
+  VerticalPlacePriceContainer,
+  HorizontalPlacePriceContainer,
 } from './index.style';
 
 type Props = {
   title: string,
   bookmarked?: boolean,
-  type?: SQUARE_CARD | RECTANGLE_CARD,
+  type?: VERTICAL_CARD | HORIZONTAL_CARD,
   price: string,
   place: string,
   date: string | Object,
   cover: String,
-  organizationName: ?string,
-  organizationLogo: ?string,
-  organizationSlug: ?string,
-  linkTo: ?string,
+  organization: ?{
+    name: string,
+    logo: string,
+    slug: string,
+  },
+  linkTo?: string,
   onClickBookmark: () => void,
 }
 
@@ -44,9 +49,7 @@ const EventCard = (props: Props) => {
     place,
     date,
     cover,
-    organizationName,
-    organizationLogo,
-    organizationSlug,
+    organization,
     onClickBookmark,
     linkTo,
   } = props;
@@ -59,55 +62,53 @@ const EventCard = (props: Props) => {
     onClickBookmark();
   };
 
-  const renderSquareCard = () => (
-    <CardTemplate
-      direction="vertical"
+  const renderVerticalCard = () => (
+    <VerticalCardContainer
+      direction={type}
       hoverToLevel={3}
-      data-test={SQUARE_CARD}
-      maxWidth={400}
-      linkTo={linkTo}
+      maxWidth={270}
     >
-      <SquareCover src={cover} />
-      <SquareContentContainer>
-        <DateBookmarkContainer data-test="square-date-bookmark">
-          <ShowDate date={date} color="gray" fontSize="12" />
-          {
-            isBookmarked
-              ? <BookmarkIcon type="bookmark" size="lg" color="gray" onClick={handleClickBookmark} />
-              : <BookmarkIcon type="bookmark-border" size="lg" color="gray" onClick={handleClickBookmark} />
-          }
-        </DateBookmarkContainer>
-        <Title level={2} size="sm">{title}</Title>
-        <PlacePriceContainer>
-          <div>
-            <PlacePriceIcon type="place" size="md" color="gray" />
-            <Text color="gray" size="12">{place}</Text>
-          </div>
-          <div>
-            <PlacePriceIcon type="loyalty" size="md" color="gray" />
-            <Text color="gray" size="12">{price}</Text>
-          </div>
-        </PlacePriceContainer>
-        {(organizationLogo || organizationName) && (
-          <OrganizationLink to={`organizations/${organizationSlug}`}>
-            <Avatar src={organizationLogo} size="sm" />
-            <OrganizationName>{organizationName}</OrganizationName>
+      <Link to={linkTo}><VerticalCover data-test="vertical-cover" src={cover} /></Link>
+      <VerticalContentContainer data-test="vertical-content">
+        <div>
+          <DateBookmarkContainer data-test="vertical-date-bookmark">
+            <ShowDate date={date} color="gray" fontSize="12" />
+            {
+              isBookmarked
+                ? <BookmarkIcon type="bookmark" size="lg" color="gray" onClick={handleClickBookmark} />
+                : <BookmarkIcon type="bookmark-border" size="lg" color="gray" onClick={handleClickBookmark} />
+            }
+          </DateBookmarkContainer>
+          <Link to={linkTo}><Title level={2} size="sm">{title}</Title></Link>
+          <VerticalPlacePriceContainer>
+            <div>
+              <PlacePriceIcon type="place" size="sm" color="gray" />
+              <Text color="gray" size="10">{place}</Text>
+            </div>
+            <div>
+              <PlacePriceIcon type="loyalty" size="sm" color="gray" />
+              <Text color="gray" size="10">{price}</Text>
+            </div>
+          </VerticalPlacePriceContainer>
+        </div>
+        {organization && (
+          <OrganizationLink to={`organizations/${organization.slug}`}>
+            <Avatar src={organization.logo} size="sm" />
+            <OrganizationName size="12">{organization.name}</OrganizationName>
           </OrganizationLink>
         )}
-      </SquareContentContainer>
-    </CardTemplate>
+      </VerticalContentContainer>
+    </VerticalCardContainer>
   );
 
-  const renderRectangleCard = () => (
-    <CardTemplate
-      direction="horizontal"
+  const renderHorizontalCard = () => (
+    <HorizontalCardContainer
+      direction={type}
       hoverToLevel={3}
-      data-test={RECTANGLE_CARD}
-      maxWidth={592}
-      linkTo={linkTo}
+      maxWidth={560}
     >
-      <RectangleCover src={cover} />
-      <RectangleContentContainer>
+      <Link to={linkTo}><HorizontalCover data-test="horizontal-cover" src={cover} /></Link>
+      <HorizontalContentContainer data-test="horizontal-content">
         <DateBookmarkContainer>
           <ShowDate date={date} color="gray" fontSize="12" />
           {
@@ -116,8 +117,8 @@ const EventCard = (props: Props) => {
               : <BookmarkIcon type="bookmark-border" size="lg" color="gray" onClick={handleClickBookmark} />
           }
         </DateBookmarkContainer>
-        <Title level={2} size="sm">{title}</Title>
-        <PlacePriceContainer>
+        <Link to={linkTo}><Title level={2} size="sm">{title}</Title></Link>
+        <HorizontalPlacePriceContainer>
           <div>
             <PlacePriceIcon type="place" size="sm" color="gray" />
             <Text color="gray" size="12">{place}</Text>
@@ -126,18 +127,18 @@ const EventCard = (props: Props) => {
             <PlacePriceIcon type="loyalty" size="sm" color="gray" />
             <Text color="gray" size="12">{price}</Text>
           </div>
-        </PlacePriceContainer>
-      </RectangleContentContainer>
-    </CardTemplate>
+        </HorizontalPlacePriceContainer>
+      </HorizontalContentContainer>
+    </HorizontalCardContainer>
   );
 
   const renderCard = () => {
     switch (type) {
-      case RECTANGLE_CARD:
-        return renderRectangleCard();
-      case SQUARE_CARD:
+      case HORIZONTAL_CARD:
+        return renderHorizontalCard();
+      case VERTICAL_CARD:
       default:
-        return renderSquareCard();
+        return renderVerticalCard();
     }
   };
 
@@ -148,7 +149,7 @@ const EventCard = (props: Props) => {
 
 EventCard.defaultProps = {
   bookmarked: false,
-  type: SQUARE_CARD,
+  type: VERTICAL_CARD,
 };
 
 export default EventCard;

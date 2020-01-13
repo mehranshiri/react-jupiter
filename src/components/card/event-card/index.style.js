@@ -1,10 +1,16 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link as ReactRouterLink } from 'react-router-dom';
 
+import CardTemplate from '../card-template';
 import { Text, Heading } from '../../typography';
 import Icon from '../../icons';
 
+
 /* Common event card styles */
+
+export const Link = styled(ReactRouterLink)`
+  text-decoration: none;
+`;
 
 export const DateBookmarkContainer = styled.div`
   display: flex;
@@ -30,33 +36,36 @@ export const PlacePriceIcon = styled(Icon)`
 `;
 
 
-/* Square event card styles */
+/* Vertical event card styles */
 
-export const SquareCover = styled.img`
+
+export const VerticalCardContainer = styled(CardTemplate)`
+  margin: 8px;
+`;
+
+export const VerticalCover = styled.img`
   width: 100%;
-  max-width: 400px;
   height: auto;
 `;
 
-export const SquareContentContainer = styled.div`
+export const VerticalContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 24px;
   justify-content: space-between;
+  padding: 16px;
+  height: 200px;
 `;
 
-export const PlacePriceContainer = styled.div`
+export const VerticalPlacePriceContainer = styled.div`
   display: flex;
-  justify-content: flex-start;
-  div {
-    width: 50%;
-  }
+  flex-direction: column;
+  height: 45px;
+  justify-content: space-between;
 `;
 
 export const OrganizationLink = styled(Link)`
   display: flex;
   align-items: center;
-  margin-top: 20px;
   text-decoration: none;
 `;
 
@@ -68,26 +77,29 @@ export const OrganizationName = styled(Text)`
 `;
 
 
-/* Rectangle event card styles */
+/* Horizontal event card styles */
 
-export const RectangleCover = styled.img`
-  width: 100%;
-  max-width: 245px;
+export const HorizontalCardContainer = styled(VerticalCardContainer)`
+  height: 116px;
+`;
+
+export const HorizontalCover = styled.img`
+  width: 206px;
   height: auto;
 `;
 
-export const RectangleContentContainer = styled.div`
+export const HorizontalContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 16px;
   justify-content: space-between;
-  width: calc(100% - 245px);
-  /* height: 200px; */
+  width: calc(100% - 206px);
 `;
 
-export const RectangleDateBookmarkContainer = styled.div`
+
+export const HorizontalPlacePriceContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border: 1px solid red;
+  div {
+    width: 50%;
+  }
 `;

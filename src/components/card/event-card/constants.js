@@ -1,2 +1,2 @@
-export const SQUARE_CARD = 'square';
-export const RECTANGLE_CARD = 'rectangle';
+export const VERTICAL_CARD = 'vertical';
+export const HORIZONTAL_CARD = 'horizontal';
