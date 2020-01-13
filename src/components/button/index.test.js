@@ -16,7 +16,7 @@ describe('mainButton', () => {
 
   it('render iconic mainButton component', () => {
     const component = render(
-      <Button icon="watch_later">
+      <Button icon="watch-later">
         دکمه آیکون دار
       </Button>,
     );
@@ -106,7 +106,7 @@ describe('Button(snapshot testing)', () => {
   });
 
   it('disabled Buttons', () => {
-    const component1 = render(<Button styleType="primary" mainColor="blue" icon="watch_later" disabled>my blue iconic disabled primary button</Button>);
+    const component1 = render(<Button styleType="primary" mainColor="blue" icon="watch-later" disabled>my blue iconic disabled primary button</Button>);
     const component2 = render(<Button styleType="secondary" mainColor="red" disabled>my red disabled secoundrry button</Button>);
     const component3 = render(<Button styleType="tertiary" disabled>my disabled tertiary button</Button>);
     const component4 = render(
@@ -131,7 +131,7 @@ describe('Button(snapshot testing)', () => {
       <Router>
         <Button
           styleType="secondary"
-          icon="watch_later"
+          icon="watch-later"
           linkTo="https://sciencebusiness.net/categories/dfgdfg"
           linkType="external"
           linkTarget="_blank"
@@ -144,7 +144,7 @@ describe('Button(snapshot testing)', () => {
       <Router>
         <Button
           styleType="tertiary"
-          icon="watch_later"
+          icon="watch-later"
           linkTo="/avatar"
           linkType="internal"
           linkTarget="_self"

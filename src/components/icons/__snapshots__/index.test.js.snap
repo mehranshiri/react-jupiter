@@ -1,0 +1,449 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon component should render alarm-off icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e906";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="alarm-off"
+/>
+`;
+
+exports[`Icon component should render alarm-on icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e905";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="alarm-on"
+/>
+`;
+
+exports[`Icon component should render aspect-ratio icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e904";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="aspect-ratio"
+/>
+`;
+
+exports[`Icon component should render assessment icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e903";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="assessment"
+/>
+`;
+
+exports[`Icon component should render delete-outline icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e90d";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="delete-outline"
+/>
+`;
+
+exports[`Icon component should render description icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e90c";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="description"
+/>
+`;
+
+exports[`Icon component should render event icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e90b";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="event"
+/>
+`;
+
+exports[`Icon component should render event-seat icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e90a";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="event-seat"
+/>
+`;
+
+exports[`Icon component should render exit-to-app icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e909";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="exit-to-app"
+/>
+`;
+
+exports[`Icon component should render today icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e902";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="today"
+/>
+`;
+
+exports[`Icon component should render touch-app icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e908";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="touch-app"
+/>
+`;
+
+exports[`Icon component should render watch-later icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e907";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="watch-later"
+/>
+`;
+
+exports[`Icon component should render zoom-in icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e901";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="zoom-in"
+/>
+`;
+
+exports[`Icon component should render zoom-out icon correctly 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0::before {
+  content: "\\e900";
+}
+
+<i
+  className="c0"
+  color="default"
+  data-test="i-tag"
+  size="md"
+  type="zoom-out"
+/>
+`;

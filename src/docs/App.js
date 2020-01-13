@@ -11,6 +11,8 @@ import ButtonPage from './containers/button';
 import AvatarPage from './containers/avatar';
 import IconPage from './containers/icon';
 import TypographyPage from './containers/typography';
+import IconsPage from './containers/icons';
+import CardPage from './containers/card';
 
 const Container = styled.main`
   display: flex;
@@ -36,6 +38,8 @@ function App() {
           <Route path="/components/avatar" component={AvatarPage} />
           <Route path="/components/icon" component={IconPage} />
           <Route path="/components/button" component={ButtonPage} />
+          <Route path="/components/icons" component={IconsPage} />
+          <Route path="/components/card" component={CardPage} />
         </ContentContainer>
       </Content>
     </Container>

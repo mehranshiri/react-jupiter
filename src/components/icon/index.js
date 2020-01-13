@@ -30,12 +30,12 @@ const Icon = (props) => {
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
-  color: PropTypes.oneOf(['red', 'green', 'yellow', 'darkBlue', 'blue']),
+  color: PropTypes.oneOf(['default', 'red', 'green', 'blue', 'yellow', 'white', 'darkBlue', 'gray']),
 };
 
 Icon.defaultProps = {
   size: 'md',
-  color: 'riverBedDark',
+  color: 'default',
 };
 
 export default Icon;

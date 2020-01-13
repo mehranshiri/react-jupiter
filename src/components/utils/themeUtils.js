@@ -10,6 +10,8 @@ export const getColorFromName = (theme, color) => {
       return theme.colors.yellow600;
     case 'darkBlue':
       return theme.colors.darkBlue600;
+    case 'gray':
+      return theme.colors.gray600;
     case 'white':
       return theme.colors.white;
     case 'light':
@@ -50,6 +52,8 @@ export const getFocusColorFromName = (theme, color) => {
       return theme.colors.yellow800;
     case 'darkBlue':
       return theme.colors.darkBlue800;
+    case 'gray':
+      return theme.colors.gray800;
     default:
     case 'default':
       return theme.defaultColor;

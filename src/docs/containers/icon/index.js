@@ -15,13 +15,13 @@ const IconPage = () => (
     <Heading level={2}>
       نمونه آیکون پیشفرض
     </Heading>
-    <Icon name="watch_later" />
+    <Icon name="watch-later" />
     <br />
 
     <Heading level={2}>
       نمونه آیکون با کامل ترین امکانات
     </Heading>
-    <Icon name="watch_later" size="sm" color="green" />
+    <Icon name="watch-later" size="sm" color="green" />
     <br />
 
     <Heading level={2}>
@@ -31,19 +31,23 @@ const IconPage = () => (
     <Heading level={3}>
       sm size
     </Heading>
-    <Icon name="watch_later" size="sm" />
+    <div>
+      <Icon name="watch-later" size="sm" color="gray" />
+      <Icon name="watch-later" size="md" color="gray" />
+      <Icon name="watch-later" size="lg" color="gray" />
+    </div>
     <br />
 
     <Heading level={3}>
       md size (default)
     </Heading>
-    <Icon name="watch_later" size="md" />
+    <Icon name="watch-later" size="md" />
     <br />
 
     <Heading level={3}>
       lg size
     </Heading>
-    <Icon name="watch_later" size="lg" />
+    <Icon name="watch-later" size="lg" />
     <br />
 
   </>

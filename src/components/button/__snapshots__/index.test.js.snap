@@ -230,10 +230,10 @@ exports[`Button(snapshot testing) disabled Buttons 1`] = `
   type="submit"
 >
   <div
-    class="sc-cSHVUG iLCKLm sc-fjdhpX eDFlZt"
+    class="sc-fjdhpX eDFlZt sc-cSHVUG iLCKLm"
   >
     <i
-      class="icon-watch_later sc-jTzLTM claoVk"
+      class="sc-jTzLTM claoVk icon-watch-later"
       color="white"
       data-test="icon"
     />
@@ -412,10 +412,10 @@ exports[`Button(snapshot testing) linked Buttons 2`] = `
     type="submit"
   >
     <div
-      class="sc-cSHVUG iLCKLm sc-fjdhpX eDFlZt"
+      class="sc-fjdhpX eDFlZt sc-cSHVUG iLCKLm"
     >
       <i
-        class="icon-watch_later sc-jTzLTM ftCaFc"
+        class="sc-jTzLTM ftCaFc icon-watch-later"
         color="darkBlue"
         data-test="icon"
       />
@@ -444,10 +444,10 @@ exports[`Button(snapshot testing) linked Buttons 3`] = `
     type="submit"
   >
     <div
-      class="sc-cSHVUG iLCKLm sc-fjdhpX eDFlZt"
+      class="sc-fjdhpX eDFlZt sc-cSHVUG iLCKLm"
     >
       <i
-        class="icon-watch_later sc-jTzLTM ftCaFc"
+        class="sc-jTzLTM ftCaFc icon-watch-later"
         color="darkBlue"
         data-test="icon"
       />

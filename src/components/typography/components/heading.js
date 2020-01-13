@@ -53,7 +53,7 @@ Heading.propTypes = {
 };
 
 Heading.defaultProps = {
-  size: sizes.lg,
+  size: sizes.medium,
   level: 1,
 };
 
