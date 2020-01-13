@@ -13,6 +13,8 @@ const Icon = (props) => {
     ...rest
   } = props;
 
+  if (name === undefined) return null;
+
   return (
     <ThemeProvider theme={iconTheme}>
       <IconWrapper size={size} {...rest}>
