@@ -53,7 +53,7 @@ const Button = (props) => {
               )
           }
           <Text
-            size={theme.size[size]}
+            size={theme.size[size].font}
             color={fontColor}
             bold
           >
