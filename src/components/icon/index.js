@@ -3,25 +3,28 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import iconTheme from './theme';
-import { StyledIcon } from './index.styles';
+import { StyledIcon, IconWrapper } from './index.styles';
 
 const Icon = (props) => {
   const {
     name,
     size,
     color,
+    ...rest
   } = props;
 
   if (name === undefined) return null;
 
   return (
     <ThemeProvider theme={iconTheme}>
-      <StyledIcon
-        size={size}
-        color={color}
-        className={`icon-${name}`}
-        data-test="icon"
-      />
+      <IconWrapper size={size} {...rest}>
+        <StyledIcon
+          size={size}
+          color={color}
+          className={`icon-${name}`}
+          data-test="icon"
+        />
+      </IconWrapper>
     </ThemeProvider>
   );
 };

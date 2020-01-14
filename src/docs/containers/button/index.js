@@ -1,113 +1,283 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import Components, { Button, Typography } from '../../../components';
+import { Typography, Button } from '../../../components';
 
-const {
-  Heading, Text, Paragraph, Link,
-} = Typography;
+const { Heading } = Typography;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+`;
 
 const ButtonPage = () => (
   <>
-    <div>
-      <div>Button</div>
-      <Components.Button1 displayText="پرداخت" />
-      <Button props="props value" borderRadius={3} rounded />
-      <Heading>سلام</Heading>
-      <Heading size="lg" level={1}>سلام</Heading>
-      <Heading level={1}>سلام</Heading>
-      <Heading size="sm" level={1}>سلام</Heading>
-      <hr />
-      <Heading size="lg" level={2}>سلام</Heading>
-      <Heading size="md" level={2}>سلام</Heading>
-      <Heading size="sm" level={2}>سلام</Heading>
-      <hr />
-      <Heading size="lg" level={3}>سلام</Heading>
-      <Heading size="md" level={3}>سلام</Heading>
-      <Heading size="sm" level={3}>سلام</Heading>
-      <hr />
-      <Heading level={4} size="lg">سلام</Heading>
-      <Heading size="md" level={4}>سلام</Heading>
-      <Heading size="sm" level={4}>سلام</Heading>
-      <hr />
-      <Heading size="lg" level={5}>سلام</Heading>
-      <Heading size="md" level={5}>سلام</Heading>
-      <Heading size="sm" level={5}>سلام</Heading>
-      <hr />
-      <Heading size="lg" level={6}>سلام</Heading>
-      <Heading size="md" level={6}>سلام</Heading>
-      <Heading size="sm" level={6}>سلام</Heading>
-      <div />
-      <Text size={16} strong>تکست ساده استرانگ</Text>
-      <div />
-      <Text size={11} bold>تکست ساده بولد</Text>
-      <div />
-      <Text emphasized color="white">تکست ساده</Text>
-      <div />
-      <Text color="red" underline>تکست ساده</Text>
-      <div />
-      <Text color="green">تکست ساده</Text>
-      <div />
-      <Text color="light">تکست ساده</Text>
-      <div />
-      <Text color="blue">تکست ساده</Text>
-      <div />
-      <Text underline>تکست ساده</Text>
-      <div />
-      <Text marked>آنجایی</Text>
-      <div />
-      <Text lineThrough underline>تکست میکس</Text>
-      <div />
-      <Text label>آنجایی</Text>
-      <div />
-      <Text>تکست ساده</Text>
-      <div />
-      <Text strong emphasized>تکست ساده</Text>
-      <div />
-      <Text>تکست ساده</Text>
-      <div />
-      <Link to="/">تکست ساده</Link>
-      <div />
-      {/* <Link to="http://yahoo.com" external>تکست ساده لینک خارجی</Link> */}
-      <div />
-      <Text>تکست ساده</Text>
-      <div />
-      <Text>تکست ساده</Text>
-      <div />
-      <Text>تکست ساده</Text>
-      <div />
-      <Text>تکست ساده</Text>
-      <div />
-      <Text>تکست ساده</Text>
-      <div />
-      <Text>تکست ساده</Text>
-      <div />
-      <Text>تکست ساده</Text>
-      <div />
-      <Text subScript>نویسنده</Text>
-    </div>
-    <Paragraph>
-      طراحان معمولاً برای طراحی، ابتدا از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفاً به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از
-      <Text marked>آنجایی</Text>
-       که طراحان عموماً
-      <Text subScript>نویسنده</Text>
-        متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
-    </Paragraph>
-    <Paragraph size={24}>
-      طراحان معمولاً برای طراحی، ابتدا از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفاً به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از
-      <Text supScript> نویسنده </Text>
-      که طراحان عموماً نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
-    </Paragraph>
-    <Paragraph>
-      طراحان معمولاً برای طراحی، ابتدا از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفاً به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموماً نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
-    </Paragraph>
-    {/* <p style={{ border: '1px solid blue', margin: 0 }}>
-      طراحان معمولاً برای طراحی، ابتدا از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفاً به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان
-      <Text subScript> نویسنده </Text>
-      موماً نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
-    </p> */}
-    <Paragraph>
-      طراحان معمولاً برای طراحی، ابتدا از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفاً به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموماً نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
-    </Paragraph>
+    <Heading level={1}>
+      دکمه ها
+    </Heading>
+    <br />
+    <br />
+
+    <Heading level={2}>
+      نمونه دکمه پیشفرض
+    </Heading>
+    <Button>
+      دکمه
+    </Button>
+    <br />
+
+    <Heading level={2}>
+      دکمه آیکون دار
+    </Heading>
+    <Button icon="watch-later">
+      دکمه آیکون دار
+    </Button>
+    <br />
+
+    <Heading level={2}>
+      دکمه full-width
+    </Heading>
+    <Button wide size="sm">
+      دکمه full-width (sm size)
+    </Button>
+    <Button wide>
+      دکمه full-width(md size - default)
+    </Button>
+    <Button wide size="lg">
+      دکمه full-width(lg size)
+    </Button>
+    <br />
+
+    <Heading level={2}>
+      دکمه در اندازه های متفاوت
+    </Heading>
+
+    <Heading level={3}>
+      sm size
+    </Heading>
+    <Button size="sm">
+      دکمه
+    </Button>
+    <Button size="sm" icon="watch-later">
+      دکمه
+    </Button>
+    <br />
+
+    <Heading level={3}>
+      md size (default)
+    </Heading>
+    <Button size="md">
+      دکمه
+    </Button>
+    <Button size="md" icon="watch-later">
+      دکمه
+    </Button>
+    <br />
+
+    <Heading level={3}>
+      lg size
+    </Heading>
+    <Button size="lg">
+      دکمه
+    </Button>
+    <Button size="lg" icon="watch-later">
+      دکمه
+    </Button>
+    <br />
+
+    <Heading level={2}>
+      دکمه ها در استایل ها متفاوت و رنگ های متفاوت
+    </Heading>
+    <Heading level={3}>
+      رنگ قرمز
+    </Heading>
+    <Heading level={4}>
+      رنگ قرمز - normal
+    </Heading>
+    <ButtonWrapper>
+      <Button styleType="primary" icon="watch-later" mainColor="red">
+        دکمه primary (default)
+      </Button>
+      <Button styleType="secondary" icon="watch-later" mainColor="red">
+        دکمه secondary
+      </Button>
+      <Button styleType="tertiary" icon="watch-later" mainColor="red">
+        دکمه tertiary
+      </Button>
+    </ButtonWrapper>
+    <Heading level={4}>
+      رنگ قرمز - disabled
+    </Heading>
+    <ButtonWrapper>
+      <Button styleType="primary" icon="watch-later" mainColor="red" disabled>
+        دکمه primary (default) - disabled
+      </Button>
+      <Button styleType="secondary" icon="watch-later" mainColor="red" disabled>
+        دکمه secondary - disabled
+      </Button>
+      <Button styleType="tertiary" icon="watch-later" mainColor="red" disabled>
+        دکمه tertiary - disabled
+      </Button>
+    </ButtonWrapper>
+    <hr />
+    <Heading level={3}>
+      رنگ سبز
+    </Heading>
+    <Heading level={4}>
+      رنگ سبز - normal
+    </Heading>
+    <ButtonWrapper>
+      <Button styleType="primary" icon="watch-later" mainColor="green">
+        دکمه primary (default)
+      </Button>
+      <Button styleType="secondary" icon="watch-later" mainColor="green">
+        دکمه secondary
+      </Button>
+      <Button styleType="tertiary" icon="watch-later" mainColor="green">
+        دکمه tertiary
+      </Button>
+    </ButtonWrapper>
+    <Heading level={4}>
+      رنگ سبز - disabled
+    </Heading>
+    <ButtonWrapper>
+      <Button styleType="primary" icon="watch-later" mainColor="green" disabled>
+        دکمه primary (default) - disabled
+      </Button>
+      <Button styleType="secondary" icon="watch-later" mainColor="green" disabled>
+        دکمه secondary - disabled
+      </Button>
+      <Button styleType="tertiary" icon="watch-later" mainColor="green" disabled>
+        دکمه tertiary - disabled
+      </Button>
+    </ButtonWrapper>
+    <hr />
+    <Heading level={3}>
+      رنگ زرد
+    </Heading>
+    <Heading level={4}>
+      رنگ زرد - normal
+    </Heading>
+    <ButtonWrapper>
+      <Button styleType="primary" icon="watch-later" mainColor="yellow">
+        دکمه primary (default)
+      </Button>
+      <Button styleType="secondary" icon="watch-later" mainColor="yellow">
+        دکمه secondary
+      </Button>
+      <Button styleType="tertiary" icon="watch-later" mainColor="yellow">
+        دکمه tertiary
+      </Button>
+    </ButtonWrapper>
+    <Heading level={4}>
+      رنگ زرد - disabled
+    </Heading>
+    <ButtonWrapper>
+      <Button styleType="primary" icon="watch-later" mainColor="yellow" disabled>
+        دکمه primary (default) - disabled
+      </Button>
+      <Button styleType="secondary" icon="watch-later" mainColor="yellow" disabled>
+        دکمه secondary - disabled
+      </Button>
+      <Button styleType="tertiary" icon="watch-later" mainColor="yellow" disabled>
+        دکمه tertiary - disabled
+      </Button>
+    </ButtonWrapper>
+    <hr />
+    <Heading level={3}>
+      رنگ آبی
+    </Heading>
+    <Heading level={4}>
+      رنگ آبی - normal
+    </Heading>
+    <ButtonWrapper>
+      <Button styleType="primary" icon="watch-later" mainColor="blue">
+        دکمه primary (default)
+      </Button>
+      <Button styleType="secondary" icon="watch-later" mainColor="blue">
+        دکمه secondary
+      </Button>
+      <Button styleType="tertiary" icon="watch-later" mainColor="blue">
+        دکمه tertiary
+      </Button>
+    </ButtonWrapper>
+    <Heading level={4}>
+      رنگ آبی - disabled
+    </Heading>
+    <ButtonWrapper>
+      <Button styleType="primary" icon="watch-later" mainColor="blue" disabled>
+        دکمه primary (default) - disabled
+      </Button>
+      <Button styleType="secondary" icon="watch-later" mainColor="blue" disabled>
+        دکمه secondary - disabled
+      </Button>
+      <Button styleType="tertiary" icon="watch-later" mainColor="blue" disabled>
+        دکمه tertiary - disabled
+      </Button>
+    </ButtonWrapper>
+    <hr />
+    <Heading level={3}>
+      رنگ آبی تیره - پیشفرض
+    </Heading>
+    <Heading level={4}>
+      رنگ آبی تیره - پیشفرض - normal
+    </Heading>
+    <ButtonWrapper>
+      <Button styleType="primary" icon="watch-later">
+        دکمه primary (default)
+      </Button>
+      <Button styleType="secondary" icon="watch-later">
+        دکمه secondary
+      </Button>
+      <Button styleType="tertiary" icon="watch-later">
+        دکمه tertiary
+      </Button>
+    </ButtonWrapper>
+    <Heading level={4}>
+      رنگ آبی تیره - پیشفرض - disabled
+    </Heading>
+    <ButtonWrapper>
+      <Button styleType="primary" icon="watch-later" disabled>
+        دکمه primary (default) - disabled
+      </Button>
+      <Button styleType="secondary" icon="watch-later" disabled>
+        دکمه secondary - disabled
+      </Button>
+      <Button styleType="tertiary" icon="watch-later" disabled>
+        دکمه tertiary - disabled
+      </Button>
+    </ButtonWrapper>
+    <br />
+
+    <Heading level={2}>
+      دکمه لینک دار
+    </Heading>
+    <ButtonWrapper>
+      <Button linkTo="/avatar">
+        دکمه لینک ساده با تنظیمات پیشفرض
+      </Button>
+      <Button styleType="secondary" icon="watch-later" linkTo="https://sciencebusiness.net/categories/dfgdfg" linkType="external" linkTarget="_blank">
+        دکمه لینک با لینک خارجی
+      </Button>
+      <Button styleType="tertiary" icon="watch-later" linkTo="/avatar" linkType="internal" linkTarget="_self">
+        دکمه لینک داخلی (نمونه کامل)
+      </Button>
+    </ButtonWrapper>
+    <Heading level={4}>
+      دکمه لینک دار - disabled
+    </Heading>
+    <ButtonWrapper>
+      <Button styleType="primary" icon="watch-later" linkTo="/avatar" disabled>
+        دکمه لینک ساده با تنظیمات پیشفرض - disabled
+      </Button>
+      <Button styleType="secondary" icon="watch-later" linkTo="https://sciencebusiness.net/categories/dfgdfg" linkType="external" linkTarget="_blank" disabled>
+        دکمه لینک با لینک خارجی - disabled
+      </Button>
+      <Button styleType="tertiary" icon="watch-later" linkTo="/avatar" linkType="internal" linkTarget="_self" disabled>
+        دکمه لینک داخلی (نمونه کامل) - disabled
+      </Button>
+    </ButtonWrapper>
+    <br />
+
   </>
 );
 

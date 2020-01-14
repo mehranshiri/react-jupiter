@@ -6,7 +6,7 @@ const iconTheme = {
     md: 20,
     sm: 16,
   },
-  marginSize: {
+  paddingSize: {
     lg: 12,
     md: 10,
     sm: 8,

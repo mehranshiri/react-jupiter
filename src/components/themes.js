@@ -33,9 +33,6 @@ const defaultTheme = {
     medium: 'md',
     small: 'sm',
   },
-  button: {
-    borderRadius: 3,
-  },
   borderRadius: {
     low: 2,
     high: 3,
