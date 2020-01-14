@@ -43,31 +43,31 @@ const CardPage = () => (
       linkTo="/somewhere"
     />
     <br />
-    <CardTemplate hoverToLevel={2}><div>Hello empty card</div></CardTemplate>
+    <CardTemplate hoverToLevel={2}><div>Hello card template.</div></CardTemplate>
     <br />
     <br />
     <br />
     <br />
-    <CardTemplate level={2} hoverToLevel={4}><div>Hello empty card</div></CardTemplate>
+    <CardTemplate level={2} hoverToLevel={4}><div>Hello card template.</div></CardTemplate>
     <br />
     <br />
     <br />
     <br />
     <CardTemplate level={3} maxWidth="400" linkTo="/test/ds" hoverToLevel={4}>
       <div>
-        <Heading>Hello empty card. Hello empty card. Hello empty card.Hello empty card. Hello empty card. Hello empty card.</Heading>
+        <Heading>Hello card template. Hello card template.Hello card template.</Heading>
       </div>
     </CardTemplate>
     <br />
     <br />
     <br />
     <br />
-    <CardTemplate level={4}><div>Hello empty card</div></CardTemplate>
+    <CardTemplate level={4}><div>Hello card template.</div></CardTemplate>
     <br />
     <br />
     <br />
     <br />
-    <CardTemplate level={5}><div>Hello empty card</div></CardTemplate>
+    <CardTemplate level={5}><div>Hello card template.</div></CardTemplate>
     <br />
     <br />
     <br />

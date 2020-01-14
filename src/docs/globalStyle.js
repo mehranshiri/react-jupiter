@@ -36,4 +36,5 @@ export const ContentContainer = styled.section`
   display: flex;
   flex-direction: column;
   padding: 16px;
+  margin-right: 180px;
 `;
