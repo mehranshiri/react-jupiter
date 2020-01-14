@@ -64,7 +64,7 @@ const Button = (props) => {
     );
   }
 
-  if (linkTo) {
+  if (linkTo && !disabled) {
     switch (linkType) {
       case 'internal':
         return (
