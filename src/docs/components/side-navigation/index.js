@@ -37,9 +37,7 @@ const SideNavigation = ({ ltr }) => (
         </Link>
       </Nav>
       <Nav id="2">
-        <Link to="/components/button">
-          <NavItem title="ویژگی‌ها" ltr={ltr} />
-        </Link>
+        <NavItem title="ویژگی‌ها" ltr={ltr} />
       </Nav>
       <Nav id="3">
         <NavItem title="منابع" ltr={ltr} />
@@ -56,10 +54,14 @@ const SideNavigation = ({ ltr }) => (
       </Nav>
       <NavTitle>کامپوننت‌ها</NavTitle>
       <Nav id="7">
-        <NavItem title="تایپوگرافی" ltr={ltr} />
+        <Link to="/components/typography">
+          <NavItem title="تایپوگرافی" ltr={ltr} />
+        </Link>
       </Nav>
       <Nav id="8">
-        <NavItem title="دکمه‌ها" ltr={ltr} />
+        <Link to="/components/button">
+          <NavItem title="دکمه‌ها" ltr={ltr} />
+        </Link>
       </Nav>
       <Nav id="9">
         <Link to="/components/avatar">

@@ -25,6 +25,24 @@ export const getColorFromName = (theme, color) => {
 export const getHoverColorFromName = (theme, color) => {
   switch (color) {
     case 'red':
+      return theme.colors.red400;
+    case 'green':
+      return theme.colors.green400;
+    case 'blue':
+      return theme.colors.blue400;
+    case 'yellow':
+      return theme.colors.yellow400;
+    case 'darkBlue':
+      return theme.colors.darkBlue400;
+    default:
+    case 'default':
+      return theme.defaultColor;
+  }
+};
+
+export const getFocusColorFromName = (theme, color) => {
+  switch (color) {
+    case 'red':
       return theme.colors.red800;
     case 'green':
       return theme.colors.green800;

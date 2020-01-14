@@ -28,27 +28,27 @@ describe('Icons Tests', () => {
   });
 
   it('should render icon component with medium size', () => {
-    const Icon = setupMount({ name: 'watch-later' });
+    const component = setupMount({ name: 'watch-later' });
+    const Icon = findByTestAtrr(component, 'icon');
     expect(Icon).toHaveStyleRule('font-size', `${theme.size.md}px`);
-    expect(Icon).toHaveStyleRule('margin', `0 ${theme.marginSize.md}px 0`);
   });
 
   it('should render icon component with large size', () => {
-    const Icon = setupMount({ name: 'watch-later', size: 'lg' });
+    const component = setupMount({ name: 'watch-later', size: 'lg' });
+    const Icon = findByTestAtrr(component, 'icon');
     expect(Icon).toHaveStyleRule('font-size', `${theme.size.lg}px`);
-    expect(Icon).toHaveStyleRule('margin', `0 ${theme.marginSize.lg}px 0`);
   });
 
   it('should render icon component with small size', () => {
-    const Icon = setupMount({ name: 'watch-later', size: 'sm' });
+    const component = setupMount({ name: 'watch-later', size: 'sm' });
+    const Icon = findByTestAtrr(component, 'icon');
     expect(Icon).toHaveStyleRule('font-size', `${theme.size.sm}px`);
-    expect(Icon).toHaveStyleRule('margin', `0 ${theme.marginSize.sm}px 0`);
   });
 
   it('should render gray icon component with small size', () => {
-    const Icon = setupMount({ name: 'watch-later', size: 'sm', color: 'gray' });
+    const component = setupMount({ name: 'watch-later', size: 'sm', color: 'gray' });
+    const Icon = findByTestAtrr(component, 'icon');
     expect(Icon).toHaveStyleRule('font-size', `${theme.size.sm}px`);
-    expect(Icon).toHaveStyleRule('margin', `0 ${theme.marginSize.sm}px 0`);
     expect(Icon).toHaveStyleRule('color', `${theme.colors.gray600}`);
   });
 });

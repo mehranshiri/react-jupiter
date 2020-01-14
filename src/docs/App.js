@@ -10,6 +10,7 @@ import HomePage from './containers/home';
 import ButtonPage from './containers/button';
 import AvatarPage from './containers/avatar';
 import IconPage from './containers/icon';
+import TypographyPage from './containers/typography';
 import IconsPage from './containers/icons';
 import CardPage from './containers/card';
 
@@ -34,9 +35,10 @@ function App() {
         <SideNavigation />
         <ContentContainer>
           <Route exact path="/" component={HomePage} />
-          <Route path="/components/button" component={ButtonPage} />
+          <Route path="/components/typography" component={TypographyPage} />
           <Route path="/components/avatar" component={AvatarPage} />
           <Route path="/components/icon" component={IconPage} />
+          <Route path="/components/button" component={ButtonPage} />
           <Route path="/components/icons" component={IconsPage} />
           <Route path="/components/card" component={CardPage} />
         </ContentContainer>
