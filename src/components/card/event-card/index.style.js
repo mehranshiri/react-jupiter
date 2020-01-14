@@ -85,6 +85,7 @@ export const HorizontalCardContainer = styled(VerticalCardContainer)`
 
 export const HorizontalCover = styled.img`
   width: 206px;
+  min-width: 206px;
   height: auto;
 `;
 
@@ -93,7 +94,8 @@ export const HorizontalContentContainer = styled.div`
   flex-direction: column;
   padding: 16px;
   justify-content: space-between;
-  width: calc(100% - 206px);
+  flex: 1;
+  min-width: 250px;
 `;
 
 
