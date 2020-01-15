@@ -3,7 +3,7 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 
 import CardTemplate from '../card-template';
 import { Text, Heading } from '../../typography';
-import Icon from '../../icons';
+import Icon from '../../icon';
 
 
 /* Common event card styles */

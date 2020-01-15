@@ -75,18 +75,18 @@ const EventCard = (props: Props) => {
             <ShowDate date={date} color="gray" fontSize="12" />
             {
               isBookmarked
-                ? <BookmarkIcon type="bookmark" size="lg" color="gray" onClick={handleClickBookmark} />
-                : <BookmarkIcon type="bookmark-border" size="lg" color="gray" onClick={handleClickBookmark} />
+                ? <BookmarkIcon name="bookmark" size="lg" color="gray" onClick={handleClickBookmark} />
+                : <BookmarkIcon name="bookmark-border" size="lg" color="gray" onClick={handleClickBookmark} />
             }
           </DateBookmarkContainer>
           <Link to={linkTo}><Title level={2} size="sm">{title}</Title></Link>
           <VerticalPlacePriceContainer>
             <div>
-              <PlacePriceIcon type="place" size="sm" color="gray" />
+              <PlacePriceIcon name="place" size="sm" color="gray" />
               <Text color="gray" size="12">{place}</Text>
             </div>
             <div>
-              <PlacePriceIcon type="loyalty" size="sm" color="gray" />
+              <PlacePriceIcon name="loyalty" size="sm" color="gray" />
               <Text color="gray" size="12">{price}</Text>
             </div>
           </VerticalPlacePriceContainer>
@@ -113,18 +113,18 @@ const EventCard = (props: Props) => {
           <ShowDate date={date} color="gray" fontSize="12" />
           {
             isBookmarked
-              ? <BookmarkIcon type="bookmark" size="lg" color="gray" onClick={handleClickBookmark} />
-              : <BookmarkIcon type="bookmark-border" size="lg" color="gray" onClick={handleClickBookmark} />
+              ? <BookmarkIcon name="bookmark" size="lg" color="gray" onClick={handleClickBookmark} />
+              : <BookmarkIcon name="bookmark-border" size="lg" color="gray" onClick={handleClickBookmark} />
           }
         </DateBookmarkContainer>
         <Link to={linkTo}><Title level={2} size="sm">{title}</Title></Link>
         <HorizontalPlacePriceContainer>
           <div>
-            <PlacePriceIcon type="place" size="sm" color="gray" />
+            <PlacePriceIcon name="place" size="sm" color="gray" />
             <Text color="gray" size="12">{place}</Text>
           </div>
           <div>
-            <PlacePriceIcon type="loyalty" size="sm" color="gray" />
+            <PlacePriceIcon name="loyalty" size="sm" color="gray" />
             <Text color="gray" size="12">{price}</Text>
           </div>
         </HorizontalPlacePriceContainer>
