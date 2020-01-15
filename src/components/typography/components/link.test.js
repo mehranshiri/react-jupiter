@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import 'jest-styled-components';
 
 import Link from './link';
-import { findByTestAtrr } from '../../utils/testUtils';
+import { findByTestAtrr } from '../../utils/test';
 
 const setupShallow = (props = {}) => (
   shallow(

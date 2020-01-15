@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import EventCard from './index';
 import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
-import { findByTestAtrr } from '../../utils/testUtils';
+import { findByTestAtrr } from '../../utils/test';
 
 const setupMount = (props = {}) => (
   mount(<Router><EventCard level={props.level} {...props} /></Router>)

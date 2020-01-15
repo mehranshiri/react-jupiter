@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import Icon from '../icon';
-import { getColorFromName, getHoverColorFromName, getFocusColorFromName } from '../utils/themeUtils';
+import { getColorFromName, getHoverColorFromName, getFocusColorFromName } from '../utils/theme';
 
 export const BaseButton = styled.button`
   display: flex;

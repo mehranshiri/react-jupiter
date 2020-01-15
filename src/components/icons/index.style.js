@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { getIconContentByType, getSizeOfIcon, getMarginOfIcon } from './utils';
-import { getColorFromName } from '../utils/themeUtils';
+import { getColorFromName } from '../utils/theme';
 import './font.scss';
 
 export const IconElement = styled.i`

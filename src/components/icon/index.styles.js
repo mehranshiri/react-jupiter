@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import './iconFont.scss';
-import { getColorFromName } from '../utils/themeUtils';
+import { getColorFromName } from '../utils/theme';
 
 export const StyledIcon = styled.i`
   font-size: ${({ theme, size }) => `${theme.size[size]}px`};

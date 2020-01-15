@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { getColorFromName } from '../../utils/themeUtils';
+import { getColorFromName } from '../../utils/theme';
 import '../../iranSharpFont.scss';
 
 export const Emphasized = styled.em`
