@@ -83,11 +83,11 @@ const EventCard = (props: Props) => {
           <VerticalPlacePriceContainer>
             <div>
               <PlacePriceIcon type="place" size="sm" color="gray" />
-              <Text color="gray" size="10">{place}</Text>
+              <Text color="gray" size="12">{place}</Text>
             </div>
             <div>
               <PlacePriceIcon type="loyalty" size="sm" color="gray" />
-              <Text color="gray" size="10">{price}</Text>
+              <Text color="gray" size="12">{price}</Text>
             </div>
           </VerticalPlacePriceContainer>
         </div>
