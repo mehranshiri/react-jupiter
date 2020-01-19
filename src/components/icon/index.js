@@ -16,10 +16,6 @@ const Icon = (props) => {
     ...rest
   } = props;
 
-  console.log('stickyLeft: ', stickyLeft);
-  console.log('stickRight: ', stickyRight);
-  console.log('****************');
-
   if (name === undefined) return null;
 
   return (
