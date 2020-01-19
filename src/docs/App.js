@@ -21,8 +21,6 @@ const Container = styled.main`
 `;
 
 const Content = styled.main`
-  /* display: flex;
-  flex: 1; */
   position: relative;
 `;
 

@@ -3,17 +3,14 @@ import PropTypes from 'prop-types';
 
 import { Text } from '../typography';
 import { convertToJalaali } from '../utils/date';
-import { DateContainer } from './index.style';
 
 const ShowDate = (props) => {
   const { date, fontSize, color } = props;
 
   return (
-    <DateContainer data-test="show-date">
-      <Text size={fontSize} color={color}>
-        {convertToJalaali(date, 'dddd jD jMMMM')}
-      </Text>
-    </DateContainer>
+    <Text size={fontSize} color={color} data-test="show-date">
+      {convertToJalaali(date, 'dddd jD jMMMM')}
+    </Text>
   );
 };
 

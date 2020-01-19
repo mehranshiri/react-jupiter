@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 
 export const Container = styled.div`
-
-  /* top: 70px;; */
   background: #fff;
   min-width: 180px;
   color: #444;
