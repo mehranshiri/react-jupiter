@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react';
-
 import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
 import ShowDate from '../../show-date';
 import { Text } from '../../typography';
 import Avatar from '../../avatar';
+import Icon from '../../icon';
 import {
   VerticalCardContainer,
   Link,
@@ -13,7 +13,6 @@ import {
   DateBookmarkContainer,
   BookmarkIcon,
   Title,
-  PlacePriceIcon,
   OrganizationLink,
   OrganizationName,
   HorizontalCardContainer,
@@ -82,11 +81,11 @@ const EventCard = (props: Props) => {
           <Link to={linkTo}><Title level={2} size="sm">{title}</Title></Link>
           <VerticalPlacePriceContainer>
             <div>
-              <PlacePriceIcon name="place" size="sm" color="gray" />
+              <Icon name="place" size="sm" color="gray" stickyRight />
               <Text color="gray" size="12">{place}</Text>
             </div>
             <div>
-              <PlacePriceIcon name="loyalty" size="sm" color="gray" />
+              <Icon name="loyalty" size="sm" color="gray" stickyRight />
               <Text color="gray" size="12">{price}</Text>
             </div>
           </VerticalPlacePriceContainer>
@@ -120,11 +119,11 @@ const EventCard = (props: Props) => {
         <Link to={linkTo}><Title level={2} size="sm">{title}</Title></Link>
         <HorizontalPlacePriceContainer>
           <div>
-            <PlacePriceIcon name="place" size="sm" color="gray" />
+            <Icon name="place" size="sm" color="gray" stickyRight />
             <Text color="gray" size="12">{place}</Text>
           </div>
           <div>
-            <PlacePriceIcon name="loyalty" size="sm" color="gray" />
+            <Icon name="loyalty" size="sm" color="gray" stickyRight />
             <Text color="gray" size="12">{price}</Text>
           </div>
         </HorizontalPlacePriceContainer>

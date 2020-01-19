@@ -11,8 +11,14 @@ const Icon = (props) => {
     size,
     color,
     className,
+    stickyLeft,
+    stickyRight,
     ...rest
   } = props;
+
+  console.log('stickyLeft: ', stickyLeft);
+  console.log('stickRight: ', stickyRight);
+  console.log('****************');
 
   if (name === undefined) return null;
 
@@ -23,6 +29,8 @@ const Icon = (props) => {
         color={color}
         className={`icon-${name} ${className}`}
         data-test="icon"
+        stickyLeft={stickyLeft}
+        stickyRight={stickyRight}
         {...rest}
       />
     </ThemeProvider>
@@ -34,12 +42,16 @@ Icon.propTypes = {
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
   color: PropTypes.oneOf(['default', 'red', 'green', 'blue', 'yellow', 'white', 'darkBlue', 'gray']),
   className: PropTypes.string,
+  stickyLeft: PropTypes.bool,
+  stickyRight: PropTypes.bool,
 };
 
 Icon.defaultProps = {
   size: 'md',
   color: 'default',
   className: '',
+  stickyLeft: false,
+  stickyRight: false,
 };
 
 export default Icon;

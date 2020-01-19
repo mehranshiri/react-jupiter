@@ -51,4 +51,16 @@ describe('Icons Tests', () => {
     expect(Icon).toHaveStyleRule('font-size', `${theme.size.sm}px`);
     expect(Icon).toHaveStyleRule('color', `${theme.colors.gray800}`);
   });
+
+  it('should render sticky left and sticky right icon', () => {
+    const component = setupMount({ name: 'watch-later', stickyLeft: true, stickyRight: true });
+    const Icon = findByTestAtrr(component, 'icon');
+    expect(Icon).toHaveStyleRule('margin', '0 0px 0 0px');
+  });
+
+  it('should render sticky right icon', () => {
+    const component = setupMount({ name: 'watch-later', stickyRight: true });
+    const Icon = findByTestAtrr(component, 'icon');
+    expect(Icon).toHaveStyleRule('margin', `0 0px 0 ${theme.marginSize.md}px`);
+  });
 });

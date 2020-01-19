@@ -31,10 +31,6 @@ export const Title = styled(Heading)`
   text-overflow: ellipsis;
 `;
 
-export const PlacePriceIcon = styled(Icon)`
-  margin-right: 0;
-`;
-
 
 /* Vertical event card styles */
 
