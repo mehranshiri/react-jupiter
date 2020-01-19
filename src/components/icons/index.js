@@ -6,12 +6,14 @@ import generalTheme from '../themes';
 import { IconElement } from './index.style';
 
 const Icons = (props) => {
-  const { type, size, color } = props;
+  const {
+    type, size, color, ...rest
+  } = props;
   if (type === undefined) return null;
 
   return (
     <ThemeProvider theme={generalTheme}>
-      <IconElement type={type} size={size} color={color} data-test="i-tag" />
+      <IconElement type={type} size={size} color={color} {...rest} data-test="i-tag" />
     </ThemeProvider>
   );
 };

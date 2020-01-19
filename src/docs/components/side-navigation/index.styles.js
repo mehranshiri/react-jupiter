@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 
 export const Container = styled.div`
-  top: 70px;;
   background: #fff;
   min-width: 180px;
   color: #444;
   ${({ ltr }) => (ltr ? 'border-right: 1px solid #e5e5e5' : 'border-left: 1px solid #e5e5e5')}
+  float: right;
+  position: absolute;
+  height: 100%;
 `;
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import 'jest-styled-components';
 
-import { findByTestAtrr } from '../utils/testUtils';
+import { findByTestAtrr } from '../utils/test';
 import Icon from './index';
 import theme from './theme';
 
@@ -49,6 +49,6 @@ describe('Icons Tests', () => {
     const component = setupMount({ name: 'watch-later', size: 'sm', color: 'gray' });
     const Icon = findByTestAtrr(component, 'icon');
     expect(Icon).toHaveStyleRule('font-size', `${theme.size.sm}px`);
-    expect(Icon).toHaveStyleRule('color', `${theme.colors.gray600}`);
+    expect(Icon).toHaveStyleRule('color', `${theme.colors.gray800}`);
   });
 });

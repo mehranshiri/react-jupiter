@@ -8,21 +8,35 @@ import { TemplateContainer, LinkWrapper } from './index.style';
 
 const CardTemplate = (props) => {
   const {
-    maxWidth, children, level, hoverToLevel, linkTo,
+    maxWidth, children, level, hoverToLevel, linkTo, direction, ...rest
   } = props;
 
   const renderContent = () => {
     if (linkTo.length > 0) {
       return (
         <LinkWrapper to={linkTo} data-test="card-template-link-wrapper">
-          <TemplateContainer maxWidth={maxWidth} level={level} hoverToLevel={hoverToLevel} data-test="card-template">
+          <TemplateContainer
+            maxWidth={maxWidth}
+            level={level}
+            hoverToLevel={hoverToLevel}
+            direction={direction}
+            data-test="card-template"
+            {...rest}
+          >
             {children}
           </TemplateContainer>
         </LinkWrapper>
       );
     }
     return (
-      <TemplateContainer maxWidth={maxWidth} level={level} hoverToLevel={hoverToLevel} data-test="card-template">
+      <TemplateContainer
+        maxWidth={maxWidth}
+        level={level}
+        hoverToLevel={hoverToLevel}
+        direction={direction}
+        data-test="card-template"
+        {...rest}
+      >
         {children}
       </TemplateContainer>
     );
@@ -48,6 +62,7 @@ CardTemplate.propTypes = {
     PropTypes.string,
   ]),
   linkTo: PropTypes.string,
+  direction: PropTypes.oneOf(['vertical', 'horizontal']),
 };
 
 CardTemplate.defaultProps = {
@@ -55,6 +70,7 @@ CardTemplate.defaultProps = {
   hoverToLevel: 1,
   maxWidth: null,
   linkTo: '',
+  direction: 'vertical',
 };
 
 export default CardTemplate;
