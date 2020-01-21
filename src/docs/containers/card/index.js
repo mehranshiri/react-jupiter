@@ -4,6 +4,9 @@ import { Typography } from '../../../components';
 import ShowDate from '../../../components/show-date';
 import CardTemplate from '../../../components/card/card-template';
 import { EventCard } from '../../../components/card';
+import TitledAvatar from '../../../components/titled-avatar';
+import OrganizationCard from '../../../components/card/organization-card';
+import NumericSummeryReport from '../../../components/numeric-summery-report';
 
 const { Heading } = Typography;
 
@@ -30,6 +33,13 @@ const CardPage = () => (
       linkTo="/somewhere"
     />
     <br />
+    <NumericSummeryReport
+      data={[
+        { id: 1, title: 'برگزار شده', count: 12 },
+        { id: 2, title: 'فعال', count: 2 },
+        { id: 3, title: 'دنبال کننده‌ها', count: 346 },
+      ]}
+    />
     <br />
 
     <EventCard
@@ -71,7 +81,13 @@ const CardPage = () => (
     <br />
     <br />
     <br />
+    <TitledAvatar
+      title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
+      انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
+      avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
+    />
     <br />
+    <OrganizationCard />
 
   </>
 );
