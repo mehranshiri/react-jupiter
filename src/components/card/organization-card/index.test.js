@@ -17,7 +17,7 @@ describe('should render correctly', () => {
         activeEventsNumber: 17,
         followingNumber: 148,
       },
-      onClickFollow: () => { console.log('handle click follow'); },
+      onClickFollow: () => { window.console.log('handle click follow'); },
     });
     const OrganizationCard = findByTestAtrr(component, 'organization-card');
     expect(OrganizationCard.length).toBe(1);
