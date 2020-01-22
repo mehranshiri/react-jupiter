@@ -10,6 +10,7 @@ type Props = {
   title: string,
   logo: string,
   followed?: boolean,
+  linkTo: string,
   report: {
     heldEventsNumber: number,
     activeEventsNumber: number,
@@ -20,7 +21,7 @@ type Props = {
 
 const OrganizationCard = (props: Props) => {
   const {
-    title, logo, followed, report, onClickFollow,
+    title, logo, followed, linkTo, report, onClickFollow,
   } = props;
 
   const [isFollowed, setFollowed] = useState(followed);
@@ -43,7 +44,7 @@ const OrganizationCard = (props: Props) => {
       maxWidth={370}
       data-test="organization-card"
     >
-      <TitledAvatar title={title} avatar={logo} />
+      <TitledAvatar title={title} avatar={logo} linkTo={linkTo} />
       <NumericSummeryReport data={reportData} />
       <Button
         styleType={isFollowed ? 'secondary' : 'primary'}

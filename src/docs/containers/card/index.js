@@ -90,6 +90,7 @@ const CardPage = () => (
     <OrganizationCard
       title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی انجمن علمی کامپیوتر دانشگاه صنعتی خواجه"
       logo="https://static.evand.net/images/organizations/logos/original/d431e339d86b187f356055f1d6f39ddb.jpg?x-oss-process=image/resize,h_250"
+      linkTo="/somewherelinkto"
       report={{
         heldEventsNumber: 2,
         activeEventsNumber: 17,
