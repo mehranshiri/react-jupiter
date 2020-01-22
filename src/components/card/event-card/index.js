@@ -72,11 +72,12 @@ const EventCard = (props: Props) => {
         <div>
           <DateBookmarkContainer data-test="vertical-date-bookmark">
             <ShowDate date={date} color="gray" fontSize="12" />
-            {
-              isBookmarked
-                ? <BookmarkIcon name="bookmark" size="lg" color="gray" onClick={handleClickBookmark} />
-                : <BookmarkIcon name="bookmark-border" size="lg" color="gray" onClick={handleClickBookmark} />
-            }
+            <BookmarkIcon
+              name={isBookmarked ? 'bookmark' : 'bookmark-border'}
+              size="lg"
+              color="gray"
+              onClick={handleClickBookmark}
+            />
           </DateBookmarkContainer>
           <Link to={linkTo}><Title level={2} size="sm">{title}</Title></Link>
           <VerticalPlacePriceContainer>
