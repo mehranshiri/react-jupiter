@@ -1,10 +1,23 @@
 import React from 'react';
+import Icon from '../icon';
+import { Text } from '../typography';
 
-const ProductProperty = () => {
-  const hi = 'render it';
+type Props = {
+  iconName: string,
+  text: string,
+}
+
+const ProductProperty = (props: Props) => {
+  const { iconName, text } = props;
 
   return (
-    <p>{hi}</p>
+
+    <>
+      <Icon name={iconName} size="sm" color="gray" />
+      <Text color="gray">
+        {text}
+      </Text>
+    </>
   );
 };
 

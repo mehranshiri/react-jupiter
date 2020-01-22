@@ -15,7 +15,7 @@ const ProductPage = () => (
     <Heading level={2}>
       product-property
     </Heading>
-    <ProductProperty />
+    <ProductProperty iconName="watch-later" text="watch text" />
     <br />
 
   </>
