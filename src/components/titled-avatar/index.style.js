@@ -8,7 +8,6 @@ export const Container = styled.div`
 `;
 
 export const TitleContainer = styled.div`
-  border: 1px solid green;
   height: 45px;
   overflow: hidden;
 `;
