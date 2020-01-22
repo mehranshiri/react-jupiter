@@ -95,7 +95,7 @@ const CardPage = () => (
         activeEventsNumber: 17,
         followingNumber: 148,
       }}
-      onClickFollow={() => { console.log('click on follow'); }}
+      onClickFollow={() => { window.console.log('click on follow'); }}
     />
 
   </>
