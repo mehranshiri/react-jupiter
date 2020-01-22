@@ -15,7 +15,7 @@ const TitledAvatar = (props: Props) => {
   return (
     <Container data-test="titled-avatar">
       <Avatar src={avatar} />
-      <Title level={4} size="sm">{title}</Title>
+      <Title level={4} size="md" bold>{title}</Title>
     </Container>
   );
 };

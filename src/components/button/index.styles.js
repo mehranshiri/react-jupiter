@@ -13,7 +13,6 @@ export const BaseButton = styled.button`
   min-width: ${({ size, theme }) => (`${theme.size[size].minWidth}px`)};
   min-height: ${({ size, theme }) => (`${theme.size[size].height}px`)};
 
-  margin: ${({ size, theme }) => (`${theme.size[size].margin}px`)};
   padding: ${({ size, theme }) => theme.size[size].padding};
   box-sizing: border-box;
 
