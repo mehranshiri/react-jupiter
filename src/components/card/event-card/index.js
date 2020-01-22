@@ -1,12 +1,12 @@
 
 import React, { useState } from 'react';
 import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
+import CardTemplate from '../card-template';
 import ShowDate from '../../show-date';
 import { Text } from '../../typography';
 import Avatar from '../../avatar';
 import Icon from '../../icon';
 import {
-  VerticalCardContainer,
   Link,
   VerticalCover,
   VerticalContentContainer,
@@ -36,6 +36,7 @@ type Props = {
     slug: string,
   },
   linkTo?: string,
+  queryString?: string,
   onClickBookmark: () => void,
 }
 
@@ -51,6 +52,7 @@ const EventCard = (props: Props) => {
     organization,
     onClickBookmark,
     linkTo,
+    queryString,
   } = props;
 
   const [isBookmarked, setBookmark] = useState(bookmarked);
@@ -62,12 +64,12 @@ const EventCard = (props: Props) => {
   };
 
   const renderVerticalCard = () => (
-    <VerticalCardContainer
+    <CardTemplate
       direction={type}
       hoverToLevel={3}
       maxWidth={270}
     >
-      <Link to={linkTo}><VerticalCover data-test="vertical-cover" src={cover} /></Link>
+      <Link to={`${linkTo}${queryString.length > 0 ? `?${queryString}` : ''}`}><VerticalCover data-test="vertical-cover" src={cover} /></Link>
       <VerticalContentContainer data-test="vertical-content">
         <div>
           <DateBookmarkContainer data-test="vertical-date-bookmark">
@@ -79,7 +81,7 @@ const EventCard = (props: Props) => {
               onClick={handleClickBookmark}
             />
           </DateBookmarkContainer>
-          <Link to={linkTo}><Title level={2} size="sm">{title}</Title></Link>
+          <Link to={`${linkTo}${queryString.length > 0 ? `?${queryString}` : ''}`}><Title level={2} size="sm">{title}</Title></Link>
           <VerticalPlacePriceContainer>
             <div>
               <Icon name="place" size="sm" color="gray" stickyRight />
@@ -98,7 +100,7 @@ const EventCard = (props: Props) => {
           </OrganizationLink>
         )}
       </VerticalContentContainer>
-    </VerticalCardContainer>
+    </CardTemplate>
   );
 
   const renderHorizontalCard = () => (
@@ -107,7 +109,7 @@ const EventCard = (props: Props) => {
       hoverToLevel={3}
       maxWidth={560}
     >
-      <Link to={linkTo}><HorizontalCover data-test="horizontal-cover" src={cover} /></Link>
+      <Link to={`${linkTo}${queryString.length > 0 ? `?${queryString}` : ''}`}><HorizontalCover data-test="horizontal-cover" src={cover} /></Link>
       <HorizontalContentContainer data-test="horizontal-content">
         <DateBookmarkContainer>
           <ShowDate date={date} color="gray" fontSize="12" />
@@ -118,7 +120,7 @@ const EventCard = (props: Props) => {
             onClick={handleClickBookmark}
           />
         </DateBookmarkContainer>
-        <Link to={linkTo}><Title level={2} size="sm">{title}</Title></Link>
+        <Link to={`${linkTo}${queryString.length > 0 ? `?${queryString}` : ''}`}><Title level={2} size="sm">{title}</Title></Link>
         <HorizontalPlacePriceContainer>
           <div>
             <Icon name="place" size="sm" color="gray" stickyRight />
@@ -151,6 +153,7 @@ const EventCard = (props: Props) => {
 EventCard.defaultProps = {
   bookmarked: false,
   type: VERTICAL_CARD,
+  queryString: '',
 };
 
 export default EventCard;

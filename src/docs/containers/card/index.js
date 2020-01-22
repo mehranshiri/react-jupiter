@@ -41,6 +41,7 @@ const CardPage = () => (
       price="از ۴۴۰۰۰ تومان"
       onClickBookmark={() => { window.console.log('handle click bookmark'); }}
       linkTo="/somewhere"
+      queryString="icn=trendEvents&ici=fp5"
     />
     <br />
     <CardTemplate hoverToLevel={2}><div>Hello card template.</div></CardTemplate>
