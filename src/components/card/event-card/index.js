@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react';
-
 import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
 import ShowDate from '../../show-date';
 import { Text } from '../../typography';
 import Avatar from '../../avatar';
+import Icon from '../../icon';
 import {
   VerticalCardContainer,
   Link,
@@ -13,7 +13,6 @@ import {
   DateBookmarkContainer,
   BookmarkIcon,
   Title,
-  PlacePriceIcon,
   OrganizationLink,
   OrganizationName,
   HorizontalCardContainer,
@@ -73,20 +72,21 @@ const EventCard = (props: Props) => {
         <div>
           <DateBookmarkContainer data-test="vertical-date-bookmark">
             <ShowDate date={date} color="gray" fontSize="12" />
-            {
-              isBookmarked
-                ? <BookmarkIcon type="bookmark" size="lg" color="gray" onClick={handleClickBookmark} />
-                : <BookmarkIcon type="bookmark-border" size="lg" color="gray" onClick={handleClickBookmark} />
-            }
+            <BookmarkIcon
+              name={isBookmarked ? 'bookmark' : 'bookmark-border'}
+              size="lg"
+              color="gray"
+              onClick={handleClickBookmark}
+            />
           </DateBookmarkContainer>
           <Link to={linkTo}><Title level={2} size="sm">{title}</Title></Link>
           <VerticalPlacePriceContainer>
             <div>
-              <PlacePriceIcon type="place" size="sm" color="gray" />
+              <Icon name="place" size="sm" color="gray" stickyRight />
               <Text color="gray" size="12">{place}</Text>
             </div>
             <div>
-              <PlacePriceIcon type="loyalty" size="sm" color="gray" />
+              <Icon name="loyalty" size="sm" color="gray" stickyRight />
               <Text color="gray" size="12">{price}</Text>
             </div>
           </VerticalPlacePriceContainer>
@@ -111,20 +111,21 @@ const EventCard = (props: Props) => {
       <HorizontalContentContainer data-test="horizontal-content">
         <DateBookmarkContainer>
           <ShowDate date={date} color="gray" fontSize="12" />
-          {
-            isBookmarked
-              ? <BookmarkIcon type="bookmark" size="lg" color="gray" onClick={handleClickBookmark} />
-              : <BookmarkIcon type="bookmark-border" size="lg" color="gray" onClick={handleClickBookmark} />
-          }
+          <BookmarkIcon
+            name={isBookmarked ? 'bookmark' : 'bookmark-border'}
+            size="lg"
+            color="gray"
+            onClick={handleClickBookmark}
+          />
         </DateBookmarkContainer>
         <Link to={linkTo}><Title level={2} size="sm">{title}</Title></Link>
         <HorizontalPlacePriceContainer>
           <div>
-            <PlacePriceIcon type="place" size="sm" color="gray" />
+            <Icon name="place" size="sm" color="gray" stickyRight />
             <Text color="gray" size="12">{place}</Text>
           </div>
           <div>
-            <PlacePriceIcon type="loyalty" size="sm" color="gray" />
+            <Icon name="loyalty" size="sm" color="gray" stickyRight />
             <Text color="gray" size="12">{price}</Text>
           </div>
         </HorizontalPlacePriceContainer>

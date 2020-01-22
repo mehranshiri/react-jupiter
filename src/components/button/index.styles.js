@@ -79,7 +79,7 @@ export const BaseButton = styled.button`
 `;
 
 export const StyledIcon = styled(Icon)`
-  padding-right: 0;
+  margin-right: 0;
 `;
 
 export const ExternalLink = styled.a`
