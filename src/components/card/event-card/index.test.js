@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { BrowserRouter as Router } from 'react-router-dom';
-
 import EventCard from './index';
 import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
 import { findByTestAtrr } from '../../utils/test';
@@ -44,8 +43,6 @@ describe('Event Card', () => {
       organizerLogo: 'https://static.evand.net/images/organizations/logos/original/e90483ade453446ae2fd156e15244d04.jpg',
       linkTo: '/somewhere',
     });
-    // const EventCard = findByTestAtrr(HorizontalCard, HORIZONTAL_CARD);
-    // expect(EventCard.length).toBe(1);
     const HorizontalCover = findByTestAtrr(HorizontalCard.find('img'), 'horizontal-cover');
     const HorizontalContent = findByTestAtrr(HorizontalCard.find('div'), 'horizontal-content');
     expect(HorizontalCover.length).toBe(1);
@@ -65,12 +62,12 @@ describe('Event Card', () => {
       onClickBookmark: fn,
       linkTo: '/somewhere',
     });
-    const Bookmark = findByTestAtrr(VerticalCard, 'vertical-date-bookmark').find('i[type="bookmark-border"]');
+    const Bookmark = findByTestAtrr(VerticalCard, 'vertical-date-bookmark').find('i[name="bookmark-border"]');
     expect(Bookmark.length).toBe(1);
     Bookmark.simulate('click');
-    const NewBookmark = findByTestAtrr(VerticalCard, 'vertical-date-bookmark').find('i[type="bookmark-border"]');
+    const NewBookmark = findByTestAtrr(VerticalCard, 'vertical-date-bookmark').find('i[name="bookmark-border"]');
     expect(NewBookmark.length).toBe(0);
-    const Bookmarked = findByTestAtrr(VerticalCard, 'vertical-date-bookmark').find('i[type="bookmark"]');
+    const Bookmarked = findByTestAtrr(VerticalCard, 'vertical-date-bookmark').find('i[name="bookmark"]');
     expect(Bookmarked.length).toBe(1);
     VerticalCard.unmount();
   });

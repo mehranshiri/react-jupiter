@@ -3,7 +3,7 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 
 import CardTemplate from '../card-template';
 import { Text, Heading } from '../../typography';
-import Icon from '../../icons';
+import Icon from '../../icon';
 
 
 /* Common event card styles */
@@ -29,10 +29,6 @@ export const Title = styled(Heading)`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-`;
-
-export const PlacePriceIcon = styled(Icon)`
-  margin-right: 0;
 `;
 
 
