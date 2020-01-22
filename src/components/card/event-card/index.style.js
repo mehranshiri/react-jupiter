@@ -34,11 +34,6 @@ export const Title = styled(Heading)`
 
 /* Vertical event card styles */
 
-
-export const VerticalCardContainer = styled(CardTemplate)`
-  margin: 8px;
-`;
-
 export const VerticalCover = styled.img`
   width: 100%;
   height: auto;
@@ -75,7 +70,7 @@ export const OrganizationName = styled(Text)`
 
 /* Horizontal event card styles */
 
-export const HorizontalCardContainer = styled(VerticalCardContainer)`
+export const HorizontalCardContainer = styled(CardTemplate)`
   height: 116px;
 `;
 

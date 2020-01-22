@@ -1,12 +1,12 @@
 
 import React, { useState } from 'react';
 import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
+import CardTemplate from '../card-template';
 import ShowDate from '../../show-date';
 import { Text } from '../../typography';
 import Avatar from '../../avatar';
 import Icon from '../../icon';
 import {
-  VerticalCardContainer,
   Link,
   VerticalCover,
   VerticalContentContainer,
@@ -64,7 +64,7 @@ const EventCard = (props: Props) => {
   };
 
   const renderVerticalCard = () => (
-    <VerticalCardContainer
+    <CardTemplate
       direction={type}
       hoverToLevel={3}
       maxWidth={270}
@@ -100,7 +100,7 @@ const EventCard = (props: Props) => {
           </OrganizationLink>
         )}
       </VerticalContentContainer>
-    </VerticalCardContainer>
+    </CardTemplate>
   );
 
   const renderHorizontalCard = () => (
