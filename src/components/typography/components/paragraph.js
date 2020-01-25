@@ -25,7 +25,7 @@ Paragraph.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]).isRequired,
-  size: PropTypes.number, // accepted values: 8 or 9 or 10 or ...
+  size: PropTypes.number,
 };
 
 Paragraph.defaultProps = {
