@@ -8,6 +8,11 @@ export const Container = styled.div`
 
 export const ListContainer = styled.ul`
   display: flex;
-  justify-content: space-between;
   flex-direction: ${({ isHorizontal }) => (isHorizontal ? 'row' : 'column')};
+  flex-wrap: wrap;
+`;
+
+export const ListItem = styled.li`
+    margin: 4px 0;
+    min-width: calc(100% / ${({ propsLength }) => propsLength});
 `;

@@ -3,7 +3,7 @@
 import React from 'react';
 import Icon from '../icon';
 import { Text } from '../typography';
-import { Container, ListContainer } from './index.style';
+import { Container, ListContainer, ListItem } from './index.style';
 
 type Props = {
   iconName: string,
@@ -30,6 +30,7 @@ const ProductProperty = (props: Props) => {
 
 const ProductProperties = (props: ComponentPros) => {
   const { list, isHorizontal } = props;
+  const propsLength = list.length > 1 && isHorizontal ? list.length : 1;
 
   if (list.length === 1) {
     return (<ProductProperty iconName={list[0].iconName} text={list[0].text} />);
@@ -38,9 +39,9 @@ const ProductProperties = (props: ComponentPros) => {
   return (
     <ListContainer isHorizontal={isHorizontal}>
       {list.map(({ iconName, text }, index) => (
-        <li key={`${iconName}-${index.toString()}`}>
+        <ListItem key={`${iconName}-${index.toString()}`} propsLength={propsLength}>
           <ProductProperty iconName={iconName} text={text} />
-        </li>
+        </ListItem>
       ))}
     </ListContainer>
   );
