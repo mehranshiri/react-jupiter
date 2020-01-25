@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 // @flow
 
 import React from 'react';
@@ -39,7 +38,7 @@ const ProductProperties = (props: ComponentPros) => {
   return (
     <ListContainer isHorizontal={isHorizontal}>
       {list.map(({ iconName, text }, index) => (
-        <li key={`${iconName}-${index}`}>
+        <li key={`${iconName}-${index.toString()}`}>
           <ProductProperty iconName={iconName} text={text} />
         </li>
       ))}
