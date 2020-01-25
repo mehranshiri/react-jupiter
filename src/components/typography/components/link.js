@@ -47,7 +47,10 @@ renderLink.propTypes = {
   external: PropTypes.bool,
   to: PropTypes.string.isRequired,
   target: PropTypes.oneOf(['_self', '_blank', '_parent', '_top']),
-  size: PropTypes.number,
+  size: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
   strong: PropTypes.bool,
   emphasized: PropTypes.bool,
 };
