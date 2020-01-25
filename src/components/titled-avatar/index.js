@@ -13,7 +13,7 @@ type Props = {
 const TitledAvatar = (props: Props) => {
   const { title, avatar, linkTo } = props;
 
-  if (linkTo.length === 0) {
+  if (!linkTo) {
     return (
       <Container data-test="titled-avatar">
         <Avatar src={avatar} />
