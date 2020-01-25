@@ -47,13 +47,6 @@ export const VerticalContentContainer = styled.div`
   height: 200px;
 `;
 
-export const VerticalPlacePriceContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 45px;
-  justify-content: space-between;
-`;
-
 export const OrganizationLink = styled(Link)`
   display: flex;
   align-items: center;
@@ -87,12 +80,4 @@ export const HorizontalContentContainer = styled.div`
   justify-content: space-between;
   flex: 1;
   min-width: 250px;
-`;
-
-
-export const HorizontalPlacePriceContainer = styled.div`
-  display: flex;
-  div {
-    width: 50%;
-  }
 `;
