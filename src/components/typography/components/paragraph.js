@@ -25,10 +25,7 @@ Paragraph.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]).isRequired,
-  size: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string,
-  ]),
+  size: PropTypes.number,
 };
 
 Paragraph.defaultProps = {

@@ -131,10 +131,7 @@ Text.prototype = {
     PropTypes.node,
     PropTypes.string,
   ]).isRequired,
-  size: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string,
-  ]),
+  size: PropTypes.number,
   color: PropTypes.oneOf(['red', 'green', 'blue', 'yellow', 'white', 'darkBlue']),
   underline: PropTypes.bool,
   lineThrough: PropTypes.bool,
