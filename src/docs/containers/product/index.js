@@ -16,7 +16,7 @@ const ProductPage = () => (
     <br />
 
     <Heading level={2}>
-      product-property
+      product-properties
     </Heading>
     <br />
     <Container>

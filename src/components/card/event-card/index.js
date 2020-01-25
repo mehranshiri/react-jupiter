@@ -4,7 +4,7 @@ import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
 import CardTemplate from '../card-template';
 import ShowDate from '../../show-date';
 import Avatar from '../../avatar';
-import ProductProperties from '../../product-property';
+import ProductProperties from '../../product-properties';
 import {
   Link,
   VerticalCover,
