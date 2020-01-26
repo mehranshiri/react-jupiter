@@ -1,29 +1,29 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { findByTestAtrr } from '../../utils/test';
 import TextInput from './text-input';
 
 describe('text input tests', () => {
   it('render simple text input', () => {
-    const component = shallow(<TextInput label="this is label" name="eng name" />);
+    const component = mount(<TextInput label="this is label" name="eng name" />);
     const textInput = findByTestAtrr(component, 'text-input');
     expect(textInput.length).toBe(1);
   });
 
   it('render text input with placeholder', () => {
-    const component = shallow(<TextInput label="this is label" name="eng name" placeholder="hi guys" />);
+    const component = mount(<TextInput label="this is label" name="eng name" placeholder="hi guys" />);
     const textInput = findByTestAtrr(component, 'text-input');
     expect(textInput.find('input').prop('placeholder')).toBe('hi guys');
   });
 
   it('test text input id without id props', () => {
-    const component = shallow(<TextInput label="this is label" name="eng name" placeholder="hi guys" />);
+    const component = mount(<TextInput label="this is label" name="eng name" placeholder="hi guys" />);
     const textInput = findByTestAtrr(component, 'text-input');
-    expect(textInput.find('input').prop('id')).toBe('text-engname');
+    expect(textInput.find('input').prop('id')).toBe('text-engname-thisislabel');
   });
 
   it('render text input - full props', () => {
-    const component = shallow(<TextInput label="this is label" name="eng name" placeholder="hi guys" type="text" id="hiiii-id" />);
+    const component = mount(<TextInput label="this is label" name="eng name" placeholder="hi guys" type="text" id="hiiii-id" />);
     const textInput = findByTestAtrr(component, 'text-input');
     expect(textInput.find('input').prop('id')).toBe('hiiii-id');
     expect(textInput.find('input').prop('type')).toBe('text');

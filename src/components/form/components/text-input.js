@@ -1,6 +1,9 @@
 // @flow
 
 import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import theme from '../theme';
+import { Input, LabelContainer } from './text-input.style';
 
 type Props = {
   type?: 'text' | 'password',
@@ -25,17 +28,21 @@ const TextInput = (props: Props) => {
   }
 
   return (
-    <label htmlFor={id || `${type}-${name.split(' ').join('')}`} data-test="text-input">
-      {label}
-      <input
-        id={id || `${type}-${name.split(' ').join('')}`}
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={handleChange}
-      />
-    </label>
+    <ThemeProvider theme={theme}>
+      <label htmlFor={id || `${type}-${name.split(' ').join('')}-${label.split(' ').join('')}`} data-test="text-input">
+        <LabelContainer bold size={14}>
+          {label}
+        </LabelContainer>
+        <Input
+          id={id || `${type}-${name.split(' ').join('')}-${label.split(' ').join('')}`}
+          name={name}
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChange={handleChange}
+        />
+      </label>
+    </ThemeProvider>
   );
 };
 
