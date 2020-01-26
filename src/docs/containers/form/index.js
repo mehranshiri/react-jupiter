@@ -3,7 +3,7 @@ import React from 'react';
 import { Typography, Form } from '../../../components';
 
 const { Heading } = Typography;
-const { Input } = Form;
+const { TextInput } = Form;
 
 const FormPage = () => (
   <>
@@ -14,9 +14,10 @@ const FormPage = () => (
     <br />
 
     <Heading level={2}>
-      input
+      TextInput
     </Heading>
-    <Input />
+    <TextInput name="text-name" label="این لیبل است" />
+    <TextInput name="text-name" label="این لیبل است" placeholder="متن مورد نظر خود را وارد کنید" />
     <br />
 
   </>

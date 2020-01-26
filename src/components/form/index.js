@@ -1,7 +1,7 @@
-import Input from './components/input';
+import TextInput from './components/text-input';
 
-export { default as Input } from './components/input';
+export { default as TextInput } from './components/text-input';
 
 export default {
-  Input,
+  TextInput,
 };
