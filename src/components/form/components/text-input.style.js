@@ -36,3 +36,8 @@ export const LabelContainer = styled(Text)`
   display: block;
   margin-bottom: 8px;
 `;
+
+export const DescriptionContainer = styled(Text)`
+  display: block;
+  margin-bottom: 4px;
+`;

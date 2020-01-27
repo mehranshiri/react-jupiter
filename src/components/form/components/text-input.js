@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import theme from '../theme';
-import { Input, LabelContainer } from './text-input.style';
+import { Input, LabelContainer, DescriptionContainer } from './text-input.style';
 
 type Props = {
   type?: 'text' | 'password',
@@ -12,6 +12,7 @@ type Props = {
   id?: string,
   placeholder?: string,
   disabled?: boolean,
+  description?: string,
 }
 
 const TextInput = (props: Props) => {
@@ -22,6 +23,7 @@ const TextInput = (props: Props) => {
     id,
     placeholder,
     disabled,
+    description,
   } = props;
   const [value, setValue] = useState('');
 
@@ -35,6 +37,11 @@ const TextInput = (props: Props) => {
         <LabelContainer bold size={14}>
           {label}
         </LabelContainer>
+        {description && (
+          <DescriptionContainer bold size={10} color="gray" data-test="text-input-description">
+            {description}
+          </DescriptionContainer>
+        )}
         <Input
           id={id || `${type}-${uniqueName.split(' ').join('')}`}
           name={uniqueName}
@@ -54,6 +61,7 @@ TextInput.defaultProps = {
   id: null,
   placeholder: null,
   disabled: false,
+  description: null,
 };
 
 export default TextInput;
