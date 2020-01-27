@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import { Typography } from '../../../components';
 import ShowDate from '../../../components/show-date';
 import CardTemplate from '../../../components/card/card-template';
@@ -31,6 +31,7 @@ const CardPage = () => (
       }}
       onClickBookmark={() => { window.console.log('handle click bookmark'); }}
       linkTo="/somewhere"
+      renderProps={(element) => <Link to="/tosomewhere">{element}</Link>}
     />
     <br />
     <NumericSummeryReport
@@ -52,6 +53,7 @@ const CardPage = () => (
       onClickBookmark={() => { window.console.log('handle click bookmark'); }}
       linkTo="/somewhere"
       queryString="icn=trendEvents&ici=fp5"
+      renderEventLink={(element) => <Link to="/tosomewhere">{element}</Link>}
     />
     <br />
     <CardTemplate hoverToLevel={2}><div>Hello card template.</div></CardTemplate>
@@ -86,6 +88,35 @@ const CardPage = () => (
       title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
       انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
       avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
+      size="sm"
+    />
+    <br />
+    <TitledAvatar
+      title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
+      انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
+      avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
+    />
+    <br />
+    <TitledAvatar
+      title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
+      انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
+      avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
+      size="lg"
+    />
+    <br />
+    <TitledAvatar
+      title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
+      انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
+      avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
+      linkTo="/somewhere"
+    />
+    <br />
+    <TitledAvatar
+      title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
+      انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
+      avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
+      linkTo="/somewhere"
+      renderProps={(element) => <Link to="/tosomewhere">{element}</Link>}
     />
     <br />
     <OrganizationCard

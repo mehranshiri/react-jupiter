@@ -1,14 +1,12 @@
 import styled from 'styled-components';
-import { Link as ReactRouterLink } from 'react-router-dom';
-
 import CardTemplate from '../card-template';
-import { Text, Heading } from '../../typography';
+import { Heading } from '../../typography';
 import Icon from '../../icon';
 
 
 /* Common event card styles */
 
-export const Link = styled(ReactRouterLink)`
+export const Link = styled.a`
   text-decoration: none;
 `;
 
@@ -33,6 +31,11 @@ export const Title = styled(Heading)`
 
 
 /* Vertical event card styles */
+export const VerticalCardContainer = styled(CardTemplate)`
+  a {
+    text-decoration: none;
+  }
+`;
 
 export const VerticalCover = styled.img`
   width: 100%;
@@ -47,23 +50,10 @@ export const VerticalContentContainer = styled.div`
   height: 200px;
 `;
 
-export const OrganizationLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-`;
-
-export const OrganizationName = styled(Text)`
-  margin-right: 8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-`;
-
 
 /* Horizontal event card styles */
 
-export const HorizontalCardContainer = styled(CardTemplate)`
+export const HorizontalCardContainer = styled(VerticalCardContainer)`
   height: 116px;
 `;
 

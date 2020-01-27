@@ -1,6 +1,6 @@
 {
   "name": "react-jupiter",
-  "version": "0.0.53",
+  "version": "0.0.65",
   "main": "./index.js",
   "license": "MIT",
   "keywords": [
@@ -27,12 +27,13 @@
   "scripts": {
   },
   "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "styled-components": "^4.3.2",
-    "react-router-dom": "^5.0.1"
+    "react-router-dom": "^5.0.1",
+    "moment-jalaali": "^0.9.1"
   },
   "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
   }
