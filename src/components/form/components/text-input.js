@@ -8,7 +8,7 @@ import { Input, LabelContainer } from './text-input.style';
 type Props = {
   type?: 'text' | 'password',
   label: string,
-  name: string,
+  uniqueName: string,
   id?: string,
   placeholder?: string,
   disabled?: boolean,
@@ -18,7 +18,7 @@ const TextInput = (props: Props) => {
   const {
     type,
     label,
-    name,
+    uniqueName,
     id,
     placeholder,
     disabled,
@@ -31,13 +31,13 @@ const TextInput = (props: Props) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <label htmlFor={id || `${type}-${name.split(' ').join('')}-${label.split(' ').join('')}`} data-test="text-input">
+      <label htmlFor={id || `${type}-${uniqueName.split(' ').join('')}`} data-test="text-input">
         <LabelContainer bold size={14}>
           {label}
         </LabelContainer>
         <Input
-          id={id || `${type}-${name.split(' ').join('')}-${label.split(' ').join('')}`}
-          name={name}
+          id={id || `${type}-${uniqueName.split(' ').join('')}`}
+          name={uniqueName}
           type={type}
           placeholder={placeholder}
           value={value}
