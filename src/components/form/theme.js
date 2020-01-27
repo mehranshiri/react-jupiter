@@ -7,7 +7,10 @@ const theme = {
     hover: defaultTheme.colors.blue400,
     focus: defaultTheme.colors.blue600,
   },
-  disabledColor: defaultTheme.colors.gray200,
+  disabled: {
+    background: defaultTheme.colors.gray200,
+    color: defaultTheme.colors.gray400,
+  },
 };
 
 export default theme;

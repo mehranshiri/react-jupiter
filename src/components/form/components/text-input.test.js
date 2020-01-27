@@ -32,6 +32,12 @@ describe('text input tests', () => {
     expect(textInput.length).toBe(1);
   });
 
+  it('render disabled input', () => {
+    const component = mount(<TextInput label="this is label" name="eng name" disabled />);
+    const textInput = findByTestAtrr(component, 'text-input');
+    expect(textInput.find('input').prop('disabled')).toBe(true);
+  });
+
   // it('set entered text as value', () => {
   //   const component = shallow(<TextInput label="this is label" name="eng-name" />);
   //   const textInput = findByTestAtrr(component, 'text-input');

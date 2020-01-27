@@ -10,7 +10,8 @@ type Props = {
   label: string,
   name: string,
   id?: string,
-  placeholder?: string
+  placeholder?: string,
+  disabled?: boolean,
 }
 
 const TextInput = (props: Props) => {
@@ -20,6 +21,7 @@ const TextInput = (props: Props) => {
     name,
     id,
     placeholder,
+    disabled,
   } = props;
   const [value, setValue] = useState('');
 
@@ -40,6 +42,7 @@ const TextInput = (props: Props) => {
           placeholder={placeholder}
           value={value}
           onChange={handleChange}
+          disabled={disabled}
         />
       </label>
     </ThemeProvider>
@@ -50,6 +53,7 @@ TextInput.defaultProps = {
   type: 'text',
   id: null,
   placeholder: null,
+  disabled: false,
 };
 
 export default TextInput;

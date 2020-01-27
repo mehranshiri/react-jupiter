@@ -18,6 +18,7 @@ const FormPage = () => (
     </Heading>
     <TextInput name="text-name-01" label="این لیبل است" />
     <TextInput name="text-name" label="این لیبل است" placeholder="متن مورد نظر خود را وارد کنید" />
+    <TextInput name="disable" label="این لیبل است" placeholder="متن مورد نظر خود را وارد کنید" disabled />
     <br />
 
   </>

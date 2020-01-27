@@ -12,6 +12,17 @@ export const Input = styled.input`
   box-sizing: border-box;
   width: 100%;
 
+  &[disabled=""]{
+    background-color: ${({ theme }) => theme.disabled.background};
+    color: ${({ theme }) => theme.disabled.color};
+    border-color: transparent;
+
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
   &:hover {
     border-color: ${({ theme }) => theme.borderColor.hover};
   }
