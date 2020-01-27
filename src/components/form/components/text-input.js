@@ -3,7 +3,13 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import theme from '../theme';
-import { Input, LabelContainer, DescriptionContainer } from './text-input.style';
+import {
+  Input,
+  LabelContainer,
+  DescriptionContainer,
+  PassIcon,
+  Label,
+} from './text-input.style';
 
 type Props = {
   type?: 'text' | 'password',
@@ -26,14 +32,19 @@ const TextInput = (props: Props) => {
     description,
   } = props;
   const [value, setValue] = useState('');
+  const [displayedPassword, setDisplayedPassword] = useState(false);
 
   function handleChange(e) {
     setValue(e.target.value);
   }
 
+  function handleDisplayPassword() {
+    setDisplayedPassword(!displayedPassword);
+  }
+
   return (
     <ThemeProvider theme={theme}>
-      <label htmlFor={id || `${type}-${uniqueName.split(' ').join('')}`} data-test="text-input">
+      <Label htmlFor={id || `${type}-${uniqueName.split(' ').join('')}`} data-test="text-input">
         <LabelContainer bold size={14}>
           {label}
         </LabelContainer>
@@ -45,13 +56,20 @@ const TextInput = (props: Props) => {
         <Input
           id={id || `${type}-${uniqueName.split(' ').join('')}`}
           name={uniqueName}
-          type={type}
+          type={displayedPassword || type === 'text' ? 'text' : 'password'}
           placeholder={placeholder}
           value={value}
           onChange={handleChange}
           disabled={disabled}
         />
-      </label>
+        {type === 'password' && (
+          <PassIcon
+            name="cake"
+            color={displayedPassword ? 'blue' : 'gray'}
+            onClick={handleDisplayPassword}
+          />
+        )}
+      </Label>
     </ThemeProvider>
   );
 };

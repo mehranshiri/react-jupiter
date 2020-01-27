@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Text } from '../../typography';
+import Icon from '../../icon';
 import '../../iranSharpFont.scss';
 
 export const Input = styled.input`
@@ -40,4 +41,18 @@ export const LabelContainer = styled(Text)`
 export const DescriptionContainer = styled(Text)`
   display: block;
   margin-bottom: 4px;
+`;
+
+export const PassIcon = styled(Icon)`
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const Label = styled.label`
+  position: relative;
 `;

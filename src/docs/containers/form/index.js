@@ -28,6 +28,8 @@ const FormPage = () => (
     <Br />
     <TextInput uniqueName="with-desc" label="این لیبل است" placeholder="متن مورد نظر خود را وارد کنید" description="توضیحات کم و بیش" />
     <Br />
+    <TextInput type="password" uniqueName="pass-input" label="این لیبل است" />
+    <Br />
     <Br />
 
   </>
