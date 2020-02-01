@@ -42,6 +42,10 @@ const TextInput = (props: Props) => {
     setDisplayedPassword(!displayedPassword);
   }
 
+  function handleFocus(e) {
+    e.target.setSelectionRange(0, 0);
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Label htmlFor={id || `${type}-${uniqueName.split(' ').join('')}`} data-test="text-input">
@@ -60,6 +64,7 @@ const TextInput = (props: Props) => {
           placeholder={placeholder}
           value={value}
           onChange={handleChange}
+          onFocus={handleFocus}
           disabled={disabled}
         />
         {type === 'password' && (
