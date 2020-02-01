@@ -13,6 +13,7 @@ import IconPage from './containers/icon';
 import TypographyPage from './containers/typography';
 import IconsPage from './containers/icons';
 import CardPage from './containers/card';
+import CoverPage from './containers/cover';
 import ProductPage from './containers/product';
 
 const Container = styled.main`
@@ -40,6 +41,7 @@ function App() {
           <Route path="/components/button" component={ButtonPage} />
           <Route path="/components/icons" component={IconsPage} />
           <Route path="/components/card" component={CardPage} />
+          <Route path="/components/cover" component={CoverPage} />
           <Route path="/components/product" component={ProductPage} />
         </ContentContainer>
       </Content>
