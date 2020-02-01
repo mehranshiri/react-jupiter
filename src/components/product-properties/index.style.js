@@ -15,4 +15,7 @@ export const ListContainer = styled.ul`
 export const ListItem = styled.li`
     margin: 4px 0;
     min-width: calc(100% / ${({ propsLength }) => propsLength});
+    &:first-child { margin-top: 0; }
+    &:last-child { margin-bottom: 0; }
+
 `;

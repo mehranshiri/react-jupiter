@@ -1,13 +1,12 @@
 // @flow
 
-import React, { useState, type Node } from 'react';
+import React, { type Node, PureComponent } from 'react';
 import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
 import ShowDate from '../../show-date';
 import ProductProperties from '../../product-properties';
 import TitledAvatar from '../../titled-avatar';
 import {
   VerticalCardContainer,
-  Link,
   VerticalCover,
   VerticalContentContainer,
   DateBookmarkContainer,
@@ -31,131 +30,131 @@ type Props = {
     logo: string,
     slug: string,
   },
-  linkTo: string,
-  renderEventLink?: * => Node,
-  queryString?: string,
+  renderEventLink: * => Node,
   onClickBookmark: () => void,
+  rest: Object,
 }
 
-const EventCard = (props: Props) => {
-  const {
-    title,
-    type,
-    bookmarked,
-    price,
-    place,
-    date,
-    cover,
-    organization,
-    onClickBookmark,
-    linkTo,
-    renderEventLink,
-    queryString,
-    ...rest
-  } = props;
+type State = {
+  isBookmarked: boolean
+}
 
-  const [isBookmarked, setBookmark] = useState(bookmarked);
-  const productPropertiesList = [
-    { iconName: 'place', text: place },
-    { iconName: 'loyalty', text: price },
-  ];
+class EventCard extends PureComponent<Props, State> {
+  static defaultProps = {
+    bookmarked: false,
+    type: VERTICAL_CARD,
+  };
 
-  const handleClickBookmark = (e) => {
-    e.preventDefault();
-    setBookmark(!isBookmarked);
+  constructor(props: Object) {
+    super(props);
+    this.state = { isBookmarked: props.bookmarked };
+  }
+
+
+  productPropertiesList = () => {
+    const { place, price } = this.props;
+    return [
+      { iconName: 'place', text: place },
+      { iconName: 'loyalty', text: price },
+    ];
+  };
+
+  handleClickBookmark = () => {
+    const { isBookmarked } = this.state;
+    const { onClickBookmark } = this.props;
+    this.setState({ isBookmarked: !isBookmarked });
     onClickBookmark();
   };
 
-  const renderVerticalCard = () => (
-    <VerticalCardContainer
-      direction={type}
-      hoverToLevel={3}
-      maxWidth={270}
-      {...rest}
-    >
-      {
-        renderEventLink
-          ? renderEventLink(<VerticalCover data-test="vertical-cover" src={cover} />)
-          : <Link href={`${linkTo}${queryString ? `?${queryString}` : ''}`}><VerticalCover data-test="vertical-cover" src={cover} /></Link>
-      }
-      <VerticalContentContainer data-test="vertical-content">
-        <div>
-          <DateBookmarkContainer data-test="vertical-date-bookmark">
+  handleFailedBookmarked = () => {
+    const { bookmarked } = this.props;
+    this.setState({ isBookmarked: bookmarked });
+  }
+
+  renderVerticalCard = (productPropertiesList: Object) => {
+    const {
+      type, title, renderEventLink, date, cover, organization, rest,
+    } = this.props;
+    const { isBookmarked } = this.state;
+    return (
+      <VerticalCardContainer
+        direction={type}
+        hoverToLevel={3}
+        maxWidth={270}
+        {...rest}
+      >
+        { renderEventLink(<VerticalCover data-test="vertical-cover" src={cover} />) }
+        <VerticalContentContainer data-test="vertical-content">
+          <div>
+            <DateBookmarkContainer data-test="vertical-date-bookmark">
+              <ShowDate date={date} color="gray" fontSize="12" />
+              <BookmarkIcon
+                name={isBookmarked ? 'bookmark' : 'bookmark-border'}
+                size="lg"
+                color="gray"
+                onClick={this.handleClickBookmark}
+              />
+            </DateBookmarkContainer>
+            { renderEventLink(<Title level={2} size="sm">{title}</Title>) }
+            <ProductProperties list={productPropertiesList} />
+          </div>
+          {
+            organization
+            && <TitledAvatar size="sm" title={organization.name} avatar={organization.logo} />
+          }
+        </VerticalContentContainer>
+      </VerticalCardContainer>
+    );
+  }
+
+  renderHorizontalCard = (productPropertiesList: Object) => {
+    const {
+      type, title, rest, renderEventLink, date, cover,
+    } = this.props;
+    const { isBookmarked } = this.state;
+    return (
+      <HorizontalCardContainer
+        direction={type}
+        hoverToLevel={3}
+        maxWidth={560}
+        {...rest}
+      >
+        { renderEventLink(<HorizontalCover data-test="horizontal-cover" src={cover} />) }
+        <HorizontalContentContainer data-test="horizontal-content">
+          <DateBookmarkContainer>
             <ShowDate date={date} color="gray" fontSize="12" />
             <BookmarkIcon
               name={isBookmarked ? 'bookmark' : 'bookmark-border'}
               size="lg"
               color="gray"
-              onClick={handleClickBookmark}
+              onClick={this.handleClickBookmark}
             />
           </DateBookmarkContainer>
-          {
-            renderEventLink
-              ? renderEventLink(<Title level={2} size="sm">{title}</Title>)
-              : <Link href={`${linkTo}${queryString ? `?${queryString}` : ''}`}><Title level={2} size="sm">{title}</Title></Link>
-          }
-          <ProductProperties list={productPropertiesList} />
-        </div>
-        {
-          organization
-          && <TitledAvatar size="sm" title={organization.name} avatar={organization.logo} />
-        }
-      </VerticalContentContainer>
-    </VerticalCardContainer>
-  );
+          { renderEventLink(<Title level={2} size="sm">{title}</Title>) }
+          <ProductProperties list={productPropertiesList} isHorizontal />
+        </HorizontalContentContainer>
+      </HorizontalCardContainer>
+    );
+  };
 
-  const renderHorizontalCard = () => (
-    <HorizontalCardContainer
-      direction={type}
-      hoverToLevel={3}
-      maxWidth={560}
-      {...rest}
-    >
-      {
-        renderEventLink
-          ? renderEventLink(<HorizontalCover data-test="horizontal-cover" src={cover} />)
-          : <Link href={`${linkTo}${queryString ? `?${queryString}` : ''}`}><HorizontalCover data-test="horizontal-cover" src={cover} /></Link>
-      }
-      <HorizontalContentContainer data-test="horizontal-content">
-        <DateBookmarkContainer>
-          <ShowDate date={date} color="gray" fontSize="12" />
-          <BookmarkIcon
-            name={isBookmarked ? 'bookmark' : 'bookmark-border'}
-            size="lg"
-            color="gray"
-            onClick={handleClickBookmark}
-          />
-        </DateBookmarkContainer>
-        {
-          renderEventLink
-            ? renderEventLink(<Title level={2} size="sm">{title}</Title>)
-            : <Link href={`${linkTo}${queryString ? `?${queryString}` : ''}`}><Title level={2} size="sm">{title}</Title></Link>
-        }
-        <ProductProperties list={productPropertiesList} isHorizontal />
-      </HorizontalContentContainer>
-    </HorizontalCardContainer>
-  );
-
-  const renderCard = () => {
+  renderCard = () => {
+    const { type, place, price } = this.props;
+    const productPropertiesList = [
+      { iconName: 'place', text: place },
+      { iconName: 'loyalty', text: price },
+    ];
     switch (type) {
       case HORIZONTAL_CARD:
-        return renderHorizontalCard();
+        return this.renderHorizontalCard(productPropertiesList);
       case VERTICAL_CARD:
       default:
-        return renderVerticalCard();
+        return this.renderVerticalCard(productPropertiesList);
     }
   };
 
-  return (
-    renderCard()
-  );
-};
-
-EventCard.defaultProps = {
-  bookmarked: false,
-  type: VERTICAL_CARD,
-  queryString: '',
-  renderEventLink: undefined,
-};
+  render() {
+    return this.renderCard();
+  }
+}
 
 export default EventCard;
