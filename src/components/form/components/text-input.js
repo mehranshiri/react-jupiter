@@ -7,7 +7,7 @@ import {
   Input,
   LabelContainer,
   DescriptionContainer,
-  PassIcon,
+  PasswordIcon,
   Label,
 } from './text-input.style';
 
@@ -63,8 +63,8 @@ const TextInput = (props: Props) => {
           disabled={disabled}
         />
         {type === 'password' && (
-          <PassIcon
-            name="cake"
+          <PasswordIcon
+            name={displayedPassword ? 'visibility-off' : 'visibility'}
             color={displayedPassword ? 'blue' : 'gray'}
             onClick={handleDisplayPassword}
           />

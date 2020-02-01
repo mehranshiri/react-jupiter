@@ -43,7 +43,7 @@ export const DescriptionContainer = styled(Text)`
   margin-bottom: 4px;
 `;
 
-export const PassIcon = styled(Icon)`
+export const PasswordIcon = styled(Icon)`
   position: absolute;
   left: 0;
   bottom: 6px;
