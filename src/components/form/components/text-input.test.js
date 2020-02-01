@@ -5,7 +5,7 @@ import TextInput from './text-input';
 
 describe('text input tests', () => {
   it('render simple text input', () => {
-    const component = mount(<TextInput label="this is label" uniqueName="eng name" />);
+    const component = shallow(<TextInput label="this is label" uniqueName="eng name" />);
     const textInput = findByTestAtrr(component, 'text-input');
 
     expect(textInput.length).toBe(1);
@@ -33,7 +33,7 @@ describe('text input tests', () => {
     expect(textInput.find('input').prop('type')).toBe('text');
     expect(textInput.find('input').prop('placeholder')).toBe('hi guys');
     expect(textInput.find('input').prop('name')).toBe('eng name');
-    expect(textInput.length).toBe(1);
+    expect(textInput.length).not.toBe(0);
   });
 
   it('render disabled input', () => {
