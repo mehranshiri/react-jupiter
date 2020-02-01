@@ -29,6 +29,7 @@ const CardPage = () => {
         date="2020-01-10T14:00:00+0330"
         place="تهران"
         price="از ۴۴۰۰۰ تومان"
+        ads
         organization={{
           name: 'هلدینگ کلان - مجتمع فنی پلی تکنیک - شرکت تجارت جهانی اندیشه',
           logo: 'https://static.evand.net/images/organizations/logos/original/e90483ade453446ae2fd156e15244d04.jpg',
@@ -56,6 +57,7 @@ const CardPage = () => {
         date="2020-01-10T14:00:00+0330"
         place="تهران"
         price="از ۴۴۰۰۰ تومان"
+        ads
         onClickBookmark={() => { window.console.log('handle click bookmark'); }}
         queryString="icn=trendEvents&ici=fp5"
         renderEventLink={(element) => <Link to="/tosomewhere">{element}</Link>}

@@ -16,6 +16,12 @@ export const DateBookmarkContainer = styled.div`
   justify-content: space-between;
 `;
 
+
+export const DateAdsContainer = styled.div`
+  display: flex;
+  justify-items: center;
+`;
+
 export const BookmarkIcon = styled(Icon)`
   margin-left: 0;
   &:hover {

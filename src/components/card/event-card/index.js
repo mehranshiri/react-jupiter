@@ -5,10 +5,12 @@ import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
 import ShowDate from '../../show-date';
 import ProductProperties from '../../product-properties';
 import TitledAvatar from '../../titled-avatar';
+import AdsLabel from '../../ads-label';
 import {
   VerticalCardContainer,
   VerticalCover,
   VerticalContentContainer,
+  DateAdsContainer,
   DateBookmarkContainer,
   BookmarkIcon,
   Title,
@@ -25,6 +27,7 @@ type Props = {
   place: string,
   date: string | Object,
   cover: String,
+  ads?: Boolean,
   organization: ?{
     name: string,
     logo: string,
@@ -43,6 +46,7 @@ class EventCard extends PureComponent<Props, State> {
   static defaultProps = {
     bookmarked: false,
     type: VERTICAL_CARD,
+    ads: false,
   };
 
   constructor(props: Object) {
@@ -73,7 +77,7 @@ class EventCard extends PureComponent<Props, State> {
 
   renderVerticalCard = (productPropertiesList: Object) => {
     const {
-      type, title, renderEventLink, date, cover, organization, rest,
+      type, title, renderEventLink, date, cover, ads, organization, rest,
     } = this.props;
     const { isBookmarked } = this.state;
     return (
@@ -87,7 +91,10 @@ class EventCard extends PureComponent<Props, State> {
         <VerticalContentContainer data-test="vertical-content">
           <div>
             <DateBookmarkContainer data-test="vertical-date-bookmark">
-              <ShowDate date={date} color="gray" fontSize="12" />
+              <DateAdsContainer>
+                {ads && <AdsLabel />}
+                <ShowDate date={date} color="gray" fontSize="12" />
+              </DateAdsContainer>
               <BookmarkIcon
                 name={isBookmarked ? 'bookmark' : 'bookmark-border'}
                 size="lg"
@@ -109,7 +116,7 @@ class EventCard extends PureComponent<Props, State> {
 
   renderHorizontalCard = (productPropertiesList: Object) => {
     const {
-      type, title, rest, renderEventLink, date, cover,
+      type, title, rest, renderEventLink, date, cover, ads,
     } = this.props;
     const { isBookmarked } = this.state;
     return (
@@ -122,7 +129,10 @@ class EventCard extends PureComponent<Props, State> {
         { renderEventLink(<HorizontalCover data-test="horizontal-cover" src={cover} />) }
         <HorizontalContentContainer data-test="horizontal-content">
           <DateBookmarkContainer>
-            <ShowDate date={date} color="gray" fontSize="12" />
+            <DateAdsContainer>
+              { ads && <AdsLabel /> }
+              <ShowDate date={date} color="gray" fontSize="12" />
+            </DateAdsContainer>
             <BookmarkIcon
               name={isBookmarked ? 'bookmark' : 'bookmark-border'}
               size="lg"
