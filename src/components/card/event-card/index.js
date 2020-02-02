@@ -27,8 +27,8 @@ type Props = {
   price: string,
   place: string,
   date: string | Object,
-  cover?: String,
-  ads?: Boolean,
+  cover?: string,
+  ads?: boolean,
   organization: ?{
     name: string,
     logo: string,
@@ -36,6 +36,7 @@ type Props = {
   },
   renderEventLink: * => Node,
   onClickBookmark: () => void,
+  rest: Object,
 }
 
 type State = {
@@ -55,15 +56,6 @@ class EventCard extends PureComponent<Props, State> {
     this.state = { isBookmarked: props.bookmarked };
   }
 
-
-  productPropertiesList = () => {
-    const { place, price } = this.props;
-    return [
-      { iconName: 'place', text: place },
-      { iconName: 'loyalty', text: price },
-    ];
-  };
-
   handleClickBookmark = () => {
     const { isBookmarked } = this.state;
     const { onClickBookmark } = this.props;
@@ -78,7 +70,7 @@ class EventCard extends PureComponent<Props, State> {
 
   renderVerticalCard = (productPropertiesList: Object) => {
     const {
-      type, title, renderEventLink, date, cover, ads, organization, ...rest
+      type, title, renderEventLink, date, cover, ads, organization, rest,
     } = this.props;
     const { isBookmarked } = this.state;
     return (
@@ -117,7 +109,7 @@ class EventCard extends PureComponent<Props, State> {
 
   renderHorizontalCard = (productPropertiesList: Object) => {
     const {
-      type, title, renderEventLink, date, cover, ads, ...rest
+      type, title, renderEventLink, date, cover, ads, rest,
     } = this.props;
     const { isBookmarked } = this.state;
     return (
@@ -152,7 +144,7 @@ class EventCard extends PureComponent<Props, State> {
     const { type, place, price } = this.props;
     const productPropertiesList = [
       { iconName: 'place', text: place },
-      { iconName: 'loyalty', text: price },
+      { iconName: 'local-offer', text: price },
     ];
     switch (type) {
       case HORIZONTAL_CARD:
