@@ -45,7 +45,9 @@ export const VerticalCardContainer = styled(CardTemplate)`
 
 export const VerticalCover = styled.img`
   width: 100%;
+  min-width: 270px;
   height: auto;
+  min-height: 150px;
 `;
 
 export const VerticalContentContainer = styled.div`

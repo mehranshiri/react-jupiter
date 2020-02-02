@@ -18,6 +18,7 @@ import {
   HorizontalCover,
   HorizontalContentContainer,
 } from './index.style';
+import DefaultCover from '../../assets/defaults-images/default-cover.jpg';
 
 type Props = {
   title: string,
@@ -26,7 +27,7 @@ type Props = {
   price: string,
   place: string,
   date: string | Object,
-  cover: String,
+  cover?: String,
   ads?: Boolean,
   organization: ?{
     name: string,
@@ -43,6 +44,7 @@ type State = {
 
 class EventCard extends PureComponent<Props, State> {
   static defaultProps = {
+    cover: '',
     bookmarked: false,
     type: VERTICAL_CARD,
     ads: false,
@@ -86,7 +88,7 @@ class EventCard extends PureComponent<Props, State> {
         maxWidth={270}
         {...rest}
       >
-        { renderEventLink(<VerticalCover data-test="vertical-cover" src={cover} />) }
+        { renderEventLink(<VerticalCover data-test="vertical-cover" src={!cover ? DefaultCover : cover} />) }
         <VerticalContentContainer data-test="vertical-content">
           <div>
             <DateBookmarkContainer data-test="vertical-date-bookmark">
@@ -125,7 +127,7 @@ class EventCard extends PureComponent<Props, State> {
         maxWidth={560}
         {...rest}
       >
-        { renderEventLink(<HorizontalCover data-test="horizontal-cover" src={cover} />) }
+        { renderEventLink(<HorizontalCover data-test="horizontal-cover" src={!cover ? DefaultCover : cover} />) }
         <HorizontalContentContainer data-test="horizontal-content">
           <DateBookmarkContainer>
             <DateAdsContainer>
