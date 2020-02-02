@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Typography, ProductProperties } from '../../../components';
+import { Typography, ProductProperties, ProductOwner } from '../../../components';
 
 const { Heading } = Typography;
 
@@ -53,6 +53,19 @@ const ProductPage = () => (
           { iconName: 'aspect-ratio', text: 'و باز هم متن دیگری' },
         ]}
       />
+    </Container>
+    <br />
+
+    <Heading level={2}>
+        product-owner
+    </Heading>
+    <br />
+    <Container>
+      <Heading level={3}>
+        product-owner
+      </Heading>
+      <ProductOwner />
+      <br />
     </Container>
     <br />
 
