@@ -14,6 +14,7 @@ import TypographyPage from './containers/typography';
 import IconsPage from './containers/icons';
 import CardPage from './containers/card';
 import ProductPage from './containers/product';
+import FormPage from './containers/form';
 
 const Container = styled.main`
   display: flex;
@@ -41,6 +42,7 @@ function App() {
           <Route path="/components/icons" component={IconsPage} />
           <Route path="/components/card" component={CardPage} />
           <Route path="/components/product" component={ProductPage} />
+          <Route path="/components/form" component={FormPage} />
         </ContentContainer>
       </Content>
     </Container>

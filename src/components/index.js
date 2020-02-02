@@ -8,6 +8,7 @@ import NumericSummeryReport from './numeric-summery-report';
 import Card from './card';
 import ProductProperties from './product-properties';
 import AdsLabel from './ads-label';
+import Form from './form';
 
 export { default as Typography } from './typography';
 export { default as Button1 } from './button1';
@@ -19,6 +20,7 @@ export { default as NumericSummeryReport } from './numeric-summery-report';
 export { default as Card } from './card';
 export { default as ProductProperties } from './product-properties';
 export { default as AdsLabel } from './ads-label';
+export { default as Form } from './form';
 
 export default {
   Typography,
@@ -31,4 +33,5 @@ export default {
   Card,
   ProductProperties,
   AdsLabel,
+  Form,
 };
