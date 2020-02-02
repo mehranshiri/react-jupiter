@@ -9,7 +9,7 @@ import {
   DescriptionContainer,
   PasswordIcon,
   Label,
-} from './text-input.style';
+} from './index.style';
 
 type Props = {
   type?: 'text' | 'password',

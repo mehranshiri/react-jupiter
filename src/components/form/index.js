@@ -1,6 +1,6 @@
-import TextInput from './components/text-input';
+import TextInput from './text-input';
 
-export { default as TextInput } from './components/text-input';
+export { default as TextInput } from './text-input';
 
 export default {
   TextInput,
