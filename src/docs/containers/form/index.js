@@ -30,6 +30,7 @@ const FormPage = () => (
     <Br />
     <TextInput type="password" uniqueName="pass-input" label="این لیبل است" />
     <Br />
+    <TextInput type="password" uniqueName="err-example" label="این لیبل است" errorMessage="ارور زیبا بود در این زمانه بلا" />
     <Br />
 
   </>

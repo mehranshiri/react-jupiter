@@ -3,12 +3,15 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import theme from '../theme';
+import Icon from '../../icon';
+import { Text } from '../../typography';
 import {
   Input,
   LabelContainer,
   DescriptionContainer,
   PasswordIcon,
   Label,
+  ErrorMsgContainer,
 } from './index.style';
 
 type Props = {
@@ -19,6 +22,7 @@ type Props = {
   placeholder?: string,
   disabled?: boolean,
   description?: string,
+  errorMessage?: string,
 }
 
 const TextInput = (props: Props) => {
@@ -30,6 +34,7 @@ const TextInput = (props: Props) => {
     placeholder,
     disabled,
     description,
+    errorMessage,
   } = props;
   const [value, setValue] = useState('');
   const [displayedPassword, setDisplayedPassword] = useState(false);
@@ -75,6 +80,14 @@ const TextInput = (props: Props) => {
           />
         )}
       </Label>
+      {errorMessage && (
+        <ErrorMsgContainer>
+          <Icon name="error" color="red" size="sm" stickyRight />
+          <Text bold size={10} color="red" data-test="error-message">
+            {errorMessage}
+          </Text>
+        </ErrorMsgContainer>
+      )}
     </ThemeProvider>
   );
 };
@@ -85,6 +98,7 @@ TextInput.defaultProps = {
   placeholder: null,
   disabled: false,
   description: null,
+  errorMessage: null,
 };
 
 export default TextInput;

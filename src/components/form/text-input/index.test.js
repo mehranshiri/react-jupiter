@@ -52,4 +52,12 @@ describe('text input tests', () => {
     expect(textInputDescription01.length).toBe(1);
     expect(textInputDescription02.length).toBe(0);
   });
+
+  it('render with or err msg', () => {
+    const component = shallow(<TextInput label="this is label" uniqueName="with desc" description="hiiiiii" errorMessage="this is a good err" />);
+    const textInputErrorMessage = findByTestAtrr(component, 'error-message');
+
+    expect(textInputErrorMessage.length).toBe(1);
+    expect(textInputErrorMessage.children().text()).toBe('this is a good err');
+  });
 });
