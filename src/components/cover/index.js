@@ -8,6 +8,7 @@ type Props = {
   src?: string,
   alt?: string,
   linkTo?: string,
+  linkTarget?: '_self' | '_blank',
   renderLink?: * => Node,
 }
 
@@ -16,6 +17,7 @@ const Cover = (props: Props) => {
     src,
     alt,
     linkTo,
+    linkTarget,
     renderLink,
     ...rest
   } = props;
@@ -34,7 +36,7 @@ const Cover = (props: Props) => {
   if (linkTo) {
     return (
       <Container>
-        <a href={linkTo}>
+        <a href={linkTo} target={linkTarget}>
           {renderCover()}
         </a>
       </Container>
@@ -48,6 +50,7 @@ Cover.defaultProps = {
   src: defaultImage,
   renderLink: null,
   linkTo: null,
+  linkTarget: '_blank',
 };
 
 export default Cover;
