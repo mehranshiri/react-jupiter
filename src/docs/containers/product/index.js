@@ -64,7 +64,13 @@ const ProductPage = () => (
       <Heading level={3}>
         product-owner
       </Heading>
-      <ProductOwner />
+      <ProductOwner
+        name="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
+        انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
+        onClickFollowMe={() => { window.console.log('Follow Me Button Clicked'); }}
+        onClickConnectUs={() => { window.console.log('Connect Us Button Clicked'); }}
+        onClickDescription={() => { window.console.log('Description Button Clicked'); }}
+      />
       <br />
     </Container>
     <br />
