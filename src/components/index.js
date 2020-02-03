@@ -1,3 +1,7 @@
+
+import breakpoint from 'styled-components-breakpoint';
+import Spacing from 'styled-components-spacing';
+import Grid from 'styled-components-grid';
 import Typography from './typography';
 import Button1 from './button1';
 import Avatar from './avatar';
@@ -11,6 +15,9 @@ import AdsLabel from './ads-label';
 import Form from './form';
 import Responsive from './responsive';
 
+export { default as breakpoint } from 'styled-components-breakpoint';
+export { default as Spacing } from 'styled-components-spacing';
+export { default as Grid } from 'styled-components-grid';
 export { default as Typography } from './typography';
 export { default as Button1 } from './button1';
 export { default as Avatar } from './avatar';
@@ -25,6 +32,9 @@ export { default as Form } from './form';
 export { default as Responsive } from './responsive';
 
 export default {
+  breakpoint,
+  Spacing,
+  Grid,
   Typography,
   Button1,
   Avatar,
