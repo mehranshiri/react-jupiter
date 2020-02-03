@@ -1,5 +1,6 @@
+// @flow
+
 import React from 'react';
-import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { Text } from '../typography';
 import {
@@ -11,7 +12,22 @@ import {
 import { setFontColor } from './utils';
 import theme from './theme';
 
-const Button = (props) => {
+type Props = {
+  htmlType?: 'button' | 'submit' | 'reset',
+  children: string,
+  icon?: string,
+  wide?: boolean,
+  disabled?: boolean,
+  size?: 'sm' | 'md' | 'lg',
+  mainColor?: 'red' | 'green' | 'yellow' | 'darkBlue' | 'blue',
+  styleType?: 'primary' | 'secondary' | 'tertiary',
+  linkTo?: string,
+  linkTarget?: '_self' | '_blank',
+  isLoading?: boolean,
+  renderLink?: * => Node,
+}
+
+const Button = (props: Props) => {
   const {
     htmlType,
     icon,
@@ -83,21 +99,6 @@ const Button = (props) => {
   return (
     <RenderButtonContext />
   );
-};
-
-Button.propTypes = {
-  htmlType: PropTypes.oneOf(['button', 'submit', 'reset']),
-  children: PropTypes.string.isRequired,
-  icon: PropTypes.string,
-  wide: PropTypes.bool,
-  disabled: PropTypes.bool,
-  size: PropTypes.oneOf(['lg', 'md', 'sm']),
-  mainColor: PropTypes.oneOf(['red', 'green', 'yellow', 'darkBlue', 'blue']),
-  styleType: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
-  linkTo: PropTypes.string,
-  linkTarget: PropTypes.oneOf(['_self', '_blank']),
-  isLoading: PropTypes.bool,
-  renderLink: PropTypes.node,
 };
 
 Button.defaultProps = {

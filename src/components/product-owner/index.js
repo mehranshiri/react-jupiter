@@ -7,12 +7,13 @@ import { ButtonContainer, StyledButton } from './index.style';
 type Props = {
   name: string,
   avatar: string,
+  linkTarget: string,
   isFollowed?: boolean,
+  renderDescriptionLink: * => Node,
   // onClickFollowMe : it should handle actions that should be happened after click follow-me button
   // and return new value for isFollow and if the function return nothing the default value is set to be 'false'
   onClickFollowMe?: () => boolean,
   onClickConnectUs?: () => void,
-  onClickDescription?: () => void,
 }
 
 const ProductOwner = (props: Props) => {
@@ -20,9 +21,10 @@ const ProductOwner = (props: Props) => {
     name,
     avatar,
     isFollowed,
+    linkTarget,
+    renderDescriptionLink,
     onClickFollowMe,
     onClickConnectUs,
-    onClickDescription,
   } = props;
   const [isFollow, setFollowStatus] = useState(isFollowed);
   const [isLoading, setLoadingStatus] = useState(false);
@@ -64,7 +66,8 @@ const ProductOwner = (props: Props) => {
           styleType="tertiary"
           htmlType="button"
           size="sm"
-          onClick={onClickDescription}
+          linkTarget={linkTarget}
+          renderLink={renderDescriptionLink}
         >
           توضیحات
         </StyledButton>
@@ -77,7 +80,6 @@ ProductOwner.defaultProps = {
   isFollowed: false,
   onClickFollowMe: () => false,
   onClickConnectUs: () => {},
-  onClickDescription: () => {},
 };
 
 export default ProductOwner;

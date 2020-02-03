@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { Typography, ProductProperties, ProductOwner } from '../../../components';
 
 const { Heading } = Typography;
@@ -72,7 +73,16 @@ const ProductPage = () => (
           return new Promise((resolve) => { setTimeout(() => resolve(!Math.floor(Math.random() * 2)), 3000); });
         }}
         onClickConnectUs={() => { window.console.log('Connect Us Button Clicked'); }}
-        onClickDescription={() => { window.console.log('Description Button Clicked'); }}
+        renderDescriptionLink={(element) => <Link to="/tosomewherenew">{element}</Link>}
+      />
+      <br />
+      <ProductOwner
+        name="دومی"
+        onClickFollowMe={() => {
+          window.console.log('Follow Me Button Clicked, and it will return true or false randomly');
+          return new Promise((resolve) => { setTimeout(() => resolve(!Math.floor(Math.random() * 2)), 3000); });
+        }}
+        onClickConnectUs={() => { window.console.log('Connect Us Button Clicked'); }}
       />
       <br />
     </Container>
