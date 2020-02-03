@@ -68,6 +68,13 @@ const defaultTheme = {
     time: 0.2,
     method: 'ease-in',
   },
+  breakPoints: {
+    extraLarge: 1920,
+    large: 1200,
+    medium: 990,
+    small: 768,
+    extraSmall: 375,
+  },
 };
 
 export default defaultTheme;
