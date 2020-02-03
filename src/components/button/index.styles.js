@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
 import Icon from '../icon';
 import { getColorFromName, getHoverColorFromName, getFocusColorFromName } from '../utils/theme';
 
@@ -93,7 +91,9 @@ export const ExternalLink = styled.a`
   }
 `;
 
-export const InternalLink = styled(Link)`
-  color: ${({ theme, color }) => getColorFromName(theme, color)};
-  text-decoration: none;
+export const InternalLink = styled.div`
+  a {
+    color: ${({ theme, color }) => getColorFromName(theme, color)};
+    text-decoration: none;
+  }
 `;

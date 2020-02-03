@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-
 import { Text } from '../typography';
 import {
   BaseButton,
@@ -24,8 +23,8 @@ const Button = (props) => {
     styleType,
     linkTo,
     linkTarget,
-    linkType,
     isLoading,
+    renderLink,
     ...rest
   } = props;
   const fontColor = setFontColor(styleType, mainColor);
@@ -65,27 +64,25 @@ const Button = (props) => {
     );
   }
 
-  if (linkTo && !disabled) {
-    switch (linkType) {
-      case 'internal':
-        return (
-          <InternalLink to={linkTo} target={linkTarget}>
-            <RenderButtonContext />
-          </InternalLink>
-        );
-      case 'external':
-      default:
-        return (
-          <ExternalLink href={linkTo} target={linkTarget}>
-            <RenderButtonContext />
-          </ExternalLink>
-        );
+  if ((linkTo || renderLink) && !disabled) {
+    if (renderLink) {
+      return (
+        <InternalLink>
+          {renderLink(<RenderButtonContext />)}
+        </InternalLink>
+      );
     }
-  } else {
+
     return (
-      <RenderButtonContext />
+      <ExternalLink href={linkTo} target={linkTarget}>
+        <RenderButtonContext />
+      </ExternalLink>
     );
   }
+
+  return (
+    <RenderButtonContext />
+  );
 };
 
 Button.propTypes = {
@@ -99,8 +96,8 @@ Button.propTypes = {
   styleType: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   linkTo: PropTypes.string,
   linkTarget: PropTypes.oneOf(['_self', '_blank']),
-  linkType: PropTypes.oneOf(['external', 'internal']),
   isLoading: PropTypes.bool,
+  renderLink: PropTypes.node,
 };
 
 Button.defaultProps = {
@@ -113,8 +110,8 @@ Button.defaultProps = {
   styleType: 'primary',
   linkTo: null,
   linkTarget: '_self',
-  linkType: 'internal',
   isLoading: false,
+  renderLink: null,
 };
 
 export default Button;

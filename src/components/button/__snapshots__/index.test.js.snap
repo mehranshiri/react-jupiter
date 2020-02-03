@@ -243,7 +243,7 @@ exports[`Button(snapshot testing) disabled Buttons 1`] = `
   type="submit"
 >
   <i
-    class="sc-jTzLTM eQMsAa icon-watch-later sc-jzJRlG bWCExS"
+    class="sc-jTzLTM eQMsAa new-icon-watch-later sc-jzJRlG bWCExS"
     color="white"
     data-test="icon"
   />
@@ -389,7 +389,7 @@ exports[`Button(snapshot testing) green Buttons 3`] = `
 
 exports[`Button(snapshot testing) linked Buttons 1`] = `
 <a
-  class="sc-kAzzGY gxAShh"
+  class="sc-cSHVUG iEZwKe"
   href="/avatar"
   target="_self"
 >
@@ -424,7 +424,7 @@ exports[`Button(snapshot testing) linked Buttons 2`] = `
     type="submit"
   >
     <i
-      class="sc-jTzLTM lpeMqL icon-watch-later sc-jzJRlG bWCExS"
+      class="sc-jTzLTM lpeMqL new-icon-watch-later sc-jzJRlG bWCExS"
       color="darkBlue"
       data-test="icon"
     />
@@ -435,35 +435,6 @@ exports[`Button(snapshot testing) linked Buttons 2`] = `
       size="14"
     >
       my secoundrry external-linked button
-    </span>
-  </button>
-</a>
-`;
-
-exports[`Button(snapshot testing) linked Buttons 3`] = `
-<a
-  class="sc-kAzzGY gxAShh"
-  href="/avatar"
-  target="_self"
->
-  <button
-    class="sc-fjdhpX gRhpjK"
-    data-styletype="tertiary"
-    data-test="button"
-    type="submit"
-  >
-    <i
-      class="sc-jTzLTM lpeMqL icon-watch-later sc-jzJRlG bWCExS"
-      color="darkBlue"
-      data-test="icon"
-    />
-    <span
-      class="sc-htoDjs deFOOE"
-      color="darkBlue"
-      data-test="span"
-      size="14"
-    >
-      my tertiary internal-liked button
     </span>
   </button>
 </a>
