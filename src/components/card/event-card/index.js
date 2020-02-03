@@ -35,7 +35,7 @@ type Props = {
     slug: string,
   },
   renderEventLink: * => Node,
-  onClickBookmark: () => void,
+  clickBookmark: () => void,
 }
 
 type State = {
@@ -57,9 +57,9 @@ class EventCard extends PureComponent<Props, State> {
 
   handleClickBookmark = () => {
     const { isBookmarked } = this.state;
-    const { onClickBookmark } = this.props;
+    const { clickBookmark } = this.props;
     this.setState({ isBookmarked: !isBookmarked });
-    onClickBookmark();
+    clickBookmark();
   };
 
   handleFailedBookmarked = () => {

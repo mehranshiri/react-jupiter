@@ -35,7 +35,7 @@ const CardPage = () => {
           logo: 'https://static.evand.net/images/organizations/logos/original/e90483ade453446ae2fd156e15244d04.jpg',
           slug: 'drskill',
         }}
-        onClickBookmark={() => { window.console.log('handle click bookmark'); }}
+        clickBookmark={() => { window.console.log('handle click bookmark'); }}
         renderEventLink={(element) => <Link to="/tosomewherenew">{element}</Link>}
       />
       <br />
@@ -58,7 +58,7 @@ const CardPage = () => {
         place="تهران"
         price="از ۴۴۰۰۰ تومان"
         ads
-        onClickBookmark={() => { window.console.log('handle click bookmark'); }}
+        clickBookmark={() => { window.console.log('handle click bookmark'); }}
         queryString="icn=trendEvents&ici=fp5"
         renderEventLink={(element) => <Link to="/tosomewhere">{element}</Link>}
       />
