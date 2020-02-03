@@ -67,7 +67,11 @@ const ProductPage = () => (
       <ProductOwner
         name="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
         انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
-        onClickFollowMe={() => { window.console.log('Follow Me Button Clicked'); }}
+        onClickFollowMe={() => {
+          const randomBoolean = !Math.floor(Math.random() * 2);
+          window.console.log('Follow Me Button Clicked, and it will return:', randomBoolean);
+          return randomBoolean;
+        }}
         onClickConnectUs={() => { window.console.log('Connect Us Button Clicked'); }}
         onClickDescription={() => { window.console.log('Description Button Clicked'); }}
       />
