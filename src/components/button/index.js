@@ -25,6 +25,7 @@ const Button = (props) => {
     linkTo,
     linkTarget,
     linkType,
+    isLoading,
     ...rest
   } = props;
   const fontColor = setFontColor(styleType, mainColor);
@@ -38,7 +39,7 @@ const Button = (props) => {
           wide={wide}
           size={size}
           mainColor={mainColor}
-          disabled={disabled}
+          disabled={disabled || isLoading}
           data-styletype={styleType}
           {...rest}
         >
@@ -57,7 +58,7 @@ const Button = (props) => {
             color={fontColor}
             bold
           >
-            {children}
+            {isLoading ? 'صبر کنید...' : children}
           </Text>
         </BaseButton>
       </ThemeProvider>
@@ -99,6 +100,7 @@ Button.propTypes = {
   linkTo: PropTypes.string,
   linkTarget: PropTypes.oneOf(['_self', '_blank']),
   linkType: PropTypes.oneOf(['external', 'internal']),
+  isLoading: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -112,6 +114,7 @@ Button.defaultProps = {
   linkTo: null,
   linkTarget: '_self',
   linkType: 'internal',
+  isLoading: false,
 };
 
 export default Button;

@@ -68,9 +68,8 @@ const ProductPage = () => (
         name="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
         انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
         onClickFollowMe={() => {
-          const randomBoolean = !Math.floor(Math.random() * 2);
-          window.console.log('Follow Me Button Clicked, and it will return:', randomBoolean);
-          return randomBoolean;
+          window.console.log('Follow Me Button Clicked, and it will return true or false randomly');
+          return new Promise((resolve) => { setTimeout(() => resolve(!Math.floor(Math.random() * 2)), 3000); });
         }}
         onClickConnectUs={() => { window.console.log('Connect Us Button Clicked'); }}
         onClickDescription={() => { window.console.log('Description Button Clicked'); }}

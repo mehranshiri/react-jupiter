@@ -25,9 +25,13 @@ const ProductOwner = (props: Props) => {
     onClickDescription,
   } = props;
   const [isFollow, setFollowStatus] = useState(isFollowed);
+  const [isLoading, setLoadingStatus] = useState(false);
 
-  function handleClickFollowMe() {
-    setFollowStatus(onClickFollowMe());
+  async function handleClickFollowMe() {
+    setLoadingStatus(true);
+    const updatedIsFollowStatus = await onClickFollowMe();
+    setLoadingStatus(false);
+    setFollowStatus(updatedIsFollowStatus);
   }
 
   return (
@@ -42,6 +46,7 @@ const ProductOwner = (props: Props) => {
           htmlType="button"
           mainColor="blue"
           size="sm"
+          isLoading={isLoading}
           onClick={handleClickFollowMe}
         >
           {isFollow ? 'دنبال میکنید' : 'دنبال کنید' }
