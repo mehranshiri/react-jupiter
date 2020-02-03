@@ -36,7 +36,6 @@ type Props = {
   },
   renderEventLink: * => Node,
   onClickBookmark: () => void,
-  rest: Object,
 }
 
 type State = {
@@ -70,7 +69,7 @@ class EventCard extends PureComponent<Props, State> {
 
   renderVerticalCard = (productPropertiesList: Object) => {
     const {
-      type, title, renderEventLink, date, cover, ads, organization, rest,
+      type, title, renderEventLink, date, cover, ads, organization, ...rest
     } = this.props;
     const { isBookmarked } = this.state;
     return (
@@ -109,7 +108,7 @@ class EventCard extends PureComponent<Props, State> {
 
   renderHorizontalCard = (productPropertiesList: Object) => {
     const {
-      type, title, renderEventLink, date, cover, ads, rest,
+      type, title, renderEventLink, date, cover, ads, ...rest
     } = this.props;
     const { isBookmarked } = this.state;
     return (
