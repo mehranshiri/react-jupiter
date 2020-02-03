@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { Icons } from '../../../components';
+// import { Icons } from '../../../components';
 
 const IconPage = () => (
   <>
+    <p>Test Icons</p>
     <br />
-    <div>
+    {/* <div>
       <span>zoom-out</span>
       <Icons type="zoom-out" size="lg" />
       <Icons type="zoom-out" size="md" />
@@ -1479,7 +1480,7 @@ const IconPage = () => (
       <Icons type="star-half" size="lg" />
       <Icons type="star-half" size="md" />
       <Icons type="star-half" size="sm" />
-    </div>
+    </div> */}
 
   </>
 );
