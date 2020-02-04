@@ -7,6 +7,7 @@ import { EventCard } from '../../../components/card';
 import TitledAvatar from '../../../components/titled-avatar';
 import OrganizationCard from '../../../components/card/organization-card';
 import NumericSummeryReport from '../../../components/numeric-summery-report';
+import Responsive from '../../../components/responsive';
 
 const { Heading } = Typography;
 
@@ -20,6 +21,9 @@ const CardPage = () => {
       </Heading>
       <ShowDate date={new Date()} />
       <br />
+      <Responsive option={{ max: 1200 }}><h1>Show up to 1200px</h1></Responsive>
+      <Responsive option={{ min: 900 }}><h1>Show from 900px</h1></Responsive>
+      <Responsive option={{ min: 700, max: 900 }}><h1>Show from 700px up to 900px</h1></Responsive>
       <br />
       <EventCard
         ref={cardRef}
