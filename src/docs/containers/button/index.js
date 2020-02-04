@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
 import { Typography, Button } from '../../../components';
 
 const { Heading } = Typography;
@@ -255,10 +255,15 @@ const ButtonPage = () => (
       <Button linkTo="/avatar">
         دکمه لینک ساده با تنظیمات پیشفرض
       </Button>
-      <Button styleType="secondary" icon="watch-later" linkTo="https://sciencebusiness.net/categories/dfgdfg" linkType="external" linkTarget="_blank">
+      <Button styleType="secondary" icon="watch-later" linkTo="https://sciencebusiness.net/categories/dfgdfg" linkTarget="_blank">
         دکمه لینک با لینک خارجی
       </Button>
-      <Button styleType="tertiary" icon="watch-later" linkTo="/avatar" linkType="internal" linkTarget="_self">
+      <Button
+        styleType="tertiary"
+        icon="watch-later"
+        renderLink={(element) => <Link to="/tosomewherenew">{element}</Link>}
+        linkTarget="_self"
+      >
         دکمه لینک داخلی (نمونه کامل)
       </Button>
     </ButtonWrapper>
@@ -269,10 +274,16 @@ const ButtonPage = () => (
       <Button styleType="primary" icon="watch-later" linkTo="/avatar" disabled>
         دکمه لینک ساده با تنظیمات پیشفرض - disabled
       </Button>
-      <Button styleType="secondary" icon="watch-later" linkTo="https://sciencebusiness.net/categories/dfgdfg" linkType="external" linkTarget="_blank" disabled>
+      <Button styleType="secondary" icon="watch-later" linkTo="https://sciencebusiness.net/categories/dfgdfg" linkTarget="_blank" disabled>
         دکمه لینک با لینک خارجی - disabled
       </Button>
-      <Button styleType="tertiary" icon="watch-later" linkTo="/avatar" linkType="internal" linkTarget="_self" disabled>
+      <Button
+        styleType="tertiary"
+        icon="watch-later"
+        linkTarget="_self"
+        renderLink={(element) => <Link to="/tosomewherenew">{element}</Link>}
+        disabled
+      >
         دکمه لینک داخلی (نمونه کامل) - disabled
       </Button>
     </ButtonWrapper>

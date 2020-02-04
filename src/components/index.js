@@ -14,6 +14,7 @@ import ProductProperties from './product-properties';
 import AdsLabel from './ads-label';
 import Form from './form';
 import Responsive from './responsive';
+import ProductOwner from './product-owner';
 
 export { default as breakpoint } from 'styled-components-breakpoint';
 export { default as Spacing } from 'styled-components-spacing';
@@ -30,6 +31,7 @@ export { default as ProductProperties } from './product-properties';
 export { default as AdsLabel } from './ads-label';
 export { default as Form } from './form';
 export { default as Responsive } from './responsive';
+export { default as ProductOwner } from './product-owner';
 
 export default {
   breakpoint,
@@ -47,4 +49,5 @@ export default {
   AdsLabel,
   Form,
   Responsive,
+  ProductOwner,
 };
