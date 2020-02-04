@@ -9,6 +9,7 @@ import Card from './card';
 import ProductProperties from './product-properties';
 import AdsLabel from './ads-label';
 import Form from './form';
+import ProductOwner from './product-owner';
 
 export { default as Typography } from './typography';
 export { default as Button1 } from './button1';
@@ -21,6 +22,7 @@ export { default as Card } from './card';
 export { default as ProductProperties } from './product-properties';
 export { default as AdsLabel } from './ads-label';
 export { default as Form } from './form';
+export { default as ProductOwner } from './product-owner';
 
 export default {
   Typography,
@@ -34,4 +36,5 @@ export default {
   ProductProperties,
   AdsLabel,
   Form,
+  ProductOwner,
 };

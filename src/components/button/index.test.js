@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { render, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-
 import { findByTestAtrr } from '../utils/test';
 import Button from './index';
 
@@ -133,29 +132,14 @@ describe('Button(snapshot testing)', () => {
           styleType="secondary"
           icon="watch-later"
           linkTo="https://sciencebusiness.net/categories/dfgdfg"
-          linkType="external"
           linkTarget="_blank"
         >
           my secoundrry external-linked button
         </Button>
       </Router>,
     );
-    const component3 = render(
-      <Router>
-        <Button
-          styleType="tertiary"
-          icon="watch-later"
-          linkTo="/avatar"
-          linkType="internal"
-          linkTarget="_self"
-        >
-          my tertiary internal-liked button
-        </Button>
-      </Router>,
-    );
 
     expect(toJson(component1)).toMatchSnapshot();
     expect(toJson(component2)).toMatchSnapshot();
-    expect(toJson(component3)).toMatchSnapshot();
   });
 });

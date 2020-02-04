@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { ThemeProvider } from 'styled-components';
+// @flow
 
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { Text } from '../typography';
 import {
   BaseButton,
@@ -12,7 +12,22 @@ import {
 import { setFontColor } from './utils';
 import theme from './theme';
 
-const Button = (props) => {
+type Props = {
+  htmlType?: 'button' | 'submit' | 'reset',
+  children: string,
+  icon?: string,
+  wide?: boolean,
+  disabled?: boolean,
+  size?: 'sm' | 'md' | 'lg',
+  mainColor?: 'red' | 'green' | 'yellow' | 'darkBlue' | 'blue',
+  styleType?: 'primary' | 'secondary' | 'tertiary',
+  linkTo?: string,
+  linkTarget?: '_self' | '_blank',
+  isLoading?: boolean,
+  renderLink?: * => Node,
+}
+
+const Button = (props: Props) => {
   const {
     htmlType,
     icon,
@@ -24,7 +39,8 @@ const Button = (props) => {
     styleType,
     linkTo,
     linkTarget,
-    linkType,
+    isLoading,
+    renderLink,
     ...rest
   } = props;
   const fontColor = setFontColor(styleType, mainColor);
@@ -38,7 +54,7 @@ const Button = (props) => {
           wide={wide}
           size={size}
           mainColor={mainColor}
-          disabled={disabled}
+          disabled={disabled || isLoading}
           data-styletype={styleType}
           {...rest}
         >
@@ -57,48 +73,32 @@ const Button = (props) => {
             color={fontColor}
             bold
           >
-            {children}
+            {isLoading ? 'صبر کنید...' : children}
           </Text>
         </BaseButton>
       </ThemeProvider>
     );
   }
 
-  if (linkTo && !disabled) {
-    switch (linkType) {
-      case 'internal':
-        return (
-          <InternalLink to={linkTo} target={linkTarget}>
-            <RenderButtonContext />
-          </InternalLink>
-        );
-      case 'external':
-      default:
-        return (
-          <ExternalLink href={linkTo} target={linkTarget}>
-            <RenderButtonContext />
-          </ExternalLink>
-        );
+  if ((linkTo || renderLink) && !disabled) {
+    if (renderLink) {
+      return (
+        <InternalLink>
+          {renderLink(<RenderButtonContext />)}
+        </InternalLink>
+      );
     }
-  } else {
+
     return (
-      <RenderButtonContext />
+      <ExternalLink href={linkTo} target={linkTarget}>
+        <RenderButtonContext />
+      </ExternalLink>
     );
   }
-};
 
-Button.propTypes = {
-  htmlType: PropTypes.oneOf(['button', 'submit', 'reset']),
-  children: PropTypes.string.isRequired,
-  icon: PropTypes.string,
-  wide: PropTypes.bool,
-  disabled: PropTypes.bool,
-  size: PropTypes.oneOf(['lg', 'md', 'sm']),
-  mainColor: PropTypes.oneOf(['red', 'green', 'yellow', 'darkBlue', 'blue']),
-  styleType: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
-  linkTo: PropTypes.string,
-  linkTarget: PropTypes.oneOf(['_self', '_blank']),
-  linkType: PropTypes.oneOf(['external', 'internal']),
+  return (
+    <RenderButtonContext />
+  );
 };
 
 Button.defaultProps = {
@@ -111,7 +111,8 @@ Button.defaultProps = {
   styleType: 'primary',
   linkTo: null,
   linkTarget: '_self',
-  linkType: 'internal',
+  isLoading: false,
+  renderLink: null,
 };
 
 export default Button;
