@@ -4,13 +4,12 @@ import React, { type Node } from 'react';
 import Avatar from '../avatar';
 import GlobalStyle from '../globalStyle';
 import {
-  Container, Link, Title, SmallTitle,
+  Container, Title, SmallTitle,
 } from './index.style';
 
 type Props = {
   title: string,
   avatar: string,
-  linkTo?: string,
   renderAvatarLink?: * => Node,
   avatarSize?: 'sm' | 'md',
   titleSize?: 10 | 12,
@@ -18,7 +17,7 @@ type Props = {
 
 const TitledAvatar = (props: Props) => {
   const {
-    title, avatar, linkTo, renderAvatarLink, avatarSize, titleSize,
+    title, avatar, renderAvatarLink, avatarSize, titleSize,
   } = props;
 
   const renderTitle = () => {
@@ -38,25 +37,15 @@ const TitledAvatar = (props: Props) => {
     );
   }
 
-  if (!linkTo) {
-    return (
-      <Container data-test="titled-avatar">
-        <Avatar src={avatar} size={avatarSize} />
-        {renderTitle()}
-      </Container>
-    );
-  }
-
   return (
-    <Link href={linkTo}>
+    <Container data-test="titled-avatar">
       <Avatar src={avatar} size={avatarSize} />
       {renderTitle()}
-    </Link>
+    </Container>
   );
 };
 
 TitledAvatar.defaultProps = {
-  linkTo: '',
   renderAvatarLink: undefined,
   avatarSize: 'md',
   titleSize: 12,

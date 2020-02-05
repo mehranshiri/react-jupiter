@@ -28,9 +28,3 @@ export const SmallTitle = styled(Text)`
   overflow: hidden;
   text-overflow: ellipsis;
 `;
-
-export const Link = styled.a`
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-`;
