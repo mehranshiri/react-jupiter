@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import CardTemplate from '../card-template';
 import { Heading } from '../../typography';
+import ProductProperties from '../../product-properties';
 import Icon from '../../icon';
 
 
@@ -17,7 +18,7 @@ export const DateBookmarkContainer = styled.div`
 `;
 
 
-export const DateAdsContainer = styled.div`
+export const DateLabelContainer = styled.div`
   display: flex;
   justify-items: center;
 `;
@@ -27,12 +28,6 @@ export const BookmarkIcon = styled(Icon)`
   &:hover {
     cursor: pointer;
   }
-`;
-
-export const Title = styled(Heading)`
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 `;
 
 
@@ -54,8 +49,18 @@ export const VerticalContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 16px;
+  padding: 12px 16px 16px;
   height: 200px;
+`;
+
+export const VerticalTitle = styled(Heading)`
+  margin: 0;
+  overflow: hidden;
+  height: 60px;
+`;
+
+export const VerticalPlacePrice = styled(ProductProperties)`
+  margin-top: 4px;
 `;
 
 
@@ -79,3 +84,11 @@ export const HorizontalContentContainer = styled.div`
   flex: 1;
   min-width: 250px;
 `;
+
+export const HorizontalTitle = styled(Heading)`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+export const HorizontalPlacePrice = styled(ProductProperties)``;

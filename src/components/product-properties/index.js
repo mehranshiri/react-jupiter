@@ -16,10 +16,10 @@ type ComponentPros = {
 }
 
 const ProductProperty = (props: Props) => {
-  const { iconName, text } = props;
+  const { iconName, text, ...rest } = props;
 
   return (
-    <Container>
+    <Container {...rest}>
       <Icon name={iconName} size="sm" color="gray" stickyRight />
       <Text color="gray" size="12">
         {text}
@@ -29,15 +29,15 @@ const ProductProperty = (props: Props) => {
 };
 
 const ProductProperties = (props: ComponentPros) => {
-  const { list, isHorizontal } = props;
+  const { list, isHorizontal, ...rest } = props;
   const propsLength = list.length > 1 && isHorizontal ? list.length : 1;
 
   if (list.length === 1) {
-    return (<ProductProperty iconName={list[0].iconName} text={list[0].text} />);
+    return (<ProductProperty iconName={list[0].iconName} text={list[0].text} {...rest} />);
   }
 
   return (
-    <ListContainer isHorizontal={isHorizontal}>
+    <ListContainer isHorizontal={isHorizontal} {...rest}>
       {list.map(({ iconName, text }, index) => (
         <ListItem key={`${iconName}-${index.toString()}`} propsLength={propsLength}>
           <ProductProperty iconName={iconName} text={text} />

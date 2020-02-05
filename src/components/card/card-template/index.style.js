@@ -16,6 +16,7 @@ export const TemplateContainer = styled.section`
   )};
   text-decoration: none;
   transition: ${({ theme }) => (`all ${theme.animation.time}s ${theme.animation.method}`)};
+  ${({ background }) => (background ? `background: url(${background}) bottom left / 142px no-repeat` : '')};
 
   &:hover {
     ${({ theme, level, hoverToLevel }) => (
