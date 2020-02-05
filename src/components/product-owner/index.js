@@ -45,6 +45,7 @@ const ProductOwner = (props: Props) => {
       />
       <ButtonContainer>
         <StyledButton
+          className="follow-button"
           styleType={isFollow ? 'secondary' : 'primary'}
           htmlType="button"
           mainColor="blue"
