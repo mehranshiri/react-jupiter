@@ -9,7 +9,8 @@ type Props = {
   avatar: string,
   linkTarget: string,
   isFollowed?: boolean,
-  renderDescriptionLink: * => Node,
+  renderTitledAvatarLink?: * => Node,
+  renderDescriptionLink?: * => Node,
   // onClickFollowMe : it should handle actions that should be happened after click follow-me button
   // and return new value for isFollow and if the function return nothing the default value is set to be 'false'
   onClickFollowMe?: () => boolean,
@@ -22,6 +23,7 @@ const ProductOwner = (props: Props) => {
     avatar,
     isFollowed,
     linkTarget,
+    renderTitledAvatarLink,
     renderDescriptionLink,
     onClickFollowMe,
     onClickConnectUs,
@@ -41,6 +43,7 @@ const ProductOwner = (props: Props) => {
       <TitledAvatar
         title={name}
         avatar={avatar}
+        renderAvatarLink={renderTitledAvatarLink}
       />
       <ButtonContainer>
         <StyledButton
@@ -78,6 +81,8 @@ const ProductOwner = (props: Props) => {
 
 ProductOwner.defaultProps = {
   isFollowed: false,
+  renderTitledAvatarLink: null,
+  renderDescriptionLink: null,
   onClickFollowMe: () => false,
   onClickConnectUs: () => {},
 };

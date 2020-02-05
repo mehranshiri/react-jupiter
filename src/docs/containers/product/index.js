@@ -74,6 +74,7 @@ const ProductPage = () => (
         }}
         onClickConnectUs={() => { window.console.log('Connect Us Button Clicked'); }}
         renderDescriptionLink={(element) => <Link to="/tosomewherenew">{element}</Link>}
+        renderTitledAvatarLink={(element) => <Link to="/tosomewhere">{element}</Link>}
       />
       <br />
       <ProductOwner
