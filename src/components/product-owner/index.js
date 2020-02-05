@@ -7,6 +7,8 @@ import { ButtonContainer, StyledButton } from './index.style';
 type Props = {
   name: string,
   avatar: string,
+  avatarSize?: 'sm' | 'md',
+  nameSize?: 10 | 12,
   isFollowed?: boolean,
   renderTitledAvatarLink?: * => Node,
   renderDescriptionLink?: * => Node,
@@ -20,6 +22,8 @@ const ProductOwner = (props: Props) => {
   const {
     name,
     avatar,
+    avatarSize,
+    nameSize,
     isFollowed,
     renderTitledAvatarLink,
     renderDescriptionLink,
@@ -41,6 +45,8 @@ const ProductOwner = (props: Props) => {
       <TitledAvatar
         title={name}
         avatar={avatar}
+        avatarSize={avatarSize}
+        titleSize={nameSize}
         renderAvatarLink={renderTitledAvatarLink}
       />
       <ButtonContainer>
@@ -79,6 +85,8 @@ const ProductOwner = (props: Props) => {
 
 ProductOwner.defaultProps = {
   isFollowed: false,
+  avatarSize: 'md',
+  nameSize: 12,
   renderTitledAvatarLink: null,
   renderDescriptionLink: null,
   onClickFollowMe: () => false,

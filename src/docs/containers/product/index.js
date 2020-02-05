@@ -79,6 +79,8 @@ const ProductPage = () => (
       <br />
       <ProductOwner
         name="دومی"
+        nameSize={10}
+        avatarSize="sm"
         onClickFollowMe={() => {
           window.console.log('Follow Me Button Clicked, and it will return true or false randomly');
           return new Promise((resolve) => { setTimeout(() => resolve(!Math.floor(Math.random() * 2)), 3000); });
