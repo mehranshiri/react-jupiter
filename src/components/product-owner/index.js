@@ -7,7 +7,6 @@ import { ButtonContainer, StyledButton } from './index.style';
 type Props = {
   name: string,
   avatar: string,
-  linkTarget: string,
   isFollowed?: boolean,
   renderTitledAvatarLink?: * => Node,
   renderDescriptionLink?: * => Node,
@@ -22,7 +21,6 @@ const ProductOwner = (props: Props) => {
     name,
     avatar,
     isFollowed,
-    linkTarget,
     renderTitledAvatarLink,
     renderDescriptionLink,
     onClickFollowMe,
@@ -69,7 +67,6 @@ const ProductOwner = (props: Props) => {
           styleType="tertiary"
           htmlType="button"
           size="sm"
-          linkTarget={linkTarget}
           renderLink={renderDescriptionLink}
         >
           توضیحات
