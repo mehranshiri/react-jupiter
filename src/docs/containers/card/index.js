@@ -13,7 +13,7 @@ const { Heading } = Typography;
 
 const CardPage = () => {
   const cardRef = useRef();
-  // const sampleRef = useRef();
+
   return (
     <>
       <Heading level={1}>
@@ -99,7 +99,8 @@ const CardPage = () => {
         title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
         انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
         avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
-        size="sm"
+        avatarSize="sm"
+        titleSize={10}
       />
       <br />
       <TitledAvatar
@@ -112,22 +113,7 @@ const CardPage = () => {
         title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
         انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
         avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
-        size="lg"
-      />
-      <br />
-      <TitledAvatar
-        title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
-        انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
-        avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
-        linkTo="/somewhere"
-      />
-      <br />
-      <TitledAvatar
-        title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
-        انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
-        avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
-        linkTo="/somewhere"
-        renderProps={(element) => <Link to="/tosomewhere">{element}</Link>}
+        renderAvatarLink={(element) => <Link to="/tosomewhere">{element}</Link>}
       />
       <br />
       <OrganizationCard

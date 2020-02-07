@@ -3,62 +3,52 @@
 import React, { type Node } from 'react';
 import Avatar from '../avatar';
 import GlobalStyle from '../globalStyle';
-import globalTheme from '../themes';
 import {
-  Container, Link, Title, SmallTitle,
+  Container, Title, SmallTitle,
 } from './index.style';
 
 type Props = {
   title: string,
   avatar: string,
-  linkTo?: string,
   renderAvatarLink?: * => Node,
-  size?: string,
+  avatarSize?: 'sm' | 'md',
+  titleSize?: 10 | 12,
 };
 
 const TitledAvatar = (props: Props) => {
   const {
-    title, avatar, linkTo, renderAvatarLink, size,
+    title, avatar, renderAvatarLink, avatarSize, titleSize,
   } = props;
 
   const renderTitle = () => {
-    if (size === globalTheme.sizes.small) {
-      return <SmallTitle size="12">{title}</SmallTitle>;
+    if (titleSize === 10) {
+      return <SmallTitle size={10}>{title}</SmallTitle>;
     }
-    return <Title level={4} size={size}>{title}</Title>;
+    return <Title level={4} size="md">{title}</Title>;
   };
 
   if (renderAvatarLink) {
     return renderAvatarLink(
       <Container data-test="titled-avatar">
         <GlobalStyle />
-        <Avatar src={avatar} size={size} />
+        <Avatar src={avatar} size={avatarSize} />
         {renderTitle()}
       </Container>,
     );
   }
 
-  if (!linkTo) {
-    return (
-      <Container data-test="titled-avatar">
-        <Avatar src={avatar} size={size} />
-        {renderTitle()}
-      </Container>
-    );
-  }
-
   return (
-    <Link href={linkTo}>
-      <Avatar src={avatar} size={size} />
+    <Container data-test="titled-avatar">
+      <Avatar src={avatar} size={avatarSize} />
       {renderTitle()}
-    </Link>
+    </Container>
   );
 };
 
 TitledAvatar.defaultProps = {
-  linkTo: '',
   renderAvatarLink: undefined,
-  size: globalTheme.sizes.medium,
+  avatarSize: 'md',
+  titleSize: 12,
 };
 
 export default TitledAvatar;

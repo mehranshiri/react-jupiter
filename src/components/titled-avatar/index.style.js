@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Heading, Text } from '../typography';
-import globalTheme from '../themes';
 
 export const Container = styled.div`
   display: flex;
@@ -19,7 +18,7 @@ export const TitleContainer = styled.div`
 
 export const Title = styled(Heading)`
   margin: 8px 8px 8px 0;
-  max-height: ${({ size }) => (size === globalTheme.sizes.medium ? '45px' : '88px')};
+  max-height: 45px;
   overflow: hidden;
 `;
 
@@ -28,10 +27,4 @@ export const SmallTitle = styled(Text)`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-`;
-
-export const Link = styled.a`
-  display: flex;
-  align-items: center;
-  text-decoration: none;
 `;
