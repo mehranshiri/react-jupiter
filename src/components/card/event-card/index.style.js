@@ -60,7 +60,7 @@ export const VerticalTitle = styled(Heading)`
 `;
 
 export const VerticalPlacePrice = styled(ProductProperties)`
-  margin-top: 4px;
+  margin: 4px 0;
 `;
 
 
