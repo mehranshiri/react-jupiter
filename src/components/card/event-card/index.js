@@ -147,12 +147,11 @@ EventCard.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       logo: PropTypes.string,
-      slug: PropTypes.string.isRequired,
     }),
     undefined,
   ]),
   renderEventLink: PropTypes.func.isRequired,
-  renderOrganizationLink: PropTypes.func.isRequired,
+  renderOrganizationLink: PropTypes.func,
   clickBookmark: PropTypes.func.isRequired,
 };
 
@@ -162,6 +161,7 @@ EventCard.defaultProps = {
   type: VERTICAL_CARD,
   ads: false,
   finished: false,
+  renderOrganizationLink: () => false,
 };
 
 export default EventCard;
