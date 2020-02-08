@@ -1,6 +1,6 @@
 // @flow
 
-import React, { useState } from 'react';
+import React, { type Node, useState } from 'react';
 import TitledAvatar from '../../titled-avatar';
 import NumericSummeryReport from '../../numeric-summery-report';
 import Button from '../../button';
@@ -10,18 +10,18 @@ type Props = {
   title: string,
   logo: string,
   followed?: boolean,
-  linkTo: string,
   report: {
     heldEventsNumber: number,
     activeEventsNumber: number,
     followingNumber: number,
   },
   onClickFollow: () => void,
+  renderLink: * => Node,
 }
 
 const OrganizationCard = (props: Props) => {
   const {
-    title, logo, followed, linkTo, report, onClickFollow,
+    title, logo, followed, report, onClickFollow, renderLink,
   } = props;
 
   const [isFollowed, setFollowed] = useState(followed);
@@ -44,7 +44,11 @@ const OrganizationCard = (props: Props) => {
       maxWidth={370}
       data-test="organization-card"
     >
-      <TitledAvatar title={title} avatar={logo} linkTo={linkTo} />
+      <TitledAvatar
+        title={title}
+        avatar={logo}
+        renderAvatarLink={renderLink}
+      />
       <NumericSummeryReport data={reportData} />
       <Button
         styleType={isFollowed ? 'secondary' : 'primary'}

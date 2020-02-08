@@ -7,9 +7,11 @@ import { ButtonContainer, StyledButton } from './index.style';
 type Props = {
   name: string,
   avatar: string,
-  linkTarget: string,
+  avatarSize?: 'sm' | 'md',
+  nameSize?: 10 | 12,
   isFollowed?: boolean,
-  renderDescriptionLink: * => Node,
+  renderTitledAvatarLink?: * => Node,
+  renderDescriptionLink?: * => Node,
   // onClickFollowMe : it should handle actions that should be happened after click follow-me button
   // and return new value for isFollow and if the function return nothing the default value is set to be 'false'
   onClickFollowMe?: () => boolean,
@@ -20,8 +22,10 @@ const ProductOwner = (props: Props) => {
   const {
     name,
     avatar,
+    avatarSize,
+    nameSize,
     isFollowed,
-    linkTarget,
+    renderTitledAvatarLink,
     renderDescriptionLink,
     onClickFollowMe,
     onClickConnectUs,
@@ -41,9 +45,13 @@ const ProductOwner = (props: Props) => {
       <TitledAvatar
         title={name}
         avatar={avatar}
+        avatarSize={avatarSize}
+        titleSize={nameSize}
+        renderAvatarLink={renderTitledAvatarLink}
       />
       <ButtonContainer>
         <StyledButton
+          className="follow-button"
           styleType={isFollow ? 'secondary' : 'primary'}
           htmlType="button"
           mainColor="blue"
@@ -66,7 +74,6 @@ const ProductOwner = (props: Props) => {
           styleType="tertiary"
           htmlType="button"
           size="sm"
-          linkTarget={linkTarget}
           renderLink={renderDescriptionLink}
         >
           توضیحات
@@ -78,6 +85,10 @@ const ProductOwner = (props: Props) => {
 
 ProductOwner.defaultProps = {
   isFollowed: false,
+  avatarSize: 'md',
+  nameSize: 12,
+  renderTitledAvatarLink: null,
+  renderDescriptionLink: null,
   onClickFollowMe: () => false,
   onClickConnectUs: () => {},
 };

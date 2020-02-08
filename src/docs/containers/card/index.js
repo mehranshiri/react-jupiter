@@ -7,6 +7,7 @@ import { EventCard } from '../../../components/card';
 import TitledAvatar from '../../../components/titled-avatar';
 import OrganizationCard from '../../../components/card/organization-card';
 import NumericSummeryReport from '../../../components/numeric-summery-report';
+import Responsive from '../../../components/responsive';
 
 const { Heading } = Typography;
 
@@ -17,6 +18,9 @@ const CardPage = () => (
     </Heading>
     <ShowDate date={new Date()} />
     <br />
+    <Responsive option={{ max: 1200 }}><h1>Show up to 1200px</h1></Responsive>
+    <Responsive option={{ min: 900 }}><h1>Show from 900px</h1></Responsive>
+    <Responsive option={{ min: 700, max: 900 }}><h1>Show from 700px up to 900px</h1></Responsive>
     <br />
     <EventCard
       type="vertical"
@@ -51,6 +55,7 @@ const CardPage = () => (
       }}
       clickBookmark={() => { window.console.log('handle click bookmark'); return true; }}
       renderEventLink={(element) => <Link to="/tosomewherenew">{element}</Link>}
+      renderOrganizationLink={(element) => <Link to="/toorganization">{element}</Link>}
     />
     <br />
     <NumericSummeryReport
@@ -102,52 +107,34 @@ const CardPage = () => (
     <CardTemplate level={5}><div>Hello card template.</div></CardTemplate>
     <br />
     <br />
-    <br />
+
     <TitledAvatar
       title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
       انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
       avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
-      size="sm"
+      avatarSize="sm"
+      titleSize={10}
+      renderAvatarLink={(element) => <Link to="/tosomewherenew">{element}</Link>}
     />
     <br />
     <TitledAvatar
       title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
       انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
       avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
+      renderAvatarLink={(element) => <Link to="/tosomewherenew">{element}</Link>}
     />
     <br />
-    <TitledAvatar
-      title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
-      انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
-      avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
-      size="lg"
-    />
-    <br />
-    <TitledAvatar
-      title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
-      انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
-      avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
-      linkTo="/somewhere"
-    />
-    <br />
-    <TitledAvatar
-      title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی
-      انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
-      avatar="https://static.evand.net/images/organizations/logos/original/96f2fd0f4770552bf2d14db5b51f4013.jpg?x-oss-process=image/resize,h_250"
-      linkTo="/somewhere"
-      renderProps={(element) => <Link to="/tosomewhere">{element}</Link>}
-    />
     <br />
     <OrganizationCard
       title="انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی انجمن علمی کامپیوتر دانشگاه صنعتی خواجه"
       logo="https://static.evand.net/images/organizations/logos/original/d431e339d86b187f356055f1d6f39ddb.jpg?x-oss-process=image/resize,h_250"
-      linkTo="/somewherelinkto"
       report={{
         heldEventsNumber: 2,
         activeEventsNumber: 17,
         followingNumber: 148,
       }}
       onClickFollow={() => { window.console.log('click on follow'); }}
+      renderLink={(element) => <Link to="/somewhere">{element}</Link>}
     />
   </>
 );
