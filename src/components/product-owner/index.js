@@ -3,12 +3,12 @@
 import React, { useState } from 'react';
 import TitledAvatar from '../titled-avatar';
 import { ButtonContainer, StyledButton } from './index.style';
+import Responsive from '../responsive';
+import generalTheme from '../themes';
 
 type Props = {
   name: string,
   avatar: string,
-  avatarSize?: 'sm' | 'md',
-  nameSize?: 10 | 12,
   isFollowed?: boolean,
   renderTitledAvatarLink?: * => Node,
   renderDescriptionLink?: * => Node,
@@ -22,8 +22,6 @@ const ProductOwner = (props: Props) => {
   const {
     name,
     avatar,
-    avatarSize,
-    nameSize,
     isFollowed,
     renderTitledAvatarLink,
     renderDescriptionLink,
@@ -42,51 +40,62 @@ const ProductOwner = (props: Props) => {
 
   return (
     <div data-test="product-owner">
-      <TitledAvatar
-        title={name}
-        avatar={avatar}
-        avatarSize={avatarSize}
-        titleSize={nameSize}
-        renderAvatarLink={renderTitledAvatarLink}
-      />
-      <ButtonContainer>
-        <StyledButton
-          className="follow-button"
-          styleType={isFollow ? 'secondary' : 'primary'}
-          htmlType="button"
-          mainColor="blue"
-          size="sm"
-          isLoading={isLoading}
-          onClick={handleClickFollowMe}
-        >
-          {isFollow ? 'دنبال میکنید' : 'دنبال کنید' }
-        </StyledButton>
-        <StyledButton
-          styleType="secondary"
-          htmlType="button"
-          mainColor="blue"
-          size="sm"
-          onClick={onClickConnectUs}
-        >
-          تماس
-        </StyledButton>
-        <StyledButton
-          styleType="tertiary"
-          htmlType="button"
-          size="sm"
-          renderLink={renderDescriptionLink}
-        >
-          توضیحات
-        </StyledButton>
-      </ButtonContainer>
+      <Responsive option={{ max: generalTheme.breakpoints.sm }}>
+        <TitledAvatar
+          title={name}
+          avatar={avatar}
+          avatarSize={generalTheme.sizes.small}
+          titleSize={10}
+          renderAvatarLink={renderTitledAvatarLink}
+        />
+      </Responsive>
+      <Responsive option={{ min: generalTheme.breakpoints.sm }}>
+        <TitledAvatar
+          title={name}
+          avatar={avatar}
+          avatarSize={generalTheme.sizes.small}
+          titleSize={12}
+          renderAvatarLink={renderTitledAvatarLink}
+        />
+      </Responsive>
+      <Responsive option={{ min: generalTheme.breakpoints.md }}>
+        <ButtonContainer>
+          <StyledButton
+            className="follow-button"
+            styleType={isFollow ? 'secondary' : 'primary'}
+            htmlType="button"
+            mainColor="blue"
+            size={generalTheme.sizes.small}
+            isLoading={isLoading}
+            onClick={handleClickFollowMe}
+          >
+            {isFollow ? 'دنبال میکنید' : 'دنبال کنید' }
+          </StyledButton>
+          <StyledButton
+            styleType="secondary"
+            htmlType="button"
+            mainColor="blue"
+            size="sm"
+            onClick={onClickConnectUs}
+          >
+            تماس
+          </StyledButton>
+          <StyledButton
+            styleType="tertiary"
+            htmlType="button"
+            size="sm"
+            renderLink={renderDescriptionLink}
+          >
+            توضیحات
+          </StyledButton>
+        </ButtonContainer>
+      </Responsive>
     </div>
   );
 };
 
 ProductOwner.defaultProps = {
   isFollowed: false,
-  avatarSize: 'md',
-  nameSize: 12,
   renderTitledAvatarLink: null,
   renderDescriptionLink: null,
   onClickFollowMe: () => false,
