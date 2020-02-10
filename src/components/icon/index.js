@@ -23,7 +23,7 @@ const Icon = (props) => {
       <StyledIcon
         size={size}
         color={color}
-        className={`icon-${name} ${className}`}
+        className={`new-icon-${name} ${className}`}
         data-test="icon"
         stickyLeft={stickyLeft}
         stickyRight={stickyRight}

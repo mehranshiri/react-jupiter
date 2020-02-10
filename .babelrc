@@ -1,6 +1,7 @@
 {
   "plugins": [
-    "macros"
+    "macros",
+    "@babel/plugin-proposal-class-properties"
   ],
   "presets": [
     "@babel/preset-env",

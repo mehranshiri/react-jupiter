@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import EventCard from './index';
 import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
 import { findByTestAtrr } from '../../utils/test';
@@ -18,11 +18,13 @@ describe('Event Card', () => {
       date: '2020-01-10T14:00:00+0330',
       place: 'تهران',
       price: 'از ۴۴۰۰۰ تومان',
-      organizationLogo: 'https://static.evand.net/images/organizations/logos/original/e90483ade453446ae2fd156e15244d04.jpg',
-      organizationName: 'هلدینگ کلان - مجتمع فنی پلی تکنیک - شرکت تجارت جهانی اندیشه',
-      organizationSlug: 'drskill',
+      organization: {
+        logo: 'https://static.evand.net/images/organizations/logos/original/e90483ade453446ae2fd156e15244d04.jpg',
+        name: 'هلدینگ کلان - مجتمع فنی پلی تکنیک - شرکت تجارت جهانی اندیشه',
+      },
       onClickBookmark: () => { window.console.log('handle click bookmark'); },
-      linkTo: '/somewhere',
+      renderEventLink: (element) => <Link to="/tosomewherenew">{element}</Link>,
+      renderOrganizationLink: (element) => <Link to="/tosomewherenew">{element}</Link>,
     });
     const VerticalCover = findByTestAtrr(VerticalCard.find('img'), 'vertical-cover');
     const VerticalContent = findByTestAtrr(VerticalCard.find('div'), 'vertical-content');
@@ -39,9 +41,7 @@ describe('Event Card', () => {
       location: 'تهران',
       date: '2020-01-10T14:00:00+0330',
       cover: 'https://static.evand.net/images/events/covers/original/2e6f40ac8e1bc78304ccf3fd77b1b3d5.jpg',
-      organizerName: 'برگزار کننده نمونه',
-      organizerLogo: 'https://static.evand.net/images/organizations/logos/original/e90483ade453446ae2fd156e15244d04.jpg',
-      linkTo: '/somewhere',
+      renderEventLink: (element) => <Link to="/tosomewherenew">{element}</Link>,
     });
     const HorizontalCover = findByTestAtrr(HorizontalCard.find('img'), 'horizontal-cover');
     const HorizontalContent = findByTestAtrr(HorizontalCard.find('div'), 'horizontal-content');
@@ -60,7 +60,12 @@ describe('Event Card', () => {
       place: 'تهران',
       price: 'از ۴۴۰۰۰ تومان',
       onClickBookmark: fn,
-      linkTo: '/somewhere',
+      organization: {
+        logo: 'https://static.evand.net/images/organizations/logos/original/e90483ade453446ae2fd156e15244d04.jpg',
+        name: 'هلدینگ کلان - مجتمع فنی پلی تکنیک - شرکت تجارت جهانی اندیشه',
+      },
+      renderEventLink: (element) => <Link to="/tosomewherenew">{element}</Link>,
+      renderOrganizationLink: (element) => <Link to="/tosomewherenew">{element}</Link>,
     });
     const Bookmark = findByTestAtrr(VerticalCard, 'vertical-date-bookmark').find('i[name="bookmark-border"]');
     expect(Bookmark.length).toBe(1);

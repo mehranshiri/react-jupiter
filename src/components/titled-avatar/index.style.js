@@ -1,10 +1,14 @@
 import styled from 'styled-components';
-import { Link as ReactRouterLink } from 'react-router-dom';
-import { Heading } from '../typography';
+import { Heading, Text } from '../typography';
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -18,8 +22,9 @@ export const Title = styled(Heading)`
   overflow: hidden;
 `;
 
-export const Link = styled(ReactRouterLink)`
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+export const SmallTitle = styled(Text)`
+  margin-right: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;

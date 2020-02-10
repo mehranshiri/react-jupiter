@@ -1,39 +1,54 @@
 // @flow
 
-import React from 'react';
+import React, { type Node } from 'react';
 import Avatar from '../avatar';
-import { Container, Link, Title } from './index.style';
+import GlobalStyle from '../globalStyle';
+import {
+  Container, Title, SmallTitle,
+} from './index.style';
 
 type Props = {
   title: string,
   avatar: string,
-  linkTo?: string,
+  renderAvatarLink?: * => Node,
+  avatarSize?: 'sm' | 'md',
+  titleSize?: 10 | 12,
 };
 
 const TitledAvatar = (props: Props) => {
-  const { title, avatar, linkTo } = props;
+  const {
+    title, avatar, renderAvatarLink, avatarSize, titleSize,
+  } = props;
 
-  if (!linkTo) {
-    return (
+  const renderTitle = () => {
+    if (titleSize === 10) {
+      return <SmallTitle size={10}>{title}</SmallTitle>;
+    }
+    return <Title level={4} size="md">{title}</Title>;
+  };
+
+  if (renderAvatarLink) {
+    return renderAvatarLink(
       <Container data-test="titled-avatar">
-        <Avatar src={avatar} />
-        <Title level={4} size="md" bold>{title}</Title>
-      </Container>
+        <GlobalStyle />
+        <Avatar src={avatar} size={avatarSize} />
+        {renderTitle()}
+      </Container>,
     );
   }
 
   return (
     <Container data-test="titled-avatar">
-      <Link to={linkTo}>
-        <Avatar src={avatar} />
-        <Title level={4} size="md" bold>{title}</Title>
-      </Link>
+      <Avatar src={avatar} size={avatarSize} />
+      {renderTitle()}
     </Container>
   );
 };
 
 TitledAvatar.defaultProps = {
-  linkTo: '',
+  renderAvatarLink: undefined,
+  avatarSize: 'md',
+  titleSize: 12,
 };
 
 export default TitledAvatar;

@@ -88,6 +88,11 @@ const SideNavigation = ({ ltr }) => (
           <NavItem title="کاور" ltr={ltr} />
         </Link>
       </Nav>
+      <Nav id="14">
+        <Link to="/components/form">
+          <NavItem title="فرم" ltr={ltr} />
+        </Link>
+      </Nav>
       <Nav id="15">
         <Link to="/components/product">
           <NavItem title="کامپوننت های پروداکت" ltr={ltr} />

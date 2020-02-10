@@ -1,80 +1,75 @@
-
 import React, { useState } from 'react';
+import PropTypes, { oneOfType } from 'prop-types';
 import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
-import CardTemplate from '../card-template';
 import ShowDate from '../../show-date';
-import Avatar from '../../avatar';
-import ProductProperties from '../../product-properties';
+import TitledAvatar from '../../titled-avatar';
+import EventCardLabel from './event-card-label';
 import {
-  Link,
+  VerticalCardContainer,
   VerticalCover,
   VerticalContentContainer,
+  DateLabelContainer,
   DateBookmarkContainer,
   BookmarkIcon,
-  Title,
-  OrganizationLink,
-  OrganizationName,
+  VerticalPlacePrice,
+  VerticalTitle,
   HorizontalCardContainer,
   HorizontalCover,
   HorizontalContentContainer,
+  HorizontalTitle,
+  HorizontalPlacePrice,
 } from './index.style';
+import DefaultCover from '../../assets/defaults-images/default-cover.jpg';
+import finishedClockLabel from '../../assets/images/finished-clock-label.svg';
 
-type Props = {
-  title: string,
-  bookmarked?: boolean,
-  type?: VERTICAL_CARD | HORIZONTAL_CARD,
-  price: string,
-  place: string,
-  date: string | Object,
-  cover: String,
-  organization: ?{
-    name: string,
-    logo: string,
-    slug: string,
-  },
-  linkTo?: string,
-  queryString?: string,
-  onClickBookmark: () => void,
-}
-
-const EventCard = (props: Props) => {
+const EventCard = (props) => {
   const {
     title,
-    type,
     bookmarked,
+    type,
     price,
     place,
     date,
     cover,
+    ads,
+    finished,
     organization,
-    onClickBookmark,
-    linkTo,
-    queryString,
+    renderEventLink,
+    renderOrganizationLink,
+    clickBookmark,
+    ...rest
   } = props;
+  const [isBookmarked, setIsBookmarked] = useState(bookmarked);
 
-  const [isBookmarked, setBookmark] = useState(bookmarked);
   const productPropertiesList = [
     { iconName: 'place', text: place },
-    { iconName: 'loyalty', text: price },
+    { iconName: 'local-offer', text: price },
   ];
 
-  const handleClickBookmark = (e) => {
-    e.preventDefault();
-    setBookmark(!isBookmarked);
-    onClickBookmark();
+  const handleClickBookmark = () => {
+    const returnedValue = clickBookmark();
+    if (returnedValue !== false) {
+      setIsBookmarked(!isBookmarked);
+    }
   };
 
   const renderVerticalCard = () => (
-    <CardTemplate
+    <VerticalCardContainer
       direction={type}
       hoverToLevel={3}
       maxWidth={270}
+      background={finished ? finishedClockLabel : null}
+      {...rest}
     >
-      <Link to={`${linkTo}${queryString.length > 0 ? `?${queryString}` : ''}`}><VerticalCover data-test="vertical-cover" src={cover} /></Link>
+      { renderEventLink(<VerticalCover data-test="vertical-cover" src={!cover ? DefaultCover : cover} />) }
       <VerticalContentContainer data-test="vertical-content">
         <div>
           <DateBookmarkContainer data-test="vertical-date-bookmark">
-            <ShowDate date={date} color="gray" fontSize="12" />
+            <DateLabelContainer>
+              {finished && <EventCardLabel type="finished" />}
+              {!finished && ads && <EventCardLabel type="ads" />}
+              <ShowDate date={date} color="gray" fontSize="12" />
+            </DateLabelContainer>
             <BookmarkIcon
               name={isBookmarked ? 'bookmark' : 'bookmark-border'}
               size="lg"
@@ -82,17 +77,14 @@ const EventCard = (props: Props) => {
               onClick={handleClickBookmark}
             />
           </DateBookmarkContainer>
-          <Link to={`${linkTo}${queryString.length > 0 ? `?${queryString}` : ''}`}><Title level={2} size="sm">{title}</Title></Link>
-          <ProductProperties list={productPropertiesList} />
+          { renderEventLink(<VerticalTitle level={2} size="sm">{title}</VerticalTitle>)}
+          <VerticalPlacePrice list={productPropertiesList} />
         </div>
-        {organization && (
-          <OrganizationLink to={`organizations/${organization.slug}`}>
-            <Avatar src={organization.logo} size="sm" />
-            <OrganizationName size="12">{organization.name}</OrganizationName>
-          </OrganizationLink>
-        )}
+        {
+          organization && <TitledAvatar title={organization.name} titleSize={10} avatar={organization.logo} avatarSize="sm" renderAvatarLink={renderOrganizationLink} />
+        }
       </VerticalContentContainer>
-    </CardTemplate>
+    </VerticalCardContainer>
   );
 
   const renderHorizontalCard = () => (
@@ -100,43 +92,76 @@ const EventCard = (props: Props) => {
       direction={type}
       hoverToLevel={3}
       maxWidth={560}
+      {...rest}
     >
-      <Link to={`${linkTo}${queryString.length > 0 ? `?${queryString}` : ''}`}><HorizontalCover data-test="horizontal-cover" src={cover} /></Link>
+      { renderEventLink(<HorizontalCover data-test="horizontal-cover" src={!cover ? DefaultCover : cover} />) }
       <HorizontalContentContainer data-test="horizontal-content">
         <DateBookmarkContainer>
-          <ShowDate date={date} color="gray" fontSize="12" />
+          <DateLabelContainer>
+            {finished && <EventCardLabel type="finished" />}
+            {!finished && ads && <EventCardLabel type="ads" />}
+            <ShowDate date={date} color="gray" fontSize="12" />
+          </DateLabelContainer>
           <BookmarkIcon
             name={isBookmarked ? 'bookmark' : 'bookmark-border'}
             size="lg"
             color="gray"
             onClick={handleClickBookmark}
+            data-test={isBookmarked ? 'bookmark' : 'bookmark-border'}
           />
         </DateBookmarkContainer>
-        <Link to={`${linkTo}${queryString.length > 0 ? `?${queryString}` : ''}`}><Title level={2} size="sm">{title}</Title></Link>
-        <ProductProperties list={productPropertiesList} isHorizontal />
+        { renderEventLink(<HorizontalTitle level={2} size="sm">{title}</HorizontalTitle>) }
+        <HorizontalPlacePrice list={productPropertiesList} isHorizontal />
       </HorizontalContentContainer>
     </HorizontalCardContainer>
   );
 
   const renderCard = () => {
+    const { type } = props;
     switch (type) {
       case HORIZONTAL_CARD:
-        return renderHorizontalCard();
+        return renderHorizontalCard(props);
       case VERTICAL_CARD:
       default:
-        return renderVerticalCard();
+        return renderVerticalCard(props);
     }
   };
 
-  return (
-    renderCard()
-  );
+  return renderCard();
+};
+
+EventCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  bookmarked: PropTypes.bool,
+  type: PropTypes.string,
+  price: PropTypes.string.isRequired,
+  place: PropTypes.string.isRequired,
+  date: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]).isRequired,
+  cover: PropTypes.string,
+  ads: PropTypes.bool,
+  finished: PropTypes.bool,
+  organization: oneOfType([
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      logo: PropTypes.string,
+    }),
+    undefined,
+  ]),
+  renderEventLink: PropTypes.func.isRequired,
+  renderOrganizationLink: PropTypes.func,
+  clickBookmark: PropTypes.func.isRequired,
 };
 
 EventCard.defaultProps = {
   bookmarked: false,
+  cover: '',
   type: VERTICAL_CARD,
-  queryString: '',
+  ads: false,
+  finished: false,
+  renderOrganizationLink: () => false,
 };
 
 export default EventCard;
