@@ -84,6 +84,11 @@ const SideNavigation = ({ ltr }) => (
         </Link>
       </Nav>
       <Nav id="13">
+        <Link to="/components/cover">
+          <NavItem title="کاور" ltr={ltr} />
+        </Link>
+      </Nav>
+      <Nav id="14">
         <Link to="/components/form">
           <NavItem title="فرم" ltr={ltr} />
         </Link>
