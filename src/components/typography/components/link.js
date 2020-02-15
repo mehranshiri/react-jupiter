@@ -1,31 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-
+import GlobalStyle from '../../globalStyle';
 import defaultTheme from '../theme';
 import Text from './text';
-import { InternalLink, ExternalLink } from './link.styles';
+import { ExternalLink } from './link.styles';
 
-const renderLink = (props) => {
+const generateLink = (props) => {
   const {
-    external, children, to, target, size, strong, emphasized, ...rest
+    external, children, href, linkContent, target, size, strong, emphasized, ...rest
   } = props;
-  if (external) {
-    return (
-      <ExternalLink href={to} target={target} data-test="external-link" {...rest}>
-        <Text
-          size={size}
-          strong={strong}
-          emphasized={emphasized}
-          color="blue"
-        >
-          {children}
-        </Text>
-      </ExternalLink>
+  if (typeof href === 'function') {
+    return href(
+      <Text
+        size={size}
+        strong={strong}
+        emphasized={emphasized}
+        color="blue"
+        {...rest}
+      >
+        {linkContent}
+      </Text>,
     );
   }
   return (
-    <InternalLink to={to} target={target} data-test="internal-link" {...rest}>
+    <ExternalLink href={href} target={target} data-test="external" {...rest}>
       <Text
         size={size}
         strong={strong}
@@ -34,25 +33,33 @@ const renderLink = (props) => {
       >
         {children}
       </Text>
-    </InternalLink>
+    </ExternalLink>
   );
 };
 
-renderLink.propTypes = {
+generateLink.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
     PropTypes.string,
-  ]).isRequired,
-  external: PropTypes.bool,
-  to: PropTypes.string.isRequired,
+  ]),
+  href: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.string,
+  ]),
+  linkContent: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   target: PropTypes.oneOf(['_self', '_blank', '_parent', '_top']),
   size: PropTypes.number,
   strong: PropTypes.bool,
   emphasized: PropTypes.bool,
 };
 
-renderLink.defaultProps = {
+generateLink.defaultProps = {
+  href: '',
   external: false,
   target: '_self',
   size: 14,
@@ -61,18 +68,19 @@ renderLink.defaultProps = {
 };
 
 const Link = (props) => {
-  const { children, to } = props;
-  if (children === undefined || to === undefined) return null;
+  const { children, linkContent } = props;
+  if (children === undefined && linkContent === undefined) return null;
   return (
     <ThemeProvider theme={defaultTheme}>
-      {renderLink(props)}
+      <GlobalStyle />
+      {generateLink(props)}
     </ThemeProvider>
   );
 };
 
 
-Link.propTypes = renderLink.propTypes;
+Link.propTypes = generateLink.propTypes;
 
-Link.defaultProps = renderLink.defaultProps;
+Link.defaultProps = generateLink.defaultProps;
 
 export default Link;
