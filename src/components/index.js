@@ -1,7 +1,7 @@
 
 import breakpoint from 'styled-components-breakpoint';
-import Spacing from 'styled-components-spacing';
 import Grid from 'styled-components-grid';
+import Spacing from './spacing';
 import Typography from './typography';
 import ShowDate from './show-date';
 import Button1 from './button1';
