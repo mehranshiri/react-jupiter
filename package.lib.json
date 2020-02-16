@@ -1,6 +1,6 @@
 {
   "name": "react-jupiter",
-  "version": "0.0.66",
+  "version": "0.0.72",
   "main": "./index.js",
   "license": "MIT",
   "keywords": [
@@ -27,16 +27,17 @@
   "scripts": {
   },
   "dependencies": {
-    "react-router-dom": "^5.0.1",
     "moment-jalaali": "^0.9.1",
     "react-responsive": "^8.0.3",
-    "styled-components-breakpoint": "^3.0.0-preview.20",
     "styled-components-grid": "^2.2.2",
-    "styled-components-spacing": "^3.1.1"
+    "styled-components-spacing": "^3.1.1",
+    "react-lazy-load-image-component": "^1.4.1",
+    "styled-media-query": "^2.1.2"
   },
   "peerDependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
