@@ -17,8 +17,8 @@ import Responsive from './responsive';
 import ProductOwner from './product-owner';
 
 export { default as breakpoint } from 'styled-components-breakpoint';
-export { default as Spacing } from 'styled-components-spacing';
 export { default as Grid } from 'styled-components-grid';
+export { default as Spacing } from './spacing';
 export { default as Typography } from './typography';
 export { default as Button1 } from './button1';
 export { default as Avatar } from './avatar';
