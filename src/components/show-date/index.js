@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 
 import { Text } from '../typography';
 import { convertToJalaali } from '../utils/date';
+import { englishNumberToPersianInString } from '../utils/numbers';
 
 const ShowDate = (props) => {
   const { date, fontSize, color } = props;
 
   return (
     <Text size={fontSize} color={color} data-test="show-date">
-      {convertToJalaali(date, 'dddd jD jMMMM')}
+      {englishNumberToPersianInString(convertToJalaali(date, 'dddd jD jMMMM'))}
     </Text>
   );
 };
