@@ -1,15 +1,10 @@
-// @flow
-
-import React, { type Node } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { useMediaQuery } from 'react-responsive';
 
-type Props = {
-  option: Object,
-  children: * => Node,
-}
-
-const Responsive = (props: Props) => {
+const Responsive = (props) => {
   const { option, children } = props;
+  const { isDefault } = option;
   const generateQueryObject = () => {
     const { min, max } = option;
     let query;
@@ -24,7 +19,20 @@ const Responsive = (props: Props) => {
   };
 
   const screen = useMediaQuery(generateQueryObject());
-  return (screen && <>{children}</>);
+  return ((isDefault || screen) && <>{children}</>);
+};
+
+Responsive.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
+  option: PropTypes.shape({
+    max: PropTypes.number,
+    min: PropTypes.number,
+    isDefault: PropTypes.bool,
+  }).isRequired,
 };
 
 export default Responsive;
