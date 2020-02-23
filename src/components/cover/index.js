@@ -6,6 +6,7 @@ import { Container, StyledLazyImage, StyledImage } from './index.style';
 
 type Props = {
   src?: string,
+  srcSet?: string,
   alt?: string,
   minHeight?: number,
   linkTo?: string,
@@ -17,6 +18,7 @@ type Props = {
 const Cover = (props: Props) => {
   const {
     src,
+    srcSet,
     alt,
     minHeight,
     linkTo,
@@ -27,31 +29,42 @@ const Cover = (props: Props) => {
   } = props;
 
   const renderCover = () => (
-    <>
-      {
-        isLazy ? (
-          <StyledLazyImage effect="blur" src={src} alt={alt} data-test="cover" {...rest} />
-        ) : (
-          <StyledImage src={src} alt={alt} data-test="cover" {...rest} />
-        )
-      }
-    </>
+    isLazy
+      ? (
+        <StyledLazyImage
+          effect="blur"
+          srcSet={`${src}`}
+          src={src}
+          alt={alt}
+          data-test="cover"
+          {...rest}
+        />
+      )
+      : (
+        <StyledImage
+          srcSet={`${src}`}
+          src={src}
+          alt={alt}
+          data-test="cover"
+          {...rest}
+        />
+      )
   );
 
   if (renderLink) {
     return (
-      <Container minHeight={minHeight}>
-        {renderLink(renderCover())}
-      </Container>
+      // <Container minHeight={minHeight}>
+      renderLink(renderCover())
+      // </Container>
     );
   }
   if (linkTo) {
     return (
-      <Container minHeight={minHeight}>
-        <a href={linkTo} target={linkTarget}>
-          {renderCover()}
-        </a>
-      </Container>
+      // <Container minHeight={minHeight}>
+      <a href={linkTo} target={linkTarget}>
+        {renderCover()}
+      </a>
+      // </Container>
     );
   }
   return (
@@ -64,9 +77,10 @@ const Cover = (props: Props) => {
 Cover.defaultProps = {
   alt: 'کاور',
   src: defaultImage,
+  srcSet: undefined,
   minHeight: 151,
-  renderLink: null,
-  linkTo: null,
+  renderLink: undefined,
+  linkTo: undefined,
   linkTarget: '_blank',
   isLazy: false,
 };

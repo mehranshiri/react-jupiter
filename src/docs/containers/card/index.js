@@ -18,9 +18,10 @@ const CardPage = () => (
     </Heading>
     <ShowDate date={new Date()} />
     <br />
-    <Responsive option={{ max: 1200 }}><h1>Show up to 1200px</h1></Responsive>
-    <Responsive option={{ min: 900 }}><h1>Show from 900px</h1></Responsive>
-    <Responsive option={{ min: 700, max: 900 }}><h1>Show from 700px up to 900px</h1></Responsive>
+    <Responsive option={{ greaterThan: 1200 }}><h1>Show from to 1200px</h1></Responsive>
+    <Responsive option={{ lessThan: 1200 }}><h1>Show up to 1200px</h1></Responsive>
+    <Responsive option={{ greaterThan: 900 }}><h1>Show from 900px</h1></Responsive>
+    <Responsive option={{ greaterThan: 700, lessThan: 900 }}><h1>Show from 700px up to 900px</h1></Responsive>
     <br />
     <EventCard
       type="vertical"

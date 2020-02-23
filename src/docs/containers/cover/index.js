@@ -49,7 +49,10 @@ const CoverPage = () => (
     <Heading level={2}>
       کاور lazy-load
     </Heading>
-    <Cover isLazy src="https://images.unsplash.com/photo-1563271963-9ff697463684?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
+    <Cover
+      src="https://images.unsplash.com/photo-1563271963-9ff697463684?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+      isLazy
+    />
     <br />
     <Cover isLazy src="https://images.unsplash.com/photo-1568292342316-60aa3d36f4b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80" />
     <br />
