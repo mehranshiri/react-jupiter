@@ -75,6 +75,19 @@ const defaultTheme = {
     sm: 768,
     xs: 375,
   },
+  spacing: {
+    0: '0',
+    1: '1px',
+    2: '2px',
+    3: '4px',
+    4: '8px',
+    5: '16px',
+    6: '24px',
+    7: '32px',
+    8: '48px',
+    9: '64px',
+    10: '86px',
+  },
 };
 
 export default defaultTheme;

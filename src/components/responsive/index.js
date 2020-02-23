@@ -1,30 +1,39 @@
-// @flow
-
-import React, { type Node } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { useMediaQuery } from 'react-responsive';
 
-type Props = {
-  option: Object,
-  children: * => Node,
-}
-
-const Responsive = (props: Props) => {
+const Responsive = (props) => {
   const { option, children } = props;
+  const { isDefault } = option;
   const generateQueryObject = () => {
-    const { min, max } = option;
+    // const { min, max } = option;
+    const { greaterThan, lessThan } = option;
     let query;
-    if (min !== undefined && max !== undefined) {
-      query = { minWidth: min, maxWidth: max };
-    } else if (min !== undefined) {
-      query = { minWidth: min };
+    if (greaterThan !== undefined && lessThan !== undefined) {
+      query = { minWidth: greaterThan, maxWidth: lessThan };
+    } else if (greaterThan !== undefined) {
+      query = { minWidth: greaterThan };
     } else {
-      query = { maxWidth: max };
+      query = { maxWidth: lessThan };
     }
     return query;
   };
 
   const screen = useMediaQuery(generateQueryObject());
-  return (screen && <>{children}</>);
+  return ((isDefault || screen) && <>{children}</>);
+};
+
+Responsive.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
+  option: PropTypes.shape({
+    lessThan: PropTypes.number,
+    greaterThan: PropTypes.number,
+    isDefault: PropTypes.bool,
+  }).isRequired,
 };
 
 export default Responsive;

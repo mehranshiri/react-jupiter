@@ -1,6 +1,6 @@
 import moment from 'moment-jalaali';
 
-moment.loadPersian({ usePersianDigits: true, dialect: 'persian-modern' });
+moment.loadPersian({ dialect: 'persian-modern' });
 
 export const isDateObject = (date) => typeof date.getMonth === 'function';
 
