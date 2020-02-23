@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import 'jest-styled-components';
 
-import Text from './text';
+import Text from './index';
 import { findByTestAtrr } from '../../utils/test';
 import theme from '../theme';
 

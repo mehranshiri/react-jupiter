@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import Heading from './heading';
+import Heading from './index';
 
 export const actions = {
   SmallH1: action('small h1'),

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import theme from '../theme';
-import { Content } from './paragraph.style';
+import { Content } from './index.styles';
 
 const Paragraph = (props) => {
   const {

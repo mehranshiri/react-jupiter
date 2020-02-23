@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../../globalStyle';
 import defaultTheme from '../theme';
-import Text from './text';
-import { ExternalLink } from './link.styles';
+import Text from '../text';
+import { ExternalLink } from './index.styles';
 
 const generateLink = (props) => {
   const {
