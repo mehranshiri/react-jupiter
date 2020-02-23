@@ -28,6 +28,7 @@ const lazyLoadingAnimation = keyframes`
 `;
 
 export const StyledLazyImage = styled(LazyLoadImage)`
+  margin-bottom: -5px;
   min-height: inherit;
   width: 100%;
   font-family: 'IranSharp';

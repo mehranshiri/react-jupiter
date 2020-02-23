@@ -35,12 +35,14 @@ const ProductOwner = (props: Props) => {
     setLoadingStatus(true);
     const updatedIsFollowStatus = await onClickFollowMe();
     setLoadingStatus(false);
-    setFollowStatus(updatedIsFollowStatus);
+    if (updatedIsFollowStatus) {
+      setFollowStatus(!isFollowed);
+    }
   }
 
   return (
     <div data-test="product-owner">
-      <Responsive option={{ max: generalTheme.breakpoints.sm }}>
+      <Responsive option={{ lessThan: generalTheme.breakpoints.sm }}>
         <TitledAvatar
           title={name}
           avatar={avatar}
@@ -49,7 +51,7 @@ const ProductOwner = (props: Props) => {
           renderAvatarLink={renderTitledAvatarLink}
         />
       </Responsive>
-      <Responsive option={{ min: generalTheme.breakpoints.sm }}>
+      <Responsive option={{ greaterThan: generalTheme.breakpoints.sm }}>
         <TitledAvatar
           title={name}
           avatar={avatar}
@@ -58,7 +60,7 @@ const ProductOwner = (props: Props) => {
           renderAvatarLink={renderTitledAvatarLink}
         />
       </Responsive>
-      <Responsive option={{ min: generalTheme.breakpoints.md }}>
+      <Responsive option={{ greaterThan: generalTheme.breakpoints.md }}>
         <ButtonContainer>
           <StyledButton
             className="follow-button"

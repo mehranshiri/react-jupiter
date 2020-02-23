@@ -6,14 +6,15 @@ const Responsive = (props) => {
   const { option, children } = props;
   const { isDefault } = option;
   const generateQueryObject = () => {
-    const { min, max } = option;
+    // const { min, max } = option;
+    const { greaterThan, lessThan } = option;
     let query;
-    if (min !== undefined && max !== undefined) {
-      query = { minWidth: min, maxWidth: max };
-    } else if (min !== undefined) {
-      query = { minWidth: min };
+    if (greaterThan !== undefined && lessThan !== undefined) {
+      query = { minWidth: greaterThan, maxWidth: lessThan };
+    } else if (greaterThan !== undefined) {
+      query = { minWidth: greaterThan };
     } else {
-      query = { maxWidth: max };
+      query = { maxWidth: lessThan };
     }
     return query;
   };
