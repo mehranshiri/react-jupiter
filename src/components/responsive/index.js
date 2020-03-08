@@ -6,7 +6,6 @@ const Responsive = (props) => {
   const { option, children } = props;
   const { isDefault } = option;
   const generateQueryObject = () => {
-    // const { min, max } = option;
     const { greaterThan, lessThan } = option;
     let query;
     if (greaterThan !== undefined && lessThan !== undefined) {
@@ -30,8 +29,8 @@ Responsive.propTypes = {
     PropTypes.string,
   ]).isRequired,
   option: PropTypes.shape({
-    max: PropTypes.number,
-    min: PropTypes.number,
+    lessThan: PropTypes.number,
+    greaterThan: PropTypes.number,
     isDefault: PropTypes.bool,
   }).isRequired,
 };

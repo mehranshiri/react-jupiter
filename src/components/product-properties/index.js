@@ -1,35 +1,22 @@
 // @flow
 
 import React from 'react';
-import Icon from '../icon';
-import { Text } from '../typography';
-import { Container, ListContainer, ListItem } from './index.style';
+import { ListContainer, ListItem } from './index.style';
+import ProductProperty from './product-property';
 
 type Props = {
-  iconName: string,
-  text: string,
-}
-
-type ComponentPros = {
   list: [],
   isHorizontal?: boolean,
+  color?: 'gray' | 'darkBlue' | 'default',
 }
 
-const ProductProperty = (props: Props) => {
-  const { iconName, text, ...rest } = props;
-
-  return (
-    <Container {...rest}>
-      <Icon name={iconName} size="sm" color="gray" stickyRight />
-      <Text color="gray" size="12">
-        {text}
-      </Text>
-    </Container>
-  );
-};
-
-const ProductProperties = (props: ComponentPros) => {
-  const { list, isHorizontal, ...rest } = props;
+const ProductProperties = (props: Props) => {
+  const {
+    list,
+    isHorizontal,
+    color,
+    ...rest
+  } = props;
   const propsLength = list.length > 1 && isHorizontal ? list.length : 1;
 
   if (list.length === 1) {
@@ -40,7 +27,7 @@ const ProductProperties = (props: ComponentPros) => {
     <ListContainer isHorizontal={isHorizontal} {...rest}>
       {list.map(({ iconName, text }, index) => (
         <ListItem key={`${iconName}-${index.toString()}`} propsLength={propsLength}>
-          <ProductProperty iconName={iconName} text={text} />
+          <ProductProperty iconName={iconName} text={text} color={color} />
         </ListItem>
       ))}
     </ListContainer>
@@ -49,6 +36,7 @@ const ProductProperties = (props: ComponentPros) => {
 
 ProductProperties.defaultProps = {
   isHorizontal: false,
+  color: 'gray',
 };
 
 export default ProductProperties;

@@ -44,6 +44,30 @@ const ProductPage = () => (
 
     <Container>
       <Heading level={3}>
+        colorfull property
+      </Heading>
+      <ProductProperties
+        list={[
+          { iconName: 'watch-later', text: 'متن زیبا' },
+          { iconName: 'alarm-off', text: 'متن دیگری' },
+          { iconName: 'aspect-ratio', text: 'و باز هم متن دیگری' },
+        ]}
+        color="default"
+      />
+      <hr />
+      <ProductProperties
+        list={[
+          { iconName: 'watch-later', text: 'متن زیبا' },
+          { iconName: 'alarm-off', text: 'متن دیگری' },
+          { iconName: 'aspect-ratio', text: 'و باز هم متن دیگری' },
+        ]}
+        color="darkBlue"
+      />
+    </Container>
+    <br />
+
+    <Container>
+      <Heading level={3}>
         horizontal property
       </Heading>
       <ProductProperties
