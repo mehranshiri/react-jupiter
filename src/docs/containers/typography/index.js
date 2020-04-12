@@ -64,9 +64,9 @@ const TypographyPage = () => (
       <div />
       <Text>تکست ساده</Text>
       <div />
-      <Link to="/">تکست ساده</Link>
+      <Link href={(element) => <a href="/">{element}</a>} linkContent="لینک مثلاً داخلی" />
       <div />
-      {/* <Link to="http://yahoo.com" external>تکست ساده لینک خارجی</Link> */}
+      <Link href="http://yahoo.com">تکست ساده لینک خارجی</Link>
       <div />
       <Text>تکست ساده</Text>
       <div />

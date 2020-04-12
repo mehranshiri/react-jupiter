@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from '../theme';
 import {
   String, Strong, Emphasized, SubScript, SupScript,
-} from './text.style';
+} from './index.styles';
 
 const renderString = (props) => {
   const {

@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme';
 import 'jest-styled-components';
 
 
-import Heading from './heading';
+import Heading from './index';
 import { findByTestAtrr } from '../../utils/test';
 import theme from '../theme';
 

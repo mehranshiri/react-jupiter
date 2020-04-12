@@ -89,7 +89,7 @@ const CardPage = () => (
     <br />
     <br />
     <br />
-    <CardTemplate level={3} maxWidth="400" linkTo="/test/ds" hoverToLevel={4}>
+    <CardTemplate level={3} maxWidth="400" renderLink={(el) => <a href="http://google.com">{el}</a>} hoverToLevel={4}>
       <div>
         <Heading>Hello card template. Hello card template.Hello card template.</Heading>
       </div>
