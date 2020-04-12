@@ -1,48 +1,46 @@
 <p align="center">
-  <a href="http://design.evand.com">
+  <a href="https://evand.com">
     <img width="200" src="https://blog.evand.com/wp-content/themes/evand/assets/evand.png">
   </a>
 </p>
 
-<h1 align="center">Evand Design System</h1>
-<h3 align="center">An UI design language with React implementation.</h3>
-<br />
+<a href="https://evandhq.github.io/react-jupiter">
+    <h1 align="center">
+      Evand Design System - react-jupiter
+    </h1>
+  </a>
 
-## 🔱 __Features__
+## An UI design language with React implementation
+
+### 🔱 __Features__
+
 - An enterprise UI design system for web applications.
 - A set of high-quality React components.
 - Written in ES6 and styled-components.
 - Use [react-hook-form](https://github.com/react-hook-form/react-hook-form) for form handling
-<br /><br />
 
-
-
-## 📦 __Install__
+### 📦 __Install__
 
 ```bash
-npm install --save react-jupiter
+  npm install --save react-jupiter
 ```
+
 or
+
 ```bash
-yarn add react-jupiter
+  yarn add react-jupiter
 ```
-<br /><br />
 
-
-
-## 🙌🏼 __Usage__
+### 🙌🏼 __Usage__
 
 ```jsx
-import { Button } from 'react-jupiter';
+  import { Button } from 'react-jupiter';
 
-ReactDOM.render(<Button>Submit</Button>, mountNode);
+  ReactDOM.render(<Button>Submit</Button>, mountNode);
 ```
-<br /><br />
 
+### 🛠 __Development__
 
-
-
-## 🛠 __Development__
 Use Gitpod, a free online dev environment for GitHub.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/evandhq/react-design-system)
@@ -50,77 +48,72 @@ Use Gitpod, a free online dev environment for GitHub.
 Or clone locally:
 
 ```bash
-$ git clone https://github.com/evandhq/react-design-system.git
-$ cd react-design-system
-$ npm install
-$ npm start
+  git clone https://github.com/evandhq/react-design-system.git
+  cd react-design-system
+  npm install
+  npm start
 ```
-<br /><br />
 
+### ⬛️ __Commands__
 
-## ⬛️ __Commands__
-_start development and view doc. Open your browser and visit http://127.0.0.1:3000:_
+_start development and view doc. Open your browser and visit <http://127.0.0.1:3000>_
+
 ```bash
-$ npm start 
+  npm start
 ```
-<br/>
 
-_show stories of storybook. pen your browser and visit http://127.0.0.1:9009:_
+_show stories of storybook. Open your browser and visit <http://127.0.0.1:9009:>_
+
 ```bash
-$ npm run storybook
+  npm run storybook
 ```
-<br/>
 
 _running all tests:_
+
 ```bash
-$ npm run test 
+  npm run test
 ```
-<br/>
 
 _show linter errors (linter prevent changes to commit):_
+
 ```bash
-$ npm run lint
+  npm run lint
 ```
-<br/>
 
 _fix linter errors automatically:_
+
 ```bash
-$ npm run lint:fix
+  npm run lint:fix
 ```
-<br/>
 
-_create changelog_
+_create changelog:_
+
 ```bash
-$ npm run version
+  npm run version
 ```
-<br/>
 
-_generate static site of storybook_
+_generate static site of storybook:_
+
 ```bash
-$ npm run build:storybook
+  npm run build:storybook
 ```
-<br/>
 
-_build production of documents and samples_
+_build production of documents and samples:_
+
 ```bash
-$ npm run build:doc
+  npm run build:doc
 ```
-<br/>
 
-_build version of design system_
+_build version of design system:_
+
 ```bash
-$ npm run build:lib
+  npm run build:lib
 ```
-<br/><br/>
 
-
-
-## 🤝 __Contributing__ [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+### 🤝 __Contributing__ [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 Read our [contributing guide](https://evand.com) and let's build a better react design system.
-<br /><br />
 
+### 🎓 __Licence__
 
-
-## 🎓 __Licence__
 _react design system_ is available under MIT licence.
