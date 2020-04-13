@@ -1,10 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import Button from './index';
 import '../storybook.css';
 
 storiesOf('Button', module)
-  .add('default button', () => <Button>دکمه‌ی دیفالت</Button>)
+  .add('default button', () => (<Button>دکمه‌ی دیفالت</Button>))
   .add('button with icon', () => <Button icon="watch-later">دکمه‌ با آیکون</Button>)
   .add('wide button', () => <Button wide>دکمه‌ی تمام عرض</Button>)
   .add('small button', () => <Button size="sm">دکمه‌ی کوچک</Button>)
@@ -35,4 +36,5 @@ storiesOf('Button', module)
   .add('yellow secondary', () => <Button styleType="secondary" mainColor="yellow">دکمه‌ی زرد ثانویه</Button>)
   .add('yellow primary disabled', () => <Button mainColor="yellow" disabled>دکمه‌ی زرد اولیه غیر فعال</Button>)
   .add('yellow secondary disabled', () => <Button styleType="secondary" mainColor="yellow" disabled>دکمه‌ی زرد ثانویه غیر فعال</Button>)
-  .add('link button', () => <Button renderLink={(element) => <a href="http://google.com">{element}</a>}>لینک به گوگل</Button>);
+  .add('link button', () => <Button renderLink={(element) => <a href="http://google.com">{element}</a>}>لینک به گوگل</Button>)
+  .addDecorator(withInfo);
