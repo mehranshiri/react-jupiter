@@ -1,11 +1,28 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
+import {
+  withKnobs,
+  select,
+  text,
+  boolean,
+} from '@storybook/addon-knobs';
 import Button from './index';
 import '../storybook.css';
 
 storiesOf('Button', module)
-  .add('default button', () => (<Button>دکمه‌ی دیفالت</Button>))
+  .add('default button', () => (
+    <Button
+      size={select('size', ['sm', 'md', 'lg'])}
+      icon={select('icon(these icon-name and all other available)', ['warning', 'watch-later', 'notification-important', 'help'])}
+      wide={boolean('wide', true)}
+      disabled={boolean('disabled', true)}
+      styleType={select('styleType', ['primary', 'secondary', 'tertiary'])}
+      mainColor={select('mainColor', ['red', 'blue', 'green', 'yellow', 'darkBlue'])}
+    >
+      {text('children text', 'متن زیبای داخل دکمه')}
+    </Button>
+  ))
   .add('button with icon', () => <Button icon="watch-later">دکمه‌ با آیکون</Button>)
   .add('wide button', () => <Button wide>دکمه‌ی تمام عرض</Button>)
   .add('small button', () => <Button size="sm">دکمه‌ی کوچک</Button>)
@@ -37,4 +54,5 @@ storiesOf('Button', module)
   .add('yellow primary disabled', () => <Button mainColor="yellow" disabled>دکمه‌ی زرد اولیه غیر فعال</Button>)
   .add('yellow secondary disabled', () => <Button styleType="secondary" mainColor="yellow" disabled>دکمه‌ی زرد ثانویه غیر فعال</Button>)
   .add('link button', () => <Button renderLink={(element) => <a href="http://google.com">{element}</a>}>لینک به گوگل</Button>)
-  .addDecorator(withInfo);
+  .addDecorator(withInfo)
+  .addDecorator(withKnobs);
