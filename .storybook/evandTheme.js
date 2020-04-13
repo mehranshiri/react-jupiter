@@ -26,5 +26,5 @@ export default create({
 
   brandTitle: 'Evand',
   brandUrl: 'https://evand.com',
-  brandImage: 'https://github.com/evandhq/react-jupiter/blob/master/src/evandLogo.svg',
+  brandImage: '/logo.svg',
 });
