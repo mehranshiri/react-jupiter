@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Components, { Typography } from '../../../components';
+import { Typography } from '../../../components';
 
 const {
   Heading, Text, Paragraph, Link,
@@ -10,7 +10,6 @@ const TypographyPage = () => (
   <>
     <div>
       <div>Button</div>
-      <Components.Button1 displayText="پرداخت" />
       <Heading>سلام</Heading>
       <Heading level={1}>سلام</Heading>
       <Heading size="md" level={1}>سلام</Heading>
