@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import EventCard from './index';
 import '../../storybook.css';
 
@@ -97,4 +98,5 @@ storiesOf('EventCard', module)
       renderEventLink={(element) => <a href="/tosomewherenew">{element}</a>}
       renderOrganizationLink={(element) => <a href="/toorganization">{element}</a>}
     />
-  ));
+  ))
+  .addDecorator(withInfo);

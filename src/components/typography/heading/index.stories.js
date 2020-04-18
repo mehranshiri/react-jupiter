@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-
+import { withInfo } from '@storybook/addon-info';
 import Heading from './index';
 
 export const actions = {
@@ -33,4 +33,5 @@ storiesOf('Heading', module)
   .add('H6 default', () => <Heading level={6}>این یک اچ شش دیفالت است</Heading>)
   .add('H6 small', () => <Heading level={6} size="sm">این یک اچ شش کوچک است</Heading>)
   .add('H6 medium', () => <Heading level={6} size="md">این یک اچ شش متسوط است</Heading>)
-  .add('H6 large', () => <Heading level={6} size="lg">این یک اچ شش بزرگ است</Heading>);
+  .add('H6 large', () => <Heading level={6} size="lg">این یک اچ شش بزرگ است</Heading>)
+  .addDecorator(withInfo);

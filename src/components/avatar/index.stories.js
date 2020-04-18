@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-
+import { withInfo } from '@storybook/addon-info';
 import Avatar from './index';
 
 storiesOf('Avatar', module)
@@ -9,4 +9,5 @@ storiesOf('Avatar', module)
   .add('medium avatar', () => <Avatar size="md" src="https://i.pravatar.cc/150?img=69" />)
   .add('large avatar', () => <Avatar size="lg" src="https://i.pravatar.cc/150?img=66" />)
   .add('not found avatar', () => <Avatar src="https://i.pravatarsdsf.cc/150?img=66" />)
-  .add('undefined avatar', () => <Avatar />);
+  .add('undefined avatar', () => <Avatar />)
+  .addDecorator(withInfo);

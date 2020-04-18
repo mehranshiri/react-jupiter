@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import NumericSummeryReport from './index';
 import '../storybook.css';
 
@@ -24,4 +25,5 @@ storiesOf('NumericSummeryReport', module)
         { id: 7, title: 'پیشرفت', count: 10 },
       ]}
     />
-  ));
+  ))
+  .addDecorator(withInfo);

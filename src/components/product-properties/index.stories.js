@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import ProductProperties from './index';
 import '../storybook.css';
 
@@ -23,4 +24,5 @@ storiesOf('ProductProperty', module)
         { iconName: 'aspect-ratio', text: 'و باز هم متن دیگری' },
       ]}
     />
-  ));
+  ))
+  .addDecorator(withInfo);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-
+import { withInfo } from '@storybook/addon-info';
 import Icon from './index';
 
 storiesOf('Icon', module)
@@ -247,4 +247,5 @@ storiesOf('Icon', module)
   .add('arrow-downward', () => <Icon name="arrow-downward" />)
   .add('twitter-alt', () => <Icon name="twitter-alt" />)
   .add('twitter', () => <Icon name="twitter" />)
-  .add('watch', () => <Icon name="watch" />);
+  .add('watch', () => <Icon name="watch" />)
+  .addDecorator(withInfo);

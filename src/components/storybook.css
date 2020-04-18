@@ -13,7 +13,7 @@ ul, li {
 };
 
 /* show-info page should be ltr and show-info button doesnt cover the main component page*/
-.info__overlay{
+.info__overlay {
   direction: ltr;
 }
 .sb-show-main {

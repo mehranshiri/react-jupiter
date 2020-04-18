@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import CardTemplate from './index';
 import '../../storybook.css';
 
@@ -65,4 +66,5 @@ storiesOf('CardTemplate', module)
     <CardTemplate>
       <div style={{ height: '100px' }}>Hello card template.</div>
     </CardTemplate>
-  ));
+  ))
+  .addDecorator(withInfo);

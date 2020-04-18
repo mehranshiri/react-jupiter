@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import TitledAvatar from './index';
 import '../storybook.css';
 
@@ -37,4 +38,5 @@ storiesOf('TitledAvatar', module)
         renderAvatarLink={(el) => (<a href="https://i.pravatar.cc/150?img=62">{el}</a>)}
       />
     ),
-  );
+  )
+  .addDecorator(withInfo);

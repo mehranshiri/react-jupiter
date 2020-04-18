@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-
+import { withInfo } from '@storybook/addon-info';
 import Text from './index';
 
 storiesOf('Text', module)
@@ -21,4 +21,5 @@ storiesOf('Text', module)
   .add('subScript text', () => <Text subScript>متن پایین خط</Text>)
   .add('supScript text', () => <Text supScript>متن بالا خط</Text>)
   .add('label text', () => <Text label>متن به صورت لیبل</Text>)
-  .add('marked text', () => <Text marked>متن به صورت مارک شده</Text>);
+  .add('marked text', () => <Text marked>متن به صورت مارک شده</Text>)
+  .addDecorator(withInfo);
