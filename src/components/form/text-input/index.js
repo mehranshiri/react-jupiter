@@ -16,7 +16,7 @@ import {
 
 type Props = {
   type?: 'text' | 'password',
-  label: string,
+  label?: string,
   uniqueName: string,
   id?: string,
   placeholder?: string,
@@ -54,9 +54,11 @@ const TextInput = (props: Props) => {
   return (
     <ThemeProvider theme={theme}>
       <Label htmlFor={id || `${type}-${uniqueName.split(' ').join('')}`} data-test="text-input">
-        <LabelContainer bold size={14}>
-          {label}
-        </LabelContainer>
+        {label && (
+          <LabelContainer bold size={14}>
+            {label}
+          </LabelContainer>
+        )}
         {description && (
           <DescriptionContainer bold size={10} color="gray" data-test="text-input-description">
             {description}
@@ -94,6 +96,7 @@ const TextInput = (props: Props) => {
 
 TextInput.defaultProps = {
   type: 'text',
+  label: null,
   id: null,
   placeholder: null,
   disabled: false,
