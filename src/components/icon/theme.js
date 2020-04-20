@@ -12,6 +12,7 @@ const iconTheme = {
     sm: 8,
   },
   colors: defaultTheme.colors,
+  defaultColor: defaultTheme.colors.riverBedDark,
 };
 
 export default iconTheme;
