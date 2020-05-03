@@ -28,13 +28,13 @@ describe('file-item test', () => {
     expect(TheZipFileImage.length).toBe(0);
   });
 
-  it('file item should have title as a large h5', () => {
+  it('file item should have title with spesefic size and bold', () => {
     const component = setupShallow();
     const Title = findByTestAtrr(component, 'file-item-title');
 
     expect(Title.length).toBe(1);
-    expect(Title.props().level).toBe(5);
-    expect(Title.props().size).toBe('lg');
+    expect(Title.props().size).toBe(14);
+    expect(Title.props().bold).toBe(true);
   });
 
   it('file item should have title as the same of what we passed', () => {

@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Heading, Text } from '../../../typography';
-import FileImgIcon from './fileImgIcon';
-import { Wrapper } from './index.style';
 import getIconFileName from '../utils';
+import { Text } from '../../../typography';
 import theme from '../theme';
+import FileImgIcon from './fileImgIcon';
+import {
+  Wrapper, InfoWrapper, VerticalDivider,
+} from './index.style';
 
 type Props = {
-  type?: 'doc' | 'zip',
+  type?: 'zip' | 'doc' | 'rar' | 'pdf' | 'jpg' | 'png' | 'mp3' | 'mp4' | 'pptx' | 'xlsx',
   title?: string,
   description?: string,
   price: string,
@@ -34,11 +36,6 @@ const FileItem = (props: Props) => {
     setActivateValue(false);
   }
 
-  function handleClick() {
-    setActivateValue(true);
-    onClick();
-  }
-
   return (
     <ThemeProvider theme={theme}>
       <Wrapper
@@ -46,49 +43,55 @@ const FileItem = (props: Props) => {
         isActive={isActive}
         onMouseEnter={startHover}
         onMouseLeave={endHover}
-        onClick={handleClick}
+        onClick={onClick}
       >
         <FileImgIcon
           iconFileName={getIconFileName(type, !isActive)}
         />
 
-        <Heading
-          level={5}
-          size="lg"
-          data-test="file-item-title"
-        >
-          { title }
-        </Heading>
-
-        {description ? (
+        <InfoWrapper>
           <Text
-            size={10}
-            data-test="file-item-desc"
+            size={14}
             bold
+            data-test="file-item-title"
           >
-            { description }
+            { title }
           </Text>
-        ) : (
-          <br />
-        )}
 
-        {fileSize && (
-          <Text
-            size={10}
-            data-test="file-item-size"
-          >
-            { fileSize }
-          </Text>
-        )}
+          {description ? (
+            <Text
+              size={10}
+              data-test="file-item-desc"
+              bold
+            >
+              { description }
+            </Text>
+          ) : (
+            <br />
+          )}
 
-        <Text
-          size={10}
-          data-test="file-item-price"
-        >
-          {price}
-        </Text>
+          <div>
+            {fileSize && (
+              <>
+                <Text
+                  size={10}
+                  data-test="file-item-size"
+                >
+                  { fileSize }
+                </Text>
+                <VerticalDivider />
+              </>
+            )}
 
+            <Text
+              size={10}
+              data-test="file-item-price"
+            >
+              {price}
+            </Text>
+          </div>
 
+        </InfoWrapper>
       </Wrapper>
     </ThemeProvider>
   );
