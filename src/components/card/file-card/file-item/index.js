@@ -12,6 +12,7 @@ type Props = {
   description?: string,
   price: string,
   fileSize?: string,
+  onClick?: () => void,
 }
 
 const FileItem = (props: Props) => {
@@ -22,6 +23,7 @@ const FileItem = (props: Props) => {
     description,
     price,
     fileSize,
+    onClick,
   } = props;
 
   function startHover() {
@@ -32,6 +34,11 @@ const FileItem = (props: Props) => {
     setActivateValue(false);
   }
 
+  function handleClick() {
+    setActivateValue(true);
+    onClick();
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Wrapper
@@ -39,6 +46,7 @@ const FileItem = (props: Props) => {
         isActive={isActive}
         onMouseEnter={startHover}
         onMouseLeave={endHover}
+        onClick={handleClick}
       >
         <FileImgIcon
           iconFileName={getIconFileName(type, !isActive)}
@@ -91,6 +99,7 @@ FileItem.defaultProps = {
   title: 'فایل دانلودی',
   description: '',
   fileSize: '',
+  onClick: () => null,
 };
 
 export default FileItem;

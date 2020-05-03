@@ -54,7 +54,7 @@ describe('file-item test', () => {
   });
 
   it('file item should disply only if it has the description prop and initial with that value', () => {
-    const componentWithoutDesc = setupShallow({});
+    const componentWithoutDesc = setupShallow();
     const componentWithDesc = setupShallow({ description: 'این توضیحات فرضی' });
     const DescInComp01 = findByTestAtrr(componentWithoutDesc, 'file-item-desc');
     const DescInComp02 = findByTestAtrr(componentWithDesc, 'file-item-desc');
@@ -90,5 +90,17 @@ describe('file-item test', () => {
     expect(FileSizeInComp01.length).toBe(0);
     expect(FileSizeInComp02.length).toBe(1);
     expect(FileSizeInComp02.props().children).toBe('۷ مگابایت');
+  });
+
+  it('file item must response to onClick function', () => {
+    let flag = false;
+    function clickSample() {
+      flag = true;
+    }
+    const component = setupMount({ onClick: clickSample });
+
+    expect(flag).toBe(false);
+    component.simulate('click');
+    expect(flag).toBe(true);
   });
 });
