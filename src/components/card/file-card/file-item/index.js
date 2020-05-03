@@ -10,11 +10,19 @@ type Props = {
   type?: 'doc' | 'zip',
   title?: string,
   description?: string,
+  price: string,
+  fileSize?: string,
 }
 
 const FileItem = (props: Props) => {
   const [isActive, setActivateValue] = useState(false);
-  const { type, title, description } = props;
+  const {
+    type,
+    title,
+    description,
+    price,
+    fileSize,
+  } = props;
 
   function startHover() {
     setActivateValue(true);
@@ -56,6 +64,22 @@ const FileItem = (props: Props) => {
           <br />
         )}
 
+        {fileSize && (
+          <Text
+            size={10}
+            data-test="file-item-size"
+          >
+            { fileSize }
+          </Text>
+        )}
+
+        <Text
+          size={10}
+          data-test="file-item-price"
+        >
+          {price}
+        </Text>
+
 
       </Wrapper>
     </ThemeProvider>
@@ -66,6 +90,7 @@ FileItem.defaultProps = {
   type: 'zip',
   title: 'فایل دانلودی',
   description: '',
+  fileSize: '',
 };
 
 export default FileItem;

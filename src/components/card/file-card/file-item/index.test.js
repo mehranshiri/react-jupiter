@@ -3,11 +3,11 @@ import { shallow, mount } from 'enzyme';
 import { findByTestAtrr } from '../../../utils/test';
 import FileItem from './index';
 
-const setupShallow = (props = {}) => (
+const setupShallow = (props = { price: '۵۰۰۰ تومن' }) => (
   shallow(<FileItem data={props.data} {...props} />)
 );
 
-const setupMount = (props = {}) => (
+const setupMount = (props = { price: '۵۰۰۰ تومن' }) => (
   mount(<FileItem data={props.data} {...props} />)
 );
 
@@ -44,7 +44,7 @@ describe('file-item test', () => {
     expect(Title.props().children).toBe('فایل های کاربردی');
   });
 
-  it('file item could has description with spesefic size and bold', () => {
+  it('file item could have description with spesefic size and bold', () => {
     const component = setupShallow({ description: 'این توضیحات فرضی' });
     const Desc = findByTestAtrr(component, 'file-item-desc');
 
@@ -62,5 +62,33 @@ describe('file-item test', () => {
     expect(DescInComp01.length).toBe(0);
     expect(DescInComp02.length).toBe(1);
     expect(DescInComp02.props().children).toBe('این توضیحات فرضی');
+  });
+
+  it('file item must have price with spesefic size and initial with that value', () => {
+    const component = setupShallow({ price: '۶۰۰۰ تومن' });
+    const Price = findByTestAtrr(component, 'file-item-price');
+
+    expect(Price.length).toBe(1);
+    expect(Price.props().children).toBe('۶۰۰۰ تومن');
+    expect(Price.props().size).toBe(10);
+  });
+
+  it('file item could have fileSize with spesefic size and bold', () => {
+    const component = setupShallow({ fileSize: '۷ مگابایت' });
+    const FileSize = findByTestAtrr(component, 'file-item-size');
+
+    expect(FileSize.length).toBe(1);
+    expect(FileSize.props().size).toBe(10);
+  });
+
+  it('file item should disply fileSize only if it has the prop and initial with that value', () => {
+    const componentWithoutFileSize = setupShallow();
+    const componentWithFileSize = setupShallow({ fileSize: '۷ مگابایت' });
+    const FileSizeInComp01 = findByTestAtrr(componentWithoutFileSize, 'file-item-size');
+    const FileSizeInComp02 = findByTestAtrr(componentWithFileSize, 'file-item-size');
+
+    expect(FileSizeInComp01.length).toBe(0);
+    expect(FileSizeInComp02.length).toBe(1);
+    expect(FileSizeInComp02.props().children).toBe('۷ مگابایت');
   });
 });
