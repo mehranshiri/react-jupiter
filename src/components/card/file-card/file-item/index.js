@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Heading } from '../../../typography';
+import FileImgIcon from './fileImgIcon';
 import { Wrapper } from './index.style';
-import FileImgIcon from './FileImgIcon';
 import getIconFileName from '../utils';
 import theme from '../theme';
 
 type Props = {
   type?: 'doc' | 'zip',
+  title?: string,
 }
 
 const FileItem = (props: Props) => {
   const [isActive, setActivateValue] = useState(false);
-  const { type } = props;
+  const { type, title } = props;
 
   function startHover() {
     setActivateValue(true);
@@ -32,6 +34,15 @@ const FileItem = (props: Props) => {
         <FileImgIcon
           iconFileName={getIconFileName(type, !isActive)}
         />
+
+        <Heading
+          level={5}
+          size="lg"
+          data-test="file-item-title"
+        >
+          { title }
+        </Heading>
+
       </Wrapper>
     </ThemeProvider>
   );
@@ -39,6 +50,7 @@ const FileItem = (props: Props) => {
 
 FileItem.defaultProps = {
   type: 'zip',
+  title: 'فایل دانلودی',
 };
 
 export default FileItem;
