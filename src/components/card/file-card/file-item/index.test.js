@@ -43,4 +43,24 @@ describe('file-item test', () => {
 
     expect(Title.props().children).toBe('فایل های کاربردی');
   });
+
+  it('file item could has description with spesefic size and bold', () => {
+    const component = setupShallow({ description: 'این توضیحات فرضی' });
+    const Desc = findByTestAtrr(component, 'file-item-desc');
+
+    expect(Desc.length).toBe(1);
+    expect(Desc.props().size).toBe(10);
+    expect(Desc.props().bold).toBe(true);
+  });
+
+  it('file item should disply only if it has the description prop and initial with that value', () => {
+    const componentWithoutDesc = setupShallow({});
+    const componentWithDesc = setupShallow({ description: 'این توضیحات فرضی' });
+    const DescInComp01 = findByTestAtrr(componentWithoutDesc, 'file-item-desc');
+    const DescInComp02 = findByTestAtrr(componentWithDesc, 'file-item-desc');
+
+    expect(DescInComp01.length).toBe(0);
+    expect(DescInComp02.length).toBe(1);
+    expect(DescInComp02.props().children).toBe('این توضیحات فرضی');
+  });
 });
