@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import getIconFileName from '../utils';
-import { Text } from '../../../typography';
-import theme from '../theme';
+import getIconFileName from './utils';
+import { Text } from '../typography';
+import theme from './theme';
 import FileImgIcon from './fileImgIcon';
 import {
   Wrapper, InfoWrapper, VerticalDivider,

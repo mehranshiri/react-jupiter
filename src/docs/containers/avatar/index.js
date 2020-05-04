@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Typography, Avatar } from '../../../components';
+import { Typography, Avatar, FileItem } from '../../../components';
 
 const AvatarWrapper = styled(Avatar)`
   border: 1px solid red;
@@ -70,6 +70,20 @@ const AvatarPage = () => (
       آواتار  بدون آدرس دهی
     </Heading>
     <Avatar alt="گربه ی ناز نازی" />
+    <br />
+
+
+    <Heading level={2}>
+      تست فایل
+    </Heading>
+    <FileItem
+      description="متن توضیحات"
+      fileSize="۵ مگابایت"
+      onClick={() => (window.console.log('finallyyyyy'))}
+      price="۶۰۰۰ تومن"
+      title="فایل جلسه اول ما"
+      type="zip"
+    />
     <br />
 
   </>

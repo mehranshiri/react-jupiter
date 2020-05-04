@@ -14,6 +14,7 @@ import Cover from './cover';
 import Form from './form';
 import Responsive from './responsive';
 import ProductOwner from './product-owner';
+import FileItem from './file-item';
 
 export { default as Grid } from 'styled-components-grid';
 export { default as Spacing } from './spacing';
@@ -31,6 +32,7 @@ export { default as Cover } from './cover';
 export { default as Form } from './form';
 export { default as Responsive } from './responsive';
 export { default as ProductOwner } from './product-owner';
+export { default as FileItem } from './file-item';
 
 export default {
   Grid,
@@ -49,4 +51,5 @@ export default {
   Form,
   Responsive,
   ProductOwner,
+  FileItem,
 };

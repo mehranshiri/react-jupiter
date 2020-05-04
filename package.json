@@ -57,7 +57,7 @@
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint ./src",
     "lint:fix": "./node_modules/.bin/eslint ./src --fix",
-    "build:lib": "del-cli ./lib && babel src/components -d lib --presets minify && cp -r src/components/iranSharpFont.scss lib/ && cp -r src/components/icon/iconFont.scss lib/icon/iconFont.scss && cp -r src/components/assets lib/ && cp package.lib.json lib/package.json && cp README.md lib/ && cp CHANGELOG.md lib/ && cp LICENSE lib/ && del-cli ./lib/**/*.stories.js && del-cli ./lib/**/*.test.js",
+    "build:lib": "del-cli ./lib && babel src/components -d lib --presets minify && cp -r src/components/iranSharpFont.scss lib/ && cp -r src/components/icon/iconFont.scss lib/icon/iconFont.scss && cp -r src/components/file-item/filesImgs.scss lib/file-item/filesImgs.scss && cp -r src/components/assets lib/ && cp package.lib.json lib/package.json && cp README.md lib/ && cp CHANGELOG.md lib/ && cp LICENSE lib/ && del-cli ./lib/**/*.stories.js && del-cli ./lib/**/*.test.js",
     "version": "auto-changelog -p && git add CHANGELOG.md",
     "storybook": "start-storybook -p 9009 -s public",
     "build:storybook": "build-storybook -s public"
