@@ -37,6 +37,9 @@ const defaultTheme = {
     low: 2,
     high: 3,
   },
+  border: {
+    lightBlue: '1px solid #E6F4FB',
+  },
   shadows: {
     1: {
       blur: 8,
