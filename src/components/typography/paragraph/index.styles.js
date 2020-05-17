@@ -7,5 +7,5 @@ export const Content = styled.p`
   font-family: 'IranSharp';
   font-size: ${({ size }) => `${size}px`};
   line-height: ${({ theme, size }) => `${size * theme.lineHeightRatio}px`};
-  color: ${({ theme }) => theme.defaultColor};
+  color: ${({ theme, color }) => theme.colors[color]};
 `;

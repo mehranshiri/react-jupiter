@@ -7,12 +7,12 @@ import { Content } from './index.styles';
 
 const Paragraph = (props) => {
   const {
-    children, size, ...rest
+    children, size, color, ...rest
   } = props;
   if (children === undefined) return null;
   return (
     <ThemeProvider theme={theme}>
-      <Content size={size} data-test="paragraph" {...rest}>
+      <Content size={size} color={color} data-test="paragraph" {...rest}>
         {children}
       </Content>
     </ThemeProvider>
@@ -26,10 +26,12 @@ Paragraph.propTypes = {
     PropTypes.string,
   ]).isRequired,
   size: PropTypes.number,
+  color: PropTypes.oneOf(['riverBedDark', 'riverBed']),
 };
 
 Paragraph.defaultProps = {
   size: theme.defaultSize,
+  color: 'riverBedDark',
 };
 
 export default Paragraph;
