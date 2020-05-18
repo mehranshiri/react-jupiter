@@ -4,6 +4,7 @@ import {
   withKnobs,
   select,
   text,
+  boolean,
 } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import Paragraph from './index';
@@ -13,6 +14,7 @@ storiesOf('Paragraph', module)
   .add('default paragraph', () => (
     <Paragraph
       color={select('color (default: riverBedDark)', ['riverBedDark', 'riverBed'])}
+      bold={boolean('bold(optional - default: false)', false)}
       size={text('size (default: 13)', '13')}
     >
       {

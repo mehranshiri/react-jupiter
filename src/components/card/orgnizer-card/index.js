@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from 'styled-components-grid';
-import { Heading, Text } from '../../typography';
+import { Heading, Text, Paragraph } from '../../typography';
 import TitledAvatar from '../../titled-avatar';
 import Buttons from './buttons';
 import {
@@ -11,9 +11,11 @@ import {
 type Props = {
   name: string,
   logo: string,
+  description?: string,
+  followersCount?: string,
   allEventsCount?: string,
   activeEventsCount?: string,
-  renderLogoLink: * => Node,
+  renderOrganizerLink: * => Node,
   isFollowed?: boolean,
   onClickFollowMe?: () => boolean,
   onClickConnectUs?: () => void,
@@ -21,16 +23,17 @@ type Props = {
 
 const OrgnizerCard = (props: Props) => {
   const {
-    renderLogoLink,
+    renderOrganizerLink,
     name,
+    description,
     logo,
+    followersCount,
     onClickFollowMe,
     onClickConnectUs,
     isFollowed,
     allEventsCount,
     activeEventsCount,
   } = props;
-
 
   return (
     <Container>
@@ -45,13 +48,19 @@ const OrgnizerCard = (props: Props) => {
         avatar={logo}
         avatarSize="md"
         titleSize={12}
-        renderAvatarLink={renderLogoLink}
+        renderAvatarLink={renderOrganizerLink}
       />
+      {description && (
+        <Paragraph size={12} color="riverBed" bold>
+          {description}
+        </Paragraph>
+      )}
 
       <Buttons
         onClickFollowMe={onClickFollowMe}
         onClickConnectUs={onClickConnectUs}
         isFollowed={isFollowed}
+        followersCount={followersCount}
       />
 
       {(activeEventsCount || allEventsCount) && (
@@ -92,6 +101,8 @@ OrgnizerCard.defaultProps = {
   onClickConnectUs: () => { },
   allEventsCount: null,
   activeEventsCount: null,
+  description: null,
+  followersCount: '',
 };
 
 export default OrgnizerCard;

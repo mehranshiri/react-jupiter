@@ -12,10 +12,16 @@ type Props = {
   isFollowed: boolean,
   onClickFollowMe: () => boolean,
   onClickConnectUs: () => void,
+  followersCount: string,
 }
 
 const Buttons = (props: Props) => {
-  const { onClickFollowMe, onClickConnectUs, isFollowed } = props;
+  const {
+    onClickFollowMe,
+    onClickConnectUs,
+    isFollowed,
+    followersCount,
+  } = props;
   const [isFollow, setFollowStatus] = useState(isFollowed);
   const [isLoading, setLoadingStatus] = useState(false);
 
@@ -41,6 +47,7 @@ const Buttons = (props: Props) => {
             onClick={handleClickFollowMe}
           >
             {isFollow ? 'دنبال میکنید' : 'دنبال کنید'}
+            {followersCount && ` (${followersCount} دنبال کننده) `}
           </StyledButton>
           <StyledButton
             styleType="secondary"
@@ -68,6 +75,7 @@ const Buttons = (props: Props) => {
                 wide
               >
                 {isFollow ? 'دنبال میکنید' : 'دنبال کنید'}
+                {followersCount && ` (${followersCount} دنبال کننده) ` }
               </Button>
             </Margin>
           </Grid.Unit>
