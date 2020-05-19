@@ -13,6 +13,7 @@ export const LTRContainer = styled.div`
 
 export const StyledButton = styled(Button)`
   margin: 4px 8px;
+  direction: rtl;
 `;
 
 export const BorderedBox = styled.div`
