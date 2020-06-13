@@ -33,6 +33,7 @@ export const BookmarkIcon = styled(Icon)`
 
 /* Vertical event card styles */
 export const VerticalCardContainer = styled(CardTemplate)`
+  background: white;
   a {
     text-decoration: none;
   }
@@ -46,6 +47,7 @@ export const VerticalCover = styled.img`
 `;
 
 export const VerticalContentContainer = styled.div`
+  background: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
