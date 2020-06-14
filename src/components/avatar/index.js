@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import defaultImage from '../assets/defaults-images/Avatar_default.svg';
-import { Image } from './index.styles';
+import Image from './index.styles';
 import avatarTheme from './theme';
 
 const Avatar = (props) => {

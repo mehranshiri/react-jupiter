@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { findByTestAtrr } from '../utils/test';
+import findByTestAtrr from '../utils/test';
 import ProductOwner from './index';
 import { StyledButton } from './index.style';
 

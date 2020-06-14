@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import defaultImage from '../assets/defaults-images/Avatar_default.svg';
 import '../iranSharpFont.scss';
 
-export const Image = styled.img`
+const Image = styled.img`
   font-family: 'IranSharp';
   width: ${({ theme, size }) => `${theme.size[size]}px`};
   height: ${({ theme, size }) => `${theme.size[size]}px`};
@@ -12,3 +12,5 @@ export const Image = styled.img`
   background-image: url(${defaultImage});
   background-size: cover;
 `;
+
+export default Image;

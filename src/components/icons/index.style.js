@@ -4,7 +4,7 @@ import { getIconContentByType, getSizeOfIcon, getMarginOfIcon } from './utils';
 import { getColorFromName } from '../utils/theme';
 import './font.scss';
 
-export const IconElement = styled.i`
+const IconElement = styled.i`
   display: inline-block;
   vertical-align: middle;
   color: ${({ theme, color }) => getColorFromName(theme, color)};
@@ -27,3 +27,5 @@ export const IconElement = styled.i`
     ${({ type }) => getIconContentByType(type)};
   }
 `;
+
+export default IconElement;

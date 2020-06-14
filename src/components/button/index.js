@@ -9,7 +9,7 @@ import {
   ExternalLink,
   InternalLink,
 } from './index.styles';
-import { setFontColor } from './utils';
+import setFontColor from './utils';
 import theme from './theme';
 
 type Props = {

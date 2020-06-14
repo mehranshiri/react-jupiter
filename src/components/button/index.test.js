@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { render, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { findByTestAtrr } from '../utils/test';
+import findByTestAtrr from '../utils/test';
 import Button from './index';
 
 describe('mainButton', () => {

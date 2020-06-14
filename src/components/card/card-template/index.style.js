@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const TemplateContainer = styled.section`
+const TemplateContainer = styled.section`
   display: flex;
   flex-direction: ${({ direction }) => (direction === 'vertical' ? 'column' : 'row')};
   border-radius: ${({ theme }) => (`${theme.borderRadius.low}px`)};
@@ -21,3 +21,5 @@ export const TemplateContainer = styled.section`
   )};
   }
 `;
+
+export default TemplateContainer;

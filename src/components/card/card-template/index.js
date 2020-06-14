@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import generalTheme from '../../themes';
-import { TemplateContainer } from './index.style';
+import TemplateContainer from './index.style';
 
 
 const CardTemplate = (props) => {

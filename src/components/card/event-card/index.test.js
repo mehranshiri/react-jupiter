@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import EventCard from './index';
 import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
-import { findByTestAtrr } from '../../utils/test';
+import findByTestAtrr from '../../utils/test';
 
 const setupMount = (props = {}) => (
   mount(<Router><EventCard level={props.level} {...props} /></Router>)

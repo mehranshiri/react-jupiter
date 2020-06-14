@@ -4,7 +4,7 @@ import React, { type Node, useState } from 'react';
 import TitledAvatar from '../../titled-avatar';
 import NumericSummeryReport from '../../numeric-summery-report';
 import Button from '../../button';
-import { Container } from './index.style';
+import Container from './index.style';
 
 type Props = {
   title: string,

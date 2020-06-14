@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Link } from 'react-router-dom';
-import { findByTestAtrr } from '../utils/test';
+import findByTestAtrr from '../utils/test';
 import Cover from './index';
 
 describe('Cover', () => {

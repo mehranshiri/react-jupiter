@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import generalTheme from '../themes';
-import { IconElement } from './index.style';
+import IconElement from './index.style';
 
 const Icons = (props) => {
   const {

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ImageLabel } from './index.style';
+import ImageLabel from './index.style';
 import adsLabel from '../../../assets/images/ads-label.svg';
 import finished from '../../../assets/images/finished-text-label.svg';
 

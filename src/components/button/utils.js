@@ -1,4 +1,4 @@
-export function setFontColor(styleType, mainColor) {
+function setFontColor(styleType, mainColor) {
   switch (styleType) {
     case 'secondary':
       return mainColor;
@@ -8,3 +8,5 @@ export function setFontColor(styleType, mainColor) {
       return 'white';
   }
 }
+
+export default setFontColor;

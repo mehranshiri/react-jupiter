@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+const Container = styled.div`
   display: flex;
   align-items: center;
   width: max-content;
 `;
+
+export default Container;

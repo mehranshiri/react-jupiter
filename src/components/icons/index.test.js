@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import Icon from './index';
-import { findByTestAtrr } from '../utils/test';
+import findByTestAtrr from '../utils/test';
 
 const setupShallow = (props = {}) => (
   shallow(<Icon type={props.icon} {...props} />)

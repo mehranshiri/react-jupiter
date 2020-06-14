@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import Heading from './index';
 
-export const actions = {
+const actions = {
   SmallH1: action('small h1'),
 };
 
@@ -35,3 +35,5 @@ storiesOf('Heading', module)
   .add('H6 medium', () => <Heading level={6} size="md">این یک اچ شش متسوط است</Heading>)
   .add('H6 large', () => <Heading level={6} size="lg">این یک اچ شش بزرگ است</Heading>)
   .addDecorator(withInfo);
+
+export default actions;

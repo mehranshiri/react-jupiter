@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import TitledAvatar from './index';
-import { findByTestAtrr } from '../utils/test';
+import findByTestAtrr from '../utils/test';
 
 const setupShallow = (props = {}) => (
   shallow(

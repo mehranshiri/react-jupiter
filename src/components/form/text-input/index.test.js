@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import { findByTestAtrr } from '../../utils/test';
+import findByTestAtrr from '../../utils/test';
 import TextInput from './index';
 
 describe('text input tests', () => {

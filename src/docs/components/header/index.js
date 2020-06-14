@@ -1,8 +1,5 @@
 import React from 'react';
-
-import {
-  Container,
-} from './index.styles';
+import Container from './index.styles';
 
 const Header = () => (
   <Container>

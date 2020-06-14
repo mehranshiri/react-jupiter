@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import iconTheme from './theme';
-import { StyledIcon } from './index.styles';
+import StyledIcon from './index.styles';
 
 const Icon = (props) => {
   const {

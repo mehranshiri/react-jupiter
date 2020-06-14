@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme';
 import 'jest-styled-components';
 
 import Text from './index';
-import { findByTestAtrr } from '../../utils/test';
+import findByTestAtrr from '../../utils/test';
 import theme from '../theme';
 
 const setupShallow = (props = {}) => (

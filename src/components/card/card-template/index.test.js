@@ -4,7 +4,7 @@ import 'jest-styled-components';
 
 import CardTemplate from './index';
 import { Text } from '../../typography';
-import { findByTestAtrr } from '../../utils/test';
+import findByTestAtrr from '../../utils/test';
 import theme from '../../themes';
 
 const setupShallow = (props = {}) => (

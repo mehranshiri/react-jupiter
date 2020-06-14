@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import '../../iranSharpFont.scss';
 
-export const Content = styled.p`
+const Content = styled.p`
   margin: 8px 0;
   font-family: 'IranSharp';
   font-size: ${({ size }) => `${size}px`};
@@ -10,3 +10,5 @@ export const Content = styled.p`
   color: ${({ theme, color }) => theme.colors[color]};
   font-weight: ${({ bold }) => (bold ? 'bold' : 'normal')};
 `;
+
+export default Content;

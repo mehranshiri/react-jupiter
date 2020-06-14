@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { findByTestAtrr } from '../utils/test';
+import findByTestAtrr from '../utils/test';
 import FileItem from './index';
 
 const setupShallow = (props = { price: '۵۰۰۰ تومن' }) => (

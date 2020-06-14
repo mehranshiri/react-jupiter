@@ -3,7 +3,7 @@
 import React from 'react';
 import Icon from '../../icon';
 import { Text } from '../../typography';
-import { Container } from './index.style';
+import Container from './index.style';
 
 type Props = {
   iconName: string,
