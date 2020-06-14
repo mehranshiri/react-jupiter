@@ -14,6 +14,7 @@ type Props = {
   description?: string,
   followersCount?: string,
   allEventsCount?: string,
+  recommendedCount?: string,
   activeEventsCount?: string,
   renderOrganizerLink: * => Node,
   isFollowed?: boolean,
@@ -33,6 +34,7 @@ const OrgnizerCard = (props: Props) => {
     isFollowed,
     allEventsCount,
     activeEventsCount,
+    recommendedCount,
   } = props;
 
   return (
@@ -89,6 +91,18 @@ const OrgnizerCard = (props: Props) => {
               </BorderedBox>
             </Grid.Unit>
           )}
+          {recommendedCount && (
+            <Grid.Unit>
+              <BorderedBox>
+                <Text size={12} bold>
+                  تعداد افراد توصیهکننده این برگزارکننده
+                </Text>
+                <Text size={16} bold>
+                  {recommendedCount}
+                </Text>
+              </BorderedBox>
+            </Grid.Unit>
+          )}
         </Grid>
       )}
     </Container>
@@ -101,6 +115,7 @@ OrgnizerCard.defaultProps = {
   onClickConnectUs: () => { },
   allEventsCount: null,
   activeEventsCount: null,
+  recommendedCount: null,
   description: null,
   followersCount: '',
 };

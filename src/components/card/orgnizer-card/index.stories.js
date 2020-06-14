@@ -20,6 +20,7 @@ storiesOf('OrganizerCard', module)
       renderOrganizerLink={(el) => (<a href="https://i.pravatar.cc/150?img=62">{el}</a>)}
       activeEventsCount={text('activeEventsCount(optional)', '۱۲۳')}
       allEventsCount={text('allEventsCount(optional)', '۲۴۵۶۷')}
+      recommendedCount={text('recommendedCount(optional)', '۳۳ نفر')}
     />
   ))
   .addDecorator(withKnobs)
