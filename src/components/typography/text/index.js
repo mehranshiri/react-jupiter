@@ -9,7 +9,19 @@ import {
 
 const renderString = (props) => {
   const {
-    children, size, color, underline, lineThrough, strong, bold, emphasized, subScript, supScript, marked, label, ...rest
+    children,
+    size,
+    color,
+    underline,
+    lineThrough,
+    strong,
+    bold,
+    emphasized,
+    subScript,
+    supScript,
+    marked,
+    label,
+    ...rest
   } = props;
 
   if (children === undefined) return null;

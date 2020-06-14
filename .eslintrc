@@ -6,7 +6,6 @@
     "react/jsx-props-no-spreading": "off", // 48
     "import/prefer-default-export": "off", // 13
     "no-shadow": "off", // 54
-    "max-len": "off", // 16
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   }
 }

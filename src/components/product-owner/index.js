@@ -12,8 +12,10 @@ type Props = {
   isFollowed?: boolean,
   renderTitledAvatarLink?: * => Node,
   renderDescriptionLink?: * => Node,
-  // onClickFollowMe : it should handle actions that should be happened after click follow-me button
-  // and return new value for isFollow and if the function return nothing the default value is set to be 'false'
+  // onClickFollowMe : it should handle actions that should be
+  // happened after click follow-me button and return new value
+  // for isFollow and if the function return nothing the default
+  // value is set to be 'false'
   onClickFollowMe?: () => boolean,
   onClickConnectUs?: () => void,
 }

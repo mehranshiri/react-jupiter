@@ -42,7 +42,10 @@ describe('ProductOwner Tests', () => {
 
   it('check follow button place and its functionality', () => {
     let isFollowMeFunctionCalled = false;
-    function followMeFunc() { isFollowMeFunctionCalled = !isFollowMeFunctionCalled; return isFollowMeFunctionCalled; }
+    function followMeFunc() {
+      isFollowMeFunctionCalled = !isFollowMeFunctionCalled;
+      return isFollowMeFunctionCalled;
+    }
 
     const component = mount(
       <ProductOwner
@@ -63,8 +66,10 @@ describe('ProductOwner Tests', () => {
     expect(isFollowMeFunctionCalled).toBe(true);
 
     // TODO: try to solve the problem of use '.state()' on hooks
-    // I cant use just 'followmeButton.props().styleType' az expect argument because the followmeButton's props doesnt update after click
-    // plus I cant check component.state() with enzyme because it doesnt support hooks('.state()' only work with class)
+    // I cant use just 'followmeButton.props().styleType' az expect
+    // argument because the followmeButton's props doesnt update after click
+    // plus I cant check component.state() with enzyme because
+    // it doesnt support hooks('.state()' only work with class)
     // expect(component.find(StyledButton).at(0).props().styleType).toBe('secondary');
   });
 });

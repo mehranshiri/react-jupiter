@@ -94,20 +94,22 @@ const ProductPage = () => (
         انجمن علمی کامپیوتر دانشگاه صنعتی خواجه نصیرالدین طوسی"
         onClickFollowMe={() => {
           window.console.log('Follow Me Button Clicked, and it will return true or false randomly');
-          // return new Promise((resolve) => { setTimeout(() => resolve(!Math.floor(Math.random() * 2)), 3000); });
           return false;
         }}
         onClickConnectUs={() => { window.console.log('Connect Us Button Clicked'); }}
         renderDescriptionLink={(element) => <Link to="/tosomewherenew">{element}</Link>}
         renderTitledAvatarLink={(element) => <Link to="/tosomewhere">{element}</Link>}
-        // isFollowed={true}
       />
       <br />
       <ProductOwner
         name="دومی"
         onClickFollowMe={() => {
           window.console.log('Follow Me Button Clicked, and it will return true or false randomly');
-          return new Promise((resolve) => { setTimeout(() => resolve(!Math.floor(Math.random() * 2)), 3000); });
+          return new Promise(
+            (resolve) => {
+              setTimeout(() => resolve(!Math.floor(Math.random() * 2)), 3000);
+            },
+          );
         }}
         onClickConnectUs={() => { window.console.log('Connect Us Button Clicked'); }}
       />
