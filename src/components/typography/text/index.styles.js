@@ -34,10 +34,10 @@ export const Strong = styled.strong`
 
 export const String = styled.span`
   font-family: 'IranSharp';
-  font-size: ${({ size }) => (`${size}px`)};
+  font-size: ${({ spanSize }) => (`${spanSize}px`)};
   ${({ underline }) => (underline ? 'text-decoration: underline;' : '')}
   ${({ lineThrough }) => (lineThrough ? 'text-decoration: line-through;' : '')}
-  color: ${({ theme, color }) => getColorFromName(theme, color)};
+  color: ${({ theme, spanColor }) => getColorFromName(theme, spanColor)};
   ${({ bold }) => (bold ? 'font-weight: bold;' : '')}
   ${({ theme, marked }) => (marked ? `background-color: ${theme.colors.blue200};` : '')}
   ${({ theme, isLabel }) => (isLabel

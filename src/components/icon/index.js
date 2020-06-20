@@ -22,7 +22,7 @@ const Icon = (props) => {
     <ThemeProvider theme={iconTheme}>
       <StyledIcon
         size={size}
-        color={color}
+        IconColor={color}
         className={`new-icon-${name} ${className}`}
         data-test="icon"
         stickyLeft={stickyLeft}

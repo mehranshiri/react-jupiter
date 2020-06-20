@@ -82,8 +82,8 @@ const renderString = (props) => {
     default:
       return (
         <String
-          size={size}
-          color={color}
+          spanSize={size}
+          spanColor={color}
           underline={underline && !lineThrough}
           lineThrough={lineThrough && !underline}
           marked={marked && !label}
