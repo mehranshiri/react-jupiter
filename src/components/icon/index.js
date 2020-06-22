@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-
+import FontStyle from './iconFont';
 import iconTheme from './theme';
 import StyledIcon from './index.styles';
 
@@ -20,10 +20,11 @@ const Icon = (props) => {
 
   return (
     <ThemeProvider theme={iconTheme}>
+      <FontStyle />
       <StyledIcon
         size={size}
         IconColor={color}
-        className={`new-icon-${name} ${className}`}
+        className={`jupiter-icon new-icon-${name} ${className}`}
         data-test="icon"
         stickyLeft={stickyLeft}
         stickyRight={stickyRight}

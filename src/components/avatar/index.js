@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-
+import GlobalStyle from '../globalStyle';
 import defaultImage from '../assets/defaults-images/Avatar_default.svg';
 import Image from './index.styles';
 import avatarTheme from './theme';
@@ -16,6 +16,7 @@ const Avatar = (props) => {
 
   return (
     <ThemeProvider theme={avatarTheme}>
+      <GlobalStyle />
       <Image src={src} alt={alt} size={size} data-test="avatar" {...rest} />
     </ThemeProvider>
   );

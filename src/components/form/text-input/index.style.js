@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Text } from '../../typography';
 import Icon from '../../icon';
-import '../../iranSharpFont.scss';
 
 export const Input = styled.input`
   font-family: 'IranSharp';

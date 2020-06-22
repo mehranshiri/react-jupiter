@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-
 import defaultImage from '../assets/defaults-images/Avatar_default.svg';
-import '../iranSharpFont.scss';
 
 const Image = styled.img`
   font-family: 'IranSharp';

@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import defaultImage from '../assets/defaults-images/Cover_default.jpg';
-import '../iranSharpFont.scss';
 
 export const Container = styled.div`
   min-height: ${(props) => props.minHeight}px;

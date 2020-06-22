@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-
-import './iconFont.scss';
 import { getColorFromName } from '../utils/theme';
 
 const StyledIcon = styled.i`

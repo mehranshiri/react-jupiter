@@ -3,6 +3,7 @@
 import React from 'react';
 import defaultImage from '../assets/defaults-images/Cover_default.jpg';
 import { Container, StyledLazyImage, StyledImage } from './index.style';
+import GlobalStyle from '../globalStyle';
 
 type Props = {
   src?: string,
@@ -60,17 +61,21 @@ const Cover = (props: Props) => {
   }
   if (linkTo) {
     return (
-      // <Container minHeight={minHeight}>
-      <a href={linkTo} target={linkTarget}>
-        {renderCover()}
-      </a>
-      // </Container>
+      <>
+        <GlobalStyle />
+        <a href={linkTo} target={linkTarget}>
+          {renderCover()}
+        </a>
+      </>
     );
   }
   return (
-    <Container minHeight={minHeight}>
-      {renderCover()}
-    </Container>
+    <>
+      <GlobalStyle />
+      <Container minHeight={minHeight}>
+        {renderCover()}
+      </Container>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-
+import GlobalStyle from '../../globalStyle';
 import theme from '../theme';
 import Content from './index.styles';
 
@@ -12,6 +12,7 @@ const Paragraph = (props) => {
   if (children === undefined) return null;
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <Content size={size} color={color} bold={bold} data-test="paragraph" {...rest}>
         {children}
       </Content>
