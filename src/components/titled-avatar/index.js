@@ -2,7 +2,6 @@
 
 import React, { type Node } from 'react';
 import Avatar from '../avatar';
-import GlobalStyle from '../globalStyle';
 import {
   Container, Title, SmallTitle,
 } from './index.style';
@@ -30,7 +29,6 @@ const TitledAvatar = (props: Props) => {
   if (renderAvatarLink) {
     return renderAvatarLink(
       <Container data-test="titled-avatar">
-        <GlobalStyle />
         <Avatar src={avatar} size={avatarSize} />
         {renderTitle()}
       </Container>,

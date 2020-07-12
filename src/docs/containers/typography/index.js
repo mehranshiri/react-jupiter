@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { Typography } from '../../../components';
+
 
 const {
   Heading, Text, Paragraph, Link,

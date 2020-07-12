@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-import GlobalStyle from '../../globalStyle';
 import defaultTheme from '../theme';
 import Text from '../text';
 import ExternalLink from './index.styles';
@@ -72,7 +71,6 @@ const Link = (props) => {
   if (children === undefined && linkContent === undefined) return null;
   return (
     <ThemeProvider theme={defaultTheme}>
-      <GlobalStyle />
       {generateLink(props)}
     </ThemeProvider>
   );

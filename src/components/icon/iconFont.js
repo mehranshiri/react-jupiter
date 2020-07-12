@@ -1,20 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
-import IconMoonWoff from '../assets/fonts/icomoon.woff';
 
 const FontStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Icomoon';
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    src: url(${IconMoonWoff}) format("woff");
-  }
-
   i.jupiter-icon {
     /* use !important to prevent issues with browser extensions that change fonts */
     display: inline-block;
     vertical-align: middle;
-    font-family: 'Icomoon' !important;
+    font-family: 'Jupiterico' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;

@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components';
 import theme from '../theme';
 import Icon from '../../icon';
 import { Text } from '../../typography';
-import GlobalStyle from '../../globalStyle';
 import {
   Input,
   LabelContainer,
@@ -54,7 +53,6 @@ const TextInput = (props: Props) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
       <Label htmlFor={id || `${type}-${uniqueName.split(' ').join('')}`} data-test="text-input">
         {label && (
           <LabelContainer bold size={14}>

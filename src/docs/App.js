@@ -1,11 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
-
 import GlobalStyle, { ContentContainer } from './globalStyle';
 import Header from './components/header';
 import SideNavigation from './components/side-navigation';
-
 import HomePage from './containers/home';
 import ButtonPage from './containers/button';
 import AvatarPage from './containers/avatar';
