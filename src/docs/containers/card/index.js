@@ -45,7 +45,6 @@ const CardPage = () => (
     <EventCard
       type="vertical"
       title="تایتل یک رویداد اینجاست کهن"
-      cover="https://static.evand.net/images/events/covers/original/2e6f40ac8e1bc78304ccf3fd77b1b3d5.jpg"
       date="2020-01-10T14:00:00+0330"
       place="تهران"
       price="از ۴۴۰۰۰ تومان"
@@ -76,6 +75,17 @@ const CardPage = () => (
       place="تهران"
       price="از ۴۴۰۰۰ تومان"
       ads
+      clickBookmark={() => { window.console.log('handle click bookmark'); }}
+      queryString="icn=trendEvents&ici=fp5"
+      renderEventLink={(element) => <Link to="/tosomewhere">{element}</Link>}
+    />
+    <EventCard
+      type="horizontal"
+      title="تایتل یک رویداد نسبتا طولانی در اینجاست که باید و باید و قرار است اضافه بیاید و بزند به بیرون"
+      date="2020-01-10T14:00:00+0330"
+      place="تهران"
+      price="از ۴۴۰۰۰ تومان"
+      finished
       clickBookmark={() => { window.console.log('handle click bookmark'); }}
       queryString="icn=trendEvents&ici=fp5"
       renderEventLink={(element) => <Link to="/tosomewhere">{element}</Link>}

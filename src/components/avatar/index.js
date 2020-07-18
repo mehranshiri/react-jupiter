@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-import defaultImage from '../assets/defaults-images/Avatar_default.svg';
 import Image from './index.styles';
 import avatarTheme from './theme';
+
+const defaultImageUrl = 'https://evand-storage.oss-eu-central-1.aliyuncs.com/assets/images/defaults/avatar.svg';
 
 const Avatar = (props) => {
   const {
@@ -29,7 +30,7 @@ Avatar.propTypes = {
 Avatar.defaultProps = {
   alt: 'آواتار',
   size: 'md',
-  src: defaultImage,
+  src: defaultImageUrl,
 };
 
 export default Avatar;

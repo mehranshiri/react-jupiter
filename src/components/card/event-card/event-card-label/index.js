@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ImageLabel from './index.style';
-import adsLabel from '../../../assets/images/ads-label.svg';
-import finished from '../../../assets/images/finished-text-label.svg';
+
+const adsLabelUrl = 'https://evand-storage.oss-eu-central-1.aliyuncs.com/assets/images/other/ads-label.svg';
+const finishedLabelUrl = 'https://evand-storage.oss-eu-central-1.aliyuncs.com/assets/images/other/finished-text-label.svg';
 
 const EventCardLabel = ({ type }) => {
   switch (type) {
     case 'ads':
-      return <ImageLabel src={adsLabel} data-test="ads-label" />;
+      return <ImageLabel src={adsLabelUrl} data-test="ads-label" />;
     case 'finished':
     default:
-      return <ImageLabel src={finished} data-test="finished-label" />;
+      return <ImageLabel src={finishedLabelUrl} data-test="finished-label" />;
   }
 };
 

@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import defaultImage from '../assets/defaults-images/Cover_default.jpg';
+
+const defaultImageUrl = 'https://static.evand.net/assets/images/defaults/event-cover.jpg';
 
 export const Container = styled.div`
   min-height: ${(props) => props.minHeight}px;
@@ -32,7 +33,7 @@ export const StyledLazyImage = styled(LazyLoadImage)`
   width: 100%;
   font-family: 'IranSharp';
   display: block;
-  background-image: url(${defaultImage});
+  background-image: url(${defaultImageUrl});
   background-size: cover;
   animation: ${lazyLoadingAnimation} 2s 1;
 `;
@@ -42,6 +43,6 @@ export const StyledImage = styled.img`
   width: 100%;
   font-family: 'IranSharp';
   display: block;
-  background-image: url(${defaultImage});
+  background-image: url(${defaultImageUrl});
   background-size: cover;
 `;

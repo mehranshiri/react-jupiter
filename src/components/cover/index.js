@@ -1,8 +1,9 @@
 // @flow
 
 import React from 'react';
-import defaultImage from '../assets/defaults-images/Cover_default.jpg';
 import { Container, StyledLazyImage, StyledImage } from './index.style';
+
+const defaultImageUrl = 'https://static.evand.net/assets/images/defaults/event-cover.jpg';
 
 type Props = {
   src?: string,
@@ -74,7 +75,7 @@ const Cover = (props: Props) => {
 
 Cover.defaultProps = {
   alt: 'کاور',
-  src: defaultImage,
+  src: defaultImageUrl,
   srcSet: undefined,
   minHeight: 151,
   renderLink: undefined,

@@ -47,7 +47,8 @@ export const VerticalCover = styled.img`
 `;
 
 export const VerticalContentContainer = styled.div`
-  background: white;
+  background-image: url(${(props) => props.background});
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

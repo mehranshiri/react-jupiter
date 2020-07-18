@@ -19,8 +19,9 @@ import {
   HorizontalTitle,
   HorizontalPlacePrice,
 } from './index.style';
-import DefaultCover from '../../assets/defaults-images/default-cover.jpg';
-import finishedClockLabel from '../../assets/images/finished-clock-label.svg';
+
+const finishedClockLabelUrl = 'https://evand-storage.oss-eu-central-1.aliyuncs.com/assets/images/other/finished-clock-label.svg';
+const defaultCoverUrl = 'https://static.evand.net/assets/images/defaults/event-cover.jpg';
 
 const EventCard = (props) => {
   const {
@@ -58,11 +59,13 @@ const EventCard = (props) => {
       direction={type}
       hoverToLevel={3}
       maxWidth={270}
-      background={finished ? finishedClockLabel : null}
       {...rest}
     >
-      { renderEventLink(<VerticalCover data-test="vertical-cover" src={!cover ? DefaultCover : cover} />) }
-      <VerticalContentContainer data-test="vertical-content">
+      {renderEventLink(<VerticalCover data-test="vertical-cover" src={cover || defaultCoverUrl} />) }
+      <VerticalContentContainer
+        data-test="vertical-content"
+        background={finished ? finishedClockLabelUrl : null}
+      >
         <div>
           <DateBookmarkContainer data-test="vertical-date-bookmark">
             <DateLabelContainer>
@@ -94,7 +97,7 @@ const EventCard = (props) => {
       maxWidth={560}
       {...rest}
     >
-      { renderEventLink(<HorizontalCover data-test="horizontal-cover" src={!cover ? DefaultCover : cover} />) }
+      {renderEventLink(<HorizontalCover data-test="horizontal-cover" src={cover || defaultCoverUrl} />) }
       <HorizontalContentContainer data-test="horizontal-content">
         <DateBookmarkContainer>
           <DateLabelContainer>
