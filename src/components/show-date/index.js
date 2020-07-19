@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { Text } from '../typography';
 import { convertToJalaali } from '../utils/date';
 import { englishNumberToPersianInString } from '../utils/numbers';

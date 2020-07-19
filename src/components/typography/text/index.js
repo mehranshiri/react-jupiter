@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
+import GlobalStyle from '../../globalStyle';
 import theme from '../theme';
 import {
   String, Strong, Emphasized, SubScript, SupScript,
@@ -132,6 +133,7 @@ renderString.defaultProps = {
 
 const Text = (props) => (
   <ThemeProvider theme={theme}>
+    <GlobalStyle />
     {renderString(props)}
   </ThemeProvider>
 );

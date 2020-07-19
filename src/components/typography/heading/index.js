@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
+import GlobalStyle from '../../globalStyle';
 import theme from '../theme';
 import {
   H1, H2, H3, H4, H5, H6,
@@ -36,6 +37,7 @@ const Heading = (props) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       {renderLevel(children, size, level)}
     </ThemeProvider>
   );

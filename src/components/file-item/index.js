@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import GlobalStyle from '../globalStyle';
 import getIconFileName from './utils';
 import { Text } from '../typography';
 import theme from './theme';
@@ -38,6 +39,7 @@ const FileItem = (props: Props) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <Wrapper
         data-test="file-item"
         isActive={isActive}

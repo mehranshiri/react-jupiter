@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import GlobalStyle from '../../globalStyle';
 import theme from '../theme';
 import Icon from '../../icon';
 import { Text } from '../../typography';
@@ -53,6 +54,7 @@ const TextInput = (props: Props) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <Label htmlFor={id || `${type}-${uniqueName.split(' ').join('')}`} data-test="text-input">
         {label && (
           <LabelContainer bold size={14}>

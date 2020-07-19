@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
+import GlobalStyle from '../globalStyle';
 import FontStyle from './iconFont';
 import iconTheme from './theme';
 import StyledIcon from './index.styles';
@@ -20,6 +21,7 @@ const Icon = (props) => {
 
   return (
     <ThemeProvider theme={iconTheme}>
+      <GlobalStyle />
       <FontStyle />
       <StyledIcon
         size={size}

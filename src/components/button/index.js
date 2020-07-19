@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import GlobalStyle from '../globalStyle';
 import { Text } from '../typography';
 import {
   BaseButton,
@@ -48,6 +49,7 @@ const Button = (props: Props) => {
   function RenderButtonContext() {
     return (
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <BaseButton
           data-test="button"
           type={htmlType}

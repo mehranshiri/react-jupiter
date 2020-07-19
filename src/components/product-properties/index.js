@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import GlobalStyle from '../globalStyle';
 import { ListContainer, ListItem } from './index.style';
 import ProductProperty from './product-property';
 
@@ -20,17 +21,25 @@ const ProductProperties = (props: Props) => {
   const propsLength = list.length > 1 && isHorizontal ? list.length : 1;
 
   if (list.length === 1) {
-    return (<ProductProperty iconName={list[0].iconName} text={list[0].text} {...rest} />);
+    return (
+      <>
+        <GlobalStyle />
+        <ProductProperty iconName={list[0].iconName} text={list[0].text} {...rest} />
+      </>
+    );
   }
 
   return (
-    <ListContainer isHorizontal={isHorizontal} {...rest}>
-      {list.map(({ iconName, text }, index) => (
-        <ListItem key={`${iconName}-${index.toString()}`} propsLength={propsLength}>
-          <ProductProperty iconName={iconName} text={text} color={color} />
-        </ListItem>
-      ))}
-    </ListContainer>
+    <>
+      <GlobalStyle />
+      <ListContainer isHorizontal={isHorizontal} {...rest}>
+        {list.map(({ iconName, text }, index) => (
+          <ListItem key={`${iconName}-${index.toString()}`} propsLength={propsLength}>
+            <ProductProperty iconName={iconName} text={text} color={color} />
+          </ListItem>
+        ))}
+      </ListContainer>
+    </>
   );
 };
 

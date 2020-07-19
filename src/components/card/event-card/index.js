@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes, { oneOfType } from 'prop-types';
+import GlobalStyle from '../../globalStyle';
 import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
 import ShowDate from '../../show-date';
 import TitledAvatar from '../../titled-avatar';
@@ -130,7 +131,12 @@ const EventCard = (props) => {
     }
   };
 
-  return renderCard();
+  return (
+    <>
+      <GlobalStyle />
+      {renderCard()}
+    </>
+  );
 };
 
 EventCard.propTypes = {
@@ -164,6 +170,7 @@ EventCard.defaultProps = {
   type: VERTICAL_CARD,
   ads: false,
   finished: false,
+  organization: undefined,
   renderOrganizationLink: () => false,
 };
 

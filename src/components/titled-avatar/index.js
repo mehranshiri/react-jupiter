@@ -1,6 +1,7 @@
 // @flow
 
 import React, { type Node } from 'react';
+import GlobalStyle from '../globalStyle';
 import Avatar from '../avatar';
 import {
   Container, Title, SmallTitle,
@@ -29,6 +30,7 @@ const TitledAvatar = (props: Props) => {
   if (renderAvatarLink) {
     return renderAvatarLink(
       <Container data-test="titled-avatar">
+        <GlobalStyle />
         <Avatar src={avatar} size={avatarSize} />
         {renderTitle()}
       </Container>,
@@ -37,6 +39,7 @@ const TitledAvatar = (props: Props) => {
 
   return (
     <Container data-test="titled-avatar">
+      <GlobalStyle />
       <Avatar src={avatar} size={avatarSize} />
       {renderTitle()}
     </Container>
