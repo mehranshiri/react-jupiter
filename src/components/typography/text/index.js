@@ -21,6 +21,7 @@ const renderString = (props) => {
     supScript,
     marked,
     label,
+    isDisplayBlock,
     ...rest
   } = props;
 
@@ -90,6 +91,7 @@ const renderString = (props) => {
           isLabel={label && !marked}
           bold={bold}
           data-test="span"
+          isDisplayBlock
           {...rest}
         >
           {children}
@@ -115,6 +117,7 @@ renderString.propTypes = {
   supScript: PropTypes.bool,
   marked: PropTypes.bool,
   label: PropTypes.bool,
+  isDisplayBlock: PropTypes.bool,
 };
 
 renderString.defaultProps = {
@@ -129,6 +132,7 @@ renderString.defaultProps = {
   supScript: false,
   marked: false,
   label: false,
+  isDisplayBlock: false,
 };
 
 const Text = (props) => (
@@ -155,6 +159,7 @@ Text.prototype = {
   supScript: PropTypes.bool,
   marked: PropTypes.bool,
   label: PropTypes.bool,
+  isDisplayBlock: PropTypes.bool,
 };
 
 Text.defaultProps = renderString.defaultProps;

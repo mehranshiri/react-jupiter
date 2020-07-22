@@ -33,7 +33,7 @@ const Select = (props: Props) => {
   if (label) {
     return (
       <label htmlFor={elementName}>
-        <Text size={14} bold>
+        <Text size={14} bold isDisplayBlock>
           {label}
         </Text>
         {renderSelect()}
