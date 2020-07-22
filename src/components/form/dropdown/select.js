@@ -1,8 +1,10 @@
 import React from 'react';
+import { Text } from '../../typography';
 
 type Props = {
   elementName?: string,
   defaultValue?: string,
+  label?: string,
   handleChange?: () => void,
   placeholder?: string,
   isDisabled?: boolean,
@@ -10,10 +12,10 @@ type Props = {
 }
 const Select = (props: Props) => {
   const {
-    elementName, defaultValue, handleChange, placeholder, isDisabled, children,
+    elementName, defaultValue, handleChange, placeholder, isDisabled, children, label,
   } = props;
 
-  return (
+  const renderSelect = () => (
     <select
       disabled={isDisabled}
       onBlur={handleChange}
@@ -27,12 +29,25 @@ const Select = (props: Props) => {
       {children}
     </select>
   );
+
+  if (label) {
+    return (
+      <label htmlFor={elementName}>
+        <Text size={14} bold>
+          {label}
+        </Text>
+        {renderSelect()}
+      </label>
+    );
+  }
+  return renderSelect();
 };
 
 Select.defaultProps = {
   elementName: 'select-element',
   defaultValue: '',
   placeholder: '',
+  label: '',
   isDisabled: false,
   handleChange: () => { },
 };
