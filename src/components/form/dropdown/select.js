@@ -1,5 +1,8 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { Text } from '../../typography';
+import { StyledSelect, SelectButton } from './index.style';
+import theme from '../theme';
 
 type Props = {
   elementName?: string,
@@ -16,18 +19,22 @@ const Select = (props: Props) => {
   } = props;
 
   const renderSelect = () => (
-    <select
-      disabled={isDisabled}
-      onBlur={handleChange}
-      name={elementName}
-      defaultValue={placeholder || defaultValue}
-      data-test="select"
-    >
-      {placeholder && (
-        <option disabled>{placeholder}</option>
-      )}
-      {children}
-    </select>
+    <ThemeProvider theme={theme}>
+      <SelectButton disabled={isDisabled}>
+        <StyledSelect
+          disabled={isDisabled}
+          onBlur={handleChange}
+          name={elementName}
+          defaultValue={placeholder || defaultValue}
+          data-test="select"
+        >
+          {placeholder && (
+            <option disabled>{placeholder}</option>
+          )}
+          {children}
+        </StyledSelect>
+      </SelectButton>
+    </ThemeProvider>
   );
 
   if (label) {
