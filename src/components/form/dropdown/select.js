@@ -5,7 +5,7 @@ import { StyledSelect, SelectButton } from './index.style';
 import theme from '../theme';
 
 type Props = {
-  elementName?: string,
+  htmlElementName?: string,
   defaultValue?: string,
   label?: string,
   handleChange?: () => void,
@@ -15,7 +15,7 @@ type Props = {
 }
 const Select = (props: Props) => {
   const {
-    elementName, defaultValue, handleChange, placeholder, isDisabled, children, label,
+    htmlElementName, defaultValue, handleChange, placeholder, isDisabled, children, label,
   } = props;
 
   const renderSelect = () => (
@@ -24,7 +24,7 @@ const Select = (props: Props) => {
         <StyledSelect
           disabled={isDisabled}
           onBlur={handleChange}
-          name={elementName}
+          name={htmlElementName}
           defaultValue={placeholder || defaultValue}
           data-test="select"
         >
@@ -39,7 +39,7 @@ const Select = (props: Props) => {
 
   if (label) {
     return (
-      <label htmlFor={elementName}>
+      <label htmlFor={htmlElementName}>
         <Text size={14} bold isDisplayBlock>
           {label}
         </Text>
@@ -51,7 +51,7 @@ const Select = (props: Props) => {
 };
 
 Select.defaultProps = {
-  elementName: 'select-element',
+  htmlElementName: 'select-element',
   defaultValue: '',
   placeholder: '',
   label: '',

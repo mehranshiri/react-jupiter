@@ -10,10 +10,10 @@ import {
 import TextInput from './index';
 
 storiesOf('Form/Inputs', module)
-  .add('Minimal Text Input', () => <TextInput uniqueName="text-name-01" label="این لیبل است" />)
+  .add('Minimal Text Input', () => <TextInput htmlElementName="text-name-01" label="این لیبل است" />)
   .add('Full option Text Input', () => (
     <TextInput
-      uniqueName="text-name-02"
+      htmlElementName="text-name-02"
       label={text('optional label', 'این لیبل است')}
       placeholder={text('optional placeholder', 'متن پیشفرض')}
       disabled={boolean('disabled(default : false)', false)}

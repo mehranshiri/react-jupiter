@@ -18,7 +18,7 @@ storiesOf('Form/Dropdown', module)
   ))
   .add('Select with placeholder', () => (
     <Select
-      elementName={text('optional elementName', 'استان')}
+      htmlElementName={text('optional htmlElementName', 'استان')}
       defaultValue={text('optional defaultValue(if its not et or set wrong get the first option)', '30')}
       placeholder={text('optional placeholder', '__استان مورد نظر خود را انتخاب کنید__')}
       handleChange={action('triger what you want to do in onBlur function')}
@@ -30,7 +30,7 @@ storiesOf('Form/Dropdown', module)
   ))
   .add('Full option Select(no placeholder)', () => (
     <Select
-      elementName={text('optional elementName', 'استان')}
+      htmlElementName={text('optional htmlElementName', 'استان')}
       defaultValue={text('optional defaultValue(if its not et or set wrong get the first option)', '30')}
       handleChange={action('triger what you want to do in onBlur function')}
       isDisabled={boolean('disabled(default : false)', false)}
@@ -43,7 +43,7 @@ storiesOf('Form/Dropdown', module)
   ))
   .add('Full option SelectOption', () => (
     <Select
-      elementName="استان"
+      htmlElementName="استان"
       defaultValue="30"
       handleChange={action('triger what you want to do in onBlur function')}
       isDisabled={false}

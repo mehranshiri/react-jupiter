@@ -5,28 +5,28 @@ import TextInput from './index';
 
 describe('text input tests', () => {
   it('render simple text input', () => {
-    const component = shallow(<TextInput label="this is label" uniqueName="eng name" />);
+    const component = shallow(<TextInput label="this is label" htmlElementName="eng name" />);
     const textInput = findByTestAtrr(component, 'text-input');
 
     expect(textInput.length).toBe(1);
   });
 
   it('render text input with placeholder', () => {
-    const component = mount(<TextInput label="this is label" uniqueName="eng name" placeholder="hi guys" />);
+    const component = mount(<TextInput label="this is label" htmlElementName="eng name" placeholder="hi guys" />);
     const textInput = findByTestAtrr(component, 'text-input');
 
     expect(textInput.find('input').prop('placeholder')).toBe('hi guys');
   });
 
   it('test text input id without id props', () => {
-    const component = mount(<TextInput label="this is label" uniqueName="eng name" placeholder="hi guys" />);
+    const component = mount(<TextInput label="this is label" htmlElementName="eng name" placeholder="hi guys" />);
     const textInput = findByTestAtrr(component, 'text-input');
 
     expect(textInput.find('input').prop('id')).toBe('text-engname');
   });
 
   it('render text input - full props', () => {
-    const component = mount(<TextInput label="this is label" uniqueName="eng name" placeholder="hi guys" type="text" id="hiiii-id" />);
+    const component = mount(<TextInput label="this is label" htmlElementName="eng name" placeholder="hi guys" type="text" id="hiiii-id" />);
     const textInput = findByTestAtrr(component, 'text-input');
 
     expect(textInput.find('input').prop('id')).toBe('hiiii-id');
@@ -37,15 +37,15 @@ describe('text input tests', () => {
   });
 
   it('render disabled input', () => {
-    const component = mount(<TextInput label="this is label" uniqueName="eng name" disabled />);
+    const component = mount(<TextInput label="this is label" htmlElementName="eng name" disabled />);
     const textInput = findByTestAtrr(component, 'text-input');
 
     expect(textInput.find('input').prop('disabled')).toBe(true);
   });
 
   it('render with or without text-input-description', () => {
-    const componentWithDesc = shallow(<TextInput label="this is label" uniqueName="with desc" description="hiiiiii" />);
-    const componentWithoutDesc = shallow(<TextInput label="this is label" uniqueName="without desc" />);
+    const componentWithDesc = shallow(<TextInput label="this is label" htmlElementName="with desc" description="hiiiiii" />);
+    const componentWithoutDesc = shallow(<TextInput label="this is label" htmlElementName="without desc" />);
     const textInputDescription01 = findByTestAtrr(componentWithDesc, 'text-input-description');
     const textInputDescription02 = findByTestAtrr(componentWithoutDesc, 'text-input-description');
 
@@ -54,7 +54,7 @@ describe('text input tests', () => {
   });
 
   it('render with or err msg', () => {
-    const component = shallow(<TextInput label="this is label" uniqueName="with desc" description="hiiiiii" errorMessage="this is a good err" />);
+    const component = shallow(<TextInput label="this is label" htmlElementName="with desc" description="hiiiiii" errorMessage="this is a good err" />);
     const textInputErrorMessage = findByTestAtrr(component, 'error-message');
 
     expect(textInputErrorMessage.length).toBe(1);
