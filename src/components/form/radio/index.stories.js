@@ -5,6 +5,7 @@ import { action } from '@storybook/addon-actions';
 import {
   withKnobs,
   text,
+  select,
   boolean,
 } from '@storybook/addon-knobs';
 import Radio from './radio';
@@ -25,6 +26,7 @@ storiesOf('Form/Radio', module)
       defaultCheckedValue="300"
       handleChange={action('triger what you want to do in onChange function')}
       isDisabled={boolean('optional disabled all', false)}
+      type={select('optional type', ['horizental', 'vertical'])}
     >
       <RadioOption value="100" label="زیر دیپلم" />
       <RadioOption value="234" label="دیپلم" />

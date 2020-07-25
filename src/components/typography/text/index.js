@@ -91,7 +91,7 @@ const renderString = (props) => {
           isLabel={label && !marked}
           bold={bold}
           data-test="span"
-          isDisplayBlock
+          isDisplayBlock={isDisplayBlock}
           {...rest}
         >
           {children}

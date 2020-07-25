@@ -1,4 +1,7 @@
 import React from 'react';
+import GlobalStyle from '../../globalStyle';
+import { Text } from '../../typography';
+import { Fieldset, RadioWrapper } from './index.style';
 
 type Props = {
   children: * => Node,
@@ -7,22 +10,26 @@ type Props = {
   handleChange?: () => void,
   defaultCheckedValue?: string,
   isDisabled?: boolean,
+  type?: 'horizental' | 'vertical',
 };
 
 const Radio = (props: Props) => {
   const {
-    children, groupName, label, handleChange, defaultCheckedValue, isDisabled,
+    children, groupName, label, handleChange, defaultCheckedValue, isDisabled, type,
   } = props;
   const radioElements = React.Children.toArray(children);
 
   return (
-    <fieldset onChange={handleChange}>
+    <Fieldset onChange={handleChange}>
+      <GlobalStyle />
       {label && (
         <legend>
-          {label}
+          <Text bold size={14}>
+            {label}
+          </Text>
         </legend>
       )}
-      <div>
+      <RadioWrapper type={type}>
         {radioElements.map(
           (radioElement) => (
             isDisabled ? (
@@ -32,8 +39,8 @@ const Radio = (props: Props) => {
             )
           ),
         )}
-      </div>
-    </fieldset>
+      </RadioWrapper>
+    </Fieldset>
   );
 };
 
@@ -43,5 +50,6 @@ Radio.defaultProps = {
   handleChange: () => { },
   defaultCheckedValue: '',
   isDisabled: false,
+  type: 'horizental',
 };
 export default Radio;

@@ -42,7 +42,7 @@ export const String = styled.span`
     ? `background-color: ${theme.colors.gray400}; padding: 2px 8px; border-radius: 2px;`
     : ''
   )}
-  ${(isDisplayBlock) => (isDisplayBlock ? 'display: block;' : '')}
+  ${({ isDisplayBlock }) => (isDisplayBlock ? 'display: block;' : '')}
 `;
 
 export const SubScript = styled.sub`

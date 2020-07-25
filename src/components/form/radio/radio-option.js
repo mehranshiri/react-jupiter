@@ -1,4 +1,8 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { Text } from '../../typography';
+import { Input } from './index.style';
+import theme from '../theme';
 
 type Props = {
   label: string,
@@ -14,19 +18,21 @@ const RadioOption = (props: Props) => {
   const itemId = `${groupName}-${value}-${label.split(' ').join('')}`;
 
   return (
-    <label htmlFor={itemId}>
-      <input
-        type="radio"
-        id={itemId}
-        name={groupName}
-        value={value}
-        defaultChecked={defaultCheckedValue === value}
-        disabled={isDisabled}
-      />
-      <span>
-        {label}
-      </span>
-    </label>
+    <ThemeProvider theme={theme}>
+      <label htmlFor={itemId}>
+        <Input
+          type="radio"
+          id={itemId}
+          name={groupName}
+          value={value}
+          defaultChecked={defaultCheckedValue === value}
+          disabled={isDisabled}
+        />
+        <Text size={14}>
+          {label}
+        </Text>
+      </label>
+    </ThemeProvider>
   );
 };
 
