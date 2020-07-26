@@ -18,33 +18,33 @@ export const Input = styled.input`
   border-radius: 50%;
   width: 16px;
   height: 16px;
-
-  border: 1px solid ${({ theme }) => theme.borderColor.normal};
-  transition: background 0.5s linear;
   margin-right: 5px;
-
   position: relative;
   top: 4px;
   
+  border: 1px solid ${({ disabled, theme }) => (disabled ? theme.disabled.color : theme.borderColor.normal)};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  transition: background 0.2s linear;
+
   &:hover {
-    border: 1px solid ${({ theme }) => theme.borderColor.hover};
+    border: 1px solid ${({ disabled, theme }) => (disabled ? theme.disabled.color : theme.borderColor.hover)};
   }
 
   &:checked {
-    border: 5px solid white;
+    border: 5px solid ${({ disabled, theme }) => (disabled ? theme.disabled.background : 'white')};
     width: 8px;
     height: 8px;
-    background: ${({ theme }) => theme.borderColor.focus};
+    background: ${({ disabled, theme }) => (disabled ? theme.disabled.color : theme.borderColor.focus)};
 
     &:after {
-      display: block;
+      background: ${({ disabled, theme }) => (disabled ? theme.disabled.color : theme.borderColor.focus)};
     }
   }
 
   &:after {
     content: '';
-    display: none;
-    background: ${({ theme }) => theme.borderColor.focus};
+    display: block;
+    background: ${({ disabled }) => (disabled ? 'white' : 'transparent')};
     position: absolute;
     width: 20px;
     height: 20px;
@@ -53,5 +53,4 @@ export const Input = styled.input`
     top: -6px;
     right: -6px;
   }
-
 `;

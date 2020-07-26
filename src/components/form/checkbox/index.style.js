@@ -18,7 +18,9 @@ export const Input = styled.input`
   width: 16px;
   height: 16px;
 
-  border: 1px solid ${({ theme }) => theme.borderColor.normal};
+  border: 1px solid ${({ disabled, theme }) => (disabled ? theme.disabled.color : theme.borderColor.normal)};
+  background: ${({ disabled, theme }) => (disabled ? theme.disabled.background : 'white')};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   transition: 0.2s all linear;
   margin-right: 5px;
 
@@ -26,14 +28,14 @@ export const Input = styled.input`
   top: 10px;
   
   &:hover {
-    border-color: ${({ theme }) => theme.borderColor.hover};
+    border-color: ${({ disabled, theme }) => (disabled ? theme.disabled.color : theme.borderColor.hover)};
   }
 
   &:checked {
-    border-color: ${({ theme }) => theme.borderColor.focus};
+    border-color: ${({ disabled, theme }) => (disabled ? theme.disabled.color : theme.borderColor.focus)};
     
     &:after {
-      border-color: ${({ theme }) => theme.borderColor.focus};
+      border-color: ${({ disabled, theme }) => (disabled ? theme.disabled.color : theme.borderColor.focus)};
     }
   }
 
