@@ -74,7 +74,7 @@ const EventCard = (props) => {
       maxWidth={270}
       {...rest}
     >
-      {renderEventLink(<VerticalCover data-test="vertical-cover" src={cover || defaultCoverUrl} />) }
+      {renderEventLink(<VerticalCover data-test="vertical-cover" src={cover || defaultCoverUrl} loading="lazy" />) }
       <VerticalContentContainer
         data-test="vertical-content"
         background={finished ? finishedClockLabelUrl : null}
@@ -113,7 +113,7 @@ const EventCard = (props) => {
       maxWidth={560}
       {...rest}
     >
-      {renderEventLink(<HorizontalCover data-test="horizontal-cover" src={cover || defaultCoverUrl} />) }
+      {renderEventLink(<HorizontalCover data-test="horizontal-cover" src={cover || defaultCoverUrl} loading="lazy" />) }
       <HorizontalContentContainer data-test="horizontal-content">
         <DateBookmarkContainer>
           <DateLabelContainer>
