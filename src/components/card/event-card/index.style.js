@@ -53,7 +53,8 @@ export const VerticalContentContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 12px 16px 16px;
-  height: 200px;
+  min-height: 180px;
+  max-height: 200px;
 `;
 
 export const VerticalTitle = styled(Heading)`

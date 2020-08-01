@@ -49,10 +49,16 @@ const EventCard = (props) => {
   // TODO: remove date params if no longer needed (in evand project)
   // TODO: remove ShowDate component and remove used places
   // TODO: remove moment-jalali from this package after removing ShowDate
+
+  // in new form of event-card we dont show organazation info as a titled-avatar
+  // TODO: if the new form was accepted and remove old one from evand clean these parts
   const productPropertiesList = [
     { iconName: 'place', text: place },
     { iconName: 'local-offer', text: price },
   ];
+  if (organization && organization.logo === 'unset') {
+    productPropertiesList.push({ iconName: 'supervisor-account', text: organization.name });
+  }
 
   const handleClickBookmark = () => {
     const returnedValue = clickBookmark();
@@ -93,9 +99,9 @@ const EventCard = (props) => {
           { renderEventLink(<VerticalTitle level={2} size="sm">{title}</VerticalTitle>)}
           <VerticalPlacePrice list={productPropertiesList} />
         </div>
-        {
-          organization && <TitledAvatar title={organization.name} titleSize={10} avatar={organization.logo} avatarSize="sm" renderAvatarLink={renderOrganizationLink} />
-        }
+        {(organization && organization.logo !== 'unset') && (
+          <TitledAvatar title={organization.name} titleSize={10} avatar={organization.logo} avatarSize="sm" renderAvatarLink={renderOrganizationLink} />
+        )}
       </VerticalContentContainer>
     </VerticalCardContainer>
   );
