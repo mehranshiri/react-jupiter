@@ -3,6 +3,7 @@ import PropTypes, { oneOfType } from 'prop-types';
 import GlobalStyle from '../../globalStyle';
 import { VERTICAL_CARD, HORIZONTAL_CARD } from './constants';
 import ShowDate from '../../show-date';
+import { Text } from '../../typography';
 import TitledAvatar from '../../titled-avatar';
 import EventCardLabel from './event-card-label';
 import {
@@ -39,10 +40,15 @@ const EventCard = (props) => {
     renderEventLink,
     renderOrganizationLink,
     clickBookmark,
+    showDate,
     ...rest
   } = props;
   const [isBookmarked, setIsBookmarked] = useState(bookmarked);
-
+  // date param used on main evand and because it wrong to use moment-jalali in react jupiter
+  // we ommmit it in evand-next and use showDate param instead but its still used in evand
+  // TODO: remove date params if no longer needed (in evand project)
+  // TODO: remove ShowDate component and remove used places
+  // TODO: remove moment-jalali from this package after removing ShowDate
   const productPropertiesList = [
     { iconName: 'place', text: place },
     { iconName: 'local-offer', text: price },
@@ -72,7 +78,10 @@ const EventCard = (props) => {
             <DateLabelContainer>
               {finished && <EventCardLabel type="finished" />}
               {!finished && ads && <EventCardLabel type="ads" />}
-              <ShowDate date={date} color="gray" fontSize="12" />
+              {date && <ShowDate date={date} color="gray" fontSize="12" />}
+              {showDate && (
+                <Text size="12" color="gray" data-test="show-date">{showDate}</Text>
+              )}
             </DateLabelContainer>
             <BookmarkIcon
               name={isBookmarked ? 'bookmark' : 'bookmark-border'}
@@ -104,7 +113,10 @@ const EventCard = (props) => {
           <DateLabelContainer>
             {finished && <EventCardLabel type="finished" />}
             {!finished && ads && <EventCardLabel type="ads" />}
-            <ShowDate date={date} color="gray" fontSize="12" />
+            {date && <ShowDate date={date} color="gray" fontSize="12" />}
+            {showDate && (
+              <Text size="12" color="gray" data-test="show-date">{showDate}</Text>
+            )}
           </DateLabelContainer>
           <BookmarkIcon
             name={isBookmarked ? 'bookmark' : 'bookmark-border'}
@@ -148,7 +160,8 @@ EventCard.propTypes = {
   date: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
-  ]).isRequired,
+  ]),
+  showDate: PropTypes.string,
   cover: PropTypes.string,
   ads: PropTypes.bool,
   finished: PropTypes.bool,
@@ -172,6 +185,8 @@ EventCard.defaultProps = {
   finished: false,
   organization: undefined,
   renderOrganizationLink: () => false,
+  date: '',
+  showDate: '',
 };
 
 export default EventCard;
