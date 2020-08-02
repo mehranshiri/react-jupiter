@@ -15,6 +15,7 @@ import Form from './form';
 import Responsive from './responsive';
 import ProductOwner from './product-owner';
 import FileItem from './file-item';
+import Modal from './modal';
 import defaultTheme from './themes';
 
 const { colors } = defaultTheme;
@@ -36,6 +37,7 @@ export { default as Form } from './form';
 export { default as Responsive } from './responsive';
 export { default as ProductOwner } from './product-owner';
 export { default as FileItem } from './file-item';
+export { default as Modal } from './modal';
 export { colors as jupiterColors };
 
 export default {
@@ -56,4 +58,5 @@ export default {
   Responsive,
   ProductOwner,
   FileItem,
+  Modal,
 };
