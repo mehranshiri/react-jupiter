@@ -29,8 +29,14 @@ Responsive.propTypes = {
     PropTypes.string,
   ]).isRequired,
   option: PropTypes.shape({
-    lessThan: PropTypes.number,
-    greaterThan: PropTypes.number,
+    lessThan: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
+    greaterThan: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
     isDefault: PropTypes.bool,
   }).isRequired,
 };
