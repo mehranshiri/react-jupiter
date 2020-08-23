@@ -1,10 +1,10 @@
-import Chackbox from './checkbox';
-import ChackboxOption from './checkbox-option';
+import Checkbox from './checkbox';
+import CheckboxOption from './checkbox-option';
 
-export { default as Chackbox } from './checkbox';
-export { default as ChackboxOption } from './checkbox-option';
+export { default as Checkbox } from './checkbox';
+export { default as CheckboxOption } from './checkbox-option';
 
 export default {
-  Chackbox,
-  ChackboxOption,
+  Checkbox,
+  CheckboxOption,
 };

@@ -26,6 +26,7 @@ storiesOf('Form/Checkbox', module)
       handleChange={action('triger what you want to do in onChange function')}
       isDisabled={boolean('optional disabled all', false)}
       type={select('optional type', ['horizental', 'vertical'])}
+      errorMessage={text('optional error msg', 'ارور زیبا')}
     >
       <CheckboxOption value="100" label="ورزشی" />
       <CheckboxOption value="234" label="علمی" />

@@ -24,6 +24,7 @@ storiesOf('Form/Textarea', module)
       isDisabled={boolean('optional disabled all', false)}
       resize={select('optional resize', ['none', 'vertical', 'horizontal'])}
       handleChange={action('triger what you want to do in onChange function')}
+      errorMessage={text('optional error msg', 'ارور زیبا')}
     />
   ))
   .addDecorator(withInfo)

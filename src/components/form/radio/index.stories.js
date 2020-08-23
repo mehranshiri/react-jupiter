@@ -27,6 +27,7 @@ storiesOf('Form/Radio', module)
       handleChange={action('triger what you want to do in onChange function')}
       isDisabled={boolean('optional disabled all', false)}
       type={select('optional type', ['horizental', 'vertical'])}
+      errorMessage={text('optional error msg', 'ارور زیبا')}
     >
       <RadioOption value="100" label="زیر دیپلم" />
       <RadioOption value="234" label="دیپلم" />

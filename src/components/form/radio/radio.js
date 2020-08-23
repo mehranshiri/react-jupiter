@@ -1,6 +1,7 @@
 import React from 'react';
 import GlobalStyle from '../../globalStyle';
 import { Text } from '../../typography';
+import ErrorMsg from '../errorMsg';
 import { Fieldset, RadioWrapper } from './index.style';
 
 type Props = {
@@ -11,11 +12,13 @@ type Props = {
   defaultCheckedValue?: string,
   isDisabled?: boolean,
   type?: 'horizental' | 'vertical',
+  errorMessage?: string,
 };
 
 const Radio = (props: Props) => {
   const {
-    children, groupName, label, handleChange, defaultCheckedValue, isDisabled, type,
+    children, groupName, label, handleChange, defaultCheckedValue, isDisabled,
+    type, errorMessage,
   } = props;
   const radioElements = React.Children.toArray(children);
 
@@ -40,6 +43,7 @@ const Radio = (props: Props) => {
           ),
         )}
       </RadioWrapper>
+      <ErrorMsg errorMessage={errorMessage} />
     </Fieldset>
   );
 };
@@ -51,5 +55,6 @@ Radio.defaultProps = {
   defaultCheckedValue: '',
   isDisabled: false,
   type: 'horizental',
+  errorMessage: '',
 };
 export default Radio;

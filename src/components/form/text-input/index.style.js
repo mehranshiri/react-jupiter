@@ -55,7 +55,3 @@ export const PasswordIcon = styled(Icon)`
 export const Label = styled.label`
   position: relative;
 `;
-
-export const ErrorMsgContainer = styled.div`
-  margin-top: 8px;
-`;

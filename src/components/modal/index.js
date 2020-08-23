@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import Modal from 'react-modal';
 import GlobalStyle from '../globalStyle';
 import { StyledIcon, StyledWrapper, customModalStyles } from './index.style';
@@ -8,7 +8,7 @@ import theme from './theme';
 
 type Props = {
   children: * => Node,
-  isOpen?: boolean,
+  isOpen: boolean,
   hasCloseButton?: boolean,
   disabledClose?: boolean,
   onRequestClose?: () => void,
@@ -23,16 +23,14 @@ function JupiterModal(props: Props) {
   const {
     isOpen, onRequestClose, onAfterOpen, children, hasCloseButton, disabledClose, modalWidth,
   } = props;
-  const [modalIsOpen, setIsOpen] = useState(isOpen);
 
   function closeModal() {
     onRequestClose();
-    setIsOpen(false);
   }
 
   return (
     <Modal
-      isOpen={modalIsOpen}
+      isOpen={isOpen}
       onAfterOpen={onAfterOpen}
       onRequestClose={closeModal}
       contentLabel="Example Modal"
@@ -55,7 +53,6 @@ function JupiterModal(props: Props) {
 }
 
 JupiterModal.defaultProps = {
-  isOpen: false,
   onRequestClose: () => {},
   onAfterOpen: () => {},
   hasCloseButton: true,

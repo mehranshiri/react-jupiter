@@ -18,7 +18,7 @@ storiesOf('Form/Inputs', module)
       placeholder={text('optional placeholder', 'متن پیشفرض')}
       disabled={boolean('disabled(default : false)', false)}
       description={text('optional description', 'توضیحات اضافه')}
-      errorMessage={text('optional err msg', '')}
+      errorMessage={text('optional error msg', 'ارور زیبا')}
       type={select('select type(default : text)', ['text', 'password'])}
     />
   ))

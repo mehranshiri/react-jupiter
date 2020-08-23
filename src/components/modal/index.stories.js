@@ -11,7 +11,7 @@ import Modal from './index';
 
 storiesOf('Modal', module)
   .add('Minimal modal', () => (
-    <Modal>
+    <Modal isOpen>
       <h1>
         سلام
       </h1>

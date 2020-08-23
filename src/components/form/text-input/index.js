@@ -4,15 +4,13 @@ import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../../globalStyle';
 import theme from '../theme';
-import Icon from '../../icon';
-import { Text } from '../../typography';
+import ErrorMsg from '../errorMsg';
 import {
   Input,
   LabelContainer,
   DescriptionContainer,
   PasswordIcon,
   Label,
-  ErrorMsgContainer,
 } from './index.style';
 
 type Props = {
@@ -24,6 +22,7 @@ type Props = {
   disabled?: boolean,
   description?: string,
   errorMessage?: string,
+  inputRef?: any,
 }
 
 const TextInput = (props: Props) => {
@@ -36,6 +35,7 @@ const TextInput = (props: Props) => {
     disabled,
     description,
     errorMessage,
+    inputRef,
   } = props;
   const [value, setValue] = useState('');
   const [displayedPassword, setDisplayedPassword] = useState(false);
@@ -75,6 +75,7 @@ const TextInput = (props: Props) => {
           onChange={handleChange}
           onFocus={handleFocus}
           disabled={disabled}
+          ref={inputRef}
         />
         {type === 'password' && (
           <PasswordIcon
@@ -84,14 +85,7 @@ const TextInput = (props: Props) => {
           />
         )}
       </Label>
-      {errorMessage && (
-        <ErrorMsgContainer>
-          <Icon name="error" color="red" size="sm" stickyRight />
-          <Text bold size={10} color="red" data-test="error-message">
-            {errorMessage}
-          </Text>
-        </ErrorMsgContainer>
-      )}
+      <ErrorMsg errorMessage={errorMessage} />
     </ThemeProvider>
   );
 };
@@ -103,7 +97,8 @@ TextInput.defaultProps = {
   placeholder: null,
   disabled: false,
   description: null,
-  errorMessage: null,
+  errorMessage: '',
+  inputRef: null,
 };
 
 export default TextInput;

@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../../globalStyle';
 import { Text } from '../../typography';
 import theme from '../theme';
+import ErrorMsg from '../errorMsg';
 import StyledTextarea from './index.style';
 
 type Props = {
@@ -14,11 +15,14 @@ type Props = {
   resize?: 'horizontal' | 'vertical' | 'none',
   minHeight?: number,
   handleChange?: () => void,
+  errorMessage?: string,
+  inputRef?: any,
 };
 
 const Textarea = (props: Props) => {
   const {
-    htmlElementName, label, isDisabled, initialVal, placeholder, resize, minHeight, handleChange,
+    htmlElementName, label, isDisabled, initialVal, placeholder,
+    resize, minHeight, handleChange, errorMessage, inputRef,
   } = props;
 
   return (
@@ -39,9 +43,11 @@ const Textarea = (props: Props) => {
         resize={resize}
         minHeight={minHeight}
         onChange={handleChange}
+        ref={inputRef}
       >
         {initialVal}
       </StyledTextarea>
+      <ErrorMsg errorMessage={errorMessage} />
     </ThemeProvider>
   );
 };
@@ -55,6 +61,8 @@ Textarea.defaultProps = {
   resize: 'none',
   minHeight: 120,
   handleChange: () => { },
+  errorMessage: '',
+  inputRef: null,
 };
 
 export default Textarea;

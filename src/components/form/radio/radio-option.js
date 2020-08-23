@@ -10,10 +10,11 @@ type Props = {
   groupName: string,
   isDisabled?: boolean,
   defaultCheckedValue?: string,
+  inputRef?: any,
 };
 const RadioOption = (props: Props) => {
   const {
-    label, value, isDisabled, defaultCheckedValue, groupName,
+    label, value, isDisabled, defaultCheckedValue, groupName, inputRef,
   } = props;
   const itemId = `${groupName}-${value}-${label.split(' ').join('')}`;
 
@@ -27,6 +28,7 @@ const RadioOption = (props: Props) => {
           value={value}
           defaultChecked={defaultCheckedValue === value}
           disabled={isDisabled}
+          ref={inputRef}
         />
         <Text size={14}>
           {label}
@@ -39,6 +41,7 @@ const RadioOption = (props: Props) => {
 RadioOption.defaultProps = {
   isDisabled: false,
   defaultCheckedValue: '',
+  inputRef: null,
 };
 
 export default RadioOption;

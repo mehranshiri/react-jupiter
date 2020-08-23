@@ -1,6 +1,7 @@
 import React from 'react';
 import GlobalStyle from '../../globalStyle';
 import { Text } from '../../typography';
+import ErrorMsg from '../errorMsg';
 import { Fieldset, CheckboxWrapper } from './index.style';
 
 type Props = {
@@ -10,11 +11,12 @@ type Props = {
   handleChange?: () => void,
   isDisabled?: boolean,
   type?: 'horizental' | 'vertical',
+  errorMessage?: string,
 };
 
 const Checkbox = (props: Props) => {
   const {
-    children, groupName, label, handleChange, isDisabled, type,
+    children, groupName, label, handleChange, isDisabled, type, errorMessage,
   } = props;
   const radioElements = React.Children.toArray(children);
 
@@ -39,6 +41,7 @@ const Checkbox = (props: Props) => {
           ),
         )}
       </CheckboxWrapper>
+      <ErrorMsg errorMessage={errorMessage} />
     </Fieldset>
   );
 };
@@ -49,5 +52,6 @@ Checkbox.defaultProps = {
   handleChange: () => { },
   isDisabled: false,
   type: 'horizental',
+  errorMessage: '',
 };
 export default Checkbox;

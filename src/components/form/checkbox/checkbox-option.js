@@ -1,8 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import theme from '../theme';
 import { Text } from '../../typography';
 import { Input } from './index.style';
-import theme from '../theme';
 
 type Props = {
   label: string,
@@ -10,10 +10,11 @@ type Props = {
   groupName: string,
   isDisabled?: boolean,
   isChecked?: boolean,
+  inputRef?: any,
 };
-const RadioOption = (props: Props) => {
+const CheckboxOption = (props: Props) => {
   const {
-    label, value, isDisabled, isChecked, groupName,
+    label, value, isDisabled, isChecked, groupName, inputRef,
   } = props;
   const itemId = `${groupName}-${value}-${label.split(' ').join('')}`;
 
@@ -27,6 +28,7 @@ const RadioOption = (props: Props) => {
           value={value}
           defaultChecked={isChecked}
           disabled={isDisabled}
+          ref={inputRef}
         />
         <Text size={14}>
           {label}
@@ -36,9 +38,10 @@ const RadioOption = (props: Props) => {
   );
 };
 
-RadioOption.defaultProps = {
+CheckboxOption.defaultProps = {
   isDisabled: false,
   isChecked: false,
+  inputRef: null,
 };
 
-export default RadioOption;
+export default CheckboxOption;

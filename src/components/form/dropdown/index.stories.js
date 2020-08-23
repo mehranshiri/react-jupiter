@@ -35,6 +35,7 @@ storiesOf('Form/Dropdown', module)
       handleChange={action('triger what you want to do in onBlur function')}
       isDisabled={boolean('disabled(default : false)', false)}
       label={text('optional label', 'محل برگزاری رویداد')}
+      errorMessage={text('optional error msg', 'ارور زیبا')}
     >
       <SelectOption value="20" label="کرج" />
       <SelectOption value="30" label="تهران" />

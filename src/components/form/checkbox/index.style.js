@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Fieldset = styled.fieldset`
   border: none;
+  padding: 0;
+  margin: 0;
 `;
 
 export const CheckboxWrapper = styled.div`
@@ -44,7 +46,7 @@ export const Input = styled.input`
     display: block;
 
     height: 8px;
-    width: 3px;
+    width: 5px;
     position: absolute;
     right: 5px;
     top: 2px;

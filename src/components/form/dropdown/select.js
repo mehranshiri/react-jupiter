@@ -1,8 +1,9 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Text } from '../../typography';
-import { StyledSelect, SelectButton } from './index.style';
 import theme from '../theme';
+import { Text } from '../../typography';
+import ErrorMsg from '../errorMsg';
+import { StyledSelect, SelectButton } from './index.style';
 
 type Props = {
   htmlElementName?: string,
@@ -12,10 +13,13 @@ type Props = {
   placeholder?: string,
   isDisabled?: boolean,
   children: * => Node,
+  errorMessage?: string,
+  inputRef?: any,
 }
 const Select = (props: Props) => {
   const {
-    htmlElementName, defaultValue, handleChange, placeholder, isDisabled, children, label,
+    htmlElementName, defaultValue, handleChange, placeholder, isDisabled,
+    children, label, inputRef, errorMessage,
   } = props;
 
   const renderSelect = () => (
@@ -27,6 +31,7 @@ const Select = (props: Props) => {
           name={htmlElementName}
           defaultValue={placeholder || defaultValue}
           data-test="select"
+          ref={inputRef}
         >
           {placeholder && (
             <option disabled>{placeholder}</option>
@@ -34,6 +39,7 @@ const Select = (props: Props) => {
           {children}
         </StyledSelect>
       </SelectButton>
+      <ErrorMsg errorMessage={errorMessage} />
     </ThemeProvider>
   );
 
@@ -57,6 +63,8 @@ Select.defaultProps = {
   label: '',
   isDisabled: false,
   handleChange: () => { },
+  errorMessage: '',
+  inputRef: null,
 };
 
 export default Select;
