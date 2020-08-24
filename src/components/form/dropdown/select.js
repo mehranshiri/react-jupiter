@@ -22,12 +22,16 @@ const Select = (props: Props) => {
     children, label, inputRef, errorMessage,
   } = props;
 
+  function onChange(e) {
+    handleChange(e.target.value);
+  }
+
   const renderSelect = () => (
     <ThemeProvider theme={theme}>
       <SelectButton disabled={isDisabled}>
         <StyledSelect
           disabled={isDisabled}
-          onBlur={handleChange}
+          onChange={onChange}
           name={htmlElementName}
           defaultValue={placeholder || defaultValue}
           data-test="select"
