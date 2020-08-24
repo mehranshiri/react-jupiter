@@ -18,7 +18,7 @@ describe('ProductMenu', () => {
   it('render menu Item', () => {
     const component = shallow(
       <Menu>
-        <MenuItem />
+        <MenuItem label="hi" />
       </Menu>,
     );
     const wrapper = findByTestAtrr(component, 'product-menu-item');
