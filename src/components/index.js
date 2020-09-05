@@ -17,6 +17,7 @@ import ProductOwner from './product-owner';
 import FileItem from './file-item';
 import Modal from './modal';
 import ProductMenu from './product-menu';
+import Table from './table';
 import defaultTheme from './themes';
 
 const { colors } = defaultTheme;
@@ -40,6 +41,7 @@ export { default as ProductOwner } from './product-owner';
 export { default as FileItem } from './file-item';
 export { default as Modal } from './modal';
 export { default as ProductMenu } from './product-menu';
+export { default as Table } from './table';
 export { colors as jupiterColors };
 
 export default {
@@ -62,4 +64,5 @@ export default {
   FileItem,
   Modal,
   ProductMenu,
+  Table,
 };
