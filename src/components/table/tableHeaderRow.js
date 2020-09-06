@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from '../typography';
 
 type Props = {
   columns: [
@@ -15,7 +16,9 @@ function TableHeaderRow({ columns }: Props) {
     <tr>
       {columns.map((headerItem) => (
         <th key={headerItem.key}>
-          {headerItem.label}
+          <Text size={16} bold>
+            {headerItem.label}
+          </Text>
         </th>
       ))}
     </tr>

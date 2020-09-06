@@ -68,14 +68,6 @@ const data03 = [
     tirdTitle: 'مدیر بازرگانی',
     wrongTitle: '۳۰ ساله',
     the5th: (<Icon name="watch-later" size="lg" />),
-    callToActions: [
-      {
-        props: {
-          renderLink: (element) => <a href="http://evand.com">{element}</a>,
-        },
-        text: 'احمدی',
-      },
-    ],
   },
   {
     key: 'the2ndRow',
@@ -91,6 +83,18 @@ const data03 = [
       {
         props: { renderLink: (element) => <a href="http://yahoo.com">{element}</a> },
         text: 'دومی',
+      },
+      {
+        props: { renderLink: (element) => <a href="http://evand.com">{element}</a> },
+        text: 'سومین مورد',
+      },
+      {
+        props: { renderLink: (element) => <a href="http://evand.com">{element}</a> },
+        text: ' بعدی',
+      },
+      {
+        props: { renderLink: (element) => <a href="http://evand.com">{element}</a> },
+        text: 'بعدیش مورد',
       },
     ],
   },

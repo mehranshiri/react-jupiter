@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../button';
+import { ShowMoreButton, ActionCellContainer, ActionsContainer } from './index.style';
 
 type Props = {
   callToActions: [{
@@ -17,46 +18,48 @@ function ActionCell({ callToActions }: Props) {
 
   return (
     <td>
-      <Button
-        {...callToActions[0].props}
-        htmlType="button"
-        mainColor="blue"
-        styleType="secondary"
-        wide
-      >
-        {callToActions[0].text}
-      </Button>
+      <ActionCellContainer>
+        <Button
+          {...callToActions[0].props}
+          htmlType="button"
+          mainColor="blue"
+          styleType="secondary"
+          wide
+        >
+          {callToActions[0].text}
+        </Button>
 
-      {callToActions.length > 1 && (
-        <>
-          <button type="button" onClick={toggleShowMore}>
-            ...
-          </button>
+        {callToActions.length > 1 && (
+          <>
+            <ShowMoreButton type="button" onClick={toggleShowMore}>
+              ...
+            </ShowMoreButton>
 
-          {isShowingMore && (
-            <>
-              {callToActions.map((item, index) => {
-                if (index === 0) {
-                  return null;
-                }
-                return (
-                  <Button
-                    key={item.text}
-                    {...item.props}
-                    htmlType="button"
-                    mainColor="blue"
-                    styleType="tertiary"
-                    wide
-                  >
-                    {item.text}
-                  </Button>
-                );
-              })}
-            </>
-          )}
+            {isShowingMore && (
+              <ActionsContainer>
+                {callToActions.map((item, index) => {
+                  if (index === 0) {
+                    return null;
+                  }
+                  return (
+                    <Button
+                      key={item.text}
+                      {...item.props}
+                      htmlType="button"
+                      mainColor="blue"
+                      styleType="tertiary"
+                      wide
+                    >
+                      {item.text}
+                    </Button>
+                  );
+                })}
+              </ActionsContainer>
+            )}
 
-        </>
-      )}
+          </>
+        )}
+      </ActionCellContainer>
     </td>
   );
 }

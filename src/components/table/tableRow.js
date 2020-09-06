@@ -1,5 +1,7 @@
 import React from 'react';
 import ActionCell from './actionCell';
+import { Text } from '../typography';
+import { Padding } from '../spacing';
 
 type Props = {
   columns: [
@@ -20,19 +22,32 @@ type Props = {
 
 function TableRow({ rowItem, columns }: Props) {
   return (
-    <tr key={rowItem.key}>
+    <tr>
       {columns.map((columnItem) => {
         if (columnItem.dataType === 'action') {
+          if (rowItem.callToActions && rowItem.callToActions.length > 0) {
+            return (
+              <ActionCell
+                key={`${rowItem.key}-${columnItem.key}`}
+                callToActions={rowItem.callToActions}
+              />
+            );
+          }
           return (
-            <ActionCell
-              key={`${rowItem.key}-${columnItem.key}`}
-              callToActions={rowItem.callToActions}
-            />
+            <td key={`${rowItem.key}-${columnItem.key}`}>
+              <Padding top={3}>
+                <Text size={14}>
+                  -
+                </Text>
+              </Padding>
+            </td>
           );
         }
         return (
           <td key={`${rowItem.key}-${columnItem.key}`}>
-            {rowItem[columnItem.key] || '-'}
+            <Text size={14}>
+              {rowItem[columnItem.key] || '-'}
+            </Text>
           </td>
         );
       })}
