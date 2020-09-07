@@ -75,6 +75,7 @@ const data03 = [
     tirdTitle: 'آبدارجی',
     the5th: (<a href="http://evand.com">لینک تستی</a>),
     forthTitle: '۵۵ ساله',
+    status: 'yellow',
     callToActions: [
       {
         text: 'نایینی',
@@ -99,6 +100,7 @@ const data03 = [
     ],
   },
   {
+    status: 'green',
     key: 'the3hRow',
     firstTitle: 'زهرا',
     tirdTitle: 'مدیر فروش',

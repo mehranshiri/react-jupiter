@@ -2,6 +2,7 @@ import React from 'react';
 import ActionCell from './actionCell';
 import { Text } from '../typography';
 import { Padding } from '../spacing';
+import { Tr } from './index.style';
 
 type Props = {
   columns: [
@@ -13,6 +14,7 @@ type Props = {
   ],
   rowItem: {
     key: string,
+    status?: 'red' | 'green' | 'yellow',
     callToActions?: [{
       props?: {},
       text?: string,
@@ -22,7 +24,7 @@ type Props = {
 
 function TableRow({ rowItem, columns }: Props) {
   return (
-    <tr>
+    <Tr status={rowItem.status || null}>
       {columns.map((columnItem) => {
         if (columnItem.dataType === 'action') {
           if (rowItem.callToActions && rowItem.callToActions.length > 0) {
@@ -51,7 +53,7 @@ function TableRow({ rowItem, columns }: Props) {
           </td>
         );
       })}
-    </tr>
+    </Tr>
   );
 }
 

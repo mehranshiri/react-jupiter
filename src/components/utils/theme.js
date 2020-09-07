@@ -1,4 +1,6 @@
-export const getColorFromName = (theme, color) => {
+import defaultTheme from '../themes';
+
+export const getColorFromName = (theme = defaultTheme, color) => {
   switch (color) {
     case 'red':
       return theme.colors.red600;

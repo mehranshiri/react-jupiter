@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getColorFromName } from '../utils/theme';
 
 export const TableContainer = styled.div`
   overflow-x: auto;
@@ -85,4 +86,20 @@ export const ActionsContainer = styled.div`
   background: white;
   position: absolute;
   z-index: 1;
+`;
+
+export const Tr = styled.tr`
+  ${({ status }) => {
+    if (status) {
+      return `
+        border-right: 4px solid ${getColorFromName(undefined, status)};
+        transition: border 0.25s;
+
+        &:hover {
+          border-right-width: 8px;
+        }
+      `;
+    }
+    return '';
+  }};
 `;
