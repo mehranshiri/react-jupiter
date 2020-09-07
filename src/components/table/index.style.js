@@ -43,8 +43,9 @@ export const TableContainer = styled.div`
         td:nth-child(${actionColumnNumber}) {
           position: absolute;
           left: 10px;
-          margin: -11px;
+          margin: -4px;
           padding-right: 16px;
+          width: 130px;
         }
         th:nth-child(${actionColumnNumber}) {
           background: white;
@@ -52,6 +53,7 @@ export const TableContainer = styled.div`
           left: 10px;
           margin: 0 -11px;
           padding-right: 16px;
+          width: 130px;
         }
       `;
     }
@@ -70,10 +72,10 @@ export const ShowMoreButton = styled.button`
   display: inline-flex;
   align-items: flex-start;
   transform: rotate(90deg);
-  height: 40px;
-  width: 40px;
+  height: 36px;
+  width: 36px;
   cursor: pointer;
-  padding-right: 3px;
+  padding-right: 5px;
 `;
 
 export const ActionCellContainer = styled.div`

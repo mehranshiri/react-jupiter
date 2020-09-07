@@ -27,7 +27,7 @@ describe('Table Tests', () => {
     const component = setupMount();
     const Table = findByTestAtrr(component, 'jupiter-table');
 
-    expect(Table.length).toBe(1);
+    expect(Table.length).not.toBe(0);
     expect(Table.find('thead tr').childAt(0).text()).toBe('عنوان اول');
     expect(Table.find('tbody tr').childAt(0).text()).toBe('سارا');
   });

@@ -24,6 +24,7 @@ function ActionCell({ callToActions }: Props) {
           htmlType="button"
           mainColor="blue"
           styleType="secondary"
+          size="sm"
           wide
         >
           {callToActions[0].text}
@@ -48,6 +49,7 @@ function ActionCell({ callToActions }: Props) {
                       htmlType="button"
                       mainColor="blue"
                       styleType="tertiary"
+                      size="sm"
                       wide
                     >
                       {item.text}
