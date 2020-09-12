@@ -22,6 +22,7 @@ const renderString = (props) => {
     marked,
     label,
     isDisplayBlock,
+    isCutWithEllipsis,
     ...rest
   } = props;
 
@@ -92,6 +93,7 @@ const renderString = (props) => {
           bold={bold}
           data-test="span"
           isDisplayBlock={isDisplayBlock}
+          isCutWithEllipsis={isCutWithEllipsis}
           {...rest}
         >
           {children}
@@ -118,6 +120,7 @@ renderString.propTypes = {
   marked: PropTypes.bool,
   label: PropTypes.bool,
   isDisplayBlock: PropTypes.bool,
+  isCutWithEllipsis: PropTypes.bool,
 };
 
 renderString.defaultProps = {
@@ -133,6 +136,7 @@ renderString.defaultProps = {
   marked: false,
   label: false,
   isDisplayBlock: false,
+  isCutWithEllipsis: false,
 };
 
 const Text = (props) => (
@@ -160,6 +164,7 @@ Text.prototype = {
   marked: PropTypes.bool,
   label: PropTypes.bool,
   isDisplayBlock: PropTypes.bool,
+  isCutWithEllipsis: PropTypes.bool,
 };
 
 Text.defaultProps = renderString.defaultProps;

@@ -8,10 +8,8 @@ exports[`Button(snapshot testing) Button sizes 1`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs jbxVbw"
-    color="white"
+    class="sc-htoDjs hoSuqg"
     data-test="span"
-    size="10"
   >
     my small button
   </span>
@@ -26,10 +24,8 @@ exports[`Button(snapshot testing) Button sizes 2`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs cemEaf"
-    color="white"
+    class="sc-htoDjs hCbsRl"
     data-test="span"
-    size="14"
   >
     my default size(md) button
   </span>
@@ -44,10 +40,8 @@ exports[`Button(snapshot testing) Button sizes 3`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs doVAst"
-    color="white"
+    class="sc-htoDjs edVoHP"
     data-test="span"
-    size="20"
   >
     my large button
   </span>
@@ -62,10 +56,8 @@ exports[`Button(snapshot testing) Button-default 1`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs cemEaf"
-    color="white"
+    class="sc-htoDjs hCbsRl"
     data-test="span"
-    size="14"
   >
     my simple button
   </span>
@@ -80,10 +72,8 @@ exports[`Button(snapshot testing) blue Buttons 1`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs cemEaf"
-    color="white"
+    class="sc-htoDjs hCbsRl"
     data-test="span"
-    size="14"
   >
     my primary button
   </span>
@@ -98,10 +88,8 @@ exports[`Button(snapshot testing) blue Buttons 2`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs ghkjrx"
-    color="blue"
+    class="sc-htoDjs fpPlvV"
     data-test="span"
-    size="14"
   >
     my secoundrry button
   </span>
@@ -116,10 +104,8 @@ exports[`Button(snapshot testing) blue Buttons 3`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs deFOOE"
-    color="darkBlue"
+    class="sc-htoDjs hwgZet"
     data-test="span"
-    size="14"
   >
     my tertiary button
   </span>
@@ -134,10 +120,8 @@ exports[`Button(snapshot testing) darkblue Buttons(default) 1`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs cemEaf"
-    color="white"
+    class="sc-htoDjs hCbsRl"
     data-test="span"
-    size="14"
   >
     my primary button
   </span>
@@ -152,10 +136,8 @@ exports[`Button(snapshot testing) darkblue Buttons(default) 2`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs lmWkLj"
-    color="darkblue"
+    class="sc-htoDjs enMAUV"
     data-test="span"
-    size="14"
   >
     my secoundrry button
   </span>
@@ -170,10 +152,8 @@ exports[`Button(snapshot testing) darkblue Buttons(default) 3`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs deFOOE"
-    color="darkBlue"
+    class="sc-htoDjs hwgZet"
     data-test="span"
-    size="14"
   >
     my tertiary button
   </span>
@@ -188,10 +168,8 @@ exports[`Button(snapshot testing) darkblue Buttons(default) 4`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs cemEaf"
-    color="white"
+    class="sc-htoDjs hCbsRl"
     data-test="span"
-    size="14"
   >
     my primary button
   </span>
@@ -206,10 +184,8 @@ exports[`Button(snapshot testing) darkblue Buttons(default) 5`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs deFOOE"
-    color="darkBlue"
+    class="sc-htoDjs hwgZet"
     data-test="span"
-    size="14"
   >
     my secoundrry button
   </span>
@@ -224,10 +200,8 @@ exports[`Button(snapshot testing) darkblue Buttons(default) 6`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs deFOOE"
-    color="darkBlue"
+    class="sc-htoDjs hwgZet"
     data-test="span"
-    size="14"
   >
     my tertiary button
   </span>
@@ -243,15 +217,12 @@ exports[`Button(snapshot testing) disabled Buttons 1`] = `
   type="submit"
 >
   <i
-    class="sc-VigVT kHRZAv new-icon-watch-later sc-fjdhpX fIxiFv"
-    color="white"
+    class="sc-VigVT kHRZAv jupiter-icon new-icon-watch-later sc-fjdhpX fIxiFv"
     data-test="icon"
   />
   <span
-    class="sc-htoDjs cemEaf"
-    color="white"
+    class="sc-htoDjs hCbsRl"
     data-test="span"
-    size="14"
   >
     my blue iconic disabled primary button
   </span>
@@ -267,10 +238,8 @@ exports[`Button(snapshot testing) disabled Buttons 2`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs dJtNTe"
-    color="red"
+    class="sc-htoDjs jNBVeN"
     data-test="span"
-    size="14"
   >
     my red disabled secoundrry button
   </span>
@@ -286,10 +255,8 @@ exports[`Button(snapshot testing) disabled Buttons 3`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs deFOOE"
-    color="darkBlue"
+    class="sc-htoDjs hwgZet"
     data-test="span"
-    size="14"
   >
     my disabled tertiary button
   </span>
@@ -305,10 +272,8 @@ exports[`Button(snapshot testing) disabled Buttons 4`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs cemEaf"
-    color="white"
+    class="sc-htoDjs hCbsRl"
     data-test="span"
-    size="14"
   >
     my disabled primary linked-button
   </span>
@@ -323,10 +288,8 @@ exports[`Button(snapshot testing) full-width button 1`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs cemEaf"
-    color="white"
+    class="sc-htoDjs hCbsRl"
     data-test="span"
-    size="14"
   >
     my wide button
   </span>
@@ -341,10 +304,8 @@ exports[`Button(snapshot testing) green Buttons 1`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs cemEaf"
-    color="white"
+    class="sc-htoDjs hCbsRl"
     data-test="span"
-    size="14"
   >
     my primary button
   </span>
@@ -359,10 +320,8 @@ exports[`Button(snapshot testing) green Buttons 2`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs fcTmNH"
-    color="green"
+    class="sc-htoDjs eOHBQj"
     data-test="span"
-    size="14"
   >
     my secoundrry button
   </span>
@@ -377,10 +336,8 @@ exports[`Button(snapshot testing) green Buttons 3`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs deFOOE"
-    color="darkBlue"
+    class="sc-htoDjs hwgZet"
     data-test="span"
-    size="14"
   >
     my tertiary button
   </span>
@@ -400,10 +357,8 @@ exports[`Button(snapshot testing) linked Buttons 1`] = `
     type="submit"
   >
     <span
-      class="sc-htoDjs cemEaf"
-      color="white"
+      class="sc-htoDjs hCbsRl"
       data-test="span"
-      size="14"
     >
       my simplest linked button
     </span>
@@ -424,15 +379,12 @@ exports[`Button(snapshot testing) linked Buttons 2`] = `
     type="submit"
   >
     <i
-      class="sc-VigVT lppHbR new-icon-watch-later sc-fjdhpX fIxiFv"
-      color="darkBlue"
+      class="sc-VigVT lppHbR jupiter-icon new-icon-watch-later sc-fjdhpX fIxiFv"
       data-test="icon"
     />
     <span
-      class="sc-htoDjs deFOOE"
-      color="darkBlue"
+      class="sc-htoDjs hwgZet"
       data-test="span"
-      size="14"
     >
       my secoundrry external-linked button
     </span>
@@ -448,10 +400,8 @@ exports[`Button(snapshot testing) red Buttons 1`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs cemEaf"
-    color="white"
+    class="sc-htoDjs hCbsRl"
     data-test="span"
-    size="14"
   >
     my primary button
   </span>
@@ -466,10 +416,8 @@ exports[`Button(snapshot testing) red Buttons 2`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs dJtNTe"
-    color="red"
+    class="sc-htoDjs jNBVeN"
     data-test="span"
-    size="14"
   >
     my secoundrry button
   </span>
@@ -484,10 +432,8 @@ exports[`Button(snapshot testing) red Buttons 3`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs deFOOE"
-    color="darkBlue"
+    class="sc-htoDjs hwgZet"
     data-test="span"
-    size="14"
   >
     my tertiary button
   </span>
@@ -502,10 +448,8 @@ exports[`Button(snapshot testing) yellow Buttons 1`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs cemEaf"
-    color="white"
+    class="sc-htoDjs hCbsRl"
     data-test="span"
-    size="14"
   >
     my primary button
   </span>
@@ -520,10 +464,8 @@ exports[`Button(snapshot testing) yellow Buttons 2`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs ijahRT"
-    color="yellow"
+    class="sc-htoDjs cBpZXc"
     data-test="span"
-    size="14"
   >
     my secoundrry button
   </span>
@@ -538,10 +480,8 @@ exports[`Button(snapshot testing) yellow Buttons 3`] = `
   type="submit"
 >
   <span
-    class="sc-htoDjs deFOOE"
-    color="darkBlue"
+    class="sc-htoDjs hwgZet"
     data-test="span"
-    size="14"
   >
     my tertiary button
   </span>

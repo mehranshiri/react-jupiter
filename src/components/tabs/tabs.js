@@ -1,5 +1,9 @@
 import React, { type Node, useState } from 'react';
-import Button from '../button';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from '../globalStyle';
+import { Text } from '../typography';
+import { TabHeader, StyledButton } from './index.style';
+import theme from './theme';
 
 type Props = {
   children: * => Node,
@@ -24,30 +28,33 @@ function Tabs({ children }: Props) {
   }
 
   return (
-    <div data-test="tabs-container">
-      <>
-        {tabPanels.map((tabPanelData) => {
-          const { props: { label, tabKey } } = tabPanelData;
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <div data-test="tabs-container">
+        <TabHeader>
+          {tabPanels.map((tabPanelData) => {
+            const { props: { label, tabKey } } = tabPanelData;
 
-          return (
-            <Button
-              data-access={tabKey}
-              key={tabKey}
-              data-test="tab-label"
-              htmlType="button"
-              mainColor="blue"
-              styleType="secondary"
-              size="sm"
-              onClick={handleClick}
-            >
-              {label || '-'}
-            </Button>
-          );
-        })}
-      </>
+            return (
+              <StyledButton
+                data-access={tabKey}
+                className={`${activeTabKey === tabKey ? 'active' : ''}`}
+                key={tabKey}
+                data-test="tab-label"
+                type="button"
+                onClick={handleClick}
+              >
+                <Text isCutWithEllipsis size={12}>
+                  {label || '-'}
+                </Text>
+              </StyledButton>
+            );
+          })}
+        </TabHeader>
 
-      {React.cloneElement(selectedTabPanel)}
-    </div>
+        {React.cloneElement(selectedTabPanel)}
+      </div>
+    </ThemeProvider>
   );
 }
 

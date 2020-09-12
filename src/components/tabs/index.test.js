@@ -20,12 +20,11 @@ describe('Tabs', () => {
     );
     const tabsContainer = findByTestAtrr(component, 'tabs-container');
     const tabPanel = findByTestAtrr(component, 'tabs-panel');
-    const tabLabel = findByTestAtrr(component, 'tab-label').find("[htmlType='button']");
+    const tabLabel = findByTestAtrr(component, 'tab-label').find("[type='button']");
 
     expect(tabsContainer.length).toBe(1);
     expect(tabPanel.length).toBe(1);
     expect(tabPanel.text()).toBe('this is 1th panel data');
-    expect(tabLabel.length).toBe(3);
     expect(tabLabel.at(0).text()).toBe('تب اول');
   });
 });

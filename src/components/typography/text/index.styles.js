@@ -43,6 +43,17 @@ export const String = styled.span`
     : ''
   )}
   ${({ isDisplayBlock }) => (isDisplayBlock ? 'display: block;' : '')}
+  ${({ isCutWithEllipsis }) => {
+    if (isCutWithEllipsis) {
+      return `
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block;
+        `;
+    }
+    return '';
+  }}
 `;
 
 export const SubScript = styled.sub`

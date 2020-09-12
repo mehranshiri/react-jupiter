@@ -16,6 +16,9 @@ storiesOf('Tabs', module)
       <TabPanel label="تب سوم طولانی است" tabKey="thirsdTab">
         this is 3th panel data
       </TabPanel>
+      <TabPanel label="تب بعدی خیلی خیلی خیلی خیلی طولانی است" tabKey="the4thTab">
+        this is ۴th panel data
+      </TabPanel>
     </Tabs>
   ))
   .addDecorator(withInfo);
