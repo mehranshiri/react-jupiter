@@ -17,7 +17,7 @@ type Props = {
     status?: 'red' | 'green' | 'yellow',
     callToActions?: [{
       props?: {},
-      text?: string,
+      text: string,
     }]
   },
 };

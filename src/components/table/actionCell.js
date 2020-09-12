@@ -5,7 +5,7 @@ import { ShowMoreButton, ActionCellContainer, ActionsContainer } from './index.s
 type Props = {
   callToActions: [{
     props?: {},
-    text?: string,
+    text: string,
   }]
 };
 

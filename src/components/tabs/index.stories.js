@@ -14,7 +14,7 @@ storiesOf('Tabs', module)
   .add('tabs example', () => (
     <Tabs
       defaultTab={select('optional default active tap (if dont enter it, it would be the first one by default)', ['firstTab', 'secTab', 'thirsdTab', 'the4thTab'])}
-      onChange={action('default onChange function trigers what you want to do in onChange tab (it has new tabKey as input argument)')}
+      onChange={action('optional onChange function, triggers what you want to do in onChange tab (it has new tabKey as input argument)')}
     >
       <TabPanel
         label={text('required panel tab label', 'تب اول')}
