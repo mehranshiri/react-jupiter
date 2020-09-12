@@ -1,4 +1,4 @@
-import React, { type Node, useState } from 'react';
+import React, { type Node, useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../globalStyle';
 import { Text } from '../typography';
@@ -7,12 +7,19 @@ import theme from './theme';
 
 type Props = {
   children: * => Node,
+  defaultTab?: string,
+  onChange?: () => void,
 };
 
-function Tabs({ children }: Props) {
+function Tabs(props: Props) {
+  const { children, defaultTab, onChange } = props;
   const tabPanels = React.Children.toArray(children);
-  const [activeTabKey, setActiveTabKey] = useState(tabPanels[0].props.tabKey);
+  const [activeTabKey, setActiveTabKey] = useState(defaultTab || tabPanels[0].props.tabKey);
   const selectedTabPanel = tabPanels.find((item) => item.props.tabKey === activeTabKey);
+
+  useEffect(() => {
+    onChange(activeTabKey);
+  }, [activeTabKey, onChange]);
 
   function handleClick(e) {
     let selectedTabKey;
@@ -57,5 +64,10 @@ function Tabs({ children }: Props) {
     </ThemeProvider>
   );
 }
+
+Tabs.defaultProps = {
+  defaultTab: '',
+  onChange: () => {},
+};
 
 export default Tabs;
