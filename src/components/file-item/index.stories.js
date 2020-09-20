@@ -17,7 +17,7 @@ storiesOf('FileItem', module)
       description={text('description text(optional)', 'متن توضیحات')}
       price={text('*price', '۶۰۰۰ تومن')}
       fileSize={text('*fileSize', '۵ مگابایت')}
-      onClick={action('triger what you want to do in onClick function')}
+      onClick={action('trigger what you want to do in onClick function')}
     />
   ))
   .addDecorator(withInfo)

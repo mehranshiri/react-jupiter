@@ -26,8 +26,8 @@ storiesOf('Modal', module)
       isOpen
       hasCloseButton={boolean('optional hasCloseButton', true)}
       disabledClose={boolean('optional disabledClose', false)}
-      onRequestClose={action('triger what you want to do in onRequestClose function')}
-      onAfterOpen={action('triger what you want to do in onAfterOpen function')}
+      onRequestClose={action('trigger what you want to do in onRequestClose function')}
+      onAfterOpen={action('trigger what you want to do in onAfterOpen function')}
     >
       <h1>
         سلام

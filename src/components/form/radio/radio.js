@@ -11,7 +11,7 @@ type Props = {
   handleChange?: () => void,
   defaultCheckedValue?: string,
   isDisabled?: boolean,
-  type?: 'horizental' | 'vertical',
+  type?: 'horizontal' | 'vertical',
   errorMessage?: string,
 };
 
@@ -54,7 +54,7 @@ Radio.defaultProps = {
   handleChange: () => { },
   defaultCheckedValue: '',
   isDisabled: false,
-  type: 'horizental',
+  type: 'horizontal',
   errorMessage: '',
 };
 export default Radio;

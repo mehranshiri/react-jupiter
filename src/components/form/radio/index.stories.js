@@ -24,9 +24,9 @@ storiesOf('Form/Radio', module)
       groupName={text('optional groupName(but highly recommended to set manually)', 'degree')}
       label={text('optional label', 'آخرین مدرک تحصیلی خود را انتخاب کنید')}
       defaultCheckedValue="300"
-      handleChange={action('triger what you want to do in onChange function')}
+      handleChange={action('trigger what you want to do in onChange function')}
       isDisabled={boolean('optional disabled all', false)}
-      type={select('optional type', ['horizental', 'vertical'])}
+      type={select('optional type', ['horizontal', 'vertical'])}
       errorMessage={text('optional error msg', 'ارور زیبا')}
     >
       <RadioOption value="100" label="زیر دیپلم" />

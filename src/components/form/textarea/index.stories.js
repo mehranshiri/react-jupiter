@@ -18,12 +18,12 @@ storiesOf('Form/Textarea', module)
     <Textarea
       label={text('optional label', 'توضیجات')}
       htmlElementName={text('optional html-element-name', 'html-element-name')}
-      initialVal={text('optional initialVal', 'توضیحات قبلی')}
+      defaultValue={text('optional defaultValue', 'توضیحات قبلی')}
       placeholder={text('optional placeholder', 'این پلیس هولدر است')}
       minHeight={text('optional minHeight (it should be a number)', '120')}
       isDisabled={boolean('optional disabled all', false)}
       resize={select('optional resize', ['none', 'vertical', 'horizontal'])}
-      handleChange={action('triger what you want to do in onChange function')}
+      handleChange={action('trigger what you want to do in onChange function')}
       errorMessage={text('optional error msg', 'ارور زیبا')}
     />
   ))

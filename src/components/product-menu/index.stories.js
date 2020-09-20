@@ -14,7 +14,7 @@ storiesOf('ProductMenu', module)
     <Menu>
       <MenuItem
         label={text('first item label(required)', 'درباره رویداد')}
-        handleClick={action('triger what you want to do in onClick function')}
+        handleClick={action('trigger what you want to do in onClick function')}
       />
       <MenuItem label="سخنرانان" />
       <MenuItem label="زمان بندی رویداد" />
@@ -27,7 +27,7 @@ storiesOf('ProductMenu', module)
     <Menu>
       <MenuItem
         label={text('first item label(required)', 'درباره رویداد')}
-        handleClick={action('triger what you want to do in onClick function')}
+        handleClick={action('trigger what you want to do in onClick function')}
       />
       <MenuItem label="سخنرانان" />
       <MenuItem label="زمان بندی رویداد" />

@@ -10,7 +10,7 @@ type Props = {
   label?: string,
   handleChange?: () => void,
   isDisabled?: boolean,
-  type?: 'horizental' | 'vertical',
+  type?: 'horizontal' | 'vertical',
   errorMessage?: string,
 };
 
@@ -51,7 +51,7 @@ Checkbox.defaultProps = {
   label: '',
   handleChange: () => { },
   isDisabled: false,
-  type: 'horizental',
+  type: 'horizontal',
   errorMessage: '',
 };
 export default Checkbox;

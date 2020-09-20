@@ -23,9 +23,9 @@ storiesOf('Form/Checkbox', module)
     <Checkbox
       groupName={text('optional groupName(but highly recommended to set manually)', 'degree')}
       label={text('optional label', 'در کدام موضوع ها توانایی دارید')}
-      handleChange={action('triger what you want to do in onChange function')}
+      handleChange={action('trigger what you want to do in onChange function')}
       isDisabled={boolean('optional disabled all', false)}
-      type={select('optional type', ['horizental', 'vertical'])}
+      type={select('optional type', ['horizontal', 'vertical'])}
       errorMessage={text('optional error msg', 'ارور زیبا')}
     >
       <CheckboxOption value="100" label="ورزشی" />
@@ -44,7 +44,7 @@ storiesOf('Form/Checkbox', module)
         label={text('label', 'ورزشی')}
         value={text('value', '100')}
         isDisabled={boolean('optional disabled item', false)}
-        isChecked={boolean('optional disabled item', false)}
+        isChecked={boolean('optional checked item', false)}
       />
       <CheckboxOption value="200" label="علمی" />
       <CheckboxOption value="300" label="مذهبی" />

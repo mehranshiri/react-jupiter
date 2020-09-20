@@ -10,7 +10,7 @@ type Props = {
   htmlElementName?: string,
   label?: string,
   isDisabled?: Boolean,
-  initialVal?: string,
+  defaultValue?: string,
   placeholder?: string,
   resize?: 'horizontal' | 'vertical' | 'none',
   minHeight?: number,
@@ -21,7 +21,7 @@ type Props = {
 
 const Textarea = (props: Props) => {
   const {
-    htmlElementName, label, isDisabled, initialVal, placeholder,
+    htmlElementName, label, isDisabled, defaultValue, placeholder,
     resize, minHeight, handleChange, errorMessage, inputRef,
   } = props;
 
@@ -45,7 +45,7 @@ const Textarea = (props: Props) => {
         onChange={handleChange}
         ref={inputRef}
       >
-        {initialVal}
+        {defaultValue}
       </StyledTextarea>
       <ErrorMsg errorMessage={errorMessage} />
     </ThemeProvider>
@@ -53,10 +53,10 @@ const Textarea = (props: Props) => {
 };
 
 Textarea.defaultProps = {
-  htmlElementName: 'textarea',
+  htmlElementName: 'textarea-element',
   label: '',
   isDisabled: false,
-  initialVal: '',
+  defaultValue: '',
   placeholder: '',
   resize: 'none',
   minHeight: 120,
