@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const SelectButton = styled.div`
   position: relative;
 
-  &:before {
+  &:after {
     content: "";
     display: block;
     width: 7px;
@@ -15,10 +15,10 @@ export const SelectButton = styled.div`
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    z-index: 3;
     pointer-events: none;
   }
-  &:after {
+
+  &:before {
     content: "";
     display: block;
     width: 37px;
