@@ -24,6 +24,8 @@ export const ExtraMenuWrapper = style.ol`
   transition: opacity ${({ theme }) => `${theme.animation.time}s ${theme.animation.method}`};
   position: absolute;
   background: ${({ theme }) => theme.bgColor};
+  box-shadow:
+    ${({ theme }) => `0 0 ${theme.shadow.blur}px ${theme.shadow.spread}px rgba(0, 0, 0, ${theme.shadow.opacity});`}
 
   li {
     border-bottom: 1px solid ${({ theme }) => theme.borderColor};
