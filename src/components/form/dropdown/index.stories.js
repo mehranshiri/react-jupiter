@@ -14,12 +14,12 @@ storiesOf('Form/Dropdown', module)
   .add('Minimal Select', () => (
     <Select>
       <SelectOption value="first" label="First Value" />
+      <SelectOption value="sec" label="2nd Value" />
     </Select>
   ))
   .add('Select with placeholder', () => (
     <Select
       htmlElementName={text('optional htmlElementName', 'استان')}
-      defaultValue={text('optional defaultValue(if its not et or set wrong get the first option)', '30')}
       placeholder={text('optional placeholder', '__استان مورد نظر خود را انتخاب کنید__')}
       handleChange={action('trigger what you want to do in onChange function')}
     >

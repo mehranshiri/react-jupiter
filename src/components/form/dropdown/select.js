@@ -33,12 +33,12 @@ const Select = (props: Props) => {
           disabled={isDisabled}
           onChange={onChange}
           name={htmlElementName}
-          defaultValue={placeholder || defaultValue}
+          defaultValue={placeholder ? '' : defaultValue}
           data-test="select"
           ref={inputRef}
         >
           {placeholder && (
-            <option disabled>{placeholder}</option>
+            <option value="" disabled>{placeholder}</option>
           )}
           {children}
         </StyledSelect>
