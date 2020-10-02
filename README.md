@@ -110,6 +110,12 @@ _build version of design system:_
   npm run build:lib
 ```
 
+_deploy updated storybook on [project's github gh-page](https://evandhq.github.io/react-jupiter/) :_
+
+```bash
+  npm run deploy:storybook
+```
+
 ### 🤝 __Contributing__ [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 Read our [contributing guide](https://evand.com) and let's build a better react design system.
