@@ -6,6 +6,7 @@ import { ImgContainer, Loading } from './index.style';
 type Props = {
   src: string,
   errorMessage?: string,
+  inputRef?: any,
   handleCaptchaError?: () => void;
   handleRetryCaptcha: () => void;
 };
@@ -14,6 +15,7 @@ function Captcha(props: Props) {
   const {
     src,
     errorMessage,
+    inputRef,
     handleCaptchaError,
     handleRetryCaptcha,
   } = props;
@@ -36,6 +38,7 @@ function Captcha(props: Props) {
           label="کد تصویری"
           errorMessage={errorMessage}
           type="text"
+          inputRef={inputRef}
         />
       </div>
       <ImgContainer>
@@ -62,7 +65,7 @@ function Captcha(props: Props) {
         size="sm"
         styleType={imageLoadingStatus === 'failedToLoad' ? 'primary' : 'tertiary'}
       >
-        کپچای جدید
+        کد تصویری جدید
       </Button>
     </div>
   );
@@ -71,6 +74,7 @@ function Captcha(props: Props) {
 Captcha.defaultProps = {
   errorMessage: '',
   handleCaptchaError: () => {},
+  inputRef: null,
 };
 
 export default Captcha;
