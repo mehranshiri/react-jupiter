@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import defaultTheme from '../../themes';
 
 export const ImgContainer = styled.div`
   & .hide {
@@ -8,7 +9,7 @@ export const ImgContainer = styled.div`
 
 export const Loading = styled.div`
   height: 20px;
-  background: lightgray;
+  background: ${defaultTheme.colors.gray600};
   animation-name: sparkle;
   animation-duration: 2s;
   animation-iteration-count: infinite;

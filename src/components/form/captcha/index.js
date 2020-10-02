@@ -1,36 +1,49 @@
 import React, { useState } from 'react';
 import TextInput from '../text-input';
+import Button from '../../button';
 import { ImgContainer, Loading } from './index.style';
 
 type Props = {
+  src: string,
   errorMessage?: string,
   handleCaptchaError?: () => void;
-  src: string,
+  handleRetryCaptcha: () => void;
 };
 
 function Captcha(props: Props) {
-  const { errorMessage, handleCaptchaError, src } = props;
-  const [isImgReady, setIsImgReady] = useState(false);
+  const {
+    src,
+    errorMessage,
+    handleCaptchaError,
+    handleRetryCaptcha,
+  } = props;
+  const [imageLoadingStatus, setImageLoadingStatus] = useState('loading');
 
   function hanelImgLoading() {
-    setIsImgReady(true);
+    setImageLoadingStatus('loaded');
   }
   function handleImgError() {
+    setImageLoadingStatus('failedToLoad');
     handleCaptchaError();
   }
+
   return (
     <div data-test="captcha-box">
-      <TextInput
-        data-test="captcha-input"
-        htmlElementName="captcha-input"
-        label="کد تصویری"
-        errorMessage={errorMessage}
-        type="text"
-      />
+      <div>
+        <TextInput
+          data-test="captcha-input"
+          htmlElementName="captcha-input"
+          label="کد تصویری"
+          errorMessage={errorMessage}
+          type="text"
+        />
+      </div>
       <ImgContainer>
-        <Loading className={`${isImgReady ? 'hide' : ''}`} />
+        {imageLoadingStatus !== 'loaded' && (
+          <Loading />
+        )}
         <img
-          className={`${isImgReady ? '' : 'hide'}`}
+          className={`${imageLoadingStatus === 'loaded' ? '' : 'hide'}`}
           src={src}
           alt="captcha-img"
           loading="lazy"
@@ -39,6 +52,18 @@ function Captcha(props: Props) {
           data-test="captcha-img"
         />
       </ImgContainer>
+      <Button
+        data-test="captcha-retry"
+        htmlType="button"
+        icon="restore"
+        isLoading={imageLoadingStatus === 'loading'}
+        onClick={handleRetryCaptcha}
+        mainColor="blue"
+        size="sm"
+        styleType={imageLoadingStatus === 'failedToLoad' ? 'primary' : 'tertiary'}
+      >
+        کپچای جدید
+      </Button>
     </div>
   );
 }
