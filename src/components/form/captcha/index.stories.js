@@ -11,7 +11,7 @@ import {
 import Captcha from './index';
 
 storiesOf('Form/Captcha', module)
-  .add('minimal captcha example', () => (
+  .add('captcha example', () => (
     <Captcha
       errorMessage={text('optional error msg', 'ارور زیبا')}
       src={text('captcha img src', 'https://static.evand.net/captcha/12c178c8006cb0cea5253a83db6a96db.jpg')}

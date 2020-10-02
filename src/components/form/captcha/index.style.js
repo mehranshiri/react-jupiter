@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import defaultTheme from '../../themes';
+import defaultTheme from '../theme';
 
 export const Container = styled.div`
   flex-shrink: 0;
@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const Loading = styled.div`
   height: 32px;
   width: 120px;
-  background: ${defaultTheme.colors.gray600};
+  background: ${defaultTheme.disabled.color};
   animation-name: sparkle;
   animation-duration: 2s;
   animation-iteration-count: infinite;

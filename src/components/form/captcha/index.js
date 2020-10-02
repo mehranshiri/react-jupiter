@@ -15,7 +15,7 @@ type Props = {
   errorMessage?: string,
   inputRef?: any,
   handleCaptchaError?: () => void;
-  handleRetryCaptcha: () => void;
+  handleRetryCaptcha?: () => void;
 };
 
 function Captcha(props: Props) {
@@ -64,20 +64,22 @@ function Captcha(props: Props) {
           data-test="captcha-img"
         />
       </Container>
-      <Container>
-        <Button
-          data-test="captcha-retry"
-          htmlType="button"
-          icon="restore"
-          isLoading={imageLoadingStatus === 'loading'}
-          onClick={handleRetryCaptcha}
-          mainColor="blue"
-          size="sm"
-          styleType={imageLoadingStatus === 'failedToLoad' ? 'primary' : 'tertiary'}
-        >
-          کد تصویری جدید
-        </Button>
-      </Container>
+      {handleRetryCaptcha && (
+        <Container>
+          <Button
+            data-test="captcha-retry"
+            htmlType="button"
+            icon="restore"
+            isLoading={imageLoadingStatus === 'loading'}
+            onClick={handleRetryCaptcha}
+            mainColor="blue"
+            size="sm"
+            styleType={imageLoadingStatus === 'failedToLoad' ? 'primary' : 'tertiary'}
+          >
+            کد تصویری جدید
+          </Button>
+        </Container>
+      )}
     </CaptchaBoxContainer>
   );
 }
@@ -86,6 +88,7 @@ Captcha.defaultProps = {
   errorMessage: '',
   inputRef: null,
   handleCaptchaError: () => {},
+  handleRetryCaptcha: null,
 };
 
 export default Captcha;
