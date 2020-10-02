@@ -1,14 +1,18 @@
 import styled from 'styled-components';
 import defaultTheme from '../../themes';
 
-export const ImgContainer = styled.div`
+export const Container = styled.div`
+  flex-shrink: 0;
+  margin: 6px 6px 0 0;
+
   & .hide {
     display: none;
   }
 `;
 
 export const Loading = styled.div`
-  height: 20px;
+  height: 32px;
+  width: 120px;
   background: ${defaultTheme.colors.gray600};
   animation-name: sparkle;
   animation-duration: 2s;
@@ -21,4 +25,14 @@ export const Loading = styled.div`
       100% {opacity: 0;}
     }
   }
+`;
+
+export const CaptchaBoxContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+`;
+
+export const InputConiatiner = styled.div`
+  flex-grow: 1;
 `;

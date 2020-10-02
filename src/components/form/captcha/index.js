@@ -1,7 +1,14 @@
+// @flow
+
 import React, { useState } from 'react';
 import TextInput from '../text-input';
 import Button from '../../button';
-import { ImgContainer, Loading } from './index.style';
+import {
+  CaptchaBoxContainer,
+  Loading,
+  InputConiatiner,
+  Container,
+} from './index.style';
 
 type Props = {
   src: string,
@@ -30,8 +37,8 @@ function Captcha(props: Props) {
   }
 
   return (
-    <div data-test="captcha-box">
-      <div>
+    <CaptchaBoxContainer data-test="captcha-box">
+      <InputConiatiner>
         <TextInput
           data-test="captcha-input"
           htmlElementName="captcha-input"
@@ -40,13 +47,15 @@ function Captcha(props: Props) {
           type="text"
           inputRef={inputRef}
         />
-      </div>
-      <ImgContainer>
+      </InputConiatiner>
+      <Container>
         {imageLoadingStatus !== 'loaded' && (
           <Loading />
         )}
         <img
           className={`${imageLoadingStatus === 'loaded' ? '' : 'hide'}`}
+          width="120px"
+          height="32px"
           src={src}
           alt="captcha-img"
           loading="lazy"
@@ -54,27 +63,29 @@ function Captcha(props: Props) {
           onError={handleImgError}
           data-test="captcha-img"
         />
-      </ImgContainer>
-      <Button
-        data-test="captcha-retry"
-        htmlType="button"
-        icon="restore"
-        isLoading={imageLoadingStatus === 'loading'}
-        onClick={handleRetryCaptcha}
-        mainColor="blue"
-        size="sm"
-        styleType={imageLoadingStatus === 'failedToLoad' ? 'primary' : 'tertiary'}
-      >
-        کد تصویری جدید
-      </Button>
-    </div>
+      </Container>
+      <Container>
+        <Button
+          data-test="captcha-retry"
+          htmlType="button"
+          icon="restore"
+          isLoading={imageLoadingStatus === 'loading'}
+          onClick={handleRetryCaptcha}
+          mainColor="blue"
+          size="sm"
+          styleType={imageLoadingStatus === 'failedToLoad' ? 'primary' : 'tertiary'}
+        >
+          کد تصویری جدید
+        </Button>
+      </Container>
+    </CaptchaBoxContainer>
   );
 }
 
 Captcha.defaultProps = {
   errorMessage: '',
-  handleCaptchaError: () => {},
   inputRef: null,
+  handleCaptchaError: () => {},
 };
 
 export default Captcha;
