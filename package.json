@@ -61,7 +61,8 @@
     "build:lib": "del-cli ./lib && babel src/components -d lib --presets minify && cp package.lib.json lib/package.json && cp README.md lib/ && cp CHANGELOG.md lib/ && cp LICENSE lib/ && del-cli ./lib/**/*.stories.js && del-cli ./lib/**/*.test.js",
     "version": "auto-changelog -p && git add CHANGELOG.md",
     "storybook": "start-storybook -p 9009 -s public",
-    "build:storybook": "build-storybook -s public"
+    "build:storybook": "build-storybook -s public",
+    "deploy:storybook": "storybook-to-ghpages"
   },
   "husky": {
     "hooks": {
@@ -85,6 +86,7 @@
     "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-flow": "^7.8.3",
+    "@storybook/storybook-deployer": "2.8.6",
     "auto-changelog": "^1.16.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.9.0",
