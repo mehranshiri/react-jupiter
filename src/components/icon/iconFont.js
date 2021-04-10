@@ -610,7 +610,7 @@ const FontStyle = createGlobalStyle`
     content: "\\e9c4";
   }
   .new-icon-whatsapp:before {
-    content: "\ea93";
+    content: "\\ea93";
   }
   .new-icon-telegram:before {
     content: "\\e9c5";

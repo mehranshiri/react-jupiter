@@ -20,7 +20,7 @@
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url('../docs/assets/fonts/icomoon.woff') format("woff");
+  src: url('../docs/assets/fonts/icomoon.ttf') format("woff");
 }
 
 @font-face {
