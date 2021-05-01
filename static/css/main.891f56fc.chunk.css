@@ -1,0 +1,57 @@
+/* add fonts for storybook */
+@font-face {
+  font-family: 'IranSharp';
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url(static/media/iransharp_bold_web.b469f95b.woff2) format("woff2"),
+    url(static/media/iransharp_bold_web.31fd5a3e.woff) format("woff");
+}
+@font-face {
+  font-family: 'IranSharp';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url(static/media/iransharp_regular_web.e57daa7d.woff2) format("woff2"),
+    url(static/media/iransharp_regular_web.72ca59ee.woff) format("woff");
+}
+@font-face {
+  font-family: 'Jupiterico';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(static/media/icomoon.5b0aae43.ttf) format("trueType");
+}
+
+@font-face {
+  font-family: 'JupiterfilesImgs';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(static/media/filesImgs.3d2475d9.woff) format("woff");
+}
+
+body {
+  direction: rtl;
+}
+
+* {
+  outline: none;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+};
+
+/* show-info page should be ltr and show-info button doesnt cover the main component page*/
+.info__overlay {
+  direction: ltr;
+}
+.sb-show-main {
+	margin-top: 35px;
+}
+
+
+/*# sourceMappingURL=main.891f56fc.chunk.css.map*/
