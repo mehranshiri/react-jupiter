@@ -8,7 +8,7 @@ const Image = styled.img`
   height: ${({ theme, size }) => `${theme.size[size]}px`};
   border-radius: ${({ theme }) => `${theme.borderRadius}px`};
   display: block;
-  background-image: url(${defaultImageUrl});
+  // background-image: url(${defaultImageUrl});
   background-size: cover;
 `;
 
