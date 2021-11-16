@@ -9,7 +9,7 @@ const ShowDate = (props) => {
 
   return (
     <Text size={fontSize} color={color} data-test="show-date">
-      {englishNumberToPersianInString(convertToJalaali(date, 'dddd jD jMMMM'))}
+      {englishNumberToPersianInString(convertToJalaali(date, 'dddd jD jMMMM jYYYY ساعت HH:mm'))}
     </Text>
   );
 };
