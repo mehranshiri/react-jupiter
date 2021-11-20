@@ -74,7 +74,7 @@ const EventCard = (props) => {
       maxWidth={270}
       {...rest}
     >
-      {renderEventLink(<VerticalCover data-test="vertical-cover" src={cover || defaultCoverUrl} loading="lazy" />) }
+      {renderEventLink(<VerticalCover data-test="vertical-cover" src={cover || defaultCoverUrl} loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = defaultCoverUrl}} />) }
       <VerticalContentContainer
         data-test="vertical-content"
         background={finished ? finishedClockLabelUrl : null}
