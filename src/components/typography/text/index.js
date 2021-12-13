@@ -137,6 +137,7 @@ renderString.defaultProps = {
   label: false,
   isDisplayBlock: false,
   isCutWithEllipsis: false,
+  textAlign: 'right',
 };
 
 const Text = (props) => (
@@ -165,6 +166,7 @@ Text.prototype = {
   label: PropTypes.bool,
   isDisplayBlock: PropTypes.bool,
   isCutWithEllipsis: PropTypes.bool,
+  textAlign: PropTypes.string,
 };
 
 Text.defaultProps = renderString.defaultProps;

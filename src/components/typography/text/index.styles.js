@@ -54,6 +54,10 @@ export const String = styled.span`
     }
     return '';
   }}
+  ${({ textAlign }) => (textAlign
+    ? `text-align: ${textAlign}`
+    : ''
+  )}
 `;
 
 export const SubScript = styled.sub`
