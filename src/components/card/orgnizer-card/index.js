@@ -64,14 +64,14 @@ const OrgnizerCard = (props: Props) => {
         <Display display="flex" alignItems="center" justifyContent="space-between">
           {allEventsCount && (
             <Display display="block">
-              <Margin left={5}>
+              <Margin left={6}>
                 <TextCenter>
-                  <Text size={12} bold>
-                    کل رویدادها
-                  </Text>
-                  <br />
                   <Text size={16} bold>
                     {allEventsCount}
+                  </Text>
+                  <br />
+                  <Text size={12} bold>
+                    کل رویدادها
                   </Text>
                 </TextCenter>
               </Margin>
@@ -80,14 +80,14 @@ const OrgnizerCard = (props: Props) => {
 
           {activeEventsCount && (
             <Display display="block">
-              <Margin left={5}>
+              <Margin left={6} right={6}>
                 <TextCenter>
-                  <Text size={12} bold>
-                    رویداد فعال
-                  </Text>
-                  <br />
                   <Text size={16} bold>
                     {activeEventsCount}
+                  </Text>
+                  <br />
+                  <Text size={12} bold>
+                    رویداد فعال
                   </Text>
                 </TextCenter>
               </Margin>
@@ -95,15 +95,17 @@ const OrgnizerCard = (props: Props) => {
           )}
           {followersCount && (
             <Display display="block">
-              <TextCenter>
-                <Text size={12} bold>
-                  دنبال کننده
-                </Text>
-                <br />
-                <Text size={16} bold>
-                  {followersCount}
-                </Text>
-              </TextCenter>
+              <Margin left={4} right={6}>
+                <TextCenter>
+                  <Text size={16} bold>
+                    {followersCount}
+                  </Text>
+                  <br />
+                  <Text size={12} bold>
+                    دنبال کننده
+                  </Text>
+                </TextCenter>
+              </Margin>
             </Display>
           )}
         </Display>
@@ -118,11 +120,10 @@ const OrgnizerCard = (props: Props) => {
 
     <Grid>
       <Grid.Unit size={1 / 2}>
-        <Paragraph size={12} color="riverBed" bold>
-            بیش از
-             {recommendedCount}
-              نفر این برگزارکننده را توصیه کرده‌اند.
-        </Paragraph>
+        <Heading level={4} size="md" color="riverBed" bold>
+             {` ${recommendedCount} `}
+               این برگزارکننده را توصیه کرده‌اند.
+        </Heading>
       </Grid.Unit>
       <Grid.Unit size={1 / 2}>
         <Buttons

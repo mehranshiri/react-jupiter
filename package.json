@@ -12,7 +12,8 @@
   ],
   "contributors": [
     "@arashmanteghi",
-    "https://github.com/marzzy"
+    "https://github.com/marzzy",
+    "@mehranshiri"
   ],
   "publishConfig": {
     "access": "public"
