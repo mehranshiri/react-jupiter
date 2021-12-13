@@ -14,6 +14,10 @@ export const LTRContainer = styled.div`
 export const StyledButton = styled(Button)`
   margin: 4px 8px;
   direction: rtl;
+
+  &.follow-button {
+    min-width: 140px;
+  }
 `;
 
 export const BorderedBox = styled.div`
@@ -22,4 +26,8 @@ export const BorderedBox = styled.div`
   margin: 8px 8px 0 8px;
   display: flex;
   justify-content: space-between;
+`;
+
+export const TextCenter = styled.div`
+  text-align: center;
 `;

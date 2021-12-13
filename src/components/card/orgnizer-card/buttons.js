@@ -12,7 +12,6 @@ type Props = {
   isFollowed: boolean,
   onClickFollowMe: () => boolean,
   onClickConnectUs: () => void,
-  followersCount: string,
 }
 
 const Buttons = (props: Props) => {
@@ -20,7 +19,6 @@ const Buttons = (props: Props) => {
     onClickFollowMe,
     onClickConnectUs,
     isFollowed,
-    followersCount,
   } = props;
   const [isFollow, setFollowStatus] = useState(isFollowed);
   const [isLoading, setLoadingStatus] = useState(false);
@@ -39,17 +37,6 @@ const Buttons = (props: Props) => {
       <Responsive option={{ greaterThan: '768px' }}>
         <LTRContainer>
           <StyledButton
-            className="follow-button"
-            styleType="secondary"
-            htmlType="button"
-            size="sm"
-            isLoading={isLoading}
-            onClick={handleClickFollowMe}
-          >
-            {isFollow ? 'دنبال میکنید' : 'دنبال کنید'}
-            {followersCount && ` (${followersCount} دنبال کننده) `}
-          </StyledButton>
-          <StyledButton
             styleType="secondary"
             htmlType="button"
             mainColor="blue"
@@ -58,11 +45,36 @@ const Buttons = (props: Props) => {
           >
             تماس
           </StyledButton>
+          <StyledButton
+            className="follow-button"
+            styleType="primary"
+            htmlType="button"
+            size="sm"
+            isLoading={isLoading}
+            onClick={handleClickFollowMe}
+          >
+            {isFollow ? 'دنبال میکنید' : 'دنبال کنید'}
+          </StyledButton>
         </LTRContainer>
       </Responsive>
 
       <Responsive option={{ lessThan: '768px' }}>
         <Grid>
+          <Grid.Unit size={1 / 2}>
+            <Margin all={4}>
+              <Button
+                styleType="secondary"
+                htmlType="button"
+                mainColor="blue"
+                size="sm"
+                onClick={onClickConnectUs}
+                wide
+              >
+                تماس
+              </Button>
+            </Margin>
+          </Grid.Unit>
+
           <Grid.Unit size={1 / 2}>
             <Margin all={4}>
               <Button
@@ -75,22 +87,6 @@ const Buttons = (props: Props) => {
                 wide
               >
                 {isFollow ? 'دنبال میکنید' : 'دنبال کنید'}
-                {followersCount && ` (${followersCount} دنبال کننده) ` }
-              </Button>
-            </Margin>
-          </Grid.Unit>
-
-          <Grid.Unit size={1 / 2}>
-            <Margin all={4}>
-              <Button
-                styleType="secondary"
-                htmlType="button"
-                mainColor="blue"
-                size="sm"
-                onClick={onClickConnectUs}
-                wide
-              >
-                تماس
               </Button>
             </Margin>
           </Grid.Unit>

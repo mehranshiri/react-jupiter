@@ -1,12 +1,16 @@
+/* eslint-disable react/jsx-closing-tag-location */
+/* eslint-disable react/jsx-indent */
 import React from 'react';
 import Grid from 'styled-components-grid';
 import { Heading, Text, Paragraph } from '../../typography';
-import TitledAvatar from '../../titled-avatar';
+import Avatar from '../../avatar';
 import Buttons from './buttons';
 import {
   Container,
-  BorderedBox,
+  TextCenter,
 } from './index.style';
+import { Margin } from '../../spacing';
+import Display from '../../display';
 
 type Props = {
   name: string,
@@ -16,7 +20,6 @@ type Props = {
   allEventsCount?: string,
   recommendedCount?: string,
   activeEventsCount?: string,
-  renderOrganizerLink: * => Node,
   isFollowed?: boolean,
   onClickFollowMe?: () => boolean,
   onClickConnectUs?: () => void,
@@ -24,7 +27,6 @@ type Props = {
 
 const OrgnizerCard = (props: Props) => {
   const {
-    renderOrganizerLink,
     name,
     description,
     logo,
@@ -39,72 +41,97 @@ const OrgnizerCard = (props: Props) => {
 
   return (
     <Container>
-      <Heading
-        level={3}
-        size="md"
-      >
-        برگزار‌کننده
-      </Heading>
-      <TitledAvatar
-        title={name}
-        avatar={logo}
-        avatarSize="md"
-        titleSize={12}
-        renderAvatarLink={renderOrganizerLink}
-      />
+      <Display display="flex" alignItems="center" justifyContent="space-between">
+        <Display display="flex" alignItems="center">
+          <Avatar
+            alt={name}
+            src={logo}
+            size="md"
+          />
+          <Display display="block">
+            <Margin right={5}>
+              <Text size={12} bold>
+                برگزار‌کننده :
+              </Text>
+              <br />
+              <Heading size="md" level={4}>
+                {name}
+              </Heading>
+            </Margin>
+          </Display>
+        </Display>
+        {(activeEventsCount || allEventsCount) && (
+        <Display display="flex" alignItems="center" justifyContent="space-between">
+          {allEventsCount && (
+            <Display display="block">
+              <Margin left={5}>
+                <TextCenter>
+                  <Text size={12} bold>
+                    کل رویدادها
+                  </Text>
+                  <br />
+                  <Text size={16} bold>
+                    {allEventsCount}
+                  </Text>
+                </TextCenter>
+              </Margin>
+            </Display>
+          )}
+
+          {activeEventsCount && (
+            <Display display="block">
+              <Margin left={5}>
+                <TextCenter>
+                  <Text size={12} bold>
+                    رویداد فعال
+                  </Text>
+                  <br />
+                  <Text size={16} bold>
+                    {activeEventsCount}
+                  </Text>
+                </TextCenter>
+              </Margin>
+            </Display>
+          )}
+          {followersCount && (
+            <Display display="block">
+              <TextCenter>
+                <Text size={12} bold>
+                  دنبال کننده
+                </Text>
+                <br />
+                <Text size={16} bold>
+                  {followersCount}
+                </Text>
+              </TextCenter>
+            </Display>
+          )}
+        </Display>
+        )}
+      </Display>
+
       {description && (
         <Paragraph size={12} color="riverBed" bold>
           {description}
         </Paragraph>
       )}
 
-      <Buttons
-        onClickFollowMe={onClickFollowMe}
-        onClickConnectUs={onClickConnectUs}
-        isFollowed={isFollowed}
-        followersCount={followersCount}
-      />
-
-      {(activeEventsCount || allEventsCount) && (
-        <Grid>
-          {allEventsCount && (
-            <Grid.Unit size={{ sm: 1 / 2 }}>
-              <BorderedBox>
-                <Text size={12} bold>
-                  رویداد های برگزارشده
-                </Text>
-                <Text size={16} bold>
-                  {allEventsCount}
-                </Text>
-              </BorderedBox>
-            </Grid.Unit>
-          )}
-          {activeEventsCount && (
-            <Grid.Unit size={{ sm: 1 / 2 }}>
-              <BorderedBox>
-                <Text size={12} bold>
-                  رویداد های فعال
-                </Text>
-                <Text size={16} bold>
-                  {activeEventsCount}
-                </Text>
-              </BorderedBox>
-            </Grid.Unit>
-          )}
-          {recommendedCount && (
-            <Grid.Unit>
-              <BorderedBox>
-                <Text size={12} bold>
-                  تعداد افراد توصیهکننده این برگزارکننده
-                </Text>
-                <Text size={16} bold>
-                  {recommendedCount}
-                </Text>
-              </BorderedBox>
-            </Grid.Unit>
-          )}
-        </Grid>
-      )}
+    <Grid>
+      <Grid.Unit size={1 / 2}>
+        <Paragraph size={12} color="riverBed" bold>
+            بیش از
+             {recommendedCount}
+              نفر این برگزارکننده را توصیه کرده‌اند.
+        </Paragraph>
+      </Grid.Unit>
+      <Grid.Unit size={1 / 2}>
+        <Buttons
+          onClickFollowMe={onClickFollowMe}
+          onClickConnectUs={onClickConnectUs}
+          isFollowed={isFollowed}
+        />
+      </Grid.Unit>
+    </Grid>
     </Container>
   );
 };
