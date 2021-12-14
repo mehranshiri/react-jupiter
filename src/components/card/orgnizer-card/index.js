@@ -62,9 +62,24 @@ const OrgnizerCard = (props: Props) => {
         </Display>
         {(activeEventsCount || allEventsCount) && (
         <Display display="flex" alignItems="center" justifyContent="space-between">
-          {allEventsCount && (
+          {followersCount && (
             <Display display="block">
               <Margin left={6}>
+                <TextCenter>
+                  <Text size={16} bold>
+                    {followersCount}
+                  </Text>
+                  <br />
+                  <Text size={12} bold>
+                    دنبال کننده
+                  </Text>
+                </TextCenter>
+              </Margin>
+            </Display>
+          )}
+          {allEventsCount && (
+            <Display display="block">
+              <Margin left={6} right={6}>
                 <TextCenter>
                   <Text size={16} bold>
                     {allEventsCount}
@@ -80,7 +95,7 @@ const OrgnizerCard = (props: Props) => {
 
           {activeEventsCount && (
             <Display display="block">
-              <Margin left={6} right={6}>
+              <Margin left={4} right={6}>
                 <TextCenter>
                   <Text size={16} bold>
                     {activeEventsCount}
@@ -88,21 +103,6 @@ const OrgnizerCard = (props: Props) => {
                   <br />
                   <Text size={12} bold>
                     رویداد فعال
-                  </Text>
-                </TextCenter>
-              </Margin>
-            </Display>
-          )}
-          {followersCount && (
-            <Display display="block">
-              <Margin left={4} right={6}>
-                <TextCenter>
-                  <Text size={16} bold>
-                    {followersCount}
-                  </Text>
-                  <br />
-                  <Text size={12} bold>
-                    دنبال کننده
                   </Text>
                 </TextCenter>
               </Margin>
@@ -120,10 +120,12 @@ const OrgnizerCard = (props: Props) => {
 
     <Grid>
       <Grid.Unit size={1 / 2}>
-        <Heading level={4} size="md" color="riverBed" bold>
-             {` ${recommendedCount} `}
-               این برگزارکننده را توصیه کرده‌اند.
-        </Heading>
+        {!!recommendedCount && (
+          <Heading level={4} size="md" color="riverBed" bold>
+          {` ${recommendedCount} `}
+            این برگزارکننده را توصیه کرده‌اند.
+          </Heading>
+        )}
       </Grid.Unit>
       <Grid.Unit size={1 / 2}>
         <Buttons
