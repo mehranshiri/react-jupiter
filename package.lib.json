@@ -13,7 +13,9 @@
   "contributors": [
     "@arashmanteghi",
     "https://github.com/marzzy",
-    "https://github.com/mehrdad-shokri"
+    "https://github.com/mehrdad-shokri",
+    "@mehranshiri"
+
   ],
   "publishConfig": {
     "access": "public"
