@@ -23,6 +23,7 @@ type Props = {
   isFollowed?: boolean,
   onClickFollowMe?: () => boolean,
   onClickConnectUs?: () => void,
+  renderOrganizerLink: * => Node
 }
 
 const OrgnizerCard = (props: Props) => {
@@ -37,26 +38,27 @@ const OrgnizerCard = (props: Props) => {
     allEventsCount,
     activeEventsCount,
     recommendedCount,
+    renderOrganizerLink,
   } = props;
 
   return (
     <Container>
       <Display display="flex" alignItems="center" justifyContent="space-between">
         <Display display="flex" alignItems="center">
-          <Avatar
+          {renderOrganizerLink(<Avatar
             alt={name}
             src={logo}
             size="md"
-          />
+          />)}
           <Display display="block">
             <Margin right={5}>
               <Text size={12} bold>
                 برگزار‌کننده :
               </Text>
               <br />
-              <Heading size="md" level={4}>
+              {renderOrganizerLink(<Heading size="md" level={4}>
                 {name}
-              </Heading>
+              </Heading>)}
             </Margin>
           </Display>
         </Display>
