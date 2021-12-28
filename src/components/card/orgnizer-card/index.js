@@ -116,7 +116,7 @@ const OrgnizerCard = (props: Props) => {
 
       {description && (
         <Paragraph size={12} color="riverBed" bold>
-          {description}
+          {description.slice(0, 120).concat('...')}
         </Paragraph>
       )}
 
