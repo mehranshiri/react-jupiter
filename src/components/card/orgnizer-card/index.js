@@ -8,9 +8,12 @@ import Buttons from './buttons';
 import {
   Container,
   TextCenter,
+  ResponsiveFlex
 } from './index.style';
 import { Margin } from '../../spacing';
 import Display from '../../display';
+import Responsive from '../../responsive';
+import defaultTheme from '../../themes';
 
 type Props = {
   name: string,
@@ -43,8 +46,8 @@ const OrgnizerCard = (props: Props) => {
 
   return (
     <Container>
-      <Display display="flex" alignItems="center" justifyContent="space-between">
-        <Display display="flex" alignItems="center">
+      <ResponsiveFlex>
+        <Display display="flex" alignItems="center" justifyContent="space-between">
           {renderOrganizerLink(<Avatar
             alt={name}
             src={logo}
@@ -62,8 +65,11 @@ const OrgnizerCard = (props: Props) => {
             </Margin>
           </Display>
         </Display>
+        <Responsive option={{ lessThan: defaultTheme.breakpoints.sm }}>
+          <Margin top={5}/>
+        </Responsive>
         {(activeEventsCount || allEventsCount) && (
-        <Display display="flex" alignItems="center" justifyContent="space-between">
+        <Display display="flex" alignItems="center" justofyContent="space-between">
           {followersCount && (
             <Display display="block">
               <Margin left={6}>
@@ -112,31 +118,35 @@ const OrgnizerCard = (props: Props) => {
           )}
         </Display>
         )}
-      </Display>
+      </ResponsiveFlex>
 
       {description && (
-        <Paragraph size={12} color="riverBed" bold>
-          {description.slice(0, 120).concat('...')}
-        </Paragraph>
+        <Display display="flex">
+          <Responsive option={{ lessThan: defaultTheme.breakpoints.sm }}>
+            <Margin top={5}/>
+          </Responsive>
+          <Paragraph size={12} color="riverBed" bold>
+            {description.slice(0, 120).concat('...')}
+          </Paragraph>
+        </Display>
       )}
 
-    <Grid>
-      <Grid.Unit size={1 / 2}>
+      <ResponsiveFlex>
         {!!recommendedCount && (
           <Heading level={4} size="md" color="riverBed" bold>
           {` ${recommendedCount} `}
             این برگزارکننده را توصیه کرده‌اند.
           </Heading>
         )}
-      </Grid.Unit>
-      <Grid.Unit size={1 / 2}>
-        <Buttons
-          onClickFollowMe={onClickFollowMe}
-          onClickConnectUs={onClickConnectUs}
-          isFollowed={isFollowed}
-        />
-      </Grid.Unit>
-    </Grid>
+        <Display display="flex" justifyContent="space-between">
+          <Buttons
+            onClickFollowMe={onClickFollowMe}
+            onClickConnectUs={onClickConnectUs}
+            isFollowed={isFollowed}
+          />
+        </Display>
+      </ResponsiveFlex>
+      
     </Container>
   );
 };

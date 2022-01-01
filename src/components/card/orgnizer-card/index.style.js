@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import CardTemplate from '../card-template';
 import Button from '../../button';
+import defaultTheme from '../../themes';
 
 export const Container = styled(CardTemplate)`
   padding: 16px 32px;
@@ -30,4 +31,16 @@ export const BorderedBox = styled.div`
 
 export const TextCenter = styled.div`
   text-align: center;
+`;
+
+export const ResponsiveFlex = styled.div`
+  display: flex;
+  @media only screen and (max-width: ${defaultTheme.breakpoints.sm}px) {
+    flex-flow: column nowrap;
+  }
+  @media only screen and (min-width: ${defaultTheme.breakpoints.sm}px) {
+    flex-flow: row nowrap;
+  }
+  align-items: center;
+  justify-content: space-between;
 `;
