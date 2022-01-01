@@ -26,25 +26,25 @@
     "url": "https://github.com/evandhq/jupiter-react/issues"
   },
   "dependencies": {
-    "@storybook/addon-actions": "^5.3.9",
-    "@storybook/addon-info": "^5.3.18",
-    "@storybook/addon-knobs": "^5.3.18",
-    "@storybook/addon-links": "^5.3.9",
-    "@storybook/addon-storyshots": "^5.3.9",
-    "@storybook/addons": "^5.3.9",
-    "@storybook/react": "^5.3.9",
+    "@storybook/addon-actions": "^5.3.21",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-knobs": "^5.3.21",
+    "@storybook/addon-links": "^5.3.21",
+    "@storybook/addon-storyshots": "^5.3.21",
+    "@storybook/addons": "^5.3.21",
+    "@storybook/react": "^6.4.9",
     "babel-plugin-macros": "^2.8.0",
-    "babel-preset-react-app": "^9.1.1",
-    "moment-jalaali": "^0.9.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "babel-preset-react-app": "^9.1.2",
+    "moment-jalaali": "^0.9.4",
+    "prop-types": "^15.8.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-hook-form": "^3.29.4",
-    "react-lazy-load-image-component": "^1.4.1",
-    "react-modal": "^3.11.2",
-    "react-responsive": "^8.0.3",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.3.1",
+    "react-lazy-load-image-component": "^1.5.1",
+    "react-modal": "^3.14.4",
+    "react-responsive": "^8.2.0",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "^3.4.4",
     "react-sidenav": "^4.0.6",
     "styled-components": "^4.4.1",
     "styled-components-grid": "^2.2.2",
@@ -61,9 +61,10 @@
     "lint:fix": "./node_modules/.bin/eslint ./src --fix",
     "build:lib": "del-cli ./lib && babel src/components -d lib --presets minify && cp package.lib.json lib/package.json && cp README.md lib/ && cp CHANGELOG.md lib/ && cp LICENSE lib/ && del-cli ./lib/**/*.stories.js && del-cli ./lib/**/*.test.js",
     "version": "auto-changelog -p && git add CHANGELOG.md",
-    "storybook": "start-storybook -p 9009 -s public",
+    "storybook": "start-storybook -p 6006 -s public",
     "build:storybook": "build-storybook -s public",
-    "deploy:storybook": "storybook-to-ghpages"
+    "deploy:storybook": "storybook-to-ghpages",
+    "build-storybook": "build-storybook -s public"
   },
   "husky": {
     "hooks": {
@@ -83,12 +84,15 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.4",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-flow": "^7.8.3",
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/preset-flow": "^7.16.7",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/node-logger": "^6.4.9",
+    "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/storybook-deployer": "2.8.6",
-    "auto-changelog": "^1.16.2",
+    "auto-changelog": "^1.16.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.9.0",
     "babel-minify": "^0.5.1",
@@ -97,16 +101,28 @@
     "babel-preset-react": "^6.24.1",
     "del-cli": "^2.0.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.4.4",
-    "eslint-config-airbnb": "^18.0.1",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
+    "eslint-config-airbnb": "^18.2.1",
     "flow-bin": "^0.117.0",
     "husky": "^3.1.0",
     "jest-enzyme": "^7.1.2",
     "jest-styled-components": "^6.3.4",
-    "node-sass": "^4.13.1",
-    "react-app-rewired": "^2.1.5",
-    "react-test-renderer": "^16.12.0",
+    "node-sass": "^4.14.1",
+    "react-app-rewired": "^2.1.11",
+    "react-test-renderer": "^16.14.0",
     "require-context.macro": "^1.2.2"
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
   }
 }
