@@ -248,4 +248,5 @@ storiesOf('Icon', module)
   .add('twitter-alt', () => <Icon name="twitter-alt" />)
   .add('twitter', () => <Icon name="twitter" />)
   .add('watch', () => <Icon name="watch" />)
+  .add('whatsapp', () => <Icon name="Whatsapp-alt" />)
   .addDecorator(withInfo);
