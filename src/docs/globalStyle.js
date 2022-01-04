@@ -3,7 +3,7 @@ import IranSharpBoldWoff from './assets/fonts/iransharp_bold_web.woff';
 import IranSharpBoldWoff2 from './assets/fonts/iransharp_bold_web.woff2';
 import IranSharpRegularWoff from './assets/fonts/iransharp_regular_web.woff';
 import IranSharpRegularWoff2 from './assets/fonts/iransharp_regular_web.woff2';
-import IconMoonWoff from './assets/fonts/icomoon.woff';
+import IconMoonWoff from './assets/fonts/new-icomoon.woff';
 import FilesImgsWoff from './assets/fonts/filesImgs.woff';
 
 const GlobalStyle = createGlobalStyle`
